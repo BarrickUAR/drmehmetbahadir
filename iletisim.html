@@ -361,7 +361,7 @@
                            <span><i class="fa-solid fa-location-dot"></i></span>
                         </div>
                         <div class="rr-contact-box-contat">
-                           <span>Address</span>
+                           <span>Adres</span>
                            <p><a href="https://www.google.com/maps/search/dr+mehmet+ilteber+bahad%C4%B1r/@41.0092779,28.8989831,20z?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
                                  target="_blank">Maltepe Mah. Eski
                                  Çırpıcı Yolu Sok. No:2/63 Kat:11 E-5 Karayolu Merter Metro İstasyon Yanı Merter İş
@@ -473,6 +473,38 @@
 
 
       </section>
+
+      <script>
+         function handleFormSubmission(formId) {
+            document.getElementById(formId).addEventListener("submit", function (event) {
+               event.preventDefault(); // Sayfanın yeniden yüklenmesini engelle
+      
+               let formData = new FormData(this);
+      
+               fetch("mail.php", {
+                  method: "POST",
+                  body: formData
+               })
+                  .then(response => response.text())
+                  .then(result => {
+                     let responseMessage = this.querySelector("#response-message");
+                     if (result === "success") {
+                        responseMessage.innerHTML = "<span style='color:green;'>Randevunuz Oluşturulmuştur!</span>";
+                     } else {
+                        responseMessage.innerHTML = "<span style='color:red;'>Bir Hata Meydana Geldi!</span>";
+                     }
+                  })
+                  .catch(error => {
+                     this.querySelector("#response-message").innerHTML = "<span style='color:red;'>Bir Hata Meydana Geldi!</span>";
+                  });
+            });
+         }
+      
+         // İki form için de çalıştır
+         handleFormSubmission("appointment-form-1");
+         handleFormSubmission("appointment-form-2");
+      </script>
+      
 
    </main>
 

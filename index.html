@@ -42,8 +42,46 @@
    </script>
 
    <script>
+      (function () {
+         var w = window;
+         var ic = w.Intercom;
+         if (typeof ic === "function") {
+            ic('reattach_activator');
+            ic('update', w.intercomSettings);
+         } else {
+            var d = document;
+            var i = function () {
+               i.c(arguments);
+            };
+            i.q = [];
+            i.c = function (args) {
+               i.q.push(args);
+            };
+            w.Intercom = i;
+            var l = function () {
+               var s = d.createElement('script');
+               s.type = 'text/javascript';
+               s.async = true;
+               s.src = 'https://widget.intercom.io/widget/bhbpbka7';
+               var x = d.getElementsByTagName('script')[0];
+               x.parentNode.insertBefore(s, x);
+            };
+            if (document.readyState === 'complete') {
+               l();
+            } else if (w.attachEvent) {
+               w.attachEvent('onload', l);
+            } else {
+               w.addEventListener('load', l, false);
+            }
+         }
+      })();
+   </script>
 
-      (function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', w.intercomSettings); } else { var d = document; var i = function () { i.c(arguments); }; i.q = []; i.c = function (args) { i.q.push(args); }; w.Intercom = i; var l = function () { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/bhbpbka7'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); }; if (document.readyState === 'complete') { l(); } else if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })();
+   <!-- Sohbet penceresini otomatik aç -->
+   <script>
+      window.addEventListener('load', function () {
+         Intercom('show');
+      });
    </script>
 
 
@@ -464,7 +502,7 @@
                            <li class="has-dropdown">
                               <a href="#">Sayfalar</a>
                               <ul class="submenu rr-submenu">
-                                 <li><a href="videolar.html">Videolar</a></li>
+                                 <li><a href="404.html">Videolar</a></li>
                                  <li><a href="ekibimiz.html">Ekibimiz</a></li>
                                  <li><a href="hekimlerimiz.html">Hekimlerimiz</a></li>
                                  <li><a href="SSS.html">Sıkça Sorulan Sorular</a></li>
@@ -593,14 +631,15 @@
                                        placeholder="Mail Adresiniz" required>
                                  </div>
                               </div>
-                              <!-- Tarih -->
+                              <!-- Telefon Numarası -->
                               <div class="col-xl-4 col-md-4 col-12 mb-30">
                                  <div class="rr-form-input-box rr-contact-1-border">
-                                    <input type="text" id="date" name="date" autocomplete="off"
-                                       placeholder="Tarih* (GG/AA/YYYY)" required>
+                                    <input type="tel" id="phone" name="phone" autocomplete="off"
+                                       placeholder="Telefon Numarası*" required>
                                  </div>
                               </div>
                            </div>
+
                            <button class="rr-btn rr-form-theme-bg" type="submit"><span>Randevu Oluştur!</span></button>
                         </form>
                         <div id="response-message" style="margin-top: 15px; font-weight: bold;"></div>
@@ -611,28 +650,59 @@
          </div>
 
          <script>
-            document.getElementById("date").addEventListener("input", function (event) {
-               let value = event.target.value.replace(/\D/g, ""); // Sadece rakamları al
-               let formattedDate = "";
-
-               // Gün
-               if (value.length > 0) {
-                  formattedDate += value.substring(0, 2);
-               }
-               // Ay
-               if (value.length > 2) {
-                  formattedDate += "/" + value.substring(2, 4);
-               }
-               // Yıl (4 karakterle sınırla)
-               if (value.length > 4) {
-                  formattedDate += "/" + value.substring(4, 8);
-               }
-
-               event.target.value = formattedDate;
+            // İsim kısmına sadece harflerin girilmesini sağlamak
+            document.getElementById("name").addEventListener("input", function (event) {
+               let value = event.target.value;
+               // Harf dışında herhangi bir şey girilmesine izin verme
+               value = value.replace(/[^a-zA-ZıİçÇğĞşŞöÖüÜ\s]/g, "");
+               event.target.value = value;
             });
 
+            // Telefon numarasını 3-3-2-2 formatında boşluk ekleyerek düzenle
+            document.getElementById("phone").addEventListener("input", function (event) {
+               let value = event.target.value.replace(/\D/g, ""); // Sadece rakamları al
+               let formattedPhone = "";
+
+               // 3 haneli grup
+               if (value.length > 0) {
+                  formattedPhone += value.substring(0, 3);
+               }
+               // 3 haneli grup
+               if (value.length > 3) {
+                  formattedPhone += " " + value.substring(3, 6);
+               }
+               // 2 haneli grup
+               if (value.length > 6) {
+                  formattedPhone += " " + value.substring(6, 8);
+               }
+               // 2 haneli grup
+               if (value.length > 8) {
+                  formattedPhone += " " + value.substring(8, 10);
+               }
+
+               event.target.value = formattedPhone;
+            });
+
+            // Form gönderimi sırasında kontrol
             document.getElementById("appointment-form").addEventListener("submit", function (event) {
                event.preventDefault(); // Sayfanın yeniden yüklenmesini engelle
+
+               let phone = document.getElementById("phone").value;
+               let name = document.getElementById("name").value;
+               // Telefon numarasının 0 ile başlamadığını ve 10 haneli olduğunu kontrol et
+               const phonePattern = /^[1-9][0-9]{9}$/;  // 10 haneli, 0 ile başlamayan telefon numarası
+
+               if (!phonePattern.test(phone.replace(/\s/g, ""))) {
+                  document.getElementById("response-message").innerHTML = "<span style='color:red;'>Telefon numarası geçerli değil. 10 haneli ve 0 ile başlamamalıdır.</span>";
+                  return;  // Eğer geçerli değilse form gönderilmez
+               }
+
+               // İsim alanı sadece harflerden oluşmalı
+               const namePattern = /^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/;
+               if (!namePattern.test(name)) {
+                  document.getElementById("response-message").innerHTML = "<span style='color:red;'>İsim alanı yalnızca harf içermelidir.</span>";
+                  return;  // Eğer geçerli değilse form gönderilmez
+               }
 
                let formData = new FormData(this);
 
@@ -654,35 +724,8 @@
                   });
             });
          </script>
-
       </section>
 
-      <script>
-         document.getElementById("date-input").addEventListener("input", function (event) {
-            let value = event.target.value;
-            value = value.replace(/[^0-9]/g, ''); // Sadece rakamlara izin ver
-
-            if (value.length > 2) {
-               value = value.substring(0, 2) + '/' + value.substring(2);
-            }
-            if (value.length > 5) {
-               value = value.substring(0, 5) + '/' + value.substring(5);
-            }
-
-            // Yılın 0 ile başlamasını engelle
-            let parts = value.split('/');
-            if (parts.length === 3 && parts[2].startsWith('0')) {
-               parts[2] = parts[2].replace(/^0+/, '');
-               value = parts.join('/');
-            }
-
-            if (value.length > 10) {
-               value = value.substring(0, 10);
-            }
-
-            event.target.value = value;
-         });
-      </script>
 
       <!-- contact area end -->
 
@@ -1140,38 +1183,41 @@
 
 
       <!-- blog area start -->
-      <div class="rr-blog-area pt-90 pb-90 fix">
+      <div class="rr-blog-area pt-90 pb-60 fix">
          <div class="container">
             <div class="row">
                <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                   <div class="rr-blog-title-box text-center mb-45">
                      <span class="rr-section-subtitle p-relative"><img src="assets/img/testimonial/section-icon.png"
-                           alt="img"> Blog <img src="assets/img/testimonial/section-icon.png" alt="img"></span>
-                     <h4 class="rr-section-title">En son yazılan yazılar</h4>
+                           alt="img"> Bütün Yazılar <img src="assets/img/testimonial/section-icon.png" alt="img"></span>
+                     <h4 class="rr-section-title">En son Yazılar</h4>
                   </div>
                </div>
+
                <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                   <div class="rr-blog-item">
                      <div class="rr-blog-thumb-main p-relative">
-                        <a href="blog-details.html">
+                        <a href="blog/deneme.html">
                            <div class="rr-blog-thumb">
-                              <img src="assets/img/blog/blog04.jpg" alt="img">
-                              <span>Employment</span>
+                              <img src="assets/img/blog/1.jpg" alt="img">
+                              <span>Blog</span>
                            </div>
                         </a>
                      </div>
                      <div class="rr-blog-content rr-blog-content-opcity p-relative">
                         <div class="rr-blog-content-info d-flex mb-15">
-                           <span><a href="blog-details.html"><i class="fa-sharp fa-solid fa-comments"></i> 02
-                                 Comments</a></span>
-                           <span class="ml-30"><i class="fa-regular fa-calendar-days"></i> Apr - 32 -
-                              2024</span>
+                           <span><a href="bloglar/egzama-ve-beslenme-iliskileri.html"><i
+                                    class="fa-sharp fa-solid fa-comments"></i> 0
+                                 Yorumlar</a></span>
+                           <span class="ml-30"><i class="fa-regular fa-calendar-days"></i> 12 Şubat 2025</span>
                         </div>
                         <div class="rr-blog-text">
-                           <h4 class="rr-blog-title mb-0 pb-10"><a href="blog-details.html">Improve Assistant Health
-                                 Medical This Blog</a></h4>
-                           <p>We will give you a complete account
-                              theen teachings of the great.</p>
+                           <h4 class="rr-blog-title mb-0 pb-10"><a
+                                 href="bloglar/egzama-ve-beslenme-iliskileri.html">Sedef Hastalığı ve
+                                 Mevsimsel
+                                 Değişiklikler: Kışın ve Yazın Cilt Sağlığınızı Koruma Yöntemleri</a></h4>
+                           <p>Sedef hastalığı (psoriasis), ciltte pul pul döküntüler, kızarıklık ve kaşıntıya yol açan
+                              kronik bir hastalıktır...</p>
                         </div>
                         <div class="rr-blog-wrap d-flex align-items-center justify-content-between">
                            <div class="rr-blog-item-user d-flex align-items-center">
@@ -1179,40 +1225,46 @@
                                  <img src="assets/img/blog/avada.png" alt="img">
                               </div>
                               <div class="rr-blog-item-user-content">
-                                 <span class="rr-blog-item-user-title"><a href="blog-details.html">Dr: Meran
-                                       Bara</a></span>
+                                 <span class="rr-blog-item-user-title"><a
+                                       href="bloglar/egzama-ve-beslenme-iliskileri.html">Dr. M.
+                                       İlteber
+                                       Bahadır</a></span>
                               </div>
                            </div>
                            <div class="rr-blog-link">
-                              <a href="blog-details.html">Daha Fazla...<i class="fa-light fa-angle-right"></i></a>
+                              <a href="bloglar/egzama-ve-beslenme-iliskileri.html">Daha Fazla... <i
+                                    class="fa-light fa-angle-right"></i></a>
                            </div>
-
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
+
+               <!-- blog item -->
+
+               <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                   <div class="rr-blog-item">
                      <div class="rr-blog-thumb-main p-relative">
-                        <a href="blog-details.html">
+                        <a href="blog/deneme.html">
                            <div class="rr-blog-thumb">
-                              <img src="assets/img/blog/blog05.jpg" alt="img">
-                              <span>Employment</span>
+                              <img src="/assets/img/blog/2.jpg" alt="img">
+                              <span>Blog</span>
                            </div>
                         </a>
                      </div>
                      <div class="rr-blog-content rr-blog-content-opcity p-relative">
                         <div class="rr-blog-content-info d-flex mb-15">
-                           <span><a href="blog-details.html"><i class="fa-sharp fa-solid fa-comments"></i> 02
-                                 Comments</a></span>
-                           <span class="ml-30"><i class="fa-regular fa-calendar-days"></i> Apr - 32 -
-                              2024</span>
+                           <span><a href="bloglar/egzama-ve-beslenme-iliskileri.html"><i
+                                    class="fa-sharp fa-solid fa-comments"></i> 0
+                                 Yorumlar</a></span>
+                           <span class="ml-30"><i class="fa-regular fa-calendar-days"></i> 12 Şubat 2025</span>
                         </div>
                         <div class="rr-blog-text">
-                           <h4 class="rr-blog-title mb-0 pb-10"><a href="blog-details.html">How We Can Fix Problem in
-                                 Tailbone in Back</a></h4>
-                           <p>We will give you a complete account
-                              theen teachings of the great.</p>
+                           <h4 class="rr-blog-title mb-0 pb-10"><a
+                                 href="bloglar/egzama-ve-beslenme-iliskileri.html">Egzama ve Beslenme Arasındaki
+                                 İlişkiler</a></h4>
+                           <p>Egzama, ciltte kaşıntı, kızarıklık ve tahrişe neden olan kronik bir cilt rahatsızlığıdır.
+                              Bu rahatsızlığın tedavisinde...</p>
                         </div>
                         <div class="rr-blog-wrap d-flex align-items-center justify-content-between">
                            <div class="rr-blog-item-user d-flex align-items-center">
@@ -1220,66 +1272,29 @@
                                  <img src="assets/img/blog/avada.png" alt="img">
                               </div>
                               <div class="rr-blog-item-user-content">
-                                 <span class="rr-blog-item-user-title"><a href="blog-details.html">Dr: Meran
-                                       Bara</a></span>
+                                 <span class="rr-blog-item-user-title"><a
+                                       href="bloglar/egzama-ve-beslenme-iliskileri.html">Dr. M.
+                                       İlteber
+                                       Bahadır</a></span>
                               </div>
                            </div>
                            <div class="rr-blog-link">
-                              <a href="blog-details.html">Daha Fazla...<i class="fa-light fa-angle-right"></i></a>
+                              <a href="bloglar/egzama-ve-beslenme-iliskileri.html">Daha Fazla... <i
+                                    class="fa-light fa-angle-right"></i></a>
                            </div>
-
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
-                  <div class="rr-blog-item">
-                     <div class="rr-blog-thumb-main p-relative">
-                        <a href="blog-details.html">
-                           <div class="rr-blog-thumb">
-                              <img src="assets/img/blog/blog06.jpg" alt="img">
-                              <span>Employment</span>
-                           </div>
-                        </a>
-                     </div>
-                     <div class="rr-blog-content rr-blog-content-opcity p-relative">
-                        <div class="rr-blog-content-info d-flex mb-15">
-                           <span><a href="blog-details.html"><i class="fa-sharp fa-solid fa-comments"></i> 02
-                                 Comments</a></span>
-                           <span class="ml-30"><i class="fa-regular fa-calendar-days"></i> Apr - 32 -
-                              2024</span>
-                        </div>
-                        <div class="rr-blog-text">
-                           <h4 class="rr-blog-title mb-0 pb-10"><a href="blog-details.html">Medical Which Helps This
-                                 Medical This Blog</a></h4>
-                           <p>We will give you a complete account
-                              theen teachings of the great.</p>
-                        </div>
-                        <div class="rr-blog-wrap d-flex align-items-center justify-content-between">
-                           <div class="rr-blog-item-user d-flex align-items-center">
-                              <div class="rr-blog-item-user-thumb">
-                                 <img src="assets/img/blog/avada.png" alt="img">
-                              </div>
-                              <div class="rr-blog-item-user-content">
-                                 <span class="rr-blog-item-user-title"><a href="blog-details.html">Dr: Meran
-                                       Bara</a></span>
-                              </div>
-                           </div>
-                           <div class="rr-blog-link">
-                              <a href="blog-details.html">Daha Fazla...<i class="fa-light fa-angle-right"></i></a>
-                           </div>
 
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="blog-btn text-center wow rrfadeUp pt-20" data-wow-duration=".9s" data-wow-delay=".9s"
-                  style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.9s; animation-name: rrfadeUp;">
-                  <a class="rr-btn-black" href="blog.html"><span>Bütün Blogları Gör <i
-                           class="fa-sharp fa-solid fa-plus"></i></span></a>
-               </div>
+               <!-- blog item -->
+
+
+
+
             </div>
          </div>
+      </div>
       </div>
       <!-- blog area end -->
 

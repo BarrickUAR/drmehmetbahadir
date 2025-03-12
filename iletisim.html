@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="tr">
 
 <head>
    <meta charset="utf-8">
@@ -478,9 +478,9 @@
          function handleFormSubmission(formId) {
             document.getElementById(formId).addEventListener("submit", function (event) {
                event.preventDefault(); // Sayfanın yeniden yüklenmesini engelle
-      
+
                let formData = new FormData(this);
-      
+
                fetch("mail.php", {
                   method: "POST",
                   body: formData
@@ -499,12 +499,12 @@
                   });
             });
          }
-      
+
          // İki form için de çalıştır
          handleFormSubmission("appointment-form-1");
          handleFormSubmission("appointment-form-2");
       </script>
-      
+
 
    </main>
 

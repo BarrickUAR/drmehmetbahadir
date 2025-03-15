@@ -34,6 +34,8 @@
 
       gtag('config', 'AW-936493452');
    </script>
+   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 
 <body>
@@ -65,55 +67,6 @@
       </button>
    </div>
    <!-- back to top end -->
-
-   <!-- search popup start -->
-   <div class="search__popup">
-      <div class="container">
-         <div class="row">
-            <div class="col-xxl-12">
-               <div class="search__wrapper">
-                  <div class="search__top d-flex justify-content-between align-items-center">
-                     <div class="search__logo">
-                        <a href="index.html">
-                           <img loading="lazy" src="assets/img/logo/logo-white.png" alt="img">
-                        </a>
-                     </div>
-                     <div class="search__close">
-                        <button type="button" class="search__close-btn search-close-btn">
-                           <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                              <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                 stroke-linejoin="round" />
-                              <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                 stroke-linejoin="round" />
-                           </svg>
-                        </button>
-                     </div>
-                  </div>
-                  <div class="search__form">
-                     <form action="#">
-                        <div class="search__input">
-                           <input class="search-input-field" type="text" placeholder="Type here to search...">
-                           <span class="search-focus-border"></span>
-                           <button type="submit">
-                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                 <path
-                                    d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
-                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                 <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                           </button>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- search popup end -->
-
    <!-- rr-offcanvus-area-start -->
    <div class="rroffcanvas-area">
       <div class="rroffcanvas">
@@ -139,7 +92,7 @@
                </li>
                <li>
                   <i class="fas fa-envelope"></i>
-                  <a href="mailto:info@drmehmetilteberbahadir.net">info@drmehmetilteberbahadir.net</a>
+                  <a href="mailto:randevu@drmehmetilteberbahadir.net">randevu@drmehmetilteberbahadir.net</a>
                </li>
                <li>
                   <i class="fal fa-phone-alt"></i>
@@ -295,7 +248,6 @@
                <div class="col-xl-5 col-lg-5 col-md-6 col-6">
                   <div class="rr-header-right d-flex align-items-center justify-content-end">
                      <div class="rr-header-icon d-none rr-header-2-search d-xl-block">
-                        <button class="search-open-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                      </div>
                      <div class="rr-header-1-contat d-none d-md-block ml-30">
                         <a class="rr-btn-border" href="iletisim.html"><span>Randevu Oluştur <i
@@ -389,7 +341,8 @@
                         </div>
                         <div class="rr-contact-box-contat">
                            <span>Mail Gönderin!</span>
-                           <p><a href="mailto:info@drmehmetilteberbahadir.net">info@drmehmetilteberbahadir.net</a></p>
+                           <p><a href="mailto:randevu@drmehmetilteberbahadir.net">randevu@drmehmetilteberbahadir.net</a>
+                           </p>
                         </div>
                      </div>
                   </div>
@@ -427,11 +380,15 @@
                            <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
                               <div class="rr-form-input-box rr-form-input-main">
                                  <input type="text" name="name" id="name" placeholder="İsim" required>
+                                 <small id="name-error" style="color: red; display: none;">Lütfen sadece harf
+                                    kullanın.</small>
                               </div>
                            </div>
                            <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
                               <div class="rr-form-input-box rr-form-input-main">
                                  <input type="email" name="email" id="email" placeholder="E-Posta" required>
+                                 <small id="email-error" style="color: red; display: none;">Lütfen geçerli bir e-posta
+                                    adresi girin.</small>
                               </div>
                            </div>
                            <div class="col-xl-12 col-lg-12 col-md-12 mb-20">
@@ -444,6 +401,14 @@
                                  <textarea name="message" id="message" placeholder="Mesaj" required></textarea>
                               </div>
                            </div>
+
+                           <!-- reCAPTCHA -->
+                           <div class="col-12 mb-20">
+                              <div class="g-recaptcha" data-sitekey="6LfiLPUqAAAAAOepUPcU3iMU8WU-JQa-9bsLqEVo"></div>
+                              <small id="recaptcha-error" style="color: red; display: none;">Lütfen reCAPTCHA'yı
+                                 doğrulayın.</small>
+                           </div>
+
                            <div class="col-12">
                               <button class="rr-btn-1 rr-form-theme-bg" type="submit"><span>Randevu
                                     Oluştur</span></button>
@@ -457,64 +422,81 @@
             </div>
          </div>
 
+         <!-- EmailJS Script -->
+         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
          <script>
+            (function () {
+               emailjs.init('AfjNJbvpclsfFJDiK');
+            })();
+
+            // Formu gönderme ve doğrulama
             document.getElementById("appointment-form").addEventListener("submit", function (event) {
                event.preventDefault(); // Sayfanın yeniden yüklenmesini engelle
 
-               let formData = new FormData(this);
+               var name = document.getElementById("name").value.trim();
+               var email = document.getElementById("email").value.trim();
+               var address = document.getElementById("address").value.trim();
+               var message = document.getElementById("message").value.trim();
+               var recaptchaResponse = grecaptcha.getResponse(); // reCAPTCHA yanıtı
 
-               fetch("mail.php", {
-                  method: "POST",
-                  body: formData
-               })
-                  .then(response => response.text())
-                  .then(result => {
-                     let responseMessage = document.getElementById("response-message");
-                     if (result === "success") {
-                        responseMessage.innerHTML = "<span style='color:green;'>Randevunuz Oluşturulmuştur!</span>";
-                     } else {
-                        responseMessage.innerHTML = "<span style='color:red;'>Bir Hata Meydana Geldi!</span>";
-                     }
+               // Hata mesajlarını sıfırlama
+               document.getElementById("name-error").style.display = "none";
+               document.getElementById("email-error").style.display = "none";
+               document.getElementById("recaptcha-error").style.display = "none";
+               document.getElementById("response-message").innerHTML = "";
+
+               var isValid = true;
+
+               // Ad kontrolü (Sadece harf ve boşluk)
+               if (!/^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/.test(name)) {
+                  document.getElementById("name-error").style.display = "block";
+                  isValid = false;
+               }
+
+               // E-posta kontrolü
+               if (!/\S+@\S+\.\S+/.test(email)) {
+                  document.getElementById("email-error").style.display = "block";
+                  isValid = false;
+               }
+
+               // reCAPTCHA doğrulaması
+               if (recaptchaResponse === "") {
+                  document.getElementById("recaptcha-error").style.display = "block";
+                  isValid = false;
+               }
+
+               if (!isValid) return;
+
+               // Randevu oluşturuluyor mesajını hemen göster
+               document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Randevunuz oluşturuluyor...</span>";
+
+               var params = {
+                  name: name,
+                  email: email,
+                  address: address,
+                  message: message
+               };
+
+               const serviceID = "service_b123ul8"; // EmailJS Servis ID
+               const templateID = "template_8bekk3p"; // EmailJS Şablon ID
+
+               emailjs.send(serviceID, templateID, params)
+                  .then(res => {
+                     // Başarı mesajı
+                     document.getElementById("response-message").innerHTML = "<span style='color:green;'>Randevunuz başarıyla oluşturuldu!</span>";
+                     // Formu sıfırlama
+                     document.getElementById("appointment-form").reset();
+                     grecaptcha.reset(); // reCAPTCHA'yı sıfırlama
                   })
-                  .catch(error => {
-                     document.getElementById("response-message").innerHTML = "<span style='color:red;'>Bir Hata Meydana Geldi!</span>";
+                  .catch(err => {
+                     // Hata mesajı
+                     document.getElementById("response-message").innerHTML = "<span style='color:red;'>Bir hata oluştu, lütfen tekrar deneyin.</span>";
+                     console.log(err);
                   });
             });
          </script>
-
-
       </section>
-
-      <script>
-         function handleFormSubmission(formId) {
-            document.getElementById(formId).addEventListener("submit", function (event) {
-               event.preventDefault(); // Sayfanın yeniden yüklenmesini engelle
-
-               let formData = new FormData(this);
-
-               fetch("mail.php", {
-                  method: "POST",
-                  body: formData
-               })
-                  .then(response => response.text())
-                  .then(result => {
-                     let responseMessage = this.querySelector("#response-message");
-                     if (result === "success") {
-                        responseMessage.innerHTML = "<span style='color:green;'>Randevunuz Oluşturulmuştur!</span>";
-                     } else {
-                        responseMessage.innerHTML = "<span style='color:red;'>Bir Hata Meydana Geldi!</span>";
-                     }
-                  })
-                  .catch(error => {
-                     this.querySelector("#response-message").innerHTML = "<span style='color:red;'>Bir Hata Meydana Geldi!</span>";
-                  });
-            });
-         }
-
-         // İki form için de çalıştır
-         handleFormSubmission("appointment-form-1");
-         handleFormSubmission("appointment-form-2");
-      </script>
 
 
    </main>

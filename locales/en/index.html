@@ -1,13 +1,13 @@
 <!doctype html>
 
-<html class="no-js" lang="en">
+<html class="no-js" lang="tr">
 
 <head>
     <meta charset="utf-8">
-    <title>Dr. Mehmet Ilteber Bahadır</title>
+    <title>Anasayfa - Dr. Mehmet İlteber BAHADIR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Dr. Mehmet Ilteber Bahadır">
-    <meta name="keywords" content="Dr. Mehmet Ilteber Bahadır">
+    <meta name="description" content="Dr. Mehmet İlteber BAHADIR">
+    <meta name="keywords" content="Dr. Mehmet İlteber BAHADIR">
 
     <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo/favicon.png">
@@ -26,9 +26,76 @@
     <link rel="stylesheet" href="/assets/css/spacing.css">
     <link rel="stylesheet" href="/assets/css/custom-animation.css">
     <link rel="stylesheet" href="/assets/css/main.css">
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https:/www.googletagmanager.com/gtag/js?id=AW-936493452">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-936493452');
+    </script>
 </head>
 
 <body>
+
+
+
+
+    <!-- Intercom script'ini buraya ekle -->
+    <script>
+        window.intercomSettings = {
+            api_base: "https:/api-iam.intercom.io",
+            app_id: "bhbpbka7",
+        };
+    </script>
+
+    <script>
+        (function () {
+            var w = window;
+            var ic = w.Intercom;
+            if (typeof ic === "function") {
+                ic('reattach_activator');
+                ic('update', w.intercomSettings);
+            } else {
+                var d = document;
+                var i = function () {
+                    i.c(arguments);
+                };
+                i.q = [];
+                i.c = function (args) {
+                    i.q.push(args);
+                };
+                w.Intercom = i;
+                var l = function () {
+                    var s = d.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.src = 'https:/widget.intercom.io/widget/bhbpbka7';
+                    var x = d.getElementsByTagName('script')[0];
+                    x.parentNode.insertBefore(s, x);
+                };
+                if (document.readyState === 'complete') {
+                    l();
+                } else if (w.attachEvent) {
+                    w.attachEvent('onload', l);
+                } else {
+                    w.addEventListener('load', l, false);
+                }
+            }
+        })();
+    </script>
+
+    <!-- Sohbet penceresini otomatik aç -->
+    <script>
+        window.addEventListener('load', function () {
+            Intercom('show');
+        });
+    </script>
+
 
     <!-- preloader start -->
 
@@ -46,49 +113,7 @@
 
     <!-- preloader start -->
 
-    <!-- back to top start -->
-    <div class="back-to-top-wrapper">
-        <button id="back_to_top" type="button" class="back-to-top-btn">
-            <svg width="30" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="round" />
-            </svg>
-        </button>
-    </div>
-
-    <!-- CSS -->
-    <style>
-        .back-to-top-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            /* Butonun genişliği */
-            height: 50px;
-            /* Butonun yüksekliği */
-            background-color: #007bff;
-            /* Mavi arka plan */
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .back-to-top-btn svg {
-            display: block;
-            margin: auto;
-        }
-
-        .back-to-top-btn:hover {
-            background-color: #0056b3;
-            /* Daha koyu mavi */
-        }
-    </style>
-
-
-    <!-- back to top end -->
-
-    <!-- search popup start -->
+    <!-- WhatsApp Button -->
 
     <div class="search__popup">
         <div class="container">
@@ -97,8 +122,8 @@
                     <div class="search__wrapper">
                         <div class="search__top d-flex justify-content-between align-items-center">
                             <div class="search__logo">
-                                <a href="index.html">
-                                    <img src="/assets/img/logo/logo-white.png" alt="img">
+                                <a href="/locales/en//locales/en/index.html">
+                                    <img loading="lazy" src="/assets/img/logo/logo-white.png" alt="img">
                                 </a>
                             </div>
                             <div class="search__close">
@@ -136,9 +161,191 @@
         </div>
     </div>
 
-    <!-- search popup end -->
-    <!-- header top area start -->
 
+    <!-- WhatsApp Butonu -->
+    <a href="tel:+905302250325" target="_blank" class="whatsapp-button z-index-2">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+    <!-- WhatsApp Butonu -->
+
+    <!-- CSS -->
+    <style>
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-5px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 40px;
+            left: 50px;
+            background-color: #25D366;
+            color: white;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 1.5s infinite;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1EBE5D;
+            text-decoration: none;
+            animation: shake 0.5s ease-in-out;
+        }
+    </style>
+    <!-- WhatsApp Button -->
+
+
+
+    <!-- back to top start -->
+    <div class="back-to-top-wrapper">
+        <button id="back_to_top" type="button" class="back-to-top-btn">
+            <svg width="30" height="7" viewBox="0 0 12 7" fill="none" xmlns="http:/www.w3.org/2000/svg">
+                <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- CSS -->
+    <style>
+        .back-to-top-btn {
+            position: fixed;
+            left: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            /* Butonun genişliği */
+            height: 50px;
+            /* Butonun yüksekliği */
+            background-color: #007bff;
+            /* Mavi arka plan */
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-to-top-btn svg {
+            display: block;
+            margin: auto;
+        }
+
+        .back-to-top-btn:hover {
+            background-color: #0056b3;
+            /* Daha koyu mavi */
+        }
+    </style>
+
+
+    <!-- back to top end -->
+
+
+    <!-- search popup end -->
+
+    <!-- rr-offcanvus-area-start -->
+
+
+
+    <!-- Offcanvas Bölümü -->
+    <div class="rroffcanvas-area">
+        <div class="rroffcanvas">
+            <div class="rroffcanvas__close-btn">
+                <button class="close-btn"><i class="fal fa-times"></i></button>
+            </div>
+            <div class="rroffcanvas__logo">
+                <a href="/locales/en/index.html">
+                    <img loading="lazy" src="/assets/img/logo/logo.png" alt="img">
+                </a>
+                <!-- Dil seçenekleri -->
+                <div class="lang">
+                    <select style="display: none;">
+                        <option>Türkçe</option>
+                        <option>English</option>
+                        <option>Arabic</option>
+                    </select>
+                    <div class="nice-select" tabindex="0"><span class="current"> Türkçe</span>
+                        <ul class="list z-index-2">
+                            <li data-value="Türkçe" class="option selected focus">Türkçe</li>
+                            <li data-value="English" class="option">English</li>
+                            <li data-value="Arabic" class="option">Arabic</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="rr-main-menu-mobile d-xl-none"></div>
+            <div class="rroffcanvas__contact-info">
+                <div class="rroffcanvas__contact-title">
+                    <h5>Bizimle İletişime Geçin!</h5>
+                </div>
+                <ul>
+                    <li>
+                        <i class="fa-light fa-location-dot"></i>
+                        <a href="htrrs:/www.google.com/maps/@23.8223586,90.3661283,15z" target="_blank">Maltepe Mah.
+                            Eski
+                            Çırpıcı Yolu Sok. No:2/63 Kat:11 E-5 Karayolu Merter Metro İstasyon Yanı Merter İş Merkezi
+                            Zeytinburnu / İstanbul</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:randevu@drmehmetilteberbahadir.net">randevu@drmehmetilteberbahadir.net</a>
+                    </li>
+                    <li>
+                        <i class="fal fa-phone-alt"></i>
+                        <a href="tel:+902126772424">+90 212 677 24 24</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="rroffcanvas__social">
+                <div class="social-icon">
+                    <a href="https:/www.instagram.com/drmehmetilteberbahadir/"><i class="fab fa-instagram"></i></a>
+                    <a href="https:/www.facebook.com/sedefegzamatedavisi"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay Bölümü -->
+    <div class="body-overlay"></div>
+    <!-- rr-offcanvus-area-end -->
+
+    <!-- header top area start -->
     <div class="rr-header-1-top rr-header-1-shap d-none d-xl-block grey-bg p-relative">
         <div class="container custom-container-1 z-index-3">
             <div class="rr-header-1-before">
@@ -147,51 +354,46 @@
                         <div class="rr-header-1-top-info text-end">
                             <ul class="d-flex align-items-center">
                                 <li>
-                                    <a href="mailto:support@gmail.com "><span><i
-                                                class="fa-solid fa-envelope"></i></span>
-                                        info@drmehmetilteberbahadir.net</a>
+                                    <a href="mailto:support@gmail.com"><span><i class="fa-solid fa-envelope"></i></span>
+                                        randevu@drmehmetilteberbahadir.net</a>
                                 </li>
                                 <li class="ml-50">
-                                    <b><span><i class="fa-solid fa-clock"></i></span>Monday - Saturday : 09.00 -
-                                        17.00</b>
+                                    <b><span><i class="fa-solid fa-clock"></i></span>Monday - Saturday: 09:00 -
+                                        17:00</b>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-xxl-3 col-xl-3  col-lg-1 d-none d-xxl-block">
                         <div class="rr-header-1-top-btn-text">
-                            <span>Dr. Mehmet Ilteber Bahadır
-                            </span>
+                            <span>Dr. Mehmet İlteber BAHADIR</span>
                         </div>
                     </div>
                     <div class="col-xxl-4 col-xl-6 col-lg-5">
                         <div class="rr-header-2-top-info d-flex align-items-center justify-content-end text-end">
                             <div class="rr-header-2-lang rr-header-lang-main d-none d-md-block ml-60">
                                 <select style="display: none;">
-                                    <option>Turkish</option>
                                     <option>English</option>
+                                    <option>Türkçe</option>
                                     <option>Arabic</option>
-
                                 </select>
-                                <div class="nice-select" tabindex="0"><span class="current"> English</span>
+                                <div class="nice-select" tabindex="0"><span class="current">English</span>
                                     <ul class="list z-index-2">
-                                        <li data-value="Türkçe" class="option ">Turkish</li>
                                         <li data-value="English" class="option selected focus">English</li>
+                                        <li data-value="Türkçe" class="option">Türkçe</li>
                                         <li data-value="Arabic" class="option">Arabic</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-
     <!-- header top area end -->
-    <!-- header main area start -->
 
+    <!-- header main area start -->
     <section class="rr-header-1-main d-none d-xl-block">
         <div class="container custom-container-1">
             <div class="row align-items-center">
@@ -199,16 +401,18 @@
                     <div class="rr-header-main-social d-flex align-items-center">
                         <h4 class="rr-header-1-title">Social Media</h4>
                         <div class="rr-header-1-social ml-20">
-                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https:/www.facebook.com/sedefegzamatedavisi"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https:/www.instagram.com/drmehmetilteberbahadir/"><i
+                                    class="fa-brands fa-instagram"></i></a>
                             <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-4">
                     <div class="rr-herader-1-logo text-center">
-                        <a href="/index.html"><img src="/assets/img/logo/logo.png" alt="img"></a>
+                        <a href="/locales/en/index.html"><img loading="lazy" src="/assets/img/logo/logo.png"
+                                alt="img"></a>
                     </div>
                 </div>
                 <div class="col-xl-4">
@@ -218,8 +422,8 @@
                         </div>
                         <a href="">
                             <div class="rr-header-1-contat-text ml-20">
-                                <h4>Click to make an appointment!</h4>
-                                <b><a href="tel:+99584554">24/7 – fast and easy</a></b>
+                                <h4>Click to Book an Appointment!</h4>
+                                <b><a href="tel:+902126772424">24/7 – Fast & Easy</a></b>
                             </div>
                         </a>
                     </div>
@@ -227,8 +431,8 @@
             </div>
         </div>
     </section>
-
     <!-- header main area end -->
+
     <header class="rr-header-height z-index-5">
         <!-- header area start -->
         <div id="header-sticky" class="rr-header-area">
@@ -236,89 +440,87 @@
                 <div class="row align-items-center">
                     <div class="col-xl-7 col-lg-7 col-md-6 col-6">
                         <div class="rr-header-1-logo d-xl-none">
-                            <img src="/assets/img/logo/logo-black.png" alt="img">
+                            <img loading="lazy" src="/assets/img/logo/logo-black.png" alt="img">
                         </div>
                         <div class="rr-header-main-menu rr-header-menu ml-30  d-none d-xl-block">
                             <nav class="rr-main-menu-content">
                                 <ul>
                                     <li class="has-dropdown">
-                                        <a href="/index.html">Home</a>
+                                        <a href="/locales/en/index.html">Home</a>
                                         <div class="rr-submenu submenu has-homemenu">
                                             <div class="row gx-6 row-cols-1 row-cols-md-2 row-cols-xl-3">
                                                 <div class="col homemenu">
                                                     <div class="homemenu-thumb mb-15">
-                                                        <img src="/assets/img/menu/home-1.jpg" alt="img">
+                                                        <img loading="lazy" src="/assets/img/menu/home-1.jpg" alt="img">
                                                         <div class="homemenu-btn">
-                                                            <a class="rr-menu-btn" href="index.html">Visit Site</a>
+                                                            <a class="rr-menu-btn" href="locales/en/therapy.html">Go to
+                                                                Site</a>
                                                         </div>
                                                     </div>
-
                                                     <div class="homemenu-content text-center">
                                                         <h4 class="homemenu-title">
-                                                            <a href="/index.html">What is Phytotherapy?</a>
+                                                            <a href="locales/en/therapy.html">What is Phytotherapy?</a>
                                                         </h4>
                                                     </div>
                                                 </div>
-
                                                 <div class="col homemenu">
                                                     <div class="homemenu-thumb mb-15">
-                                                        <img src="/assets/img/menu/home-2.jpg" alt="img">
+                                                        <img loading="lazy" src="/assets/img/menu/home-2.jpg" alt="img">
                                                         <div class="homemenu-btn">
-                                                            <a class="rr-menu-btn" href="/index-2.html">Visit Site</a>
+                                                            <a class="rr-menu-btn" href="locales/en/therapy.html">Go to
+                                                                Site</a>
                                                         </div>
                                                     </div>
                                                     <div class="homemenu-content text-center">
                                                         <h4 class="homemenu-title">
-                                                            <a href="/index-2.html">Ozone Therapy</a>
+                                                            <a href="locales/en/therapy.html">Ozone Therapy</a>
                                                         </h4>
                                                     </div>
                                                 </div>
-
                                                 <div class="col homemenu">
                                                     <div class="homemenu-thumb mb-15">
-                                                        <img src="/assets/img/menu/home-3.jpg" alt="img">
+                                                        <img loading="lazy" src="/assets/img/menu/home-3.jpg" alt="img">
                                                         <div class="homemenu-btn">
-                                                            <a class="rr-menu-btn" href="/index-3.html">Visit Site</a>
+                                                            <a class="rr-menu-btn" href="locales/en/therapy.html">Go to
+                                                                Site</a>
                                                         </div>
                                                     </div>
                                                     <div class="homemenu-content text-center">
                                                         <h4 class="homemenu-title">
-                                                            <a href="/index-3.html">Mesotherapy</a>
+                                                            <a href="locales/en/therapy.html">Mesotherapy</a>
                                                         </h4>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
-                                    <li><a href="/hakkimizda.html">About</a></li>
+                                    <li><a href="/locales/en/about.html">About Me</a></li>
                                     <li class="has-dropdown">
-                                        <a href="/cilt-hastaliklari.html">Diseases</a>
+                                        <a href="/locales/en//locales/en/skin-diseases.html">Diseases</a>
                                         <ul class="submenu rr-submenu">
-                                            <li><a href="/cilt-hastaliklari.html">Skin Diseases</a></li>
-                                            <li><a href="/romatizmal-hastaliklar.html">Rheumatic Diseases</a></li>
-                                            <li><a href="/cilt-hastaliklari.html">Acne</a></li>
+                                            <li><a href="/locales/en//locales/en/skin-diseases.html">Skin Diseases</a>
+                                            </li>
+                                            <li><a href="/locales/en/rheumatic-diseases.html">Rheumatic Diseases</a>
+                                            </li>
+                                            <li><a href="/locales/en/acne.html">Acne</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-dropdown">
                                         <a href="#">Pages</a>
                                         <ul class="submenu rr-submenu">
-                                            <li><a href="/team.html">Team</a></li>
-                                            <li><a href="/team-details.html">Team Details</a></li>
-                                            <li><a href="/pricing.html">Pricing</a></li>
-                                            <li><a href="/project.html">Project</a></li>
-                                            <li><a href="/project-details.html">Project Details</a></li>
-                                            <li><a href="/doctors.html">Doctors</a></li>
-                                            <li><a href="/doctor-details.html">Doctor Details</a></li>
-                                            <li><a href="/404.html">Error</a></li>
+                                            <li><a href="/locales/en/videos.html">Videos</a></li>
+                                            <li><a href="/locales/en/our-team.html">Our Team</a></li>
+                                            <li><a href="/locales/en/our-doctors.html">Our Doctors</a></li>
+                                            <li><a href="/locales/en/faq.html">FAQ</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-dropdown">
-                                        <a href="/blog.html">Blog</a>
+                                        <a href="/locales/en/blog.html">Blog</a>
                                         <ul class="submenu rr-submenu">
-                                            <li><a href="/blog.html">All Articles</a></li>
+                                            <li><a href="/locales/en/blog.html">All Posts</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="/contact.html">Contact</a></li>
+                                    <li><a href="locales/en/contact.html">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -329,7 +531,7 @@
                                 <button class="search-open-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </div>
                             <div class="rr-header-1-contat d-none d-md-block ml-30">
-                                <a class="rr-btn-border" href="/contact.html"><span>Make an Appointment <i
+                                <a class="rr-btn-border" href="locales/en/contact.html"><span>Book Appointment <i
                                             class="fa-sharp fa-solid fa-plus"></i></span></a>
                             </div>
                             <div class="rr-header-bar d-xl-none">
@@ -340,56 +542,52 @@
                 </div>
             </div>
         </div>
-
         <!-- header area end -->
     </header>
-
-
 
     <main>
 
         <!-- slider area start -->
-        <div class="rr-slider-1-area fix p-relative theme-bg-2 pt-90" data-background="/assets/img/slider/bg.jpg">
+
+        <div class="rr-slider-1-area fix p-relative theme-bg-2 pt-90 " data-background="/assets/img/slider/bg.jpg">
             <div class="rr-slider-1-wrapper">
                 <div class="rr-slider-1-wrap p-relative">
                     <div class="rr-slider-1-height">
                         <div class="container">
                             <div class="rr-slider-1-shap-star">
-                                <img src="/assets/img/slider/start-shap.png" alt="img">
+                                <img loading="lazy" src="/assets/img/slider/start-shap.png" alt="img">
                             </div>
                             <div class="rr-slider-1-shap-plus">
-                                <img src="/assets/img/slider/plus-shap.png" alt="img">
+                                <img loading="lazy" src="/assets/img/slider/plus-shap.png" alt="img">
                             </div>
                             <div class="rr-slider-1-shap-plus-2">
-                                <img src="/assets/img/slider/subtitle-shape-3.png" alt="img">
+                                <img loading="lazy" src="/assets/img/slider/subtitle-shape-3.png" alt="img">
                             </div>
                             <div class="row align-items-center">
                                 <div class="col-xl-7 col-lg-7 col-md-6">
                                     <div class="rr-slider-1-content z-index-1">
                                         <div class="rr-slider-1-title-box">
                                             <span class="rr-slider-1-subtitle wow rrfadeUp" data-wow-duration=".9s"
-                                                data-wow-delay=".3s"><img src="/assets/img/testimonial/section-icon.png"
-                                                    alt="img">
-                                                ...</span>
+                                                data-wow-delay=".3s"><img loading="lazy"
+                                                    src="/assets/img/testimonial/section-icon.png" alt="img">
+                                                We Do Not Leave Any Patient Untreated</span>
                                             <h1 class="rr-slider-1-title pb-10 wow rrfadeUp" data-wow-duration=".9s"
-                                                data-wow-delay=".5s">Dr. Mehmet Ilteber Bahadır</h1>
+                                                data-wow-delay=".5s">Dr. Mehmet İlteber BAHADIR</h1>
                                             <p class="pb-30 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
-                                                In our clinic, we provide treatment for Psoriasis, Eczema, Seborrheic
+                                                At our clinic, we treat diseases such as Psoriasis, Eczema, Seborrheic
                                                 Dermatitis,
-                                                Lichen Planus, Ichthyosis, and Rheumatic diseases associated with
-                                                Psoriasis
-                                                (Rheumatoid Arthritis, Ankylosing Spondylitis, Systemic Lupus
-                                                Erythematosus,
-                                                Hashimoto's Thyroiditis).
+                                                Lichen Planus, Ichthyosis, and Rheumatic diseases (Rheumatoid Arthritis,
+                                                Ankylosing
+                                                Spondylitis, Systemic Lupus Erythematosus, Hashimoto's Thyroiditis).
                                             </p>
                                         </div>
                                         <div class="rr-slider-1-button-box d-flex align-items-center">
                                             <a class="rr-btn-1 mr-30 wow rrfadeUp" data-wow-duration=".9s"
-                                                data-wow-delay=".7s" href="contact.html"><span>Contact Us<i
+                                                data-wow-delay=".7s" href="locales/en/contact.html"><span>Contact Us<i
                                                         class="fa-sharp fa-solid fa-plus"></i></span></a>
                                             <a class="rr-btn-black wow rrfadeUp" data-wow-duration=".9s"
-                                                data-wow-delay=".9s" href="cilt-hastaliklari.html"><span> Learn More <i
-                                                        class="fa-sharp fa-solid fa-plus"></i></span></a>
+                                                data-wow-delay=".9s" href="/locales/en/skin-diseases.html"><span>Learn
+                                                    More <i class="fa-sharp fa-solid fa-plus"></i></span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -397,12 +595,11 @@
                                     data-wow-delay=".5s">
                                     <div class="rr-slider-1-img p-relative pt-50">
                                         <div class="rr-slider-1-thumb z-index-2">
-                                            <img src="/assets/img/slider/hoca.png" alt="img">
+                                            <img loading="lazy" src="/assets/img/slider/hoca.png" alt="img">
                                         </div>
                                         <div class="rr-slider-1-shap z-index-1">
-                                            <img src="/assets/img/slider/img-2.png" alt="img">
+                                            <img loading="lazy" src="/assets/img/slider/img-2.png" alt="img">
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -413,9 +610,10 @@
             </div>
         </div>
 
-        <!-- slider area end -->
-        <!-- contact area start -->
 
+        <!-- slider area end -->
+
+        <!-- contact area start -->
         <section class="rr-contact-area fix" data-bg-color="#21313f">
             <div class="container">
                 <div class="row">
@@ -423,105 +621,131 @@
                         data-wow-delay=".3s">
                         <div class="rr-contact-1-form mb-50 mr-30">
                             <div class="rr-contact-1-form-box text-center mt-70">
-                                <form>
+                                <form id="appointment-form">
                                     <div class="row">
-                                        <!-- User Information -->
+                                        <!-- Your Name -->
                                         <div class="col-xl-4 col-md-4 col-12 mb-30">
                                             <div class="rr-form-input-box rr-contact-1-border">
-                                                <input type="text" autocomplete="off" placeholder="Your Name*" required>
+                                                <input type="text" id="name" name="name" autocomplete="off"
+                                                    placeholder="Your Name*" required>
                                             </div>
                                         </div>
+                                        <!-- Your Email -->
                                         <div class="col-xl-4 col-md-4 col-12 mb-30">
                                             <div class="rr-form-input-box rr-contact-1-border">
-                                                <input autocomplete="off" type="email" placeholder="Your Email Address"
-                                                    required>
+                                                <input type="email" id="email" name="email" autocomplete="off"
+                                                    placeholder="Your Email" required>
                                             </div>
                                         </div>
+                                        <!-- Your Phone Number -->
                                         <div class="col-xl-4 col-md-4 col-12 mb-30">
                                             <div class="rr-form-input-box rr-contact-1-border">
-                                                <!-- Date should be formatted -->
-                                                <input type="text" id="date-input" autocomplete="off"
-                                                    placeholder="Date* (DD/MM/YYYY)" required>
+                                                <input type="tel" id="phone" name="phone" autocomplete="off"
+                                                    placeholder="Your Phone Number*" required>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <button class="rr-btn rr-form-theme-bg" type="submit"><span>Create
+                                            Appointment</span></button>
                                 </form>
-                                <button class="rr-btn rr-form-theme-bg" type="submit"><span>Book an
-                                        Appointment!</span></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-12 col-12 wow rrfadeUp" data-wow-duration=".9s"
-                        data-wow-delay=".5s">
-                        <div class="rr-contact-1-wapp">
-                            <div class="rr-contact-1-item d-flex align-items-center">
-                                <div class="rr-contact-1-icon mr-20">
-                                    <span><i class="fa-solid fa-envelope"></i></span>
-                                </div>
-                                <div class="rr-contact-1-info">
-                                    <h4>Contact Us!</h4>
-                                    <span><a
-                                            href="mailto:info@drmehmetilteberbahadir.net">info@drmehmetilteberbahadir.net</a></span>
-                                </div>
-                            </div>
-                            <div class="rr-contact-1-item d-flex align-items-center">
-                                <div class="rr-contact-1-icon mr-20">
-                                    <span><i class="fa-solid fa-location-dot"></i></span>
-                                </div>
-                                <div class="rr-contact-1-info">
-                                    <h4>Our Address</h4>
-                                    <span><a href="https://maps.app.goo.gl/GnDUzdL6u597ZMoS7">
-                                            Maltepe Mah. Eski Çırpıcı Yolu Sok. No:2/63 Floor:11 E-5 Highway Merter
-                                            Metro Station
-                                            Next to Merter Business Center, Zeytinburnu / Istanbul</a></span>
-                                </div>
+                                <div id="response-message" style="margin-top: 15px; font-weight: bold;"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <script>
+                / Allow only letters in the name field
+                document.getElementById("name").addEventListener("input", function (event) {
+                    let value = event.target.value;
+                    / Prevent anything other than letters
+                    value = value.replace(/[^a-zA-ZıİçÇğĞşŞöÖüÜ\s]/g, "");
+                    event.target.value = value;
+                });
+
+                / Format phone number as 3-3-2-2 with spaces
+                document.getElementById("phone").addEventListener("input", function (event) {
+                    let value = event.target.value.replace(/\D/g, ""); / Only digits
+                    let formattedPhone = "";
+
+                    / 3-digit group
+                    if (value.length > 0) {
+                        formattedPhone += value.substring(0, 3);
+                    }
+                    / 3-digit group
+                    if (value.length > 3) {
+                        formattedPhone += " " + value.substring(3, 6);
+                    }
+                    / 2-digit group
+                    if (value.length > 6) {
+                        formattedPhone += " " + value.substring(6, 8);
+                    }
+                    / 2-digit group
+                    if (value.length > 8) {
+                        formattedPhone += " " + value.substring(8, 10);
+                    }
+
+                    event.target.value = formattedPhone;
+                });
+
+                / Form submission validation
+                document.getElementById("appointment-form").addEventListener("submit", function (event) {
+                    event.preventDefault(); / Prevent page reload
+
+                    let phone = document.getElementById("phone").value;
+                    let name = document.getElementById("name").value;
+                    / Check if phone number starts with 0 and is 10 digits long
+                    const phonePattern = /^[1-9][0-9]{9}$/;  / 10 digits, cannot start with 0
+
+                    if (!phonePattern.test(phone.replace(/\s/g, ""))) {
+                        document.getElementById("response-message").innerHTML = "<span style='color:red;'>The phone number is invalid. It must be 10 digits long and not start with 0.</span>";
+                        return;  / If invalid, do not submit form
+                    }
+
+                    / Name field must only contain letters
+                    const namePattern = /^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/;
+                    if (!namePattern.test(name)) {
+                        document.getElementById("response-message").innerHTML = "<span style='color:red;'>The name field should only contain letters.</span>";
+                        return;  / If invalid, do not submit form
+                    }
+
+                    let formData = new FormData(this);
+
+                    fetch("mail.php", {
+                        method: "POST",
+                        body: formData
+                    })
+                        .then(response => response.text())
+                        .then(result => {
+                            let responseMessage = document.getElementById("response-message");
+                            if (result === "success") {
+                                responseMessage.innerHTML = "<span style='color:green;'>Your appointment has been created!</span>";
+                            } else {
+                                responseMessage.innerHTML = "<span style='color:red;'>An error occurred!</span>";
+                            }
+                        })
+                        .catch(error => {
+                            document.getElementById("response-message").innerHTML = "<span style='color:red;'>An error occurred!</span>";
+                        });
+                });
+            </script>
         </section>
-
-
-        <script>
-            document.getElementById("date-input").addEventListener("input", function (event) {
-                let value = event.target.value;
-                value = value.replace(/[^0-9]/g, ''); // Sadece rakamlara izin ver
-
-                if (value.length > 2) {
-                    value = value.substring(0, 2) + '/' + value.substring(2);
-                }
-                if (value.length > 5) {
-                    value = value.substring(0, 5) + '/' + value.substring(5);
-                }
-
-                // Yılın 0 ile başlamasını engelle
-                let parts = value.split('/');
-                if (parts.length === 3 && parts[2].startsWith('0')) {
-                    parts[2] = parts[2].replace(/^0+/, '');
-                    value = parts.join('/');
-                }
-
-                if (value.length > 10) {
-                    value = value.substring(0, 10);
-                }
-
-                event.target.value = value;
-            });
-        </script>
 
 
         <!-- contact area end -->
 
         <!-- features area start -->
+
         <section class="rr-features-area pt-90 pb-70 fix">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                         <div class="rr-features-title-box text-center mb-45">
-                            <span class="rr-section-subtitle p-relative"><img
+                            <span class="rr-section-subtitle p-relative"><img loading="lazy"
                                     src="/assets/img/testimonial/section-icon.png" alt="img"> Our Services <img
-                                    src="/assets/img/testimonial/section-icon.png" alt="img"></span>
+                                    loading="lazy" src="/assets/img/testimonial/section-icon.png" alt="img"></span>
                             <h4 class="rr-section-title">Our Services</h4>
                         </div>
                     </div>
@@ -531,19 +755,19 @@
                         <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s"
                             data-wow-delay=".3s">
                             <div class="rr-features-thumb p-relative">
-                                <img src="/assets/img/feature/bg-black.jpg" alt="img">
+                                <img loading="lazy" src="/assets/img/feature/bg-black.jpg" alt="img">
                                 <span>01</span>
                             </div>
                             <div class="rr-features-icon">
-                                <img src="/assets/img/feature/icon-1.png" alt="img">
+                                <img loading="lazy" src="/assets/img/feature/icon-1.png" alt="img">
                             </div>
                             <div class="rr-features-content text-center">
-                                <h3 class="rr-features-title"><a href="/cilt-hastaliklari.html">Psoriasis</a></h3>
-                                <p>Psoriasis is a skin disease characterized by redness and scaly patches on the skin.
-                                    Approximately 1 million people in Turkey have psoriasis. Although it appears to be
-                                    contagious
-                                    due to its symptoms, it is not a contagious disease.</p>
-                                <a class="rr-features-btn" href="/cilt-hastaliklari.html"><span>Learn More... <i
+                                <h3 class="rr-features-title"><a href="/locales/en/skin-diseases.html">Psoriasis</a>
+                                </h3>
+                                <p>Psoriasis is a disease that causes redness and rash-like symptoms on the skin. It is
+                                    a non-contagious disease, although it is often mistaken as contagious due to its
+                                    visible symptoms. It affects around 1 million people in Turkey.</p>
+                                <a class="rr-features-btn" href="/locales/en/skin-diseases.html"><span>Learn More... <i
                                             class="fa-solid fa-angle-right"></i></span></a>
                             </div>
                         </div>
@@ -552,19 +776,18 @@
                         <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s"
                             data-wow-delay=".5s">
                             <div class="rr-features-thumb p-relative">
-                                <img src="/assets/img/feature/bg-black.jpg" alt="img">
+                                <img loading="lazy" src="/assets/img/feature/bg-black.jpg" alt="img">
                                 <span>02</span>
                             </div>
                             <div class="rr-features-icon">
-                                <img src="/assets/img/feature/icon-2.png" alt="img">
+                                <img loading="lazy" src="/assets/img/feature/icon-2.png" alt="img">
                             </div>
                             <div class="rr-features-content text-center">
-                                <h3 class="rr-features-title"><a href="/cilt-hastaliklari.html">Eczema</a></h3>
-                                <p>Eczema is a type of skin disease. Although it is not dangerous, it is a common
-                                    condition.
-                                    Studies show that 1 in 12 people have experienced eczema at some point in their
-                                    lives.</p>
-                                <a class="rr-features-btn" href="/cilt-hastaliklari.html"><span>Learn More... <i
+                                <h3 class="rr-features-title"><a href="/locales/en/skin-diseases.html">Eczema</a></h3>
+                                <p>Eczema is a skin condition, but it is not a dangerous disease. It is a common
+                                    condition, affecting about 1 in 12 people. It is a widespread disorder without any
+                                    major risk.</p>
+                                <a class="rr-features-btn" href="/locales/en/skin-diseases.html"><span>Learn More... <i
                                             class="fa-solid fa-angle-right"></i></span></a>
                             </div>
                         </div>
@@ -573,20 +796,19 @@
                         <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s"
                             data-wow-delay=".7s">
                             <div class="rr-features-thumb p-relative">
-                                <img src="/assets/img/feature/bg-black.jpg" alt="img">
+                                <img loading="lazy" src="/assets/img/feature/bg-black.jpg" alt="img">
                                 <span>03</span>
                             </div>
                             <div class="rr-features-icon">
-                                <img src="/assets/img/feature/icon-3.png" alt="img">
+                                <img loading="lazy" src="/assets/img/feature/icon-3.png" alt="img">
                             </div>
                             <div class="rr-features-content text-center">
-                                <h3 class="rr-features-title"><a href="/cilt-hastaliklari.html">Lichen Planus</a></h3>
-                                <p>Lichen Planus is a skin disorder that affects different parts of the body.
-                                    It is believed to have a psychological trigger, but no definitive cause has been
-                                    identified.
-                                    It commonly appears on the inner skin, around the genitals in both men and women,
-                                    as well as on the arms and legs.</p>
-                                <a class="rr-features-btn" href="/cilt-hastaliklari.html"><span>Learn More... <i
+                                <h3 class="rr-features-title"><a href="/locales/en/skin-diseases.html">Lichen Planus</a>
+                                </h3>
+                                <p>Lichen Planus is a skin disease. It is believed to have a psychological origin,
+                                    though there is no definite cause. It commonly affects the skin, especially around
+                                    the sexual organs and limbs.</p>
+                                <a class="rr-features-btn" href="/locales/en/skin-diseases.html"><span>Learn More... <i
                                             class="fa-solid fa-angle-right"></i></span></a>
                             </div>
                         </div>
@@ -595,18 +817,18 @@
                         <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s"
                             data-wow-delay=".9s">
                             <div class="rr-features-thumb p-relative">
-                                <img src="/assets/img/feature/bg-black.jpg" alt="img">
+                                <img loading="lazy" src="/assets/img/feature/bg-black.jpg" alt="img">
                                 <span>04</span>
                             </div>
                             <div class="rr-features-icon">
-                                <img src="/assets/img/feature/icon-4.png" alt="img">
+                                <img loading="lazy" src="/assets/img/feature/icon-4.png" alt="img">
                             </div>
                             <div class="rr-features-content text-center">
-                                <h3 class="rr-features-title"><a href="/cilt-hastaliklari.html">Ichthyosis</a> </h3>
-                                <p>Ichthyosis Vulgaris, also known as fish scale disease, is a skin disorder.
-                                    It occurs when dead skin cells build up on the skin, creating a scaly, fish-like
-                                    appearance.</p>
-                                <a class="rr-features-btn" href="/cilt-hastaliklari.html"><span>Learn More... <i
+                                <h3 class="rr-features-title"><a href="/locales/en/skin-diseases.html">Ichthyosis</a>
+                                </h3>
+                                <p>Ichthyosis Vulgaris, commonly known as fish scale disease, is a skin condition where
+                                    dead skin cells accumulate, forming a scaly appearance resembling fish scales.</p>
+                                <a class="rr-features-btn" href="/locales/en/skin-diseases.html"><span>Learn More... <i
                                             class="fa-solid fa-angle-right"></i></span></a>
                             </div>
                         </div>
@@ -615,30 +837,78 @@
             </div>
         </section>
 
+
         <!-- features area end -->
+        <!-- Banner  -->
+
+        <section class="rr-photo-area rr-photo-before pt-50 pb-50 mb-50 fix">
+
+            <a class="rr-btn-1 wow rrfadeUp" href="More" target="_blank"><span> More Photos... <i
+                        class="fa-sharp fa-solid fa-plus"></i> </span></a>
+            <a target="_blank" href="https:/istanbulpsoriasiscenter.pixieset.com/oncesonra/"><img loading="lazy"
+                    class="mb-50 border rounded" src="/assets/img/video/hasta.jpg" alt=""></a>
+
+            <div class="rr-video-shap z-index-1 d-none d-xxl-block">
+                <img loading="lazy" src="/assets/img/video/plus-icon.png" alt="img">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-8 col-md-10 col-12 ">
+                        <div class="rr-video-title-box z-index-2">
+                            <span class="rr-video-subtitle p-relative wow rrfadeUp" data-wow-duration=".9s"
+                                data-wow-delay=".3s"><img loading="lazy" src="/assets/img/testimonial/section-icon.png"
+                                    alt="img">
+                                Our Photos</span>
+                            <h4 class="rr-video-title wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
+                                Photos
+                            </h4>
+                            <p class="wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">We have published
+                                thousands of patient photos, and we never leave any patient without a perfect result.
+                                <br />
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-6  col-lg-4 col-md-2  col-12 p-relative">
+                        <div class="rr-video-area">
+                            <div class="rr-video-play z-index-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner  -->
+
+
         <!-- About area end -->
         <section class="rr-home2-about pb-100">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-6 col-12 mb-20 wow fadeInLeft">
                         <div class="rr-section rr-style-1 text-left mb-40">
-                            <span class="rr-section-subtitle p-relative"><img
+                            <span class="rr-section-subtitle p-relative"><img loading="lazy"
                                     src="/assets/img/testimonial/section-icon.png" alt="img"> About Us <img
-                                    src="/assets/img/testimonial/section-icon.png" alt="img"></span>
-                            <h4 class="rr-section-title pb-5">Who is Dr. MEHMET Ilteber BAHADIR?</h4>
-                            <p class="rr-section-description">Born in 1971 in Antalya, he completed his primary and
-                                secondary
-                                education at Barbaros Primary School (Antalya) and Antalya Anatolian High School.
-                                From 1989 to 1996, he studied at Istanbul University Faculty of Medicine.
-                                He participated in Ministry of Health training programs on Mesotherapy and Ozone
-                                Therapy.
-                                He worked with the Leukemia Children’s Foundation and in 112 emergency services.
-                                Throughout his career, he has worked as a physician in various private hospitals.
-                            </p>
+                                    loading="lazy" src="/assets/img/testimonial/section-icon.png" alt="img"></span>
+                            <h4 class="rr-section-title pb-5">Who is Dr. MEHMET İLTEBER BAHADIR?</h4>
+                            <p class="rr-section-description">He was born in Antalya in 1971. He completed his primary
+                                and
+                                secondary education at Barbaros Primary School (Antalya) and Antalya Anatolian High
+                                School.
+                                He studied at Istanbul University Faculty of Medicine between 1989 and 1996. He
+                                participated
+                                in Health Ministry trainings on Mesotherapy and Ozone Therapy. He worked with the
+                                Leukemia
+                                Children's Foundation and volunteered in 112 Emergency Services. He has worked as a
+                                physician
+                                in many private hospitals.</p>
                         </div>
 
                         <div class="rr-button-block">
-                            <a class="rr-btn-1" href="/hakkimizda.html"><span>Learn More... <i
+                            <a class="rr-btn-1" href="hakkimizda.html"><span>Read More... <i
                                         class="fa-sharp fa-solid fa-plus"></i></span></a>
                         </div>
                     </div>
@@ -648,10 +918,10 @@
                             <div class="rr-about-2-experience wow fadeInRight">
                                 <span>25+ Years of Experience</span>
                             </div>
-                            <img src="/assets/img/about/about3.webp" class="img-fluid rr-image1 wow fadeInRight"
-                                alt="home">
-                            <img src="/assets/img/about/about2.JPG" class="img-fluid rr-image2 wow fadeInRight"
-                                alt="home">
+                            <img loading="lazy" src="/assets/img/about/about3.webp"
+                                class="img-fluid rr-image1 wow fadeInRight" alt="home">
+                            <img loading="lazy" src="/assets/img/about/about2.JPG"
+                                class="img-fluid rr-image2 wow fadeInRight" alt="home">
                         </div>
                     </div>
                 </div>
@@ -666,9 +936,9 @@
                 <div class="row">
                     <div class="col-lg-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                         <div class="rr-choose text-center mb-40">
-                            <span class="rr-section-subtitle p-relative"><img
-                                    src="/assets/img/testimonial/section-icon.png" alt="img"> Why Choose Us? <img
-                                    src="/assets/img/testimonial/section-icon.png" alt="img"></span>
+                            <span class="rr-section-subtitle p-relative"><img loading="lazy"
+                                    src="/assets/img/testimonial/section-icon.png" alt="img"> Why Us? <img
+                                    loading="lazy" src="/assets/img/testimonial/section-icon.png" alt="img"></span>
                         </div>
                     </div>
                 </div>
@@ -680,9 +950,10 @@
                                     <i class="icofont-blood"></i>
                                 </div>
                                 <div class="rr-icon-box-content">
-                                    <h6 class="rr-icon-box-title"><a href="/cilt-hastaliklari.html">Natural and Side
-                                            Effect-Free Treatments</a></h6>
-                                    <p class="rr-icon-box-description">Our treatments have no side effects.</p>
+                                    <h6 class="rr-icon-box-title"><a href="cilt-hastaliklari.html">Natural and
+                                            Side-Effect-Free
+                                            Treatment Methods</a></h6>
+                                    <p class="rr-icon-box-description">Our treatments are side-effect free.</p>
                                 </div>
                             </div>
                         </div>
@@ -692,10 +963,10 @@
                                     <i class="icofont-heart-beat-alt"></i>
                                 </div>
                                 <div class="rr-icon-box-content">
-                                    <h6 class="rr-icon-box-title"><a href="/cilt-hastaliklari.html">Effective Solutions
-                                            for Heart Health</a></h6>
-                                    <p class="rr-icon-box-description">We ensure every patient is fully treated before
-                                        discharge.</p>
+                                    <h6 class="rr-icon-box-title"><a href="cilt-hastaliklari.html">Effective Solutions
+                                            to Protect
+                                            Your Heart</a></h6>
+                                    <p class="rr-icon-box-description">We don’t leave any patient untreated.</p>
                                 </div>
                             </div>
                         </div>
@@ -705,17 +976,20 @@
                                     <i class="icofont-surgeon"></i>
                                 </div>
                                 <div class="rr-icon-box-content">
-                                    <h6 class="rr-icon-box-title"><a href="/cilt-hastaliklari.html">Guaranteed Treatment
-                                            with Expert Supervision</a></h6>
-                                    <p class="rr-icon-box-description">We provide follow-up for lesions for up to 2
-                                        years after treatment.</p>
+                                    <h6 class="rr-icon-box-title"><a href="cilt-hastaliklari.html">Treatment with Expert
+                                            Follow-Up
+                                            for
+                                            Security</a></h6>
+                                    <p class="rr-icon-box-description">We perform 2 years of lesion follow-up after
+                                        treatment.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 p-relative">
                         <div class="tp-choose-oman-img wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                            <img class="border rounded" src="/assets/img/about/about5.JPG" alt="service-img">
+                            <img loading="lazy" class="border rounded" src="/assets/img/about/about5.JPG"
+                                alt="service-img">
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4">
@@ -725,10 +999,10 @@
                                     <i class="icofont-brain"></i>
                                 </div>
                                 <div class="rr-icon-box-content">
-                                    <h6 class="rr-icon-box-title"><a href="/cilt-hastaliklari.html">Gut
-                                            Health-Supporting
-                                            Nutrition</a></h6>
-                                    <p class="rr-icon-box-description">We prioritize probiotics in our diet plans.</p>
+                                    <h6 class="rr-icon-box-title"><a href="cilt-hastaliklari.html">Nutrition to Support
+                                            Gut Health</a>
+                                    </h6>
+                                    <p class="rr-icon-box-description">We emphasize probiotics in our diets.</p>
                                 </div>
                             </div>
                         </div>
@@ -738,8 +1012,9 @@
                                     <i class="icofont-doctor-alt"></i>
                                 </div>
                                 <div class="rr-icon-box-content">
-                                    <h6 class="rr-icon-box-title"><a href="/cilt-hastaliklari.html">Accessible Doctor
-                                            Support</a></h6>
+                                    <h6 class="rr-icon-box-title"><a href="cilt-hastaliklari.html">Doctor Support
+                                            Accessible from
+                                            Anywhere</a></h6>
                                     <p class="rr-icon-box-description">We offer WhatsApp support for patients living far
                                         away.</p>
                                 </div>
@@ -751,10 +1026,11 @@
                                     <i class="icofont-patient-bed"></i>
                                 </div>
                                 <div class="rr-icon-box-content">
-                                    <h6 class="rr-icon-box-title"><a href="/cilt-hastaliklari.html">Cortisone-Free and
-                                            Natural Treatment Options</a></h6>
-                                    <p class="rr-icon-box-description">We provide treatment without the use of
-                                        cortisone.</p>
+                                    <h6 class="rr-icon-box-title"><a href="cilt-hastaliklari.html">Cortisone-Free and
+                                            Natural
+                                            Treatment
+                                            Options</a></h6>
+                                    <p class="rr-icon-box-description">We perform cortisone-free treatments.</p>
                                 </div>
                             </div>
                         </div>
@@ -767,22 +1043,39 @@
         <!-- choose  area mobail end -->
         <!-- video area start -->
 
-        <section class="rr-video-area rr-video-before p-relative pt-115 pb-115 fix">
+        <section class="rr-video-arae rr-video-before p-relative pt-115 pb-115 fix">
             <!-- Video Background -->
             <video autoplay muted loop playsinline class="background-video">
                 <source src="/assets/img/video/hoca.mp4" type="video/mp4">
             </video>
 
             <div class="rr-video-shap z-index-1 d-none d-xxl-block">
-                <img src="/assets/img/video/plus-icon.png" alt="img">
+                <img loading="lazy" src="/assets/img/video/plus-icon.png" alt="img">
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 col-lg-8 col-md-10 col-12">
                         <div class="rr-video-title-box z-index-2">
-                            <p class="wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
-                                Dr. Mehmet Ilteber Bahadır
+                            <span class="rr-video-subtitle p-relative wow rrfadeUp" data-wow-duration=".9s"
+                                data-wow-delay=".3s">
+                                <img loading="lazy" src="/assets/img/testimonial/section-icon.png" alt="img">
+                                Our Videos
+                            </span>
+                            <h4 class="rr-video-title wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
+                                Videos
+                            </h4>
+                            <p class="wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">We have published
+                                thousands of patient
+                                photos, and we don’t leave any patient untreated. <br />
                             </p>
+                            <a class="rr-btn-1 wow rrfadeUp" href="videolar.html"><span> More videos... <i
+                                        class="fa-sharp fa-solid fa-plus"></i> </span></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-4 col-md-2 col-12 p-relative">
+                        <div class="rr-video-area">
+                            <div class="rr-video-play z-index-2">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -814,10 +1107,10 @@
         <section class="rr-counter-area pt-100 pb-100 grey-bg p-relative fix">
             <div class="rr-counter-shap">
                 <div class="rr-counter-shap-img wow slideInLeft">
-                    <img src="/assets/img/counter/shap-icon.png" alt="img">
+                    <img loading="lazy" src="/assets/img/counter/shap-icon.png" alt="img">
                 </div>
                 <div class="rr-counter-man-bg">
-                    <img src="/assets/img/counter/man-img.png" alt="img">
+                    <img loading="lazy" src="/assets/img/counter/man-img.png" alt="img">
                 </div>
             </div>
             <div class="rr-counter-circle-bottom"></div>
@@ -831,10 +1124,10 @@
                                     <div
                                         class="rr-funfact-content rr-funfact-white-bg text-center fix p-relative mb-10">
                                         <div class="rr-funfact_shap">
-                                            <img src="/assets/img/footer/footer-shap.png" alt="img">
+                                            <img loading="lazy" src="/assets/img/footer/footer-shap.png" alt="img">
                                         </div>
                                         <div class="rr-funfact-icon">
-                                            <img src="/assets/img/counter/icon1.png" alt="img">
+                                            <img loading="lazy" src="/assets/img/counter/icon1.png" alt="img">
                                         </div>
                                         <div class="rr-funfact-number d-flex align-items-center justify-content-center">
                                             <h5 class="rr-funfact-number purecounter" data-purecounter-duration="1"
@@ -850,10 +1143,10 @@
                                     <div
                                         class="rr-funfact-content text-center rr-funfact-white-bg fix p-relative rr-funfact-content-2 mb-10">
                                         <div class="rr-funfact_shap">
-                                            <img src="/assets/img/footer/footer-shap.png" alt="img">
+                                            <img loading="lazy" src="/assets/img/footer/footer-shap.png" alt="img">
                                         </div>
                                         <div class="rr-funfact-icon">
-                                            <img src="/assets/img/counter/icon2.png" alt="img">
+                                            <img loading="lazy" src="/assets/img/counter/icon2.png" alt="img">
                                         </div>
                                         <div class="rr-funfact-number d-flex align-items-center justify-content-center">
                                             <h5 class="rr-funfact-number purecounter" data-purecounter-duration="1"
@@ -869,10 +1162,10 @@
                                     <div
                                         class="rr-funfact-content text-center rr-funfact-white-bg fix p-relative rr-funfact-content-2">
                                         <div class="rr-funfact_shap">
-                                            <img src="/assets/img/footer/footer-shap.png" alt="img">
+                                            <img loading="lazy" src="/assets/img/footer/footer-shap.png" alt="img">
                                         </div>
                                         <div class="rr-funfact-icon">
-                                            <img src="/assets/img/counter/icon4.png" alt="img">
+                                            <img loading="lazy" src="/assets/img/counter/icon4.png" alt="img">
                                         </div>
                                         <div class="rr-funfact-number d-flex align-items-center justify-content-center">
                                             <h5 class="rr-funfact-number purecounter" data-purecounter-duration="1"
@@ -884,7 +1177,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -892,19 +1184,17 @@
                         <div class="rr-counter-info z-index-2">
                             <div class="rr-counter-title-box mb-30">
                                 <span class="rr-section-subtitle p-relative">
-                                    <img src="/assets/img/testimonial/section-icon.png" alt="img"> What is Our Goal?
+                                    <img loading="lazy" src="/assets/img/testimonial/section-icon.png" alt="img"> What
+                                    are we aiming for?
                                 </span>
-
-                                <p>We aim to provide our patients with the most comfortable, shortest, and permanent
-                                    treatment process
-                                    without recurrence.</p>
-
-                                <p>We strive to make our services as effective and accessible as possible for all
+                                <p>We aim to provide our patients with the most comfortable, shortest, and most
+                                    permanent treatment process without recurrence.</p>
+                                <p>Our goal is to deliver our services in the most efficient and accessible way to all
                                     patients in need.</p>
                             </div>
 
                             <div class="rr-counter-img">
-                                <img src="/assets/img/about/about6.webp" alt="img">
+                                <img loading="lazy" src="/assets/img/about/about6.webp" alt="img">
                             </div>
                             <div class="rr-counter-box p-relative">
                                 <div
@@ -914,18 +1204,15 @@
                                     </div>
                                     <div class="rr-health-improve">
                                         <h3>Protect and Improve Your Health</h3>
-                                        <p>We offer a comprehensive evaluation to elevate your health to the highest
-                                            level and
-                                            support your treatment process with scientific and innovative methods. <br>
-                                            <br>
-                                            With our personalized solutions, we help you live a healthier and more
-                                            balanced life.
-                                        </p>
+                                        <p>We offer a comprehensive assessment to elevate your health to the highest
+                                            level, supporting your treatment process with scientific and innovative
+                                            methods. <br> <br> With our personalized solutions, we help you lead a
+                                            healthier and more balanced life.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="rr-counter-btn">
-                                <a class="rr-btn-black" href="/cilt-hastaliklari.html"><span>Learn More... <i
+                                <a class="rr-btn-black" href="cilt-hastaliklari.html"><span>Learn More... <i
                                             class="fa-sharp fa-solid fa-plus"></i></span></a>
                             </div>
                         </div>
@@ -938,148 +1225,112 @@
 
 
         <!-- blog area start -->
-        <div class="rr-blog-area pt-90 pb-90 fix">
+        <div class="rr-blog-area pt-90 pb-60 fix">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                         <div class="rr-blog-title-box text-center mb-45">
-                            <span class="rr-section-subtitle p-relative"><img
-                                    src="/assets/img/testimonial/section-icon.png" alt="img"> Blog <img
-                                    src="/assets/img/testimonial/section-icon.png" alt="img"></span>
-                            <h4 class="rr-section-title">Latest Blog Posts</h4>
+                            <span class="rr-section-subtitle p-relative"><img loading="lazy"
+                                    src="/assets/img/testimonial/section-icon.png" alt="img"> All Posts <img
+                                    loading="lazy" src="/assets/img/testimonial/section-icon.png" alt="img"></span>
+                            <h4 class="rr-section-title">Latest Posts</h4>
                         </div>
                     </div>
+
                     <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s"
                         data-wow-delay=".3s">
                         <div class="rr-blog-item">
                             <div class="rr-blog-thumb-main p-relative">
-                                <a href="/blog-details.html">
+                                <a href="/blog/deneme.html">
                                     <div class="rr-blog-thumb">
-                                        <img src="/assets/img/blog/blog04.jpg" alt="img">
-                                        <span>Employment</span>
+                                        <img loading="lazy" src="/assets/img/blog/1.jpg" alt="img">
+                                        <span>Blog</span>
                                     </div>
                                 </a>
                             </div>
                             <div class="rr-blog-content rr-blog-content-opcity p-relative">
                                 <div class="rr-blog-content-info d-flex mb-15">
-                                    <span><a href="/blog-details.html"><i class="fa-sharp fa-solid fa-comments"></i> 02
-                                            Comments</a></span>
-                                    <span class="ml-30"><i class="fa-regular fa-calendar-days"></i> Apr - 32 -
-                                        2024</span>
+                                    <span><a href="/bloglar/egzama-ve-beslenme-iliskileri.html"><i
+                                                class="fa-sharp fa-solid fa-comments"></i> 0 Comments</a></span>
+                                    <span class="ml-30"><i class="fa-regular fa-calendar-days"></i> February 12,
+                                        2025</span>
                                 </div>
                                 <div class="rr-blog-text">
-                                    <h4 class="rr-blog-title mb-0 pb-10"><a href="/blog-details.html">Improve Assistant
-                                            Health Medical This Blog</a></h4>
-                                    <p>We will give you a complete account of the teachings of the great.</p>
+                                    <h4 class="rr-blog-title mb-0 pb-10"><a
+                                            href="/bloglar/egzama-ve-beslenme-iliskileri.html">Psoriasis and Seasonal
+                                            Changes: How to Protect Your Skin Health in Winter and Summer</a></h4>
+                                    <p>Psoriasis is a chronic condition that causes skin to peel, redden, and itch...
+                                    </p>
                                 </div>
                                 <div class="rr-blog-wrap d-flex align-items-center justify-content-between">
                                     <div class="rr-blog-item-user d-flex align-items-center">
                                         <div class="rr-blog-item-user-thumb">
-                                            <img src="/assets/img/blog/avada.png" alt="img">
+                                            <img loading="lazy" src="/assets/img/blog/avada.png" alt="img">
                                         </div>
                                         <div class="rr-blog-item-user-content">
-                                            <span class="rr-blog-item-user-title"><a href="/blog-details.html">Dr: Meran
-                                                    Bara</a></span>
+                                            <span class="rr-blog-item-user-title"><a
+                                                    href="/bloglar/egzama-ve-beslenme-iliskileri.html">Dr. M. İlteber
+                                                    Bahadır</a></span>
                                         </div>
                                     </div>
                                     <div class="rr-blog-link">
-                                        <a href="/blog-details.html">Read More...<i
+                                        <a href="/bloglar/egzama-ve-beslenme-iliskileri.html">Read More... <i
                                                 class="fa-light fa-angle-right"></i></a>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Blog item -->
+
                     <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s"
-                        data-wow-delay=".5s">
+                        data-wow-delay=".3s">
                         <div class="rr-blog-item">
                             <div class="rr-blog-thumb-main p-relative">
-                                <a href="/blog-details.html">
+                                <a href="blog/deneme.html">
                                     <div class="rr-blog-thumb">
-                                        <img src="/assets/img/blog/blog05.jpg" alt="img">
-                                        <span>Employment</span>
+                                        <img loading="lazy" src="/assets/img/blog/2.jpg" alt="img">
+                                        <span>Blog</span>
                                     </div>
                                 </a>
                             </div>
                             <div class="rr-blog-content rr-blog-content-opcity p-relative">
                                 <div class="rr-blog-content-info d-flex mb-15">
-                                    <span><a href="/blog-details.html"><i class="fa-sharp fa-solid fa-comments"></i> 02
-                                            Comments</a></span>
-                                    <span class="ml-30"><i class="fa-regular fa-calendar-days"></i> Apr - 32 -
-                                        2024</span>
+                                    <span><a href="/bloglar/egzama-ve-beslenme-iliskileri.html"><i
+                                                class="fa-sharp fa-solid fa-comments"></i> 0 Comments</a></span>
+                                    <span class="ml-30"><i class="fa-regular fa-calendar-days"></i> February 12,
+                                        2025</span>
                                 </div>
                                 <div class="rr-blog-text">
-                                    <h4 class="rr-blog-title mb-0 pb-10"><a href="/blog-details.html">How We Can Fix
-                                            Problems in the Tailbone</a></h4>
-                                    <p>We will give you a complete account of the teachings of the great.</p>
+                                    <h4 class="rr-blog-title mb-0 pb-10"><a
+                                            href="/bloglar/egzama-ve-beslenme-iliskileri.html">Eczema and the
+                                            Relationship Between Diet</a></h4>
+                                    <p>Eczema is a chronic skin condition that causes itching, redness, and irritation.
+                                        The treatment of this condition...</p>
                                 </div>
                                 <div class="rr-blog-wrap d-flex align-items-center justify-content-between">
                                     <div class="rr-blog-item-user d-flex align-items-center">
                                         <div class="rr-blog-item-user-thumb">
-                                            <img src="/assets/img/blog/avada.png" alt="img">
+                                            <img loading="lazy" src="/assets/img/blog/avada.png" alt="img">
                                         </div>
                                         <div class="rr-blog-item-user-content">
-                                            <span class="rr-blog-item-user-title"><a href="/blog-details.html">Dr: Meran
-                                                    Bara</a></span>
+                                            <span class="rr-blog-item-user-title"><a
+                                                    href="/bloglar/egzama-ve-beslenme-iliskileri.html">Dr. M. İlteber
+                                                    Bahadır</a></span>
                                         </div>
                                     </div>
                                     <div class="rr-blog-link">
-                                        <a href="/blog-details.html">Read More...<i
+                                        <a href="/bloglar/egzama-ve-beslenme-iliskileri.html">Read More... <i
                                                 class="fa-light fa-angle-right"></i></a>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s"
-                        data-wow-delay=".7s">
-                        <div class="rr-blog-item">
-                            <div class="rr-blog-thumb-main p-relative">
-                                <a href="/blog-details.html">
-                                    <div class="rr-blog-thumb">
-                                        <img src="/assets/img/blog/blog06.jpg" alt="img">
-                                        <span>Employment</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="rr-blog-content rr-blog-content-opcity p-relative">
-                                <div class="rr-blog-content-info d-flex mb-15">
-                                    <span><a href="/blog-details.html"><i class="fa-sharp fa-solid fa-comments"></i> 02
-                                            Comments</a></span>
-                                    <span class="ml-30"><i class="fa-regular fa-calendar-days"></i> Apr - 32 -
-                                        2024</span>
-                                </div>
-                                <div class="rr-blog-text">
-                                    <h4 class="rr-blog-title mb-0 pb-10"><a href="/blog-details.html">Medical Solutions
-                                            That Help</a></h4>
-                                    <p>We will give you a complete account of the teachings of the great.</p>
-                                </div>
-                                <div class="rr-blog-wrap d-flex align-items-center justify-content-between">
-                                    <div class="rr-blog-item-user d-flex align-items-center">
-                                        <div class="rr-blog-item-user-thumb">
-                                            <img src="/assets/img/blog/avada.png" alt="img">
-                                        </div>
-                                        <div class="rr-blog-item-user-content">
-                                            <span class="rr-blog-item-user-title"><a href="/blog-details.html">Dr: Meran
-                                                    Bara</a></span>
-                                        </div>
-                                    </div>
-                                    <div class="rr-blog-link">
-                                        <a href="/blog-details.html">Read More...<i
-                                                class="fa-light fa-angle-right"></i></a>
-                                    </div>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-btn text-center wow rrfadeUp pt-20" data-wow-duration=".9s" data-wow-delay=".9s"
-                        style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.9s; animation-name: rrfadeUp;">
-                        <a class="rr-btn-black" href="/blog.html"><span>View All Blogs <i
-                                    class="fa-sharp fa-solid fa-plus"></i></span></a>
-                    </div>
+                    <!-- Blog item -->
+
                 </div>
             </div>
         </div>
@@ -1094,129 +1345,111 @@
         <div class="rr-footer-main p-relative fix" data-background="/assets/img/footer/footer-bg.jpg">
 
             <!-- footer area start -->
-            <div class="rr-footer-area pt-125 p-relative fix">
-                <div class="rr-footer-right-shap d-none d-xl-block">
-                    <img src="/assets/img/footer/footer-shap.png" alt="img">
-                </div>
-                <div class="container">
-                    <div class="rr-footer-border">
-                        <div class="row">
-                            <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp" data-wow-duration=".9s"
-                                data-wow-delay=".3s">
-                                <div class="rr-footer-widget footer-cols-1">
-                                    <div class="rr-footer-logo pb-35">
-                                        <a href="/index.html"><img src="/assets/img/logo/logo.png" alt="img"></a>
-                                    </div>
-                                    <div class="rr-footer-widget-content-list mb-25">
-                                        <div class="rr-footer-widget-content-list-item">
-                                            <i class="fa-sharp fa-solid fa-clock"></i> <a href="#">Working Hours:<br />
-                                                Mon - Sat : 9.00 AM - 5.00 PM</a>
+            <footer>
+                <div class="rr-footer-main p-relative fix" data-background="/assets/img/footer/footer-bg.jpg">
+                    <!-- footer area start -->
+                    <div class="rr-footer-area pt-125 p-relative fix">
+                        <div class="rr-footer-right-shap d-none d-xl-block">
+                            <img loading="lazy" src="/assets/img/footer/footer-shap.png" alt="img">
+                        </div>
+                        <div class="container">
+                            <div class="rr-footer-border">
+                                <div class="row">
+                                    <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp"
+                                        data-wow-duration=".9s" data-wow-delay=".3s">
+                                        <div class="rr-footer-widget footer-cols-1">
+                                            <div class="rr-footer-logo pb-35">
+                                                <a href="/locales/en/index.html"><img loading="lazy"
+                                                        src="/assets/img/logo/logo.png" alt="img"></a>
+                                            </div>
+                                            <div class="rr-footer-widget-content-list mb-25">
+                                                <div class="rr-footer-widget-content-list-item">
+                                                    <i class="fa-sharp fa-solid fa-clock"></i> <a href="#">Working
+                                                        Hours:<br />
+                                                        Mon - Sat: 09:00 - 17:00</a>
+                                                </div>
+                                                <div class="rr-footer-widget-content-list-item">
+                                                    <i class="fa-solid fa-location-dot"></i> <a href="#"> Merter
+                                                        Business Center
+                                                        - Floor 11/63</a>
+                                                </div>
+                                                <div class="rr-footer-widget-content-list-item">
+                                                    <i class="fa-sharp fa-solid fa-phone"></i><a
+                                                        href="tel:+902126772424">+90
+                                                        (212) 677 24 24</a>
+                                                </div>
+                                            </div>
+                                            <div class="rr-footer-social">
+                                                <a href="https:/www.facebook.com/sedefegzamatedavisi"><i
+                                                        class="fa-brands fa-facebook-f"></i></a>
+                                                <a href="https:/www.instagram.com/drmehmetilteberbahadir/"><i
+                                                        class="fa-brands fa-instagram"></i></a>
+                                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                            </div>
                                         </div>
-                                        <div class="rr-footer-widget-content-list-item">
-                                            <i class="fa-solid fa-location-dot"></i> <a href="#"> Merter Business Center
-                                                -
-                                                Floor 11/63</a>
+                                    </div>
+                                    <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp"
+                                        data-wow-duration=".9s" data-wow-delay=".5s"></div>
+                                    <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp"
+                                        data-wow-duration=".9s" data-wow-delay=".7s">
+                                        <div class="rr-footer-widget footer-cols-3">
+                                            <h4 class="rr-footer-title">Quick Links</h4>
+                                            <div class="rr-footer-list">
+                                                <ul>
+                                                    <li><a href="/locales/en/index.html">Home</a></li>
+                                                    <li><a href="about.html">About Me</a></li>
+                                                    <li><a href="/locales/en/skin-diseases.html">Diseases</a></li>
+                                                    <li><a href="blog.html">Blog</a></li>
+                                                    <li><a href="locales/en/contact.html">Contact</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="rr-footer-widget-content-list-item">
-                                            <i class="fa-sharp fa-solid fa-phone"></i><a href="tel:+902126772424">+90
-                                                212 677 24 24</a>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp"
+                                        data-wow-duration=".9s" data-wow-delay=".9s">
+                                        <div class="rr-footer-widget footer-cols-4">
+                                            <h4 class="rr-footer-title">Our Working Hours</h4>
+                                            <div class="rr-footer-contact">
+                                                <ul>
+                                                    <li><span>Monday - 09:00 - 17:00</span></li>
+                                                    <li><span>Tuesday - 09:00 - 17:00</span></li>
+                                                    <li><span>Wednesday - 09:00 - 17:00</span></li>
+                                                    <li><span>Thursday - 09:00 - 17:00</span></li>
+                                                    <li><span>Friday - 09:00 - 17:00</span></li>
+                                                    <li><span>Saturday - 09:00 - 17:00</span></li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="rr-footer-social">
-                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp" data-wow-duration=".9s"
-                                data-wow-delay=".5s">
-                            </div>
-                            <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp" data-wow-duration=".9s"
-                                data-wow-delay=".7s">
-                                <div class="rr-footer-widget footer-cols-3">
-                                    <h4 class="rr-footer-title">Quick Links</h4>
-                                    <div class="rr-footer-list">
-                                        <ul>
-                                            <li><a href="#">Home</a></li>
-                                            <li><a href="/hakkimizda.html">About</a></li>
-                                            <li><a href="/cilt-hastaliklari.html">Diseases</a></li>
-                                            <li><a href="/blog.html">Blog</a></li>
-                                            <li><a href="/iletisim.html">Contact</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp" data-wow-duration=".9s"
-                                data-wow-delay=".9s">
-                                <div class="rr-footer-widget footer-cols-4">
-                                    <h4 class="rr-footer-title">Our Working Hours</h4>
-                                    <div class="rr-footer-contact">
-                                        <ul>
-                                            <li><span>Monday ---------- 09.00 - 17.00</span></li>
-                                            <li><span>Tuesday ---------- 09.00 - 17.00</span></li>
-                                            <li><span>Wednesday ---------- 09.00 - 17.00</span></li>
-                                            <li><span>Thursday ------- 09.00 - 17.00</span></li>
-                                            <li><span>Friday ---------- 09.00 - 17.00</span></li>
-                                            <li><span>Saturday ---------- 09.00 - 17.00</span></li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- footer area end -->
+
+                    <!-- copy-right area start -->
+                    <div class="rr-copyright-area p-relative">
+                        <div class="container rr-copyright-broder rr-copyright-space">
+                            <div class="row align-items-center">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-12 wow rrfadeUp" data-wow-duration=".9s"
+                                    data-wow-delay=".3s">
+                                    <div class="rr-copyright-left text-center text-md-start">
+                                        <p>© 2024 <a href="#"> Dr. Mehmet İlteber BAHADIR, </a> All Rights Reserved.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- copy-right area end -->
                 </div>
-            </div>
+            </footer>
             <!-- footer area end -->
-
-            <!-- copy-right area start -->
-            <div class="rr-copyright-area p-relative">
-                <div class="container rr-copyright-broder rr-copyright-space">
-                    <div class="row align-items-center">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-12 wow rrfadeUp" data-wow-duration=".9s"
-                            data-wow-delay=".3s">
-                            <div class="rr-copyright-left text-center text-md-start">
-                                <p>© 2024 <a href="#"> Dr. Mehmet Ilteber Bahadır, </a> All Rights Reserved.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!-- copy-right area end -->
         </div>
     </footer>
 
 
-    <!-- WhatsApp Butonu -->
-    <a href="tel:+902126772424" target="_blank" class="whatsapp-button z-index-2">
-        <i class="bi bi-whatsapp"></i>
-    </a>
-
-    <!-- CSS -->
-    <style>
-        .whatsapp-button {
-            position: fixed;
-            bottom: 40px;
-            right: 100px;
-            background-color: #25D366;
-            color: white;
-            font-size: 24px;
-            padding: 15px;
-            border-radius: 50%;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
-        }
-
-        .whatsapp-button:hover {
-            background-color: #1EBE5D;
-            text-decoration: none;
-        }
-    </style>
-
     <!-- Bootstrap Icons CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https:/cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
 
 

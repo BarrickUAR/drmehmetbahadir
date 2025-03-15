@@ -3119,7 +3119,7 @@ div.demo img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 90%;
   content: "";
   background-image: url(/assets/img/breadcurmb/bg.jpg);
   background-repeat: no-repeat;
@@ -6017,7 +6017,7 @@ a.ui-button:active {
   list-style: none;
 }
 .rr-header-1-top-info ul li b {
-  font-size: 14px;
+  font-size: 13px;
   color: #636363;
   font-weight: 400;
   font-family: var(--rr-ff-p);
@@ -6032,10 +6032,12 @@ a.ui-button:active {
   font-family: var(--rr-ff-p);
   font-weight: 400;
 }
+
 .rr-header-1-top-info ul li a i {
   color: var(--rr-theme-1);
   margin-right: 6px;
 }
+
 .rr-header-1-top-info ul li a:hover {
   color: var(--rr-theme-1);
 }
@@ -13905,7 +13907,8 @@ a.ui-button:active {
 
 .rr-contact-box-item {
   background: #f2f4f9;
-  padding: 50px;
+  padding: 10px;
+  border-radius: 14px;
   transition: all 0.3s ease-out 0s;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {

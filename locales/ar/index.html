@@ -472,7 +472,8 @@
 
 
 
-        <!-- slider area end -->
+        <!-- slider area end -->,
+
         <!-- contact area start -->
 
         <section class="rr-contact-area fix" data-bg-color="#21313f">
@@ -497,7 +498,7 @@
                                         <div class="col-xl-4 col-md-4 col-12 mb-30">
                                             <div class="rr-form-input-box rr-contact-1-border">
                                                 <input type="email" id="email" name="email" autocomplete="off"
-                                                    placeholder="بريدك الإلكتروني" required>
+                                                    placeholder="بريدك الإلكتروني*" required>
                                                 <small id="email-error" style="color: red; display: none;">الرجاء إدخال
                                                     بريد إلكتروني صالح.</small>
                                             </div>
@@ -506,16 +507,24 @@
                                         <div class="col-xl-4 col-md-4 col-12 mb-30">
                                             <div class="rr-form-input-box rr-contact-1-border">
                                                 <input type="tel" id="phone" name="phone" autocomplete="off"
-                                                    placeholder="رقم الهاتف*" required oninput="checkPhoneLength(this)"
-                                                    onkeypress="return isNumberKey(event)">
+                                                    placeholder="رقم الهاتف*" required maxlength="10"
+                                                    oninput="checkPhoneLength(this)"
+                                                    onkeypress="return isNumberKey(event)" onkeydown="blockZero(event)">
                                                 <small id="phone-error" style="color: red; display: none;">رقم الهاتف
-                                                    غير صالح.</small>
+                                                    غير صالح. 10 haneli ve 0 ile başlamamalıdır.</small>
                                             </div>
                                         </div>
                                     </div>
-                                    <button class="rr-btn rr-form-theme-bg" type="submit"
-                                        onclick="sendMail(event)"><span>احجز
-                                            موعدًا!</span></button>
+
+                                    <!-- reCAPTCHA -->
+                                    <div class="col-xl-12 col-md-12 mb-30">
+                                        <div class="g-recaptcha"
+                                            data-sitekey="6LfiLPUqAAAAAOepUPcU3iMU8WU-JQa-9bsLqEVo"></div>
+                                    </div>
+
+                                    <button class="rr-btn rr-form-theme-bg" type="submit" onclick="sendMail(event)">
+                                        <span>احجز موعدًا!</span>
+                                    </button>
                                 </form>
                                 <div id="response-message" style="margin-top: 15px; font-weight: bold;"></div>
                             </div>
@@ -523,33 +532,54 @@
                     </div>
                 </div>
             </div>
-
-
         </section>
 
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
         <script>
-            // Telefon numarasının uzunluğunu kontrol etme (sınır kaldırıldı)
+            (function () {
+                emailjs.init('AfjNJbvpclsfFJDiK');
+            })();
+
+            // التحقق من طول رقم الهاتف
             function checkPhoneLength(input) {
-                // Artık uzunluk sınırlaması yok, sadece rakamları kabul et
-                var value = input.value.replace(/\D/g, ""); // Sadece rakamları al
-                input.value = value;
+                var value = input.value;
+                if (value.length > 10) {
+                    input.value = value.slice(0, 10); // تأكد من أنه يتكون من 10 أرقام
+                }
             }
 
-            // Sadece rakam girişine izin verme
+            // السماح بإدخال الأرقام فقط
             function isNumberKey(event) {
                 var charCode = (event.which) ? event.which : event.keyCode;
-                return !(charCode < 48 || charCode > 57); // Sadece rakamlara izin ver
+                return !(charCode < 48 || charCode > 57); // السماح بالأرقام فقط
             }
 
-            // Formu gönderme ve doğrulama
-            document.getElementById("appointment-form").addEventListener("submit", function (event) {
-                event.preventDefault(); // Sayfanın yeniden yüklenmesini engelle
+            // منع إدخال الرقم 0 في بداية الرقم
+            function blockZero(event) {
+                if (event.key === "0" && event.target.selectionStart === 0) {
+                    event.preventDefault(); // منع إدخال 0 في البداية
+                }
+            }
 
+            // إرسال النموذج والتحقق من البيانات
+            function sendMail(event) {
+                event.preventDefault();
+
+                // التحقق من reCAPTCHA
+                var recaptchaResponse = grecaptcha.getResponse();
+                if (recaptchaResponse.length === 0) {
+                    document.getElementById("response-message").innerHTML = "<span style='color:red;'>يرجى التحقق من reCAPTCHA.</span>";
+                    return;
+                }
+
+                // الحصول على قيم المدخلات
                 var name = document.getElementById("name").value.trim();
                 var email = document.getElementById("email").value.trim();
                 var phone = document.getElementById("phone").value.trim();
 
-                // Hata mesajlarını sıfırlama
+                // إعادة تعيين رسائل الأخطاء
                 document.getElementById("name-error").style.display = "none";
                 document.getElementById("email-error").style.display = "none";
                 document.getElementById("phone-error").style.display = "none";
@@ -557,61 +587,56 @@
 
                 var isValid = true;
 
-                // Ad kontrolü (Sadece harf ve boşluk)
+                // التحقق من الاسم (حروف فقط وفواصل)
                 if (!/^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/.test(name)) {
                     document.getElementById("name-error").style.display = "block";
                     isValid = false;
                 }
 
-                // E-posta kontrolü
+                // التحقق من البريد الإلكتروني
                 if (!/\S+@\S+\.\S+/.test(email)) {
                     document.getElementById("email-error").style.display = "block";
                     isValid = false;
                 }
 
-                // Telefon numarası kontrolü (sadece rakamlar)
-                if (!/^\d+$/.test(phone)) {
+                // التحقق من رقم الهاتف (10 أرقام، لا يبدأ بالصفر)
+                if (!/^[1-9][0-9]{9}$/.test(phone)) {
                     document.getElementById("phone-error").style.display = "block";
                     isValid = false;
                 }
 
                 if (!isValid) return;
 
-                // Başarılı mesaj gösterimi
+                // عرض رسالة "جاري إنشاء موعدك..." فوراً
                 document.getElementById("response-message").innerHTML = "<span style='color:orange;'>جاري إنشاء موعدك...</span>";
 
                 var params = {
                     name: name,
                     email: email,
                     phone: phone,
+                    recaptchaResponse: recaptchaResponse
                 };
 
-                const serviceID = "service_b123ul8"; // EmailJS Servis ID
-                const templateID = "template_feyueab"; // EmailJS Şablon ID
+                const serviceID = "service_b123ul8"; // خدمة EmailJS ID
+                const templateID = "template_feyueab"; // قالب EmailJS ID
 
                 emailjs.send(serviceID, templateID, params)
                     .then(res => {
-                        // Başarı mesajı
-                        document.getElementById("response-message").innerHTML = "<span style='color:green;'>تم حجز موعدك بنجاح!</span>";
-                        // Formu sıfırlama
+                        // رسالة النجاح
+                        document.getElementById("response-message").innerHTML = "<span style='color:green;'>تم إنشاء موعدك بنجاح!</span>";
+                        // إعادة تعيين النموذج
                         document.getElementById("appointment-form").reset();
                     })
                     .catch(err => {
-                        // Hata mesajı
-                        document.getElementById("response-message").innerHTML = "<span style='color:red;'>حدث خطأ! حاول مرة أخرى.</span>";
+                        // رسالة الخطأ
+                        document.getElementById("response-message").innerHTML = "<span style='color:red;'>حدث خطأ، يرجى المحاولة مرة أخرى.</span>";
                         console.log(err);
                     });
-            });
+            }
         </script>
 
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-
-
-
         <!-- contact area end -->
+
 
         <!-- features area start -->
         <section class="rr-features-area pt-90 pb-70 fix">

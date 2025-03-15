@@ -415,7 +415,7 @@
 
         <section class="rr-contact-area p-relative black-bg fix">
             <div class="rr-contact-shap">
-                <img loading="lazy" src="/assets/img/contact/shap01.png" alt="img">
+                <img loading="lazy" src="assets/img/contact/shap01.png" alt="img">
             </div>
 
             <div class="rr-contact-img">
@@ -431,18 +431,24 @@
                     <div class="col-xl-6 col-lg-3 col-md-1"></div>
                     <div class="col-xl-4 col-lg-9 col-md-10">
                         <div class="rr-form-box text-center">
-                            <h4 class="rr-section-title pb-60">حجز موعد</h4>
+                            <h4 class="rr-section-title pb-60">إنشاء موعد</h4>
                             <form id="appointment-form">
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
                                         <div class="rr-form-input-box rr-form-input-main">
                                             <input type="text" name="name" id="name" placeholder="الاسم" required>
+                                            <small id="name-error" style="color: red; display: none;">يرجى استخدام
+                                                الحروف
+                                                فقط.</small>
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
                                         <div class="rr-form-input-box rr-form-input-main">
                                             <input type="email" name="email" id="email" placeholder="البريد الإلكتروني"
                                                 required>
+                                            <small id="email-error" style="color: red; display: none;">يرجى إدخال بريد
+                                                إلكتروني
+                                                صالح.</small>
                                         </div>
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 mb-20">
@@ -457,6 +463,15 @@
                                                 required></textarea>
                                         </div>
                                     </div>
+
+                                    <!-- reCAPTCHA -->
+                                    <div class="col-12 mb-20">
+                                        <div class="g-recaptcha"
+                                            data-sitekey="6LfiLPUqAAAAAOepUPcU3iMU8WU-JQa-9bsLqEVo"></div>
+                                        <small id="recaptcha-error" style="color: red; display: none;">يرجى التحقق من
+                                            reCAPTCHA.</small>
+                                    </div>
+
                                     <div class="col-12">
                                         <button class="rr-btn-1 rr-form-theme-bg" type="submit"><span>إنشاء
                                                 موعد</span></button>
@@ -470,33 +485,81 @@
                 </div>
             </div>
 
+            <!-- EmailJS Script -->
+            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
             <script>
+                (function () {
+                    emailjs.init('AfjNJbvpclsfFJDiK');
+                })();
+
+                // Formu gönderme ve doğrulama
                 document.getElementById("appointment-form").addEventListener("submit", function (event) {
-                    event.preventDefault(); // منع إعادة تحميل الصفحة
+                    event.preventDefault(); // Sayfanın yeniden yüklenmesini engelle
 
-                    let formData = new FormData(this);
+                    var name = document.getElementById("name").value.trim();
+                    var email = document.getElementById("email").value.trim();
+                    var address = document.getElementById("address").value.trim();
+                    var message = document.getElementById("message").value.trim();
+                    var recaptchaResponse = grecaptcha.getResponse(); // reCAPTCHA yanıtı
 
-                    fetch("mail.php", {
-                        method: "POST",
-                        body: formData
-                    })
-                        .then(response => response.text())
-                        .then(result => {
-                            let responseMessage = document.getElementById("response-message");
-                            if (result === "success") {
-                                responseMessage.innerHTML = "<span style='color:green;'>تم حجز موعدك بنجاح!</span>";
-                            } else {
-                                responseMessage.innerHTML = "<span style='color:red;'>حدث خطأ ما!</span>";
-                            }
+                    // Hata mesajlarını sıfırlama
+                    document.getElementById("name-error").style.display = "none";
+                    document.getElementById("email-error").style.display = "none";
+                    document.getElementById("recaptcha-error").style.display = "none";
+                    document.getElementById("response-message").innerHTML = "";
+
+                    var isValid = true;
+
+                    // Ad kontrolü (Sadece harf ve boşluk)
+                    if (!/^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/.test(name)) {
+                        document.getElementById("name-error").style.display = "block";
+                        isValid = false;
+                    }
+
+                    // E-posta kontrolü
+                    if (!/\S+@\S+\.\S+/.test(email)) {
+                        document.getElementById("email-error").style.display = "block";
+                        isValid = false;
+                    }
+
+                    // reCAPTCHA doğrulaması
+                    if (recaptchaResponse === "") {
+                        document.getElementById("recaptcha-error").style.display = "block";
+                        isValid = false;
+                    }
+
+                    if (!isValid) return;
+
+                    // Randevu oluşturuluyor mesajını hemen göster
+                    document.getElementById("response-message").innerHTML = "<span style='color:orange;'>يتم إنشاء موعدك...</span>";
+
+                    var params = {
+                        name: name,
+                        email: email,
+                        address: address,
+                        message: message
+                    };
+
+                    const serviceID = "service_b123ul8"; // EmailJS Servis ID
+                    const templateID = "template_feyueab"; // EmailJS Şablon ID
+
+                    emailjs.send(serviceID, templateID, params)
+                        .then(res => {
+                            // Başarı mesajı
+                            document.getElementById("response-message").innerHTML = "<span style='color:green;'>تم إنشاء موعدك بنجاح!</span>";
+                            // Formu sıfırlama
+                            document.getElementById("appointment-form").reset();
+                            grecaptcha.reset(); // reCAPTCHA'yı sıfırlama
                         })
-                        .catch(error => {
-                            document.getElementById("response-message").innerHTML = "<span style='color:red;'>حدث خطأ ما!</span>";
+                        .catch(err => {
+                            // Hata mesajı
+                            document.getElementById("response-message").innerHTML = "<span style='color:red;'>حدث خطأ، يرجى المحاولة مرة أخرى.</span>";
+                            console.log(err);
                         });
                 });
             </script>
-
         </section>
-
 
     </main>
 

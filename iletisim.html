@@ -77,6 +77,25 @@
             <a href="index.html">
                <img loading="lazy" src="assets/img/logo/logo.png" alt="img">
             </a>
+            <!-- Dil seçenekleri -->
+            <div class="lang">
+               <select style="display: none;">
+                  <option>Türkçe</option>
+                  <option>English</option>
+                  <option>Arabic</option>
+               </select>
+               <div class="nice-select" tabindex="0"><span class="current"> <img src="assets/img/header/tr.png"
+                        alt="tr">
+                  </span>
+                  <ul class="list z-index-2">
+                     <li data-value="Türkçe" class="option selected focus"> <img src="assets/img/header/tr.png"
+                           alt="tr">
+                     </li>
+                     <li data-value="English" class="option"><img src="assets/img/header/en.png" alt="en"> </li>
+                     <li data-value="Arabic" class="option"><img src="assets/img/header/ar.png" alt="ar"> </li>
+                  </ul>
+               </div>
+            </div>
          </div>
          <div class="rr-main-menu-mobile d-xl-none"></div>
          <div class="rroffcanvas__contact-info">
@@ -111,6 +130,64 @@
    </div>
    <div class="body-overlay"></div>
    <!-- rr-offcanvus-area-end -->
+
+   <!-- header top area start -->
+
+   <div class="rr-header-1-top rr-header-1-shap d-none d-xl-block grey-bg p-relative">
+      <div class="container custom-container-1 z-index-3">
+         <div class="rr-header-1-before">
+            <div class="row align-items-center">
+               <div class="col-xxl-5 col-xl-6 col-lg-6">
+                  <div class="rr-header-1-top-info text-end">
+                     <ul class="d-flex align-items-center">
+                        <li>
+                           <a href="mailto:support@gmail.com "><span><i class="fa-solid fa-envelope"></i></span>
+                              randevu@drmehmetilteberbahadir.net</a>
+                        </li>
+                        <li class="ml-50">
+                           <b><span><i class="fa-solid fa-clock"></i></span>Pazartesi - Cumartesi : 09.00 -
+                              17.00</b>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-xxl-3 col-xl-3  col-lg-1 d-none d-xxl-block">
+                  <div class="rr-header-1-top-btn-text">
+                     <span>Dr. Mehmet İlteber BAHADIR
+                     </span>
+                  </div>
+               </div>
+               <div class="col-xxl-4 col-xl-6 col-lg-5">
+                  <div class="rr-header-2-top-info d-flex align-items-center justify-content-end text-end">
+                     <div class="rr-header-2-lang rr-header-lang-main d-none d-md-block ml-60">
+                        <select style="display: none;">
+                           <option>Türkçe</option>
+                           <option>English</option>
+                           <option>Arabic</option>
+
+                        </select>
+                        <div class="nice-select" tabindex="0"><span class="current"> <img src="assets/img/header/tr.png"
+                                 width="30" alt=""> </span>
+                           <ul class="list z-index-2">
+                              <li data-value="Türkçe" class="option selected focus"><img src="assets/img/header/tr.png"
+                                    width="30" alt=""> </li>
+                              <li data-value="English" class="option"><img src="assets/img/header/en.png" width="30"
+                                    alt=""> </li>
+                              <li data-value="Arabic" class="option"><img src="assets/img/header/ar.png" width="30"
+                                    alt=""> </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- header top area end -->
+   <!-- header main area start -->
 
    <section class="rr-header-1-main d-none d-xl-block">
       <div class="container custom-container-1">
@@ -148,8 +225,6 @@
       </div>
    </section>
 
-   <!-- header main area start -->
-
    <!-- header main area end -->
 
    <header class="rr-header-height z-index-5">
@@ -159,7 +234,7 @@
             <div class="row align-items-center">
                <div class="col-xl-7 col-lg-7 col-md-6 col-6">
                   <div class="rr-header-1-logo d-xl-none">
-                     <img loading="lazy" src="assets/img/logo/logo-black.png" alt="img">
+                     <img loading="lazy" src="assets/img/logo/logo.png" alt="">
                   </div>
                   <div class="rr-header-main-menu rr-header-menu ml-30  d-none d-xl-block">
                      <nav class="rr-main-menu-content">
@@ -227,7 +302,7 @@
                            <li class="has-dropdown">
                               <a href="#">Sayfalar</a>
                               <ul class="submenu rr-submenu">
-                                 <li><a href="videolar.html">Videolar</a></li>
+                                 <li><a href="404.html">Videolar</a></li>
                                  <li><a href="ekibimiz.html">Ekibimiz</a></li>
                                  <li><a href="hekimlerimiz.html">Hekimlerimiz</a></li>
                                  <li><a href="SSS.html">Sıkça Sorulan Sorular</a></li>
@@ -248,6 +323,7 @@
                <div class="col-xl-5 col-lg-5 col-md-6 col-6">
                   <div class="rr-header-right d-flex align-items-center justify-content-end">
                      <div class="rr-header-icon d-none rr-header-2-search d-xl-block">
+                        <button class="search-open-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                      </div>
                      <div class="rr-header-1-contat d-none d-md-block ml-30">
                         <a class="rr-btn-border" href="iletisim.html"><span>Randevu Oluştur <i

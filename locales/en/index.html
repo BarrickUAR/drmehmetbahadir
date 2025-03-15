@@ -29,7 +29,7 @@
 
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https:/www.googletagmanager.com/gtag/js?id=AW-936493452">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-936493452">
     </script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -37,6 +37,18 @@
         gtag('js', new Date());
 
         gtag('config', 'AW-936493452');
+    </script>
+
+    <!-- Emailjs -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "AfjNJbvpclsfFJDiK",
+            });
+        })();
     </script>
 </head>
 
@@ -614,6 +626,8 @@
         <!-- slider area end -->
 
         <!-- contact area start -->
+
+
         <section class="rr-contact-area fix" data-bg-color="#21313f">
             <div class="container">
                 <div class="row">
@@ -628,26 +642,41 @@
                                             <div class="rr-form-input-box rr-contact-1-border">
                                                 <input type="text" id="name" name="name" autocomplete="off"
                                                     placeholder="Your Name*" required>
+                                                <small id="name-error" style="color: red; display: none;">Please use
+                                                    only letters.</small>
                                             </div>
                                         </div>
                                         <!-- Your Email -->
                                         <div class="col-xl-4 col-md-4 col-12 mb-30">
                                             <div class="rr-form-input-box rr-contact-1-border">
                                                 <input type="email" id="email" name="email" autocomplete="off"
-                                                    placeholder="Your Email" required>
+                                                    placeholder="Your Email*" required>
+                                                <small id="email-error" style="color: red; display: none;">Please enter
+                                                    a valid email address.</small>
                                             </div>
                                         </div>
                                         <!-- Your Phone Number -->
                                         <div class="col-xl-4 col-md-4 col-12 mb-30">
                                             <div class="rr-form-input-box rr-contact-1-border">
                                                 <input type="tel" id="phone" name="phone" autocomplete="off"
-                                                    placeholder="Your Phone Number*" required>
+                                                    placeholder="Your Phone Number*" required maxlength="15"
+                                                    oninput="checkPhoneLength(this)"
+                                                    onkeypress="return isNumberKey(event)">
+                                                <small id="phone-error" style="color: red; display: none;">Invalid phone
+                                                    number. Please enter a valid number.</small>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <button class="rr-btn rr-form-theme-bg" type="submit"><span>Create
-                                            Appointment</span></button>
+                                    <!-- reCAPTCHA -->
+                                    <div class="col-xl-12 col-md-12 mb-30">
+                                        <div class="g-recaptcha"
+                                            data-sitekey="6LfiLPUqAAAAAOepUPcU3iMU8WU-JQa-9bsLqEVo"></div>
+                                    </div>
+
+                                    <button class="rr-btn rr-form-theme-bg" type="submit" onclick="sendMail(event)">
+                                        <span>Create Appointment!</span>
+                                    </button>
                                 </form>
                                 <div id="response-message" style="margin-top: 15px; font-weight: bold;"></div>
                             </div>
@@ -655,83 +684,101 @@
                     </div>
                 </div>
             </div>
-
-            <script>
-                / Allow only letters in the name field
-                document.getElementById("name").addEventListener("input", function (event) {
-                    let value = event.target.value;
-                    / Prevent anything other than letters
-                    value = value.replace(/[^a-zA-ZıİçÇğĞşŞöÖüÜ\s]/g, "");
-                    event.target.value = value;
-                });
-
-                / Format phone number as 3-3-2-2 with spaces
-                document.getElementById("phone").addEventListener("input", function (event) {
-                    let value = event.target.value.replace(/\D/g, ""); / Only digits
-                    let formattedPhone = "";
-
-                    / 3-digit group
-                    if (value.length > 0) {
-                        formattedPhone += value.substring(0, 3);
-                    }
-                    / 3-digit group
-                    if (value.length > 3) {
-                        formattedPhone += " " + value.substring(3, 6);
-                    }
-                    / 2-digit group
-                    if (value.length > 6) {
-                        formattedPhone += " " + value.substring(6, 8);
-                    }
-                    / 2-digit group
-                    if (value.length > 8) {
-                        formattedPhone += " " + value.substring(8, 10);
-                    }
-
-                    event.target.value = formattedPhone;
-                });
-
-                / Form submission validation
-                document.getElementById("appointment-form").addEventListener("submit", function (event) {
-                    event.preventDefault(); / Prevent page reload
-
-                    let phone = document.getElementById("phone").value;
-                    let name = document.getElementById("name").value;
-                    / Check if phone number starts with 0 and is 10 digits long
-                    const phonePattern = /^[1-9][0-9]{9}$/;  / 10 digits, cannot start with 0
-
-                    if (!phonePattern.test(phone.replace(/\s/g, ""))) {
-                        document.getElementById("response-message").innerHTML = "<span style='color:red;'>The phone number is invalid. It must be 10 digits long and not start with 0.</span>";
-                        return;  / If invalid, do not submit form
-                    }
-
-                    / Name field must only contain letters
-                    const namePattern = /^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/;
-                    if (!namePattern.test(name)) {
-                        document.getElementById("response-message").innerHTML = "<span style='color:red;'>The name field should only contain letters.</span>";
-                        return;  / If invalid, do not submit form
-                    }
-
-                    let formData = new FormData(this);
-
-                    fetch("mail.php", {
-                        method: "POST",
-                        body: formData
-                    })
-                        .then(response => response.text())
-                        .then(result => {
-                            let responseMessage = document.getElementById("response-message");
-                            if (result === "success") {
-                                responseMessage.innerHTML = "<span style='color:green;'>Your appointment has been created!</span>";
-                            } else {
-                                responseMessage.innerHTML = "<span style='color:red;'>An error occurred!</span>";
-                            }
-                        })
-                        .catch(error => {
-                            document.getElementById("response-message").innerHTML = "<span style='color:red;'>An error occurred!</span>";
-                        });
-                });
-            </script>
         </section>
+
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+        <script>
+            (function () {
+                emailjs.init('AfjNJbvpclsfFJDiK');
+            })();
+
+            // Check phone number length (No longer limited to 10 digits)
+            function checkPhoneLength(input) {
+                var value = input.value;
+                if (value.length > 15) {
+                    input.value = value.slice(0, 15); // Allow up to 15 digits
+                }
+            }
+
+            // Allow only numeric input
+            function isNumberKey(event) {
+                var charCode = (event.which) ? event.which : event.keyCode;
+                return !(charCode < 48 || charCode > 57); // Allow only numbers
+            }
+
+            // Send the form and validate
+            function sendMail(event) {
+                event.preventDefault();
+
+                // reCAPTCHA validation
+                var recaptchaResponse = grecaptcha.getResponse();
+                if (recaptchaResponse.length === 0) {
+                    document.getElementById("response-message").innerHTML = "<span style='color:red;'>Please verify reCAPTCHA.</span>";
+                    return;
+                }
+
+                // Get input values
+                var name = document.getElementById("name").value.trim();
+                var email = document.getElementById("email").value.trim();
+                var phone = document.getElementById("phone").value.trim();
+
+                // Reset error messages
+                document.getElementById("name-error").style.display = "none";
+                document.getElementById("email-error").style.display = "none";
+                document.getElementById("phone-error").style.display = "none";
+                document.getElementById("response-message").innerHTML = "";
+
+                var isValid = true;
+
+                // Name validation (letters and spaces only)
+                if (!/^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/.test(name)) {
+                    document.getElementById("name-error").style.display = "block";
+                    isValid = false;
+                }
+
+                // Email validation
+                if (!/\S+@\S+\.\S+/.test(email)) {
+                    document.getElementById("email-error").style.display = "block";
+                    isValid = false;
+                }
+
+                // Phone validation (No restrictions on number of digits or starting digit)
+                if (!/^[0-9]+$/.test(phone)) {
+                    document.getElementById("phone-error").style.display = "block";
+                    isValid = false;
+                }
+
+                if (!isValid) return;
+
+                // Display "Creating appointment..." message
+                document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Your appointment is being created...</span>";
+
+                var params = {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    recaptchaResponse: recaptchaResponse
+                };
+
+                const serviceID = "service_b123ul8"; // EmailJS Service ID
+                const templateID = "template_8bekk3p";
+                emailjs.send(serviceID, templateID, params)
+                    .then(res => {
+                        // Success message
+                        document.getElementById("response-message").innerHTML = "<span style='color:green;'>Your appointment has been successfully created!</span>";
+                        // Reset the form
+                        document.getElementById("appointment-form").reset();
+                    })
+                    .catch(err => {
+                        // Error message
+                        document.getElementById("response-message").innerHTML = "<span style='color:red;'>An error occurred, please try again.</span>";
+                        console.log(err);
+                    });
+            }
+        </script>
 
 
         <!-- contact area end -->

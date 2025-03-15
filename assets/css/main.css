@@ -2792,7 +2792,6 @@ div.demo img {
   z-index: 9;
 }
 .nice-select .option {
-  width: 100px;
   cursor: pointer;
   font-weight: 400;
   line-height: 40px;

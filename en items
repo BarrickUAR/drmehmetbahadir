@@ -1,0 +1,305 @@
+<div class="rr-header-1-top rr-header-1-shap d-none d-xl-block grey-bg p-relative">
+    <div class="container custom-container-1 z-index-3">
+        <div class="rr-header-1-before">
+            <div class="row align-items-center">
+                <div class="col-xxl-5 col-xl-6 col-lg-6">
+                    <div class="rr-header-1-top-info text-end">
+                        <ul class="d-flex align-items-center">
+                            <li>
+                                <a href="mailto:support@gmail.com "><span><i class="fa-solid fa-envelope"></i></span>
+                                    randevu@drmehmetilteberbahadir.net</a>
+                            </li>
+                            <li class="ml-50">
+                                <b><span><i class="fa-solid fa-clock"></i></span>Mon - Sat: 09.00 - 17.00</b>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-xl-3 col-lg-1 d-none d-xxl-block">
+                    <div class="rr-header-1-top-btn-text">
+                        <span>Dr. Mehmet İlteber BAHADIR</span>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-6 col-lg-5">
+                    <div class="rr-header-2-top-info d-flex align-items-center justify-content-end text-end">
+                        <div class="rr-header-2-lang rr-header-lang-main d-none d-md-block ml-60">
+                            <select style="display: none;">
+                                <option>Turkish</option>
+                                <option>English</option>
+                                <option>Arabic</option>
+                            </select>
+                            <div class="nice-select" tabindex="0"><span class="current"> <img
+                                        src="/assets/img/header/en.png" width="30" alt="en"> </span>
+                                <ul class="list z-index-2">
+                                    <li data-value="English" class="option selected focus"><img
+                                            src="/assets/img/header/en.png" width="30" alt=""> </li>
+                                    <li data-value="Turkish" class="option"><img src="/assets/img/header/tr.png"
+                                            width="30" alt=""> </li>
+                                    <li data-value="Arabic" class="option"><img src="/assets/img/header/ar.png"
+                                            width="30" alt=""> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="rr-header-1-main d-none d-xl-block">
+    <div class="container custom-container-1">
+        <div class="row align-items-center">
+            <div class="col-xl-4">
+                <div class="rr-header-main-social d-flex align-items-center">
+                    <h4 class="rr-header-1-title">Social Media</h4>
+                    <div class="rr-header-1-social ml-20">
+                        <a href="https:/www.facebook.com/sedefegzamatedavisi"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https:/www.instagram.com/drmehmetilteberbahadir/"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="rr-herader-1-logo text-center">
+                    <a href="index.html"><img loading="lazy" src="/assets/img/logo/logo.png" alt="img"></a>
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="rr-header-1-contat d-flex align-items-center justify-content-end">
+                    <div class="rr-header-1-contat-icon p-relative">
+                        <span><i class="fa-solid fa-phone"></i></span>
+                    </div>
+                    <a href="">
+                        <div class="rr-header-1-contat-text ml-20">
+                            <h4>Click to make an appointment!</h4>
+                            <b><a href="tel:+902126772424">24/7 - Fast and Easy</a></b>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<header class="rr-header-height z-index-5">
+    <!-- header area start -->
+    <div id="header-sticky" class="rr-header-area">
+        <div class="container custom-container-1 rr-header-bg">
+            <div class="row align-items-center">
+                <div class="col-xl-7 col-lg-7 col-md-6 col-6">
+                    <div class="rr-header-1-logo d-xl-none">
+                        <img loading="lazy" src="/assets/img/logo/logo.png" alt="">
+                    </div>
+                    <div class="rr-header-main-menu rr-header-menu ml-30  d-none d-xl-block">
+                        <nav class="rr-main-menu-content">
+                            <ul>
+                                <li class="has-dropdown">
+                                    <a href="index.html">Home</a>
+                                    <div class="rr-submenu submenu has-homemenu">
+                                        <div class="row gx-6 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                                            <div class="col homemenu">
+                                                <div class="homemenu-thumb mb-15">
+                                                    <img loading="lazy" src="/assets/img/menu/home-1.jpg" alt="img">
+                                                    <div class="homemenu-btn">
+                                                        <a class="rr-menu-btn" href="/locales/en/therapy.html">Go to
+                                                            Site</a>
+                                                    </div>
+                                                </div>
+                                                <div class="homemenu-content text-center">
+                                                    <h4 class="homemenu-title">
+                                                        <a href="/locales/en/therapy.html">What is Phytotherapy?</a>
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                            <div class="col homemenu">
+                                                <div class="homemenu-thumb mb-15">
+                                                    <img loading="lazy" src="/assets/img/menu/home-2.jpg" alt="img">
+                                                    <div class="homemenu-btn">
+                                                        <a class="rr-menu-btn" href="/locales/en/therapy.html">Go to
+                                                            Site</a>
+                                                    </div>
+                                                </div>
+                                                <div class="homemenu-content text-center">
+                                                    <h4 class="homemenu-title">
+                                                        <a href="/locales/en/therapy.html">Ozone Therapy</a>
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                            <div class="col homemenu">
+                                                <div class="homemenu-thumb mb-15">
+                                                    <img loading="lazy" src="/assets/img/menu/home-3.jpg" alt="img">
+                                                    <div class="homemenu-btn">
+                                                        <a class="rr-menu-btn" href="/locales/en/therapy.html">Go to
+                                                            Site</a>
+                                                    </div>
+                                                </div>
+                                                <div class="homemenu-content text-center">
+                                                    <h4 class="homemenu-title">
+                                                        <a href="/locales/en/therapy.html">Mesotherapy</a>
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="/locales/en/about.html">About Me</a></li>
+                                <li class="has-dropdown">
+                                    <a href="/locales/en/rheumatic-diseases.html">Diseases</a>
+                                    <ul class="submenu rr-submenu">
+                                        <li><a href="/locales/en/skin-diseases.html">Skin Diseases</a></li>
+                                        <li><a href="/locales/en/rheumatic-diseases.html">Rheumatic Diseases</a>
+                                        </li>
+                                        <li><a href="/locales/en/acne.html">Acne</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-dropdown">
+                                    <a href="#">Pages</a>
+                                    <ul class="submenu rr-submenu">
+                                        <li><a href="/locales/en/videos.html">Videos</a></li>
+                                        <li><a href="/locales/en/team.html">Our Team</a></li>
+                                        <li><a href="/locales/en/doctors.html">Our Doctors</a></li>
+                                        <li><a href="/locales/en/sss.html">FAQ</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-dropdown">
+                                    <a href="/locales/en/blog.html">Blog</a>
+                                    <ul class="submenu rr-submenu">
+                                        <li><a href="/locales/en/blog.html">All Articles</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/locales/en/locales/en/contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-5 col-md-6 col-6">
+                    <div class="rr-header-right d-flex align-items-center justify-content-end">
+                        <div class="rr-header-1-contat d-none d-md-block ml-30">
+                            <a class="rr-btn-border" href="/locales/en/contact.html"><span>Make an Appointment <i
+                                        class="fa-sharp fa-solid fa-plus"></i></span></a>
+                        </div>
+                        <div class="rr-header-bar d-xl-none">
+                            <button class="rr-menu-bar"><i class="fa-solid fa-bars"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header area end -->
+</header>
+
+
+
+
+
+
+
+<footer>
+    <div class="rr-footer-main p-relative fix" data-background="//assets/img/footer/footer-bg.jpg">
+
+        <!-- footer area start -->
+        <footer>
+            <div class="rr-footer-main p-relative fix" data-background="/assets/img/footer/footer-bg.jpg">
+                <!-- footer area start -->
+                <div class="rr-footer-area pt-125 p-relative fix">
+                    <div class="rr-footer-right-shap d-none d-xl-block">
+                        <img loading="lazy" src="/assets/img/footer/footer-shap.png" alt="img">
+                    </div>
+                    <div class="container">
+                        <div class="rr-footer-border">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp"
+                                    data-wow-duration=".9s" data-wow-delay=".3s">
+                                    <div class="rr-footer-widget footer-cols-1">
+                                        <div class="rr-footer-logo pb-35">
+                                            <a href="/locales/en/index.html"><img loading="lazy"
+                                                    src="/assets/img/logo/logo.png" alt="img"></a>
+                                        </div>
+                                        <div class="rr-footer-widget-content-list mb-25">
+                                            <div class="rr-footer-widget-content-list-item">
+                                                <i class="fa-sharp fa-solid fa-clock"></i> <a href="#">Working
+                                                    Hours:<br />
+                                                    Mon - Sat: 09:00 - 17:00</a>
+                                            </div>
+                                            <div class="rr-footer-widget-content-list-item">
+                                                <i class="fa-solid fa-location-dot"></i> <a href="#"> Merter
+                                                    Business Center
+                                                    - Floor 11/63</a>
+                                            </div>
+                                            <div class="rr-footer-widget-content-list-item">
+                                                <i class="fa-sharp fa-solid fa-phone"></i><a
+                                                    href="tel:+902126772424">+90
+                                                    (212) 677 24 24</a>
+                                            </div>
+                                        </div>
+                                        <div class="rr-footer-social">
+                                            <a href="https:/www.facebook.com/sedefegzamatedavisi"><i
+                                                    class="fa-brands fa-facebook-f"></i></a>
+                                            <a href="https:/www.instagram.com/drmehmetilteberbahadir/"><i
+                                                    class="fa-brands fa-instagram"></i></a>
+                                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp"
+                                    data-wow-duration=".9s" data-wow-delay=".5s"></div>
+                                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp"
+                                    data-wow-duration=".9s" data-wow-delay=".7s">
+                                    <div class="rr-footer-widget footer-cols-3">
+                                        <h4 class="rr-footer-title">Quick Links</h4>
+                                        <div class="rr-footer-list">
+                                            <ul>
+                                                <li><a href="/locales/en/index.html">Home</a></li>
+                                                <li><a href="/locales/en/about.html">About Me</a></li>
+                                                <li><a href="/locales/en/skin-diseases.html">Diseases</a></li>
+                                                <li><a href="/locales/en/blog.html">Blog</a></li>
+                                                <li><a href="/locales/en/contact.html">Contact</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp"
+                                    data-wow-duration=".9s" data-wow-delay=".9s">
+                                    <div class="rr-footer-widget footer-cols-4">
+                                        <h4 class="rr-footer-title">Our Working Hours</h4>
+                                        <div class="rr-footer-contact">
+                                            <ul>
+                                                <li><span>Monday - 09:00 - 17:00</span></li>
+                                                <li><span>Tuesday - 09:00 - 17:00</span></li>
+                                                <li><span>Wednesday - 09:00 - 17:00</span></li>
+                                                <li><span>Thursday - 09:00 - 17:00</span></li>
+                                                <li><span>Friday - 09:00 - 17:00</span></li>
+                                                <li><span>Saturday - 09:00 - 17:00</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- footer area end -->
+
+                <!-- copy-right area start -->
+                <div class="rr-copyright-area p-relative">
+                    <div class="container rr-copyright-broder rr-copyright-space">
+                        <div class="row align-items-center">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-12 wow rrfadeUp" data-wow-duration=".9s"
+                                data-wow-delay=".3s">
+                                <div class="rr-copyright-left text-center text-md-start">
+                                    <p>© 2024 <a href="#"> Dr. Mehmet İlteber BAHADIR, </a> All Rights Reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- copy-right area end -->
+            </div>
+        </footer>
+        <!-- footer area end -->
+    </div>
+</footer>

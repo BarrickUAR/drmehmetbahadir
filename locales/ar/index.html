@@ -72,7 +72,7 @@
     <!-- Intercom script'ini buraya ekle -->
     <script>
         window.intercomSettings = {
-            api_base: "https://api-iam.intercom.io",
+            api_base: "https:api-iam.intercom.io",
             app_id: "bhbpbka7",
         };
     </script>
@@ -98,7 +98,7 @@
                     var s = d.createElement('script');
                     s.type = 'text/javascript';
                     s.async = true;
-                    s.src = 'https://widget.intercom.io/widget/bhbpbka7';
+                    s.src = 'https:widget.intercom.io/widget/bhbpbka7';
                     var x = d.getElementsByTagName('script')[0];
                     x.parentNode.insertBefore(s, x);
                 };
@@ -113,12 +113,6 @@
         })();
     </script>
 
-    <!-- Sohbet penceresini otomatik aç -->
-    <script>
-        window.addEventListener('load', function () {
-            Intercom('show');
-        });
-    </script>
 
 
     <!-- preloader start -->
@@ -273,6 +267,7 @@
                         <option>Turkish</option>
                         <option>İngilizce</option>
                         <option>Arapça</option>
+                        <option>Russian</option> <!-- Rusça dil seçeneği eklendi -->
                     </select>
                     <div class="nice-select" tabindex="0">
                         <span class="current">
@@ -288,6 +283,9 @@
                             <li data-value="Arabic" class="option selected focus">
                                 <img src="/assets/img/header/ar.png" alt="ar">
                             </li>
+                            <li data-value="Russian" class="option"> <!-- Rusça dil seçeneği eklendi -->
+                                <img src="/assets/img/header/ru.png" alt="ru">
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -300,9 +298,9 @@
                 <ul>
                     <li>
                         <i class="fa-light fa-location-dot"></i>
-                        <a href="httpswww.google.com/maps/@23.8223586,90.3661283,15z" target="_blank">Maltepe Mah.
-                            Eski
-                            Çırpıcı Yolu Sok. No:2/63 Kat:11 E-5 Karayolu Merter Metro İstasyon Yanı Merter İş Merkezi
+                        <a href="https:www.google.com/maps/@23.8223586,90.3661283,15z" target="_blank">Maltepe Mah.
+                            Eski Çırpıcı Yolu Sok. No:2/63 Kat:11 E-5 Karayolu Merter Metro İstasyon Yanı Merter İş
+                            Merkezi
                             Zeytinburnu / İstanbul</a>
                     </li>
                     <li>
@@ -317,9 +315,9 @@
             </div>
             <div class="rroffcanvas__social">
                 <div class="social-icon">
-                    <a href="httpswww.instagram.com/drmehmetilteberbahadir/" target="_blank"><i
+                    <a href="https:www.instagram.com/drmehmetilteberbahadir/" target="_blank"><i
                             class="fab fa-instagram"></i></a>
-                    <a href="httpswww.facebook.com/sedefegzamatedavisi" target="_blank"><i
+                    <a href="https:www.facebook.com/sedefegzamatedavisi" target="_blank"><i
                             class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-linkedin" target="_blank"></i></a>
                 </div>
@@ -360,6 +358,7 @@
                                     <option>التركية</option>
                                     <option>الإنجليزية</option>
                                     <option>العربية</option>
+                                    <option>Русский</option> <!-- Rusça dil seçeneği eklendi -->
                                 </select>
                                 <div class="nice-select" tabindex="0">
                                     <span class="current"><img src="/assets/img/header/ar.png" width="30" alt=""></span>
@@ -370,6 +369,8 @@
                                                 width="30" alt=""></li>
                                         <li data-value="Arabic" class="option selected focus"><img
                                                 src="/assets/img/header/ar.png" width="30" alt=""></li>
+                                        <li data-value="Russian" class="option"><img src="/assets/img/header/ru.png"
+                                                width="30" alt=""></li> <!-- Rusça dil seçeneği eklendi -->
                                     </ul>
                                 </div>
                             </div>
@@ -379,6 +380,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- header top area end -->
     <!-- header main area start -->
@@ -555,62 +557,70 @@
     <main>
 
         <!-- slider area start -->
-        <div class="rr-slider-1-area fix p-relative theme-bg-2 pt-90" data-background="/assets/img/slider/bg.jpg">
+
+        <div class="rr-slider-1-area fix p-relative theme-bg-2 pt-90 " data-background="/assets/img/slider/bg.jpg">
             <div class="rr-slider-1-wrapper">
                 <div class="rr-slider-1-wrap p-relative">
                     <div class="rr-slider-1-height">
                         <div class="container">
                             <div class="rr-slider-1-shap-star">
-                                <img loading="lazy" src="/assets/img/slider/start-shap-copy.png" alt="صورة">
+                                <img loading="lazy" src="/assets/img/slider/start-shap.png" alt="img">
                             </div>
                             <div class="rr-slider-1-shap-plus">
-                                <img loading="lazy" src="/assets/img/slider/plus-shap-copy.png" alt="صورة">
+                                <img loading="lazy" src="/assets/img/slider/plus-shap.png" alt="img">
                             </div>
                             <div class="rr-slider-1-shap-plus-2">
-                                <img loading="lazy" src="/assets/img/slider/subtitle-shape-3-copy.png" alt="صورة">
+                                <img loading="lazy" src="/assets/img/slider/subtitle-shape-3.png" alt="img">
                             </div>
                             <div class="row align-items-center">
                                 <div class="col-xl-7 col-lg-7 col-md-6">
                                     <div class="rr-slider-1-content z-index-1">
                                         <div class="rr-slider-1-title-box">
                                             <span class="rr-slider-1-subtitle wow rrfadeUp" data-wow-duration=".9s"
-                                                data-wow-delay=".3s">
-                                                <img loading="lazy" src="/assets/img/testimonial/section-icon.png"
-                                                    alt="صورة">...
-                                            </span>
+                                                data-wow-delay=".3s"><img loading="lazy"
+                                                    src="/assets/img/testimonial/section-icon.png" alt="img">
+                                                نحن لا نترك أي مريض بدون علاج</span>
                                             <h1 class="rr-slider-1-title pb-10 wow rrfadeUp" data-wow-duration=".9s"
-                                                data-wow-delay=".5s">
-                                                الدكتور محمد إلتيبر بهادر
-                                            </h1>
+                                                data-wow-delay=".5s">الدكتور محمد إلتيبر بهادر</h1>
                                             <p class="pb-30 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
-                                                في عيادتنا، نقدم علاجًا لمرض الصدفية، والأكزيما، والتهاب الجلد الدهني،
-                                                والحزاز المسطح، والسماك، والأمراض الروماتيزمية المرتبطة بالصدفية
-                                                (التهاب المفاصل الروماتويدي، التهاب الفقار اللاصق، الذئبة الحمراء
-                                                الجهازية،
-                                                والتهاب الغدة الدرقية لهاشيموتو).
-                                            </p>
+                                                في عيادتنا، نقوم بعلاج مرض الصدفية، الإكزيما، التهاب الجلد الدهني،
+                                                اللويحة المسطحة، التقرن الشعري، والأمراض الروماتيزمية (التهاب المفاصل
+                                                الروماتويدي، التهاب الفقار القسطي، الذئبة الحمراء، والتهاب الغدة الدرقية
+                                                هاشيموتو).</p>
                                         </div>
                                         <div class="rr-slider-1-button-box d-flex align-items-center">
                                             <a class="rr-btn-1-ar mr-30 wow rrfadeUp" data-wow-duration=".9s"
-                                                data-wow-delay=".7s" href="iletisim.html">
-                                                <span>اتصل بنا<i class="fa-sharp fa-solid fa-plus"></i></span>
-                                            </a>
+                                                data-wow-delay=".7s" href="contact.html"><span>اتصل بنا<i
+                                                        class="fa-sharp fa-solid fa-plus"></i></span></a>
                                             <a class="rr-btn-black-ar wow rrfadeUp" data-wow-duration=".9s"
-                                                data-wow-delay=".9s" href="/locales/ar/cilt-hastaliklari.html">
-                                                <span>معرفة المزيد <i class="fa-sharp fa-solid fa-plus"></i></span>
-                                            </a>
+                                                data-wow-delay=".9s" href="skin-diseases.html"><span> اعرف المزيد <i
+                                                        class="fa-sharp fa-solid fa-plus"></i></span></a>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-5 col-lg-5 col-md-6 wow fadeInRight" data-wow-duration=".9s"
                                     data-wow-delay=".5s">
                                     <div class="rr-slider-1-img p-relative pt-50">
+                                        <div id="bubble-container">
+                                            <div class="speech-bubble bubble1">العلاج سهل جدا <br> بسيط للغاية</div>
+                                        </div>
+                                        <div id="bubble-container">
+                                            <div class="speech-bubble bubble1">الصدفية، الإكزيما والروماتيزم <br> هي
+                                                أمراض شقيقة</div>
+                                        </div>
+                                        <div id="bubble-container">
+                                            <div class="speech-bubble bubble1">نحن لا نستخدم الكورتيكوستيرويدات أو أدوية
+                                                العلاج الكيميائي!</div>
+                                        </div>
                                         <div class="rr-slider-1-thumb z-index-2">
-                                            <img loading="lazy" src="/assets/img/slider/hoca.png" alt="صورة">
+                                            <img loading="lazy" src="/assets/img/slider/hoca.png" alt="img">
                                         </div>
+
                                         <div class="rr-slider-1-shap z-index-1">
-                                            <img loading="lazy" src="/assets/img/slider/img-2.png" alt="صورة">
+                                            <img loading="lazy" src="/assets/img/slider/img-2.png" alt="img">
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -621,9 +631,8 @@
             </div>
         </div>
 
+        <!-- slider area end -->
 
-
-        <!-- slider area end -->,
 
         <section class="rr-contact-area fix" data-bg-color="#21313f">
             <div class="container">
@@ -668,7 +677,8 @@
                                             data-sitekey="6LfiLPUqAAAAAOepUPcU3iMU8WU-JQa-9bsLqEVo"></div>
                                     </div>
 
-                                    <button class="rr-btn rr-form-theme-bg-ar" type="submit" onclick="sendMail(event)">
+                                    <button class="rr-btn-ar rr-form-theme-bg-ar" type="submit"
+                                        onclick="sendMail(event)">
                                         <span>احجز موعدًا!</span>
                                     </button>
                                 </form>
@@ -679,6 +689,7 @@
                 </div>
             </div>
         </section>
+
 
         <script src="https:/www.google.com/recaptcha/api.js" async defer></script>
         <script src="https:/cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>

@@ -14726,7 +14726,7 @@ span.current {
   height: 4em;
   border-radius: 0.25em;
   transform: rotate(-4deg) rotateY(15deg);
-  background: #076BB0;
+  background: #076bb0;
   font: 20px Century Gothic, Verdana, sans-serif;
   text-align: center;
   color: white;
@@ -14741,14 +14741,8 @@ span.current {
 
 .bubble1 {
   position: relative;
-  left: 50%;
+  left: 0%;
   bottom: 50px;
-}
-
-.bubble3 {
-  position: relative;
-  right: 70%;
-  bottom: 200px;
 }
 
 #bubble-container .speech-bubble:after {
@@ -14758,7 +14752,7 @@ span.current {
   left: 0;
   border-radius: inherit;
   transform: rotate(2deg) translate(0.35em, -0.15em) scale(1.02);
-  background: #076BB0;
+  background: #076bb0;
 }
 
 #bubble-container .speech-bubble:before {

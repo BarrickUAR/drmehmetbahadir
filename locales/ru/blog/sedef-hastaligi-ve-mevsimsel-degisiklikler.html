@@ -1,0 +1,849 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Blog Detaylari - Dr. Mehmet İlteber BAHADIR</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo/favicon.png">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/animate.css">
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="/assets/css/slick.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/icofont.css">
+    <link rel="stylesheet" href="/assets/css/icofont.min.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome-pro.css">
+    <link rel="stylesheet" href="/assets/css/spacing.css">
+    <link rel="stylesheet" href="/assets/css/custom-animation.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+    <!-- preloader start -->
+    <div id="loading">
+        <div class="preloader-close">x</div>
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object" id="object_four"></div>
+                <div class="object" id="object_three"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_one"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader start -->
+
+    <!-- back to top start -->
+    <div class="back-to-top-wrapper">
+        <button id="back_to_top" type="button" class="back-to-top-btn">
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none">
+                <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+    <!-- back to top end -->
+
+    <!-- search popup start -->
+    <div class="search__popup">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-12">
+                    <div class="search__wrapper">
+                        <div class="search__top d-flex justify-content-between align-items-center">
+                            <div class="search__logo">
+                                <a href="index.html">
+                                    <img loading="lazy" src="/assets/img/logo/logo-white.png" alt="img">
+                                </a>
+                            </div>
+                            <div class="search__close">
+                                <button type="button" class="search__close-btn search-close-btn">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="search__form">
+                            <form action="#">
+                                <div class="search__input">
+                                    <input class="search-input-field" type="text" placeholder="Type here to search...">
+                                    <span class="search-focus-border"></span>
+                                    <button type="submit">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- search popup end -->
+
+    <div class="rroffcanvas-area">
+        <div class="rroffcanvas">
+            <div class="rroffcanvas__close-btn">
+                <button class="close-btn"><i class="fal fa-times"></i></button>
+            </div>
+            <div class="rroffcanvas__logo">
+                <a href="/locales/ru/index.html">
+                    <img loading="lazy" src="/assets/img/logo/logo.png" alt="img">
+                </a>
+                <!-- Dil seçenekleri -->
+                <div class="lang">
+                    <select style="display: none;">
+                        <option>Türkçe</option>
+                        <option>English</option>
+                        <option>Arabic</option>
+                        <option>Russian</option> <!-- Rusça eklendi -->
+                    </select>
+                    <div class="nice-select" tabindex="0">
+                        <span class="current">
+                            <img src="/assets/img/header/ru.png" alt="ru">
+                        </span>
+                        <ul class="list z-index-2">
+                            <li data-value="Russian" class="option selected focus">
+                                <img src="/assets/img/header/ru.png" alt="ru">
+                            </li>
+                            <li data-value="Türkçe" class="option ">
+                                <img src="/assets/img/header/tr.png" alt="tr">
+                            </li>
+
+                            <li data-value="English" class="option">
+                                <img src="/assets/img/header/en.png" alt="en">
+                            </li>
+                            <li data-value="Arabic" class="option">
+                                <img src="/assets/img/header/ar.png" alt="ar">
+                            </li>
+                            <!-- Rusça eklendi -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="rr-main-menu-mobile d-xl-none"></div>
+            <div class="rroffcanvas__contact-info">
+                <div class="rroffcanvas__contact-title">
+                    <h5>Свяжитесь с нами!</h5>
+                </div>
+                <ul>
+                    <li>
+                        <i class="fa-light fa-location-dot"></i>
+                        <a href="https:/www.google.com/maps/@23.8223586,90.3661283,15z" target="_blank">
+                            Малтепе Мах. Эски Чирпыджи Йолу Сок. No:2/63 Этаж:11 E-5 Караёлу Мертер Метро Станция рядом
+                            Мертер Бизнес Центр Зейтинбурну / Стамбул
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:randevu@drmehmetilteberbahadir.net">randevu@drmehmetilteberbahadir.net</a>
+                    </li>
+                    <li>
+                        <i class="fal fa-phone-alt"></i>
+                        <a href="tel:+902126772424">+90 212 677 24 24</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="rroffcanvas__social">
+                <div class="social-icon">
+                    <a href="https:/www.instagram.com/drmehmetilteberbahadir/"><i class="fab fa-instagram"></i></a>
+                    <a href="https:/www.facebook.com/sedefegzamatedavisi"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body-overlay"></div>
+
+
+    <div class="rr-header-1-top rr-header-1-shap d-none d-xl-block grey-bg p-relative">
+        <div class="container custom-container-1 z-index-3">
+            <div class="rr-header-1-before">
+                <div class="row align-items-center">
+                    <div class="col-xxl-5 col-xl-6 col-lg-6">
+                        <div class="rr-header-1-top-info text-end">
+                            <ul class="d-flex align-items-center">
+                                <li>
+                                    <a href="mailto:randevu@drmehmetilteberbahadir.net">
+                                        <span><i class="fa-solid fa-envelope"></i></span>
+                                        randevu@drmehmetilteberbahadir.net
+                                    </a>
+                                </li>
+                                <li class="ml-50">
+                                    <b><span><i class="fa-solid fa-clock"></i></span>Пон - Суб: 09:00 - 17:00</b>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-1 d-none d-xxl-block">
+                        <div class="rr-header-1-top-btn-text">
+                            <span>Др. Мехмет Ильтебер БАХАДЫР</span>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-6 col-lg-5">
+                        <div class="rr-header-2-top-info d-flex align-items-center justify-content-end text-end">
+                            <div class="rr-header-2-lang rr-header-lang-main d-none d-md-block ml-60">
+                                <select style="display: none;">
+                                    <option>Türkçe</option>
+                                    <option>English</option>
+                                    <option>Arabic</option>
+                                    <option>Russian</option> <!-- Rusça eklendi -->
+                                </select>
+                                <div class="nice-select" tabindex="0">
+                                    <span class="current">
+                                        <img src="/assets/img/header/ru.png" width="30" alt="">
+                                    </span>
+
+                                    <ul class="list z-index-2">
+                                        <li data-value="Russian" class="option selected focus">
+                                            <img src="/assets/img/header/ru.png" width="30" alt="">
+                                        </li>
+                                        <li data-value="Türkçe" class="option">
+                                            <img src="/assets/img/header/tr.png" width="30" alt="">
+                                        </li>
+                                        <li data-value="English" class="option">
+                                            <img src="/assets/img/header/en.png" width="30" alt="">
+                                        </li>
+                                        <li data-value="Arabic" class="option">
+                                            <img src="/assets/img/header/ar.png" width="30" alt="">
+                                        </li>
+                                        <!-- Rusça eklendi -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- header top area end -->
+
+    <!-- header main area start -->
+
+    <section class=".rr-header-1-main d-none d-xl-block">
+        <div class="container custom-container-1">
+            <div class="row align-items-center">
+                <div class="col-xl-4">
+                    <div class="rr-header-main-social d-flex align-items-center">
+                        <h4 class="rr-header-1-title">Социальные сети</h4>
+                        <div class="rr-header-1-social ml-20">
+                            <a href="https:/www.facebook.com/sedefegzamatedavisi"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https:/www.instagram.com/drmehmetilteberbahadir/"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="rr-herader-1-logo text-center">
+                        <a href="/locales/ru/index.html"><img loading="lazy" src="/assets/img/logo/logo.png"
+                                alt="img"></a>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="rr-header-1-contat d-flex align-items-center justify-content-end">
+                        <div class="rr-header-1-contat-icon p-relative">
+                            <span><i class="fa-solid fa-phone"></i></span>
+                        </div>
+                        <a href="">
+                            <div class="rr-header-1-contat-text ml-20">
+                                <h4>Нажмите, чтобы записаться на прием!</h4>
+                                <b><a href="tel:+902126772424">24/7 – Быстро и легко</a></b>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- header main area end -->
+
+    <header class="rr-header-height z-index-5">
+        <!-- header area start -->
+        <div id="header-sticky" class="rr-header-area">
+            <div class="container custom-container-1 rr-header-bg">
+                <div class="row align-items-center">
+                    <div class="col-xl-7 col-lg-7 col-md-6 col-6">
+                        <div class="rr-header-1-logo d-xl-none">
+                            <img loading="lazy" src="/assets/img/logo/logo.png" alt="">
+                        </div>
+                        <div class="rr-header-main-menu rr-header-menu ml-30  d-none d-xl-block">
+                            <nav class="rr-main-menu-content">
+                                <ul>
+                                    <li class="has-dropdown">
+                                        <a href="/locales/ru/index.html">Главная</a>
+                                        <div class="rr-submenu submenu has-homemenu">
+                                            <div class="row gx-6 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                                                <div class="col homemenu">
+                                                    <div class="homemenu-thumb mb-15">
+                                                        <img loading="lazy" src="/assets/img/menu/home-1.jpg" alt="img">
+                                                        <div class="homemenu-btn">
+                                                            <a class="rr-menu-btn"
+                                                                href="/locales/ru/terapi.html">Перейти на
+                                                                сайт</a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="homemenu-content text-center">
+                                                        <h4 class="homemenu-title">
+                                                            <a href="/locales/ru/terapi.html">Что такое фитотерапия?</a>
+                                                        </h4>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col homemenu">
+                                                    <div class="homemenu-thumb mb-15">
+                                                        <img loading="lazy" src="/assets/img/menu/home-2.jpg" alt="img">
+                                                        <div class="homemenu-btn">
+                                                            <a class="rr-menu-btn"
+                                                                href="/locales/ru/terapi.html">Перейти на
+                                                                сайт</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="homemenu-content text-center">
+                                                        <h4 class="homemenu-title">
+                                                            <a href="/locales/ru/terapi.html">Озонотерапия</a>
+                                                        </h4>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col homemenu">
+                                                    <div class="homemenu-thumb mb-15">
+                                                        <img loading="lazy" src="/assets/img/menu/home-3.jpg" alt="img">
+                                                        <div class="homemenu-btn">
+                                                            <a class="rr-menu-btn"
+                                                                href="/locales/ru/terapi.html">Перейти на
+                                                                сайт</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="homemenu-content text-center">
+                                                        <h4 class="homemenu-title">
+                                                            <a href="/locales/ru/terapi.html">Мезотерапия</a>
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="/locales/ru/hakkimizda.html">О нас</a></li>
+                                    <li class="has-dropdown">
+                                        <a href="/locales/ru/cilt-hastaliklari.html">Заболевания</a>
+                                        <ul class="submenu rr-submenu">
+                                            <li><a href="/locales/ru/cilt-hastaliklari.html">Кожные заболевания</a></li>
+                                            <li><a href="/locales/ru/romatizmal-hastaliklar.html">Ревматические
+                                                    заболевания</a></li>
+                                            <li><a href="/locales/ru/akne.html">Акне</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="#">Страницы</a>
+                                        <ul class="submenu rr-submenu">
+                                            <li><a href="/locales/ru/404.html">Видео</a></li>
+                                            <li><a href="/locales/ru/ekibimiz.html">Наша команда</a></li>
+                                            <li><a href="/locales/ru/hekimlerimiz.html">Наши врачи</a></li>
+                                            <li><a href="/locales/ru/SSS.html">Часто задаваемые вопросы</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="/locales/ru/locales/ru/blog/">Блог</a>
+                                        <ul class="submenu rr-submenu">
+                                            <li><a href="/locales/ru/locales/ru/blog/">Все статьи</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/locales/ru/iletisim.html">Контакты</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-5 col-md-6 col-6">
+                        <div class="rr-header-right d-flex align-items-center justify-content-end">
+                            <div class="rr-header-1-contat d-none d-md-block ml-30">
+                                <a class="rr-btn-border" href="/locales/ru/iletisim.html"><span>Записаться на прием <i
+                                            class="fa-sharp fa-solid fa-plus"></i></span></a>
+                            </div>
+                            <div class="rr-header-bar d-xl-none">
+                                <button class="rr-menu-bar"><i class="fa-solid fa-bars"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- header area end -->
+
+    </header>
+
+
+
+    <main>
+
+        <!-- breadcrumb area start -->
+        <div class="breadcrumb__area breadcrumb__overlay breadcrumb__height fix p-relative"
+            data-background="/assets/img/breadcurmb">
+            <div class="breadcrumb-shap d-none d-xxl-block">
+                <img loading="lazy" src="/assets/img/breadcurmb/img-2.png" alt="img">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-md-5">
+                        <div class="breadcrumb__content z-index">
+                            <div class="breadcrumb__section-title-box">
+                                <h3 class="breadcrumb__title">Детали блога</h3>
+                            </div>
+                            <div class="breadcrumb__list">
+                                <span><a href="/index.html">Главная страница</a></span>
+                                <span class="dvdr"><i>/</i></span>
+                                <span>Детали блога</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-md-7">
+                        <div class="breadcrumb-img z-index-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+
+
+        <!-- postbox area start -->
+        <section class="postbox__area pt-100 pb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-8 col-xl-8 col-lg-8">
+                        <div class="postbox__wrapper">
+                            <article class="postbox__item format-image mb-50 transition-3">
+                                <div class="postbox__thumb w-img mb-25">
+                                    <a href="/blog-details.html">
+                                        <img loading="lazy" src="/assets/img/blog/1.jpg" alt="img">
+                                    </a>
+                                </div>
+                                <div class="postbox__content mr-70">
+                                    <h3 class="postbox__title mb-10">
+                                        Псориаз и сезонные изменения: Как защитить здоровье кожи зимой и летом
+                                    </h3>
+                                    <div class="postbox__text pb-10">
+                                        <p>
+                                            Псориаз — это хроническое заболевание кожи, которое вызывает шелушение,
+                                            покраснение и зуд. Однако одним из факторов, влияющих на течение болезни,
+                                            являются
+                                            сезонные изменения. Зимой сухость кожи, холодный воздух и низкая влажность
+                                            могут
+                                            усилить симптомы псориаза, в то время как летом солнечные лучи, жаркая
+                                            погода и
+                                            потоотделение могут иметь другой эффект. <br><br>
+
+                                            С изменением сезонов пациенты с псориазом должны пересматривать свои
+                                            уходовые
+                                            привычки и образ жизни. В этой статье мы рассмотрим, как сезонные изменения
+                                            влияют на псориаз и что нужно делать, чтобы сохранить здоровье кожи в разные
+                                            сезоны.<br><br>
+
+                                            Зимний псориаз
+                                            Зима — это, как правило, более трудный сезон для людей с псориазом. Холодный
+                                            воздух, сухие помещения и низкая влажность могут вызвать сухость и
+                                            раздражение
+                                            кожи. Это может привести к обострению симптомов псориаза. Основные причины
+                                            ухудшения
+                                            псориаза зимой следующие:<br><br>
+
+                                            Холодный воздух и сухость кожи: Холодный воздух вызывает потерю влаги в
+                                            коже. Особенно
+                                            использование отопления и кондиционеров, которые уменьшают влажность, может
+                                            сделать
+                                            кожу более сухой и чувствительной. Сухая кожа может привести к усиленному
+                                            зуду,
+                                            шелушению и появлению красных пятен.<br><br>
+
+                                            Недостаток солнечного света: Ультрафиолетовые лучи могут быть полезны при
+                                            лечении псориаза, но зимой солнечного света бывает меньше, и пациенты могут
+                                            не
+                                            получить
+                                            этот эффект. Недостаток солнечного света может усугубить симптомы
+                                            псориаза.<br><br>
+
+                                            Холодный воздух и трещины: Холодный воздух может вызвать трещины в верхнем
+                                            слое кожи.
+                                            Эти трещины могут стать триггером псориаза и усложнить процесс
+                                            заживления.<br><br>
+
+                                            Советы по управлению псориазом зимой:
+                                            Использование увлажнителей: Очень важно увлажнять кожу зимой. Чтобы защитить
+                                            от сухого
+                                            воздуха, можно использовать густые, жирные увлажнители. Натуральные
+                                            увлажнители, такие
+                                            как
+                                            алоэ вера или масло ши, также могут быть полезными.<br><br>
+
+                                            Тёплая вода: Купание в тёплой воде может предотвратить высыхание кожи.
+                                            Горячая
+                                            вода,
+                                            наоборот, может усилить сухость и ухудшить псориаз.<br><br>
+
+                                            Солнечные лучи: Хотя зимой трудно получить солнечные лучи, можно
+                                            использовать
+                                            солнечные
+                                            дни на свежем воздухе, чтобы облегчить воспаление на коже. Конечно, не стоит
+                                            переусердствовать.<br><br>
+
+                                            Контроль температуры и влажности: Системы отопления могут высушивать кожу.
+                                            Использование
+                                            увлажнителей воздуха поможет поддерживать баланс влаги в коже.<br><br>
+
+                                            Уход за кожей: В зимний период кожа более чувствительна, поэтому следует
+                                            избегать
+                                            мыла с агрессивными химическими веществами. Лучше использовать мягкие, без
+                                            запаха
+                                            мыла и нежные очищающие средства.<br><br>
+
+                                            Летний псориаз
+                                            Лето может быть более комфортным сезоном для некоторых пациентов с
+                                            псориазом,
+                                            так как
+                                            солнечные лучи могут помочь улучшить течение заболевания. Однако жаркая
+                                            погода,
+                                            потоотделение, солнечные ожоги и другие летние проблемы могут повлиять на
+                                            псориаз.
+                                            Общие проблемы, с которыми сталкиваются пациенты с псориазом летом:<br><br>
+
+                                            Воздействие солнечных лучей: Солнечные лучи могут способствовать улучшению
+                                            псориаза.
+                                            Ультрафиолетовые лучи подавляют избыточный рост клеток на коже и уменьшают
+                                            воспаление.
+                                            Однако чрезмерное пребывание на солнце может вызвать ожоги и усилить
+                                            симптомы
+                                            псориаза.<br><br>
+
+                                            Жаркая погода и потоотделение: Жаркая погода вызывает потоотделение.
+                                            Чрезмерное
+                                            потоотделение может усилить раздражение на коже и спровоцировать обострение
+                                            псориаза.<br><br>
+
+                                            Солнечные ожоги: Кожа, поражённая псориазом, более чувствительна к солнцу.
+                                            Ожоги
+                                            могут усугубить заболевание.<br><br>
+
+                                            Морская вода и хлорированная вода: Хлор в бассейне может сушить кожу и
+                                            ухудшать
+                                            симптомы псориаза. Однако морская вода может иметь лечебное воздействие на
+                                            кожу,
+                                            так как солёная вода уменьшает воспаление.<br><br>
+
+                                            Советы по управлению псориазом летом:
+                                            Защита от солнца: Перед выходом на улицу обязательно наносите солнцезащитный
+                                            крем с
+                                            высоким SPF (30 и выше). Постарайтесь избегать длительного пребывания на
+                                            солнце.<br><br>
+
+                                            Контроль потоотделения: Чтобы избежать чрезмерного потоотделения, выбирайте
+                                            прохладные
+                                            места и часто принимайте душ, чтобы очистить кожу от пота. Также следите за
+                                            тем,
+                                            чтобы
+                                            кожа могла дышать.<br><br>
+
+                                            Лёгкая одежда: В жаркие дни выбирайте хлопковую и удобную одежду.
+                                            Синтетические
+                                            ткани
+                                            могут задерживать пот, что усугубит псориаз.<br><br>
+
+                                            Плавание и водные виды спорта: Если вам нравится плавать, морская вода может
+                                            помочь
+                                            в лечении псориаза. Но не забывайте, что хлор в бассейне может сушить
+                                            кожу.<br><br>
+
+                                            Уход за кожей и увлажнение: Летом из-за потоотделения нужно более тщательно
+                                            следить за
+                                            гигиеной. Для поддержания баланса влаги на коже используйте лёгкие
+                                            увлажнители.<br><br>
+
+                                            Заключение: Жизнь с псориазом при сезонных изменениях
+                                            Псориаз может изменяться в зависимости от сезона, но с правильным уходом за
+                                            кожей и
+                                            здоровыми привычками можно адаптироваться к этим изменениям. Увлажнение кожи
+                                            зимой и
+                                            защита от солнца летом помогут контролировать течение заболевания. Помните,
+                                            что
+                                            каждый
+                                            человек уникален, и для достижения наилучших результатов необходимо
+                                            адаптировать
+                                            уход
+                                            под личные потребности.<br><br>
+
+                                            Если ваше состояние ухудшается с изменением сезонов, полезно обратиться к
+                                            дерматологу
+                                            для пересмотра плана лечения. Здоровье кожи можно поддерживать в любое время
+                                            года с
+                                            правильным уходом.<br><br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-4">
+                        <div class="sidebar__wrapper">
+                            <div class="sidebar__widget mb-30">
+                                <div class="sidebar__widget-content">
+                                    <div class="sidebar__search">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar__widget sidebar__widget-bg mb-30">
+                                <h3 class="sidebar__widget-title">Категории</h3>
+                                <div class="sidebar__widget-content">
+                                    <ul>
+                                        <li><a href="/locales/ru/blog/"><i class="fa-solid fa-right-long"></i>
+                                                Псориаз</a></li>
+                                        <li><a href="/locales/ru/blog/"><i class="fa-solid fa-right-long"></i>
+                                                Экзема</a></li>
+                                        <li><a href="/locales/ru/blog/"><i class="fa-solid fa-right-long"></i>
+                                                Ревматизм</a></li>
+                                        <li><a href="/locales/ru/blog/"><i class="fa-solid fa-right-long"></i> Акне</a>
+                                        </li>
+                                        <li><a href="/locales/ru/blog/"><i class="fa-solid fa-right-long"></i>
+                                                Иктиоз</a></li>
+                                        <li><a href="/locales/ru/blog/"><i class="fa-solid fa-right-long"></i>
+                                                Лейкопланус</a></li>
+                                        <li><a href="/locales/ru/blog/"><i class="fa-solid fa-right-long"></i>
+                                                Ревматоидный артрит</a></li>
+                                        <li><a href="/locales/ru/blog/"><i class="fa-solid fa-right-long"></i>
+                                                Хашимото</a></li>
+                                        <li><a href="/locales/ru/blog/"><i class="fa-solid fa-right-long"></i> Системная
+                                                красная волчанка</a></li>
+                                        <li><a href="/locales/ru/blog/"><i class="fa-solid fa-right-long"></i>
+                                                Анкилозирующий спондилит</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- postbox area end -->
+
+
+    </main>
+
+
+    <footer>
+        <div class="rr-footer-main p-relative fix" data-background="/assets/img/footer/footer-bg.jpg">
+
+            <!-- Нижний колонтитул начало -->
+            <div class="rr-footer-area pt-125 p-relative fix">
+                <div class="rr-footer-right-shap d-none d-xl-block">
+                    <img loading="lazy" src="/assets/img/footer/footer-shap.png" alt="img">
+                </div>
+                <div class="container">
+                    <div class="rr-footer-border">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp" data-wow-duration=".9s"
+                                data-wow-delay=".3s">
+                                <div class="rr-footer-widget footer-cols-1">
+                                    <div class="rr-footer-logo pb-35">
+                                        <a href="/locales/ru/index.html"><img loading="lazy"
+                                                src="/assets/img/logo/logo.png" alt="img"></a>
+                                    </div>
+                                    <div class="rr-footer-widget-content-list mb-25">
+                                        <div class="rr-footer-widget-content-list-item">
+                                            <i class="fa-sharp fa-solid fa-clock"></i>
+                                            <a href="#">Рабочие часы:<br />
+                                                Пн - Сб : 9.00 - 17.00 </a>
+                                        </div>
+                                        <div class="rr-footer-widget-content-list-item">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <a href="#"> Бизнес-центр Мертер - Этаж 11/63</a>
+                                        </div>
+                                        <div class="rr-footer-widget-content-list-item">
+                                            <i class="fa-sharp fa-solid fa-phone"></i>
+                                            <a href="tel:+902126772424">+90 (212) 677 24 24</a>
+                                        </div>
+                                    </div>
+                                    <div class="rr-footer-social">
+                                        <a href="https:/www.facebook.com/sedefegzamatedavisi">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                        <a href="https:/www.instagram.com/drmehmetilteberbahadir/">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp" data-wow-duration=".9s"
+                                data-wow-delay=".5s">
+                            </div>
+                            <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp" data-wow-duration=".9s"
+                                data-wow-delay=".7s">
+                                <div class="rr-footer-widget footer-cols-3">
+                                    <h4 class="rr-footer-title">Быстрые ссылки</h4>
+                                    <div class="rr-footer-list">
+                                        <ul>
+                                            <li><a href="#">Главная</a></li>
+                                            <li><a href="/locales/ru/hakkimizda.html">Обо мне</a></li>
+                                            <li><a href="/locales/ru/cilt-hastaliklari.html">Заболевания</a></li>
+                                            <li><a href="/locales/ru/locales/ru/blog/">Блог</a></li>
+                                            <li><a href="/locales/ru/iletisim.html">Контакты</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp" data-wow-duration=".9s"
+                                data-wow-delay=".9s">
+                                <div class="rr-footer-widget footer-cols-4">
+                                    <h4 class="rr-footer-title">Наши рабочие часы</h4>
+                                    <div class="rr-footer-contact">
+                                        <ul>
+                                            <li><span>Понедельник - 09.00 - 17.00</span></li>
+                                            <li><span>Вторник - 09.00 - 17.00</span></li>
+                                            <li><span>Среда - 09.00 - 17.00</span></li>
+                                            <li><span>Четверг - 09.00 - 17.00</span></li>
+                                            <li><span>Пятница - 09.00 - 17.00</span></li>
+                                            <li><span>Суббота - 09.00 - 17.00</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Нижний колонтитул конец -->
+
+            <!-- Авторские права начало -->
+            <div class="rr-copyright-area p-relative">
+                <div class="container rr-copyright-broder rr-copyright-space">
+                    <div class="row align-items-center">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-12 wow rrfadeUp" data-wow-duration=".9s"
+                            data-wow-delay=".3s">
+                            <div class="rr-copyright-left text-center text-md-start">
+                                <p>© 2024 <a href="#"> Dr. Mehmet İlteber BAHADIR, </a> Все права защищены.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Авторские права конец -->
+        </div>
+    </footer>
+
+    <!-- WhatsApp Butonu -->
+    <a href="tel:+902126772424" target="_blank" class="whatsapp-button z-index-2">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- CSS -->
+    <style>
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-5px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 40px;
+            right: 100px;
+            background-color: #25D366;
+            color: white;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 1.5s infinite;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1EBE5D;
+            text-decoration: none;
+            animation: shake 0.5s ease-in-out;
+        }
+    </style>
+    <!-- WhatsApp Button -->
+
+
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https:/cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+
+
+
+    <!-- JS here -->
+    <script src="/assets/js/vendor/jquery.js"></script>
+    <script src="/assets/js/vendor/waypoints.js"></script>
+    <script src="/assets/js/bootstrap-bundle.js"></script>
+    <script src="/assets/js/ajax-form.js"></script>
+    <script src="/assets/js/imagesloaded-pkgd.js"></script>
+    <script src="/assets/js/isotope-pkgd.js"></script>
+    <script src="/assets/js/jarallax.js"></script>
+    <script src="/assets/js/magnific-popup.js"></script>
+    <script src="/assets/js/nice-select.js"></script>
+    <script src="/assets/js/purecounter.js"></script>
+    <script src="/assets/js/range-slider.js"></script>
+    <script src="/assets/js/wow.js"></script>
+    <script src="/assets/js/slick.js"></script>
+    <script src="/assets/js/swiper-bundle.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

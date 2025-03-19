@@ -8,21 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo/favicon.png">
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/icofont.css">
-    <link rel="stylesheet" href="assets/css/icofont.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
-    <link rel="stylesheet" href="assets/css/spacing.css">
-    <link rel="stylesheet" href="assets/css/custom-animation.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/animate.css">
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="/assets/css/slick.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/icofont.css">
+    <link rel="stylesheet" href="/assets/css/icofont.min.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome-pro.css">
+    <link rel="stylesheet" href="/assets/css/spacing.css">
+    <link rel="stylesheet" href="/assets/css/custom-animation.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
 <body>
@@ -53,15 +53,15 @@
     <!-- back to top end -->
 
 
-    <!-- rr-offcanvus-area-start -->
+
     <div class="rroffcanvas-area">
         <div class="rroffcanvas">
             <div class="rroffcanvas__close-btn">
                 <button class="close-btn"><i class="fal fa-times"></i></button>
             </div>
             <div class="rroffcanvas__logo">
-                <a href="index.html">
-                    <img loading="lazy" src="assets/img/logo/logo.png" alt="img">
+                <a href="/locales/ru/index.html">
+                    <img loading="lazy" src="/assets/img/logo/logo.png" alt="img">
                 </a>
                 <!-- Dil seçenekleri -->
                 <div class="lang">
@@ -69,16 +69,27 @@
                         <option>Türkçe</option>
                         <option>English</option>
                         <option>Arabic</option>
+                        <option>Russian</option> <!-- Rusça eklendi -->
                     </select>
-                    <div class="nice-select" tabindex="0"><span class="current"> <img src="assets/img/header/tr.png"
-                                alt="tr">
+                    <div class="nice-select" tabindex="0">
+                        <span class="current">
+                            <img src="/assets/img/header/ru.png" alt="ru">
                         </span>
                         <ul class="list z-index-2">
-                            <li data-value="Türkçe" class="option selected focus"> <img src="assets/img/header/tr.png"
-                                    alt="tr">
+                            <li data-value="Russian" class="option selected focus">
+                                <img src="/assets/img/header/ru.png" alt="ru">
                             </li>
-                            <li data-value="English" class="option"><img src="assets/img/header/en.png" alt="en"> </li>
-                            <li data-value="Arabic" class="option"><img src="assets/img/header/ar.png" alt="ar"> </li>
+                            <li data-value="Türkçe" class="option ">
+                                <img src="/assets/img/header/tr.png" alt="tr">
+                            </li>
+
+                            <li data-value="English" class="option">
+                                <img src="/assets/img/header/en.png" alt="en">
+                            </li>
+                            <li data-value="Arabic" class="option">
+                                <img src="/assets/img/header/ar.png" alt="ar">
+                            </li>
+                            <!-- Rusça eklendi -->
                         </ul>
                     </div>
                 </div>
@@ -86,15 +97,15 @@
             <div class="rr-main-menu-mobile d-xl-none"></div>
             <div class="rroffcanvas__contact-info">
                 <div class="rroffcanvas__contact-title">
-                    <h5>Bizimle İletişime Geçin!</h5>
+                    <h5>Свяжитесь с нами!</h5>
                 </div>
                 <ul>
                     <li>
                         <i class="fa-light fa-location-dot"></i>
-                        <a href="htrrs:/www.google.com/maps/@23.8223586,90.3661283,15z" target="_blank">Maltepe Mah.
-                            Eski
-                            Çırpıcı Yolu Sok. No:2/63 Kat:11 E-5 Karayolu Merter Metro İstasyon Yanı Merter İş Merkezi
-                            Zeytinburnu / İstanbul</a>
+                        <a href="https:/www.google.com/maps/@23.8223586,90.3661283,15z" target="_blank">
+                            Малтепе Мах. Эски Чирпыджи Йолу Сок. No:2/63 Этаж:11 E-5 Караёлу Мертер Метро Станция рядом
+                            Мертер Бизнес Центр Зейтинбурну / Стамбул
+                        </a>
                     </li>
                     <li>
                         <i class="fas fa-envelope"></i>
@@ -116,9 +127,7 @@
         </div>
     </div>
     <div class="body-overlay"></div>
-    <!-- rr-offcanvus-area-end -->
 
-    <!-- header top area start -->
 
     <div class="rr-header-1-top rr-header-1-shap d-none d-xl-block grey-bg p-relative">
         <div class="container custom-container-1 z-index-3">
@@ -128,21 +137,20 @@
                         <div class="rr-header-1-top-info text-end">
                             <ul class="d-flex align-items-center">
                                 <li>
-                                    <a href="mailto:support@gmail.com "><span><i
-                                                class="fa-solid fa-envelope"></i></span>
-                                        randevu@drmehmetilteberbahadir.net</a>
+                                    <a href="mailto:randevu@drmehmetilteberbahadir.net">
+                                        <span><i class="fa-solid fa-envelope"></i></span>
+                                        randevu@drmehmetilteberbahadir.net
+                                    </a>
                                 </li>
                                 <li class="ml-50">
-                                    <b><span><i class="fa-solid fa-clock"></i></span>Pzt - Cmt : 09.00 -
-                                        17.00</b>
+                                    <b><span><i class="fa-solid fa-clock"></i></span>Пон - Суб: 09:00 - 17:00</b>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xxl-3 col-xl-3  col-lg-1 d-none d-xxl-block">
+                    <div class="col-xxl-3 col-xl-3 col-lg-1 d-none d-xxl-block">
                         <div class="rr-header-1-top-btn-text">
-                            <span>Dr. Mehmet İlteber BAHADIR
-                            </span>
+                            <span>Др. Мехмет Ильтебер БАХАДЫР</span>
                         </div>
                     </div>
                     <div class="col-xxl-4 col-xl-6 col-lg-5">
@@ -152,37 +160,47 @@
                                     <option>Türkçe</option>
                                     <option>English</option>
                                     <option>Arabic</option>
-
+                                    <option>Russian</option> <!-- Rusça eklendi -->
                                 </select>
-                                <div class="nice-select" tabindex="0"><span class="current"> <img
-                                            src="assets/img/header/tr.png" width="30" alt=""> </span>
+                                <div class="nice-select" tabindex="0">
+                                    <span class="current">
+                                        <img src="/assets/img/header/ru.png" width="30" alt="">
+                                    </span>
+
                                     <ul class="list z-index-2">
-                                        <li data-value="Türkçe" class="option selected focus"><img
-                                                src="assets/img/header/tr.png" width="30" alt=""> </li>
-                                        <li data-value="English" class="option"><img src="assets/img/header/en.png"
-                                                width="30" alt=""> </li>
-                                        <li data-value="Arabic" class="option"><img src="assets/img/header/ar.png"
-                                                width="30" alt=""> </li>
+                                        <li data-value="Russian" class="option selected focus">
+                                            <img src="/assets/img/header/ru.png" width="30" alt="">
+                                        </li>
+                                        <li data-value="Türkçe" class="option">
+                                            <img src="/assets/img/header/tr.png" width="30" alt="">
+                                        </li>
+                                        <li data-value="English" class="option">
+                                            <img src="/assets/img/header/en.png" width="30" alt="">
+                                        </li>
+                                        <li data-value="Arabic" class="option">
+                                            <img src="/assets/img/header/ar.png" width="30" alt="">
+                                        </li>
+                                        <!-- Rusça eklendi -->
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 
     <!-- header top area end -->
+
     <!-- header main area start -->
 
-    <section class="rr-header-1-main d-none d-xl-block">
+    <section class=".rr-header-1-main d-none d-xl-block">
         <div class="container custom-container-1">
             <div class="row align-items-center">
                 <div class="col-xl-4">
                     <div class="rr-header-main-social d-flex align-items-center">
-                        <h4 class="rr-header-1-title">Sosyal Medya </h4>
+                        <h4 class="rr-header-1-title">Социальные сети</h4>
                         <div class="rr-header-1-social ml-20">
                             <a href="https:/www.facebook.com/sedefegzamatedavisi"><i
                                     class="fa-brands fa-facebook-f"></i></a>
@@ -194,7 +212,8 @@
                 </div>
                 <div class="col-xl-4">
                     <div class="rr-herader-1-logo text-center">
-                        <a href="index.html"><img loading="lazy" src="assets/img/logo/logo.png" alt="img"></a>
+                        <a href="/locales/ru/index.html"><img loading="lazy" src="/assets/img/logo/logo.png"
+                                alt="img"></a>
                     </div>
                 </div>
                 <div class="col-xl-4">
@@ -204,8 +223,8 @@
                         </div>
                         <a href="">
                             <div class="rr-header-1-contat-text ml-20">
-                                <h4> Randevu almak için tıklayın!</h4>
-                                <b><a href="tel:+902126772424">7/24 – Hızlı ve Kolay</a></b>
+                                <h4>Нажмите, чтобы записаться на прием!</h4>
+                                <b><a href="tel:+902126772424">24/7 – Быстро и легко</a></b>
                             </div>
                         </a>
                     </div>
@@ -223,88 +242,92 @@
                 <div class="row align-items-center">
                     <div class="col-xl-7 col-lg-7 col-md-6 col-6">
                         <div class="rr-header-1-logo d-xl-none">
-                            <img loading="lazy" src="assets/img/logo/logo.png" alt="">
+                            <img loading="lazy" src="/assets/img/logo/logo.png" alt="">
                         </div>
                         <div class="rr-header-main-menu rr-header-menu ml-30  d-none d-xl-block">
                             <nav class="rr-main-menu-content">
                                 <ul>
                                     <li class="has-dropdown">
-                                        <a href="index.html">Anasayfa</a>
+                                        <a href="/locales/ru/index.html">Главная</a>
                                         <div class="rr-submenu submenu has-homemenu">
                                             <div class="row gx-6 row-cols-1 row-cols-md-2 row-cols-xl-3">
                                                 <div class="col homemenu">
                                                     <div class="homemenu-thumb mb-15">
-                                                        <img loading="lazy" src="assets/img/menu/home-1.jpg" alt="img">
+                                                        <img loading="lazy" src="/assets/img/menu/home-1.jpg" alt="img">
                                                         <div class="homemenu-btn">
-                                                            <a class="rr-menu-btn" href="terapi.html">Siteye git</a>
+                                                            <a class="rr-menu-btn"
+                                                                href="/locales/ru/terapi.html">Перейти на
+                                                                сайт</a>
                                                         </div>
                                                     </div>
 
                                                     <div class="homemenu-content text-center">
                                                         <h4 class="homemenu-title">
-                                                            <a href="terapi.html">Fitoterapi Nedir?</a>
+                                                            <a href="/locales/ru/terapi.html">Что такое фитотерапия?</a>
                                                         </h4>
                                                     </div>
                                                 </div>
 
                                                 <div class="col homemenu">
                                                     <div class="homemenu-thumb mb-15">
-                                                        <img loading="lazy" src="assets/img/menu/home-2.jpg" alt="img">
+                                                        <img loading="lazy" src="/assets/img/menu/home-2.jpg" alt="img">
                                                         <div class="homemenu-btn">
-                                                            <a class="rr-menu-btn" href="terapi.html">Siteye git</a>
+                                                            <a class="rr-menu-btn"
+                                                                href="/locales/ru/terapi.html">Перейти на
+                                                                сайт</a>
                                                         </div>
                                                     </div>
                                                     <div class="homemenu-content text-center">
                                                         <h4 class="homemenu-title">
-                                                            <a href="terapi.html">Ozonterapi</a>
+                                                            <a href="/locales/ru/terapi.html">Озонотерапия</a>
                                                         </h4>
                                                     </div>
                                                 </div>
 
                                                 <div class="col homemenu">
                                                     <div class="homemenu-thumb mb-15">
-                                                        <img loading="lazy" src="assets/img/menu/home-3.jpg" alt="img">
+                                                        <img loading="lazy" src="/assets/img/menu/home-3.jpg" alt="img">
                                                         <div class="homemenu-btn">
-                                                            <a class="rr-menu-btn" href="terapi.html">Siteye git</a>
+                                                            <a class="rr-menu-btn"
+                                                                href="/locales/ru/terapi.html">Перейти на
+                                                                сайт</a>
                                                         </div>
                                                     </div>
                                                     <div class="homemenu-content text-center">
                                                         <h4 class="homemenu-title">
-                                                            <a href="terapi.html">Mezoterapi</a>
+                                                            <a href="/locales/ru/terapi.html">Мезотерапия</a>
                                                         </h4>
                                                     </div>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </li>
-                                    <li><a href="hakkimizda.html">Hakkımda</a></li>
+                                    <li><a href="/locales/ru/hakkimizda.html">О нас</a></li>
                                     <li class="has-dropdown">
-                                        <a href="cilt-hastaliklari.html">Hastalıklar</a>
+                                        <a href="/locales/ru/cilt-hastaliklari.html">Заболевания</a>
                                         <ul class="submenu rr-submenu">
-                                            <li><a href="cilt-hastaliklari.html">Cilt Hastalıkları</a></li>
-                                            <li><a href="romatizmal-hastaliklar.html">Romatizmal H.</a></li>
-                                            <li><a href="akne.html">Akne</a></li>
-
+                                            <li><a href="/locales/ru/cilt-hastaliklari.html">Кожные заболевания</a></li>
+                                            <li><a href="/locales/ru/romatizmal-hastaliklar.html">Ревматические
+                                                    заболевания</a></li>
+                                            <li><a href="/locales/ru/akne.html">Акне</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-dropdown">
-                                        <a href="#">Sayfalar</a>
+                                        <a href="#">Страницы</a>
                                         <ul class="submenu rr-submenu">
-                                            <li><a href="404.html">Videolar</a></li>
-                                            <li><a href="ekibimiz.html">Ekibimiz</a></li>
-                                            <li><a href="hekimlerimiz.html">Hekimlerimiz</a></li>
-                                            <li><a href="SSS.html">Sıkça Sorulan Sorular</a></li>
+                                            <li><a href="/locales/ru/404.html">Видео</a></li>
+                                            <li><a href="/locales/ru/ekibimiz.html">Наша команда</a></li>
+                                            <li><a href="/locales/ru/hekimlerimiz.html">Наши врачи</a></li>
+                                            <li><a href="/locales/ru/SSS.html">Часто задаваемые вопросы</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-dropdown">
-                                        <a href="blog.html">Blog</a>
+                                        <a href="/locales/ru/blog.html">Блог</a>
                                         <ul class="submenu rr-submenu">
-                                            <li><a href="blog.html">Bütün Yazılar</a></li>
-
+                                            <li><a href="/locales/ru/blog.html">Все статьи</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="iletisim.html">İletişim</a></li>
+                                    <li><a href="/locales/ru/iletisim.html">Контакты</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -312,7 +335,7 @@
                     <div class="col-xl-5 col-lg-5 col-md-6 col-6">
                         <div class="rr-header-right d-flex align-items-center justify-content-end">
                             <div class="rr-header-1-contat d-none d-md-block ml-30">
-                                <a class="rr-btn-border" href="iletisim.html"><span>Randevu Oluştur <i
+                                <a class="rr-btn-border" href="/locales/ru/iletisim.html"><span>Записаться на прием <i
                                             class="fa-sharp fa-solid fa-plus"></i></span></a>
                             </div>
                             <div class="rr-header-bar d-xl-none">
@@ -328,29 +351,25 @@
 
     </header>
 
-    <!-- Bootstrap Icons CDN -->
-    <link rel="stylesheet" href="https:/cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
-
     <main>
 
         <!-- breadcrumb area start -->
         <div class="breadcrumb__area breadcrumb__overlay breadcrumb__height fix p-relative"
-            data-background="assets/img/breadcurmb">
+            data-background="/assets/img/breadcurmb">
             <div class="breadcrumb-shap d-none d-xxl-block">
-                <img loading="lazy" src="assets/img/breadcurmb/img-2.png" alt="img">
+                <img loading="lazy" src="/assets/img/breadcurmb/img-2.png" alt="img">
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-xl-5 col-md-5">
                         <div class="breadcrumb__content z-index">
                             <div class="breadcrumb__section-title-box">
-                                <h3 class="breadcrumb__title">Akne</h3>
+                                <h3 class="breadcrumb__title">Acne</h3>
                             </div>
                             <div class="breadcrumb__list">
-                                <span><a href="index.html">Hastalıklar</a></span>
+                                <span><a href="index.html">Diseases</a></span>
                                 <span class="dvdr"><i>/</i></span>
-                                <span>Akne</span>
+                                <span>Acne</span>
                             </div>
                         </div>
                     </div>
@@ -372,8 +391,8 @@
                         <div class="rr-faq-left z-index-3">
                             <div class="rr-faq-title-box pb-25">
                                 <span class="rr-section-subtitle"><img loading="lazy"
-                                        src="assets/img/testimonial/section-icon.png" alt="img">
-                                    Akne Problemi</span>
+                                        src="/assets/img/testimonial/section-icon.png" alt="img">
+                                    Acne Problem</span>
                                 <p></p>
                             </div>
                             <div class="rr-faq-wrap">
@@ -385,20 +404,20 @@
                                                 <button class="accordion-buttons " type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#collapseOne"
                                                     aria-expanded="true" aria-controls="collapseOne">
-                                                    <i class="fa-solid fa-check"></i>Akne nasıl anlaşılır?
+                                                    <i class="fa-solid fa-check"></i>How is acne identified?
                                                 </button>
                                             </h2>
                                             <div id="collapseOne" class="accordion-collapse collapse show"
                                                 aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    En erken bulgu sebumsekresyon hızının artışı ve bununla birlikte
-                                                    derinin yağlı görünür bir hale gelmesidir (sebore). Genellikle
-                                                    komedonlar veya siyah noktalar yağlı görünümle birlikte olur.
-                                                    Genellikle burnun yan taraflarında ve alında çıkar. Komedonlar
-                                                    folüküler tıkaçlardır. Sertleşmiş sebum ve folüküler atık
-                                                    materyalından oluşur. Durumu ağır hastalarda nodüller sıvılaşır ve
-                                                    fuluktuasyon veren kistler oluşur. Epiter tabakaları olmadığından
-                                                    gerçekte bu lezyonlar psödokisttir. Bu ağır bir aknedir.
+                                                    The earliest sign is an increase in sebaceous secretion speed, which
+                                                    makes the skin appear oily (seborrhea). Typically, comedones or
+                                                    blackheads appear with the oily appearance, mostly around the sides
+                                                    of the nose and forehead. Comedones are follicular plugs composed of
+                                                    hardened sebum and follicular waste material. In severe cases,
+                                                    nodules turn into cysts with fluctuation. These lesions are actually
+                                                    pseudocysts because they lack epithelial layers. This is considered
+                                                    severe acne.
                                                     <span>01</span>
                                                 </div>
                                             </div>
@@ -409,16 +428,15 @@
                                                 <button class="accordion-buttons collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                                                     aria-expanded="false" aria-controls="collapseTwo">
-                                                    <i class="fa-solid fa-check"></i> Akne en çok vücudun nerelerini
-                                                    etkiler?
+                                                    <i class="fa-solid fa-check"></i> Which areas of the body are most
+                                                    affected by acne?
                                                 </button>
                                             </h2>
                                             <div id="collapseTwo" class="accordion-collapse collapse"
                                                 aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    Yüz yanaklar alt çene burun alın derisi boynun arka kısmı göğüs önü
-                                                    ve omuzlar en çok etkilenen bölgelerdir.
-
+                                                    The most affected areas are the face, cheeks, chin, nose, forehead,
+                                                    neck, back, chest, and shoulders.
                                                     <span>02</span>
                                                 </div>
                                             </div>
@@ -429,18 +447,19 @@
                                                 <button class="accordion-buttons collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#collapseThree"
                                                     aria-expanded="false" aria-controls="collapseThree">
-                                                    <i class="fa-solid fa-check"></i> Akne Kendiliğinden Geçer mi?
+                                                    <i class="fa-solid fa-check"></i> Does acne heal on its own?
                                                 </button>
                                             </h2>
                                             <div id="collapseThree" class="accordion-collapse collapse"
                                                 aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    Hastalığın doğal eğilimi kendiliğinden iyileşmesi yönündedir. Ancak
-                                                    aknenin ne zaman iyileşeceği belli olmaz. Çoğunlukla akne 25 yaşında
-                                                    kaybolur. Ancak bazı hastalarda çok daha uzun sürebilir. Akne yazın
-                                                    iyileşir. Güneş ve tuzlu su çoğu hastanın durumunun iyileşmesini
-                                                    sağlar. Bununla beraber sıcak iyileşme sağlamaz. Gerçekten sıcak ve
-                                                    nemli iklim de akne yangılı ve eksudalı bir hale dönüşebilir.
+                                                    The natural course of the disease is to heal on its own. However, it
+                                                    is unpredictable when acne will heal. Acne typically disappears by
+                                                    the age of 25. However, in some patients, it may persist much
+                                                    longer. Acne tends to improve in the summer, with sunlight and
+                                                    saltwater helping many patients. However, warmth does not improve
+                                                    it, and truly hot and humid climates may cause acne to become
+                                                    inflamed and exudative.
                                                     <span>03</span>
                                                 </div>
                                             </div>
@@ -451,16 +470,15 @@
                                                 <button class="accordion-buttons collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#collapseFour"
                                                     aria-expanded="false" aria-controls="collapseFour">
-                                                    <i class="fa-solid fa-check"></i>Skar doku nedir?
+                                                    <i class="fa-solid fa-check"></i> What is scar tissue?
                                                 </button>
                                             </h2>
                                             <div id="collapseFour" class="accordion-collapse collapse"
                                                 aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    Skar doku, yaralanma veya bir cilt hastalığı sonrası ciltte oluşan
-                                                    izlere denir. İyileşme sırasında, fonksiyonel deri dokusunun bağ
-                                                    dokusu ile yer değiştirmesi sonucu ortaya çıkan bir belirti olarak
-                                                    nitelendirilmektedir.
+                                                    Scar tissue refers to the scars that form on the skin after an
+                                                    injury or a skin disease. During healing, functional skin tissue is
+                                                    replaced by connective tissue, which is identified as a sign.
                                                     <span>04</span>
                                                 </div>
                                             </div>
@@ -471,25 +489,26 @@
                                                 <button class="accordion-buttons collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#collapseFour"
                                                     aria-expanded="false" aria-controls="collapseFour">
-                                                    <i class="fa-solid fa-check"></i>Kimler Akne tedavisi görmelidir?
+                                                    <i class="fa-solid fa-check"></i> Who should get acne treatment?
                                                 </button>
                                             </h2>
                                             <div id="collapseFour" class="accordion-collapse collapse"
                                                 aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    Nüfusun yaklaşık 70% inde ergenlik döneminde akne görülür. Ancak
-                                                    bunların sadece 10% unda tıbbi yardım gerekir. Bu hastalarda tıbbi
-                                                    yardım almak çok önemlidir. Aksi takdirde özellikle kişinin yüzü
-                                                    skar dokusuyla kaplanabilir. Kişinin psikolojik ve sosyal hayatı bu
-                                                    durumdan etkilenebilir. Bunlarda tıbbi tedavi ve uzun süreli destek
-                                                    tedavisi gerekir.
+                                                    Acne is seen in about 70% of the population during adolescence.
+                                                    However, only 10% of these people need medical assistance. It is
+                                                    crucial for these patients to seek medical help. Otherwise, the
+                                                    person's face can become covered with scar tissue. This can affect
+                                                    the person's psychological and social life. Medical treatment and
+                                                    long-term support therapy are necessary for these patients.
 
-                                                    Histolojik olarak temel özellik, aşırı iltihabi bir follikülit
-                                                    olmasıdır. Erken evrede folüküler tıkaç görülebilir. Daha sonra
-                                                    yangısal hücre birikimi, histiositler, dev hücreli granülümatöz
-                                                    reaksiyon görülür. Uzun süreli lezyonlarda skar dokusunu başlatan
-                                                    fibröz doku birikimleri vardır. Aknede önemli yangısal lezyonların
-                                                    oluşmasının, folliküllerin yırtılması sonucu oluştuğu düşünülür.
+                                                    Histologically, the main feature is an excessively inflammatory
+                                                    folliculitis. In the early stage, follicular plugs can be seen.
+                                                    Later, there is an accumulation of inflammatory cells, histiocytes,
+                                                    and multinucleated giant granulomatous reactions. Long-lasting
+                                                    lesions have fibrous tissue deposits that initiate scar formation.
+                                                    It is thought that significant inflammatory lesions in acne result
+                                                    from follicular rupture.
                                                     <span>05</span>
                                                 </div>
                                             </div>
@@ -500,21 +519,20 @@
                                                 <button class="accordion-buttons collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#collapseFour"
                                                     aria-expanded="false" aria-controls="collapseFour">
-                                                    <i class="fa-solid fa-check"></i>Akne tedavisinde yan etkisiz
-                                                    yöntemler
+                                                    <i class="fa-solid fa-check"></i> Acne treatment without side
+                                                    effects
                                                 </button>
                                             </h2>
                                             <div id="collapseFour" class="accordion-collapse collapse"
                                                 aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    Ülkemizde son yıllarda sağlık bakanlığının fitoterapiye verdiği
-                                                    değer sayesinde akne, yüz ve vücut bakımında çok daha kolay, hiç bir
-                                                    yan etkisi olmayan, her hastada aynı sonucu veren yardımcı
-                                                    fitoterapik uygulamalar yapılmaktadır. Bu uygulamaları çok kolay ve
-                                                    yan etkisiz bir şekilde, kişi evinde rahatlıkla uygulayabilir.
-                                                    Ortalama 6 haftalık bir uygulama sayesinde kişi tüm akne
-                                                    lezyonlarından kolay bir şekilde kurtulabilir. Yan etkisi olan
-                                                    ilaçlar kullanmadan aknesiz bir yaşam mümkündür.
+                                                    Thanks to the importance given by the Ministry of Health to
+                                                    phytotherapy in recent years, acne can now be treated with
+                                                    completely safe and effective phytotherapeutic applications with no
+                                                    side effects. These applications can easily be performed at home by
+                                                    individuals. After an average of 6 weeks of application, individuals
+                                                    can easily get rid of all acne lesions. A life without acne is
+                                                    possible without using any medication with side effects.
                                                     <span>06</span>
                                                 </div>
                                             </div>
@@ -524,22 +542,20 @@
                                                 <button class="accordion-buttons collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#collapseFour"
                                                     aria-expanded="false" aria-controls="collapseFour">
-                                                    <i class="fa-solid fa-check"></i>Akne Tedavisinde Hastaların Yaptığı
-                                                    Yanlışlar
+                                                    <i class="fa-solid fa-check"></i> Mistakes patients make in acne
+                                                    treatment
                                                 </button>
                                             </h2>
                                             <div id="collapseFour" class="accordion-collapse collapse"
                                                 aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    Skar doku, yaralanma veya bir cilt hastalığı sonrası ciltte oluşan
-                                                    izlere denir. İyileşme sırasında, fonksiyonel deri dokusunun bağ
-                                                    dokusu ile yer değiştirmesi sonucu ortaya çıkan bir belirti olarak
-                                                    nitelendirilmektedir.
+                                                    Scar tissue refers to the scars that form on the skin after an
+                                                    injury or a skin disease. During healing, functional skin tissue is
+                                                    replaced by connective tissue, which is identified as a sign.
                                                     <span>06</span>
                                                 </div>
                                             </div>
                                         </div>
-
 
                                     </div>
                                 </div>
@@ -548,7 +564,7 @@
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6 wow rrfadeLeft" data-wow-duration=".9s" data-wow-delay=".5s">
                         <div class="rr-faq-thumb">
-                            <img loading="lazy" src="assets/img/faq/sss.jpg" alt="img">
+                            <img loading="lazy" src="/assets/img/faq/sss.jpg" alt="img">
                         </div>
                     </div>
                 </div>
@@ -560,12 +576,12 @@
 
 
     <footer>
-        <div class="rr-footer-main p-relative fix" data-background="assets/img/footer/footer-bg.jpg">
+        <div class="rr-footer-main p-relative fix" data-background="/assets/img/footer/footer-bg.jpg">
 
-            <!-- footer area start -->
+            <!-- Нижний колонтитул начало -->
             <div class="rr-footer-area pt-125 p-relative fix">
                 <div class="rr-footer-right-shap d-none d-xl-block">
-                    <img loading="lazy" src="assets/img/footer/footer-shap.png" alt="img">
+                    <img loading="lazy" src="/assets/img/footer/footer-shap.png" alt="img">
                 </div>
                 <div class="container">
                     <div class="rr-footer-border">
@@ -574,29 +590,31 @@
                                 data-wow-delay=".3s">
                                 <div class="rr-footer-widget footer-cols-1">
                                     <div class="rr-footer-logo pb-35">
-                                        <a href="index.html"><img loading="lazy" src="assets/img/logo/logo.png"
-                                                alt="img"></a>
+                                        <a href="/locales/ru/index.html"><img loading="lazy"
+                                                src="/assets/img/logo/logo.png" alt="img"></a>
                                     </div>
                                     <div class="rr-footer-widget-content-list mb-25">
                                         <div class="rr-footer-widget-content-list-item">
-                                            <i class="fa-sharp fa-solid fa-clock"></i> <a href="#">Çalışma
-                                                Saatleri:<br />
-                                                Pzt- Cmt : 9.00 - 17.00 </a>
+                                            <i class="fa-sharp fa-solid fa-clock"></i>
+                                            <a href="#">Рабочие часы:<br />
+                                                Пн - Сб : 9.00 - 17.00 </a>
                                         </div>
                                         <div class="rr-footer-widget-content-list-item">
-                                            <i class="fa-solid fa-location-dot"></i> <a href="#"> Merter İş Merkezi -
-                                                Kat 11/63</a>
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <a href="#"> Бизнес-центр Мертер - Этаж 11/63</a>
                                         </div>
                                         <div class="rr-footer-widget-content-list-item">
-                                            <i class="fa-sharp fa-solid fa-phone"></i><a href="tel:+902126772424">+90
-                                                (212) 677 24 24</a>
+                                            <i class="fa-sharp fa-solid fa-phone"></i>
+                                            <a href="tel:+902126772424">+90 (212) 677 24 24</a>
                                         </div>
                                     </div>
                                     <div class="rr-footer-social">
-                                        <a href="https:/www.facebook.com/sedefegzamatedavisi"><i
-                                                class="fa-brands fa-facebook-f"></i></a>
-                                        <a href="https:/www.instagram.com/drmehmetilteberbahadir/"><i
-                                                class="fa-brands fa-instagram"></i></a>
+                                        <a href="https://www.facebook.com/sedefegzamatedavisi">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/drmehmetilteberbahadir/">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
                                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                                     </div>
                                 </div>
@@ -607,14 +625,14 @@
                             <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp" data-wow-duration=".9s"
                                 data-wow-delay=".7s">
                                 <div class="rr-footer-widget footer-cols-3">
-                                    <h4 class="rr-footer-title">Hızlı Linkler</h4>
+                                    <h4 class="rr-footer-title">Быстрые ссылки</h4>
                                     <div class="rr-footer-list">
                                         <ul>
-                                            <li><a href="#">Anasayfa</a></li>
-                                            <li><a href="hakkimizda.html">Hakkımda</a></li>
-                                            <li><a href="cilt-hastaliklari.html">Hastalıklar</a></li>
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="iletisim.html">İletişim</a></li>
+                                            <li><a href="#">Главная</a></li>
+                                            <li><a href="/locales/ru/hakkimizda.html">Обо мне</a></li>
+                                            <li><a href="/locales/ru/cilt-hastaliklari.html">Заболевания</a></li>
+                                            <li><a href="/locales/ru/blog.html">Блог</a></li>
+                                            <li><a href="/locales/ru/iletisim.html">Контакты</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -622,15 +640,15 @@
                             <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp" data-wow-duration=".9s"
                                 data-wow-delay=".9s">
                                 <div class="rr-footer-widget footer-cols-4">
-                                    <h4 class="rr-footer-title">Çalışma Saatlerimiz</h4>
+                                    <h4 class="rr-footer-title">Наши рабочие часы</h4>
                                     <div class="rr-footer-contact">
                                         <ul>
-                                            <li><span>Pazartesi - 09.00 - 17.00</span></li>
-                                            <li><span>Salı - 09.00 - 17.00</span></li>
-                                            <li><span>Çarşamba - 09.00 - 17.00</span></li>
-                                            <li><span>Perşembe - 09.00 - 17.00</span></li>
-                                            <li><span>Cuma -09.00 - 17.00</span></li>
-                                            <li><span>Cumartesi - 09.00 - 17.00</span></li>
+                                            <li><span>Понедельник - 09.00 - 17.00</span></li>
+                                            <li><span>Вторник - 09.00 - 17.00</span></li>
+                                            <li><span>Среда - 09.00 - 17.00</span></li>
+                                            <li><span>Четверг - 09.00 - 17.00</span></li>
+                                            <li><span>Пятница - 09.00 - 17.00</span></li>
+                                            <li><span>Суббота - 09.00 - 17.00</span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -639,45 +657,46 @@
                     </div>
                 </div>
             </div>
-            <!-- footer area end -->
+            <!-- Нижний колонтитул конец -->
 
-            <!-- copy-right area start -->
+            <!-- Авторские права начало -->
             <div class="rr-copyright-area p-relative">
                 <div class="container rr-copyright-broder rr-copyright-space">
                     <div class="row align-items-center">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-12 wow rrfadeUp" data-wow-duration=".9s"
                             data-wow-delay=".3s">
                             <div class="rr-copyright-left text-center text-md-start">
-                                <p>© 2024 <a href="#"> Dr. Mehmet İlteber BAHADIR, </a> Tüm Hakları Saklıdır.</p>
+                                <p>© 2024 <a href="#"> Dr. Mehmet İlteber BAHADIR, </a> Все права защищены.</p>
                             </div>
                         </div>
 
                     </div>
                 </div>
             </div>
-            <!-- copy-right area end -->
+            <!-- Авторские права конец -->
         </div>
     </footer>
 
 
 
 
+
     <!-- JS here -->
-    <script src="assets/js/vendor/jquery.js"></script>
-    <script src="assets/js/vendor/waypoints.js"></script>
-    <script src="assets/js/bootstrap-bundle.js"></script>
-    <script src="assets/js/ajax-form.js"></script>
-    <script src="assets/js/imagesloaded-pkgd.js"></script>
-    <script src="assets/js/isotope-pkgd.js"></script>
-    <script src="assets/js/jarallax.js"></script>
-    <script src="assets/js/magnific-popup.js"></script>
-    <script src="assets/js/nice-select.js"></script>
-    <script src="assets/js/purecounter.js"></script>
-    <script src="assets/js/range-slider.js"></script>
-    <script src="assets/js/wow.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/swiper-bundle.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/vendor/jquery.js"></script>
+    <script src="/assets/js/vendor/waypoints.js"></script>
+    <script src="/assets/js/bootstrap-bundle.js"></script>
+    <script src="/assets/js/ajax-form.js"></script>
+    <script src="/assets/js/imagesloaded-pkgd.js"></script>
+    <script src="/assets/js/isotope-pkgd.js"></script>
+    <script src="/assets/js/jarallax.js"></script>
+    <script src="/assets/js/magnific-popup.js"></script>
+    <script src="/assets/js/nice-select.js"></script>
+    <script src="/assets/js/purecounter.js"></script>
+    <script src="/assets/js/range-slider.js"></script>
+    <script src="/assets/js/wow.js"></script>
+    <script src="/assets/js/slick.js"></script>
+    <script src="/assets/js/swiper-bundle.js"></script>
+    <script src="/assets/js/main.js"></script>
 
 
 </body>

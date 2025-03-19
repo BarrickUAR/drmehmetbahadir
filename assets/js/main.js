@@ -675,12 +675,9 @@ function getCookie(e) {
       return (
         {
           Türkçe: "tr",
-          İngilizce: "en",
           English: "en",
-          Arapça: "ar",
           Arabic: "ar",
-          Rusça: "ru",
-          Almanca: "de",
+          Russian: "ru", // "Russian" kelimesini "ru" dil koduna çevir
         }[e] || "tr"
       );
     }

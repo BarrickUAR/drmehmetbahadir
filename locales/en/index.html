@@ -29,7 +29,7 @@
 
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https:/www.googletagmanager.com/gtag/js?id=G-KC044R9CB0"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC044R9CB0"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -39,7 +39,7 @@
     </script>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https:/www.googletagmanager.com/gtag/js?id=G-M4NQZ2E3PR"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4NQZ2E3PR"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -50,7 +50,7 @@
 
     <!-- Emailjs -->
 
-    <script type="text/javascript" src="https:/cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript">
         (function () {
@@ -219,7 +219,7 @@
                 <ul>
                     <li>
                         <i class="fa-light fa-location-dot"></i>
-                        <a href="https:/www.google.com/maps/@23.8223586,90.3661283,15z" target="_blank">Maltepe Mah.
+                        <a href="https://www.google.com/maps/@23.8223586,90.3661283,15z" target="_blank">Maltepe Mah.
                             Eski Çırpıcı Yolu Sok. No:2/63 Kat:11 E-5 Karayolu Merter Metro Station Next to Merter
                             Business Center
                             Zeytinburnu / Istanbul</a>
@@ -236,8 +236,8 @@
             </div>
             <div class="rroffcanvas__social">
                 <div class="social-icon">
-                    <a href="https:/www.instagram.com/istanbul_psoriasis_center/"><i class="fab fa-instagram"></i></a>
-                    <a href="https:/www.facebook.com/drmehmetilteberbahadir/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/istanbul_psoriasis_center/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/drmehmetilteberbahadir/"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
@@ -299,10 +299,47 @@
             </div>
         </div>
     </div>
-
-
     <!-- header top area end -->
+    <!-- header main area start -->
 
+    <section class="rr-header-1-main d-none d-xl-block">
+        <div class="container custom-container-1">
+            <div class="row align-items-center">
+                <div class="col-xl-4">
+                    <div class="rr-header-main-social d-flex align-items-center">
+                        <h4 class="rr-header-1-title">Social Media</h4>
+                        <div class="rr-header-1-social ml-20">
+                            <a href="https://www.facebook.com/sedefegzamatedavisi"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/drmehmetilteberbahadir/"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="rr-herader-1-logo text-center">
+                        <a href="index.html"><img loading="lazy" src="/assets/img/logo/logo.png" alt="img"></a>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="rr-header-1-contat d-flex align-items-center justify-content-end">
+                        <div class="rr-header-1-contat-icon p-relative">
+                            <span><i class="fa-solid fa-phone"></i></span>
+                        </div>
+                        <a href="">
+                            <div class="rr-header-1-contat-text ml-20">
+                                <h4>Click to make an appointment!</h4>
+                                <b><a href="tel:+902126772424">24/7 - Fast and Easy</a></b>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- header main area end -->
 
     <header class="rr-header-height z-index-5">
         <!-- header area start -->
@@ -350,7 +387,7 @@
                                                 </div>
                                                 <div class="col homemenu">
                                                     <div class="homemenu-thumb mb-15">
-                                                        <img loading="lazy" src="/assets/img/menu/home-3.jpg" alt="img">
+                                                        <img loading="lazy" src="/assets/img/menu/home-1.jpg" alt="img">
                                                         <div class="homemenu-btn">
                                                             <a class="rr-menu-btn" href="/locales/en/therapy.html">Go to
                                                                 Site</a>
@@ -545,89 +582,78 @@
         </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <script>
+        <!-- Initialize EmailJS after the library has been loaded -->
         (function () {
             emailjs.init('AfjNJbvpclsfFJDiK');
         })();
 
-        // Check phone number length (No longer limited to 10 digits)
-        function checkPhoneLength(input) {
-            var value = input.value;
-            if (value.length > 15) {
-                input.value = value.slice(0, 15); // Allow up to 15 digits
+        function formatPhoneNumber(input) {
+            let value = input.value.replace(/\D/g, '');
+            if (value.length > 10) value = value.slice(0, 10);
+            let formattedValue = value.replace(/(\d{3})(\d{3})(\d{2})(\d{2})/, '$1 $2 $3 $4');
+            input.value = formattedValue;
+        }
+
+        function isNumberKey(event) {
+            var charCode = (event.which) ? event.which : event.keyCode;
+            return !(charCode < 48 || charCode > 57);
+        }
+
+        function blockZero(event) {
+            if (event.key === "0" && event.target.selectionStart === 0) {
+                event.preventDefault();
             }
         }
 
-        // Allow only numeric input
-        function isNumberKey(event) {
-            var charCode = (event.which) ? event.which : event.keyCode;
-            return !(charCode < 48 || charCode > 57); // Allow only numbers
-        }
-
-        // Send the form and validate
         function sendMail(event) {
             event.preventDefault();
-
-            // Get input values
             var name = document.getElementById("name").value.trim();
             var email = document.getElementById("email").value.trim();
-            var phone = document.getElementById("phone").value.trim();
-
-            // Reset error messages
+            var phone = document.getElementById("phone").value.replace(/\s/g, '').trim();
             document.getElementById("name-error").style.display = "none";
             document.getElementById("email-error").style.display = "none";
             document.getElementById("phone-error").style.display = "none";
             document.getElementById("response-message").innerHTML = "";
-
             var isValid = true;
-
-            // Name validation (letters and spaces only)
             if (!/^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/.test(name)) {
                 document.getElementById("name-error").style.display = "block";
                 isValid = false;
             }
-
-            // Email validation
             if (!/\S+@\S+\.\S+/.test(email)) {
                 document.getElementById("email-error").style.display = "block";
                 isValid = false;
             }
-
-            // Phone validation (No restrictions on number of digits or starting digit)
-            if (!/^[0-9]+$/.test(phone)) {
+            if (!/^[1-9][0-9]{9}$/.test(phone)) {
                 document.getElementById("phone-error").style.display = "block";
                 isValid = false;
             }
-
             if (!isValid) return;
-
-            // Display "Creating appointment..." message
-            document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Your appointment is being created...</span>";
-
-            var params = {
-                name: name,
-                email: email,
-                phone: phone
-            };
-
-            const serviceID = "service_b123ul8"; // EmailJS Service ID
+            document.getElementById("response-message").innerHTML = "<span style='color:orange;'>يتم إنشاء موعدك...</span>";
+            var params = { name: name, email: email, phone: phone };
+            const serviceID = "service_b123ul8";
             const templateID = "template_8bekk3p";
             emailjs.send(serviceID, templateID, params)
                 .then(res => {
-                    // Success message
-                    document.getElementById("response-message").innerHTML = "<span style='color:green;'>Your appointment has been successfully created!</span>";
-                    // Reset the form
+                    document.getElementById("response-message").innerHTML = "<span
+                    style = 'color:green; font-size: 18px; display: flex; align-items: center;' > <svg width='24' height='24'
+                        viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                        <path d='M20 6L9 17L4 12' stroke='green' stroke-width='2' stroke-linecap='round'
+                            stroke-linejoin='round' />
+                    </svg> تم إنشاء موعدك بنجاح!</span > ";
                     document.getElementById("appointment-form").reset();
                 })
                 .catch(err => {
-                    // Error message
-                    document.getElementById("response-message").innerHTML = "<span style='color:red;'>An error occurred, please try again.</span>";
+                    document.getElementById("response-message").innerHTML = "<span style='color:red;'>❌ حدث خطأ، يرجى المحاولة مرة
+                    أخرى.</span > ";
                     console.log(err);
                 });
         }
     </script>
 
-    <script src="https:cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 
     <!-- contact area end -->
 
@@ -1269,9 +1295,9 @@
                                                 </div>
                                             </div>
                                             <div class="rr-footer-social">
-                                                <a href="https:/www.facebook.com/drmehmetilteberbahadir/"><i
+                                                <a href="https://www.facebook.com/drmehmetilteberbahadir/"><i
                                                         class="fa-brands fa-facebook-f"></i></a>
-                                                <a href="hhttps:/www.instagram.com/istanbul_psoriasis_center/"><i
+                                                <a href="hhttps://www.instagram.com/istanbul_psoriasis_center/"><i
                                                         class="fa-brands fa-instagram"></i></a>
                                                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                                             </div>
@@ -1338,7 +1364,7 @@
 
 
     <!-- Bootstrap Icons CDN -->
-    <link rel="stylesheet" href="https:/cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
 
 

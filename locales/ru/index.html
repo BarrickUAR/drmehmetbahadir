@@ -29,7 +29,7 @@
 
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https:/www.googletagmanager.com/gtag/js?id=G-KC044R9CB0"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC044R9CB0"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -39,7 +39,7 @@
     </script>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https:/www.googletagmanager.com/gtag/js?id=G-M4NQZ2E3PR"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4NQZ2E3PR"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -50,7 +50,7 @@
 
     <!-- Emailjs -->
 
-    <script type="text/javascript" src="https:/cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript">
         (function () {
@@ -210,7 +210,7 @@
                 <ul>
                     <li>
                         <i class="fa-light fa-location-dot"></i>
-                        <a href="https:/www.google.com/maps/@23.8223586,90.3661283,15z" target="_blank">
+                        <a href="https://www.google.com/maps/@23.8223586,90.3661283,15z" target="_blank">
                             Малтепе Мах. Эски Чирпыджи Йолу Сок. No:2/63 Этаж:11 E-5 Караёлу Мертер Метро Станция рядом
                             Мертер Бизнес Центр Зейтинбурну / Стамбул
                         </a>
@@ -227,8 +227,8 @@
             </div>
             <div class="rroffcanvas__social">
                 <div class="social-icon">
-                    <a href="https:/www.instagram.com/drmehmetilteberbahadir/"><i class="fab fa-instagram"></i></a>
-                    <a href="https:/www.facebook.com/sedefegzamatedavisi"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/drmehmetilteberbahadir/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/sedefegzamatedavisi"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
@@ -310,9 +310,9 @@
                     <div class="rr-header-main-social d-flex align-items-center">
                         <h4 class="rr-header-1-title">Социальные сети</h4>
                         <div class="rr-header-1-social ml-20">
-                            <a href="https:/www.facebook.com/sedefegzamatedavisi"><i
+                            <a href="https://www.facebook.com/sedefegzamatedavisi"><i
                                     class="fa-brands fa-facebook-f"></i></a>
-                            <a href="https:/www.instagram.com/drmehmetilteberbahadir/"><i
+                            <a href="https://www.instagram.com/drmehmetilteberbahadir/"><i
                                     class="fa-brands fa-instagram"></i></a>
                             <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                         </div>
@@ -600,13 +600,18 @@
         <!-- contact area end -->
 
 
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
         <script>
-            (function () { emailjs.init('AfjNJbvpclsfFJDiK'); })();
+            <!-- Инициализация EmailJS после загрузки библиотеки -->
+            (function () {
+                emailjs.init('AfjNJbvpclsfFJDiK');
+            })();
 
             function formatPhoneNumber(input) {
                 let value = input.value.replace(/\D/g, '');
                 if (value.length > 10) value = value.slice(0, 10);
-
+                let formattedValue = value.replace(/(\d{3})(\d{3})(\d{2})(\d{2})/, '$1 $2 $3 $4');
                 input.value = formattedValue;
             }
 
@@ -623,11 +628,6 @@
 
             function sendMail(event) {
                 event.preventDefault();
-                var recaptchaResponse = grecaptcha.getResponse();
-                if (recaptchaResponse.length === 0) {
-                    document.getElementById("response-message").innerHTML = "<span style='color:red;'>Пожалуйста, подтвердите reCAPTCHA.</span>";
-                    return;
-                }
                 var name = document.getElementById("name").value.trim();
                 var email = document.getElementById("email").value.trim();
                 var phone = document.getElementById("phone").value.replace(/\s/g, '').trim();
@@ -649,24 +649,26 @@
                     isValid = false;
                 }
                 if (!isValid) return;
-                document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Ваша запись создается...</span>";
-                var params = { name: name, email: email, phone: phone, recaptchaResponse: recaptchaResponse };
+                document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Ваш прием создается...</span>";
+                var params = { name: name, email: email, phone: phone };
                 const serviceID = "service_b123ul8";
                 const templateID = "template_8bekk3p";
                 emailjs.send(serviceID, templateID, params)
                     .then(res => {
-                        document.getElementById("response-message").innerHTML = "<span style='color:green; font-size: 18px; display: flex; align-items: center;'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http:/www.w3.org/2000/svg'><path d='M20 6L9 17L4 12' stroke='green' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg> Ваша запись успешно создана!</span>";
+                        document.getElementById("response-message").innerHTML = 
+                            "<span style='color:green; font-size: 18px; display: flex; align-items: center;'>" +
+                            "<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>" +
+                            "<path d='M20 6L9 17L4 12' stroke='green' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' />" +
+                            "</svg> Ваш прием успешно создан!</span>";
                         document.getElementById("appointment-form").reset();
                     })
                     .catch(err => {
-                        document.getElementById("response-message").innerHTML = "<span style='color:red;'>❌ Произошла ошибка, пожалуйста, попробуйте снова.</span>";
+                        document.getElementById("response-message").innerHTML = 
+                            "<span style='color:red;'>❌ Произошла ошибка, пожалуйста, попробуйте снова.</span>";
                         console.log(err);
                     });
             }
         </script>
-
-        <script src="https:/www.google.com/recaptcha/api.js" async defer></script>
-        <script src="https:/cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
         <!-- contact area end -->
 
@@ -1318,9 +1320,9 @@
                                         </div>
                                     </div>
                                     <div class="rr-footer-social">
-                                        <a href="https:/www.facebook.com/sedefegzamatedavisi"><i
+                                        <a href="https://www.facebook.com/sedefegzamatedavisi"><i
                                                 class="fa-brands fa-facebook-f"></i></a>
-                                        <a href="https:/www.instagram.com/drmehmetilteberbahadir/"><i
+                                        <a href="https://www.instagram.com/drmehmetilteberbahadir/"><i
                                                 class="fa-brands fa-instagram"></i></a>
                                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                                     </div>
@@ -1386,7 +1388,7 @@
 
 
     <!-- Bootstrap Icons CDN -->
-    <link rel="stylesheet" href="https:/cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
 
 

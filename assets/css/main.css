@@ -1407,6 +1407,10 @@ div.demo img {
   text-transform: uppercase;
 }
 
+#gradient {
+  background: linear-gradient(200deg, #ff7a00, #ff3d00);
+}
+
 .rr-btn-1-ar {
   font-family: var(--rr-ff-p);
   background: linear-gradient(200deg, #6610f2, #6f42c1);
@@ -14730,6 +14734,21 @@ span.current {
   font: 20px Century Gothic, Verdana, sans-serif;
   text-align: center;
   color: white;
+  margin-bottom: 20px;
+}
+#bubble-container-ar .speech-bubble {
+  position: relative;
+  margin: 0.5em auto;
+  padding: 8px;
+  width: 400px;
+  height: 4em;
+  border-radius: 0.25em;
+  transform: rotate(-4deg) rotateY(15deg);
+  background: linear-gradient(200deg, #6610f2, #6f42c1);
+
+  font: 20px Century Gothic, Verdana, sans-serif;
+  text-align: center;
+  color: white;
 }
 
 #bubble-container .speech-bubble:before,
@@ -14739,10 +14758,11 @@ span.current {
   content: "";
 }
 
-.bubble1 {
+.bubble {
   position: relative;
   left: 0%;
-  bottom: 50px;
+  bottom: 30px;
+  
 }
 
 #bubble-container .speech-bubble:after {
@@ -14753,6 +14773,7 @@ span.current {
   border-radius: inherit;
   transform: rotate(2deg) translate(0.35em, -0.15em) scale(1.02);
   background: #076bb0;
+  
 }
 
 #bubble-container .speech-bubble:before {
@@ -14764,6 +14785,7 @@ span.current {
   width: 0;
   height: 1em;
   transform: rotate(45deg) skewX(75deg);
+  
 }
 
 /* Bubble */

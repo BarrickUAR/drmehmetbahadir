@@ -377,7 +377,6 @@
 
 
         <!-- contact info area start -->
-
         <section class="rr-contact-area pt-100 pb-100">
             <div class="container">
                 <div class="row">
@@ -425,16 +424,12 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
-
         <!-- contact info area end -->
 
-
         <!-- contact area start -->
-
         <section class="rr-contact-area p-relative black-bg fix">
             <div class="rr-contact-shap">
                 <img loading="lazy" src="/assets/img/contact/shap01.png" alt="img">
@@ -472,8 +467,11 @@
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 mb-20">
                                         <div class="rr-form-input-box rr-form-input-main">
-                                            <input type="text" name="address" id="address" placeholder="Address"
-                                                required>
+                                            <input type="tel" name="phone" id="phone" placeholder="Phone" required
+                                                maxlength="15" oninput="checkPhoneLength(this)"
+                                                onkeypress="return isNumberKey(event)">
+                                            <small id="phone-error" style="color: red; display: none;">Invalid phone
+                                                number. Please enter a valid number.</small>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-20">
@@ -483,13 +481,7 @@
                                         </div>
                                     </div>
 
-                                    <!-- reCAPTCHA -->
-                                    <div class="col-12 mb-20">
-                                        <div class="g-recaptcha"
-                                            data-sitekey="6LfiLPUqAAAAAOepUPcU3iMU8WU-JQa-9bsLqEVo"></div>
-                                        <small id="recaptcha-error" style="color: red; display: none;">Please verify
-                                            reCAPTCHA.</small>
-                                    </div>
+                                    <!-- reCAPTCHA removed -->
 
                                     <div class="col-12">
                                         <button class="rr-btn-1 rr-form-theme-bg" type="submit"><span>Create
@@ -512,67 +504,65 @@
                     emailjs.init('AfjNJbvpclsfFJDiK');
                 })();
 
-                / Form submission and validation
+                // Form submission and validation
                 document.getElementById("appointment-form").addEventListener("submit", function (event) {
-                    event.preventDefault(); / Prevent page reload
+                    event.preventDefault();  // Prevent page reload
 
                     var name = document.getElementById("name").value.trim();
                     var email = document.getElementById("email").value.trim();
-                    var address = document.getElementById("address").value.trim();
+                    var phone = document.getElementById("phone").value.trim();
                     var message = document.getElementById("message").value.trim();
-                    var recaptchaResponse = grecaptcha.getResponse(); / reCAPTCHA response
 
-                    / Reset error messages
+                    // Reset error messages
                     document.getElementById("name-error").style.display = "none";
                     document.getElementById("email-error").style.display = "none";
-                    document.getElementById("recaptcha-error").style.display = "none";
+                    document.getElementById("phone-error").style.display = "none";
                     document.getElementById("response-message").innerHTML = "";
 
                     var isValid = true;
 
-                    / Name validation (Only letters and spaces)
+                    // Name validation (Only letters and spaces)
                     if (!/^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/.test(name)) {
                         document.getElementById("name-error").style.display = "block";
                         isValid = false;
                     }
 
-                    / Email validation
+                    // Email validation
                     if (!/\S+@\S+\.\S+/.test(email)) {
                         document.getElementById("email-error").style.display = "block";
                         isValid = false;
                     }
 
-                    / reCAPTCHA validation
-                    if (recaptchaResponse === "") {
-                        document.getElementById("recaptcha-error").style.display = "block";
+                    // Phone validation (Only numbers allowed)
+                    if (!/^[0-9]+$/.test(phone)) {
+                        document.getElementById("phone-error").style.display = "block";
                         isValid = false;
                     }
 
                     if (!isValid) return;
 
-                    / Show appointment creation message immediately
+                    // Show appointment creation message immediately
                     document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Creating your appointment...</span>";
 
                     var params = {
                         name: name,
                         email: email,
-                        address: address,
+                        phone: phone,
                         message: message
                     };
 
-                    const serviceID = "service_b123ul8"; / EmailJS Service ID
-                    const templateID = "template_8bekk3p"; / EmailJS Template ID
+                    const serviceID = "service_b123ul8";  // EmailJS Service ID
+                    const templateID = "template_8bekk3p";  // EmailJS Template ID
 
                     emailjs.send(serviceID, templateID, params)
                         .then(res => {
-                            / Success message
+                            // Success message
                             document.getElementById("response-message").innerHTML = "<span style='color:green;'>Your appointment has been successfully created!</span>";
-                            / Reset form
+                            // Reset form
                             document.getElementById("appointment-form").reset();
-                            grecaptcha.reset(); / Reset reCAPTCHA
                         })
                         .catch(err => {
-                            / Error message
+                            // Error message
                             document.getElementById("response-message").innerHTML = "<span style='color:red;'>An error occurred, please try again.</span>";
                             console.log(err);
                         });
@@ -580,8 +570,8 @@
             </script>
 
         </section>
-
         <!-- contact area end -->
+
 
 
     </main>

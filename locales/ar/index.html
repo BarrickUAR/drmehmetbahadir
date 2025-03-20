@@ -67,54 +67,6 @@
 
 <body>
 
-
-
-    <!-- Intercom script'ini buraya ekle -->
-    <script>
-        window.intercomSettings = {
-            api_base: "https:api-iam.intercom.io",
-            app_id: "bhbpbka7",
-        };
-    </script>
-
-    <script>
-        (function () {
-            var w = window;
-            var ic = w.Intercom;
-            if (typeof ic === "function") {
-                ic('reattach_activator');
-                ic('update', w.intercomSettings);
-            } else {
-                var d = document;
-                var i = function () {
-                    i.c(arguments);
-                };
-                i.q = [];
-                i.c = function (args) {
-                    i.q.push(args);
-                };
-                w.Intercom = i;
-                var l = function () {
-                    var s = d.createElement('script');
-                    s.type = 'text/javascript';
-                    s.async = true;
-                    s.src = 'https:widget.intercom.io/widget/bhbpbka7';
-                    var x = d.getElementsByTagName('script')[0];
-                    x.parentNode.insertBefore(s, x);
-                };
-                if (document.readyState === 'complete') {
-                    l();
-                } else if (w.attachEvent) {
-                    w.attachEvent('onload', l);
-                } else {
-                    w.addEventListener('load', l, false);
-                }
-            }
-        })();
-    </script>
-
-
-
     <!-- preloader start -->
 
     <div id="loading">
@@ -132,11 +84,11 @@
     <!-- preloader start -->
 
 
+
     <!-- WhatsApp Butonu -->
-    <a href="tel:+905302250325" target="_blank" class="whatsapp-button z-index-2">
+    <a href="tel:+905528303491" target="_blank" class="whatsapp-button z-index-2">
         <i class="bi bi-whatsapp"></i>
     </a>
-    <!-- WhatsApp Butonu -->
 
     <!-- CSS -->
     <style>
@@ -177,7 +129,7 @@
         .whatsapp-button {
             position: fixed;
             bottom: 40px;
-            left: 50px;
+            right: 100px;
             background-color: #25D366;
             color: white;
             font-size: 24px;
@@ -214,36 +166,7 @@
         </button>
     </div>
 
-    <!-- CSS -->
-    <style>
-        .back-to-top-btn {
-            position: fixed;
-            left: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            /* Butonun genişliği */
-            height: 50px;
-            /* Butonun yüksekliği */
-            background-color: #007bff;
-            /* Mavi arka plan */
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
 
-        .back-to-top-btn svg {
-            display: block;
-            margin: auto;
-        }
-
-        .back-to-top-btn:hover {
-            background-color: #0056b3;
-            /* Daha koyu mavi */
-        }
-    </style>
 
     <!-- back to top end -->
 
@@ -564,13 +487,13 @@
                     <div class="rr-slider-1-height">
                         <div class="container">
                             <div class="rr-slider-1-shap-star">
-                                <img loading="lazy" src="/assets/img/slider/start-shap.png" alt="img">
+                                <img loading="lazy" src="/assets/img/slider/start-shap-copy.png" alt="img">
                             </div>
                             <div class="rr-slider-1-shap-plus">
-                                <img loading="lazy" src="/assets/img/slider/plus-shap.png" alt="img">
+                                <img loading="lazy" src="/assets/img/slider/plus-shap-copy.png" alt="img">
                             </div>
                             <div class="rr-slider-1-shap-plus-2">
-                                <img loading="lazy" src="/assets/img/slider/subtitle-shape-3.png" alt="img">
+                                <img loading="lazy" src="/assets/img/slider/subtitle-shape-3-copy.png" alt="img">
                             </div>
                             <div class="row align-items-center">
                                 <div class="col-xl-7 col-lg-7 col-md-6">
@@ -602,15 +525,15 @@
                                 <div class="col-xl-5 col-lg-5 col-md-6 wow fadeInRight" data-wow-duration=".9s"
                                     data-wow-delay=".5s">
                                     <div class="rr-slider-1-img p-relative pt-50">
-                                        <div id="bubble-container">
+                                        <div id="bubble-container-ar">
                                             <div class="speech-bubble bubble1">العلاج سهل جدا <br> بسيط للغاية</div>
                                         </div>
-                                        <div id="bubble-container">
-                                            <div class="speech-bubble bubble1">الصدفية، الإكزيما والروماتيزم <br> هي
+                                        <div id="bubble-container-ar">
+                                            <div class="speech-bubble bubble2">الصدفية، الإكزيما والروماتيزم <br> هي
                                                 أمراض شقيقة</div>
                                         </div>
-                                        <div id="bubble-container">
-                                            <div class="speech-bubble bubble1">نحن لا نستخدم الكورتيكوستيرويدات أو أدوية
+                                        <div id="bubble-container-ar">
+                                            <div class="speech-bubble bubble3">نحن لا نستخدم الكورتيكوستيرويدات أو أدوية
                                                 العلاج الكيميائي!</div>
                                         </div>
                                         <div class="rr-slider-1-thumb z-index-2">
@@ -632,7 +555,7 @@
         </div>
 
         <!-- slider area end -->
-
+        <!-- contact area start -->
 
         <section class="rr-contact-area fix" data-bg-color="#21313f">
             <div class="container">
@@ -671,11 +594,7 @@
                                         </div>
                                     </div>
 
-                                    <!-- reCAPTCHA -->
-                                    <div class="col-xl-12 col-md-12 mb-30">
-                                        <div class="g-recaptcha"
-                                            data-sitekey="6LfiLPUqAAAAAOepUPcU3iMU8WU-JQa-9bsLqEVo"></div>
-                                    </div>
+                                    <!-- reCAPTCHA removed -->
 
                                     <button class="rr-btn-ar rr-form-theme-bg-ar" type="submit"
                                         onclick="sendMail(event)">
@@ -689,10 +608,6 @@
                 </div>
             </div>
         </section>
-
-
-        <script src="https:/www.google.com/recaptcha/api.js" async defer></script>
-        <script src="https:/cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
         <script>
             (function () {
@@ -720,12 +635,6 @@
             function sendMail(event) {
                 event.preventDefault();
 
-                var recaptchaResponse = grecaptcha.getResponse();
-                if (recaptchaResponse.length === 0) {
-                    document.getElementById("response-message").innerHTML = "<span style='color:red;'>يرجى التحقق من reCAPTCHA.</span>";
-                    return;
-                }
-
                 var name = document.getElementById("name").value.trim();
                 var email = document.getElementById("email").value.trim();
                 var phone = document.getElementById("phone").value.trim();
@@ -752,7 +661,7 @@
 
                 document.getElementById("response-message").innerHTML = "<span style='color:orange;'>جاري إنشاء موعدك...</span>";
 
-                var params = { name: name, email: email, phone: phone, recaptchaResponse: recaptchaResponse };
+                var params = { name: name, email: email, phone: phone };
                 const serviceID = "service_b123ul8";
                 const templateID = "template_feyueab";
 
@@ -768,9 +677,10 @@
             }
         </script>
 
-
+        <script src="https:/cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
         <!-- contact area end -->
+
 
 
         <!-- features area start -->
@@ -880,9 +790,10 @@
 
         <section class="rr-photo-area rr-photo-before pt-50 pb-50 mb-50 fix">
 
-            <a class="rr-btn-1-ar  wow rrfadeUp" href="httpsistanbulpsoriasiscenter.pixieset.com/oncesonra/"
-                target="_blank"><span> المزيد من الصور... <i class="fa-sharp fa-solid fa-plus"></i> </span></a>
-            <a target="_blank" href="httpsistanbulpsoriasiscenter.pixieset.com/oncesonra/"><img loading="lazy"
+            <a id="gradient" class="rr-btn-1-ar wow rrfadeUp"
+                href="https:istanbulpsoriasiscenter.pixieset.com/oncesonra/" target="_blank"><span> المزيد من الصور...
+                    <i class="fa-sharp fa-solid fa-plus"></i> </span></a>
+            <a target="_blank" href="https:istanbulpsoriasiscenter.pixieset.com/oncesonra/"><img loading="lazy"
                     class="mb-50 border rounded" src="/assets/img/video/hastaar.jpg" alt=""></a>
 
             <div class="rr-video-shap z-index-1 d-none d-xxl-block">

@@ -65,59 +65,10 @@
 
 
 
-
-    <!-- Intercom script'ini buraya ekle -->
-    <script>
-        window.intercomSettings = {
-            api_base: "https:/api-iam.intercom.io",
-            app_id: "bhbpbka7",
-        };
-    </script>
-
-    <script>
-        (function () {
-            var w = window;
-            var ic = w.Intercom;
-            if (typeof ic === "function") {
-                ic('reattach_activator');
-                ic('update', w.intercomSettings);
-            } else {
-                var d = document;
-                var i = function () {
-                    i.c(arguments);
-                };
-                i.q = [];
-                i.c = function (args) {
-                    i.q.push(args);
-                };
-                w.Intercom = i;
-                var l = function () {
-                    var s = d.createElement('script');
-                    s.type = 'text/javascript';
-                    s.async = true;
-                    s.src = 'https:/widget.intercom.io/widget/bhbpbka7';
-                    var x = d.getElementsByTagName('script')[0];
-                    x.parentNode.insertBefore(s, x);
-                };
-                if (document.readyState === 'complete') {
-                    l();
-                } else if (w.attachEvent) {
-                    w.attachEvent('onload', l);
-                } else {
-                    w.addEventListener('load', l, false);
-                }
-            }
-        })();
-    </script>
-
-
-
-
     <!-- WhatsApp Butonu -->
-    <a href="tel:+905302250325" target="_blank" class="whatsapp-button z-index-2">
+    <a href="tel:+905527533464" target="_blank" class="whatsapp-button z-index-2">
         <i class="bi bi-whatsapp"></i>
     </a>
-    <!-- WhatsApp Butonu -->
 
     <!-- CSS -->
     <style>
@@ -158,7 +109,7 @@
         .whatsapp-button {
             position: fixed;
             bottom: 40px;
-            left: 50px;
+            right: 100px;
             background-color: #25D366;
             color: white;
             font-size: 24px;
@@ -179,7 +130,6 @@
         }
     </style>
     <!-- WhatsApp Button -->
-
 
 
     <!-- preloader start -->
@@ -208,37 +158,6 @@
             </svg>
         </button>
     </div>
-
-    <!-- CSS -->
-    <style>
-        .back-to-top-btn {
-            position: fixed;
-            left: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            /* Butonun genişliği */
-            height: 50px;
-            /* Butonun yüksekliği */
-            background-color: #007bff;
-            /* Mavi arka plan */
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .back-to-top-btn svg {
-            display: block;
-            margin: auto;
-        }
-
-        .back-to-top-btn:hover {
-            background-color: #0056b3;
-            /* Daha koyu mavi */
-        }
-    </style>
     <!-- back to top end -->
 
     <!-- Offcanvas Bölümü -->
@@ -624,7 +543,6 @@
 
         <!-- slider area end -->
 
-
         <!-- contact area start -->
         <section class="rr-contact-area fix" data-bg-color="#21313f">
             <div class="container">
@@ -663,10 +581,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-xl-12 col-md-12 mb-30">
-                                        <div class="g-recaptcha"
-                                            data-sitekey="6LfiLPUqAAAAAOepUPcU3iMU8WU-JQa-9bsLqEVo"></div>
-                                    </div>
+                                    <!-- reCAPTCHA removed -->
+                                    <!-- <div class="col-xl-12 col-md-12 mb-30">
+                                <div class="g-recaptcha"
+                                    data-sitekey="6LfiLPUqAAAAAOepUPcU3iMU8WU-JQa-9bsLqEVo"></div>
+                            </div> -->
                                     <button class="rr-btn rr-form-theme-bg" type="submit" onclick="sendMail(event)">
                                         <span>Записаться на прием!</span>
                                     </button>
@@ -678,12 +597,8 @@
                 </div>
             </div>
         </section>
-
         <!-- contact area end -->
 
-
-        <script src="https:/www.google.com/recaptcha/api.js" async defer></script>
-        <script src="https:/cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
         <script>
             (function () { emailjs.init('AfjNJbvpclsfFJDiK'); })();
@@ -710,7 +625,7 @@
                 event.preventDefault();
                 var recaptchaResponse = grecaptcha.getResponse();
                 if (recaptchaResponse.length === 0) {
-                    document.getElementById("response-message").innerHTML = "<span style='color:red;'>Lütfen reCAPTCHA'yı doğrulayın.</span>";
+                    document.getElementById("response-message").innerHTML = "<span style='color:red;'>Пожалуйста, подтвердите reCAPTCHA.</span>";
                     return;
                 }
                 var name = document.getElementById("name").value.trim();
@@ -734,26 +649,27 @@
                     isValid = false;
                 }
                 if (!isValid) return;
-                document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Randevunuz oluşturuluyor...</span>";
+                document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Ваша запись создается...</span>";
                 var params = { name: name, email: email, phone: phone, recaptchaResponse: recaptchaResponse };
                 const serviceID = "service_b123ul8";
                 const templateID = "template_8bekk3p";
                 emailjs.send(serviceID, templateID, params)
                     .then(res => {
-                        document.getElementById("response-message").innerHTML = "<span style='color:green; font-size: 18px; display: flex; align-items: center;'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http:/www.w3.org/2000/svg'><path d='M20 6L9 17L4 12' stroke='green' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg> Randevunuz başarıyla oluşturuldu!</span>";
+                        document.getElementById("response-message").innerHTML = "<span style='color:green; font-size: 18px; display: flex; align-items: center;'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http:/www.w3.org/2000/svg'><path d='M20 6L9 17L4 12' stroke='green' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg> Ваша запись успешно создана!</span>";
                         document.getElementById("appointment-form").reset();
                     })
                     .catch(err => {
-                        document.getElementById("response-message").innerHTML = "<span style='color:red;'>❌ Bir hata oluştu, lütfen tekrar deneyin.</span>";
+                        document.getElementById("response-message").innerHTML = "<span style='color:red;'>❌ Произошла ошибка, пожалуйста, попробуйте снова.</span>";
                         console.log(err);
                     });
             }
         </script>
 
-
-
+        <script src="https:/www.google.com/recaptcha/api.js" async defer></script>
+        <script src="https:/cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
         <!-- contact area end -->
+
 
         <!-- features area start -->
 
@@ -865,7 +781,7 @@
 
             <a class="rr-btn-1  wow rrfadeUp" href="Dah" target="_blank"><span> Подробнее фотографии... <i
                         class="fa-sharp fa-solid fa-plus"></i> </span></a>
-            <a target="_blank" href="https:/istanbulpsoriasiscenter.pixieset.com/oncesonra/"><img loading="lazy"
+            <a target="_blank" href="https:istanbulpsoriasiscenter.pixieset.com/oncesonra/"><img loading="lazy"
                     class="mb-50 border rounded" src="/assets/img/video/hasta.jpg" alt=""></a>
 
             <div class="rr-video-shap z-index-1 d-none d-xxl-block">

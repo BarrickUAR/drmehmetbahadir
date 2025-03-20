@@ -65,55 +65,6 @@
 
 
 
-
-
-
-    <!-- Intercom script'ini buraya ekle -->
-    <script>
-        window.intercomSettings = {
-            api_base: "https:/api-iam.intercom.io",
-            app_id: "bhbpbka7",
-        };
-    </script>
-
-    <script>
-        (function () {
-            var w = window;
-            var ic = w.Intercom;
-            if (typeof ic === "function") {
-                ic('reattach_activator');
-                ic('update', w.intercomSettings);
-            } else {
-                var d = document;
-                var i = function () {
-                    i.c(arguments);
-                };
-                i.q = [];
-                i.c = function (args) {
-                    i.q.push(args);
-                };
-                w.Intercom = i;
-                var l = function () {
-                    var s = d.createElement('script');
-                    s.type = 'text/javascript';
-                    s.async = true;
-                    s.src = 'https:/widget.intercom.io/widget/bhbpbka7';
-                    var x = d.getElementsByTagName('script')[0];
-                    x.parentNode.insertBefore(s, x);
-                };
-                if (document.readyState === 'complete') {
-                    l();
-                } else if (w.attachEvent) {
-                    w.attachEvent('onload', l);
-                } else {
-                    w.addEventListener('load', l, false);
-                }
-            }
-        })();
-    </script>
-
-
-
     <!-- preloader start -->
 
     <div id="loading">
@@ -130,14 +81,13 @@
 
     <!-- preloader start -->
 
-    <!-- WhatsApp Button -->
+
 
 
     <!-- WhatsApp Butonu -->
-    <a href="tel:+905302250325" target="_blank" class="whatsapp-button z-index-2">
+    <a href="tel:+902126772424" target="_blank" class="whatsapp-button z-index-2">
         <i class="bi bi-whatsapp"></i>
     </a>
-    <!-- WhatsApp Butonu -->
 
     <!-- CSS -->
     <style>
@@ -178,7 +128,7 @@
         .whatsapp-button {
             position: fixed;
             bottom: 40px;
-            left: 50px;
+            right: 100px;
             background-color: #25D366;
             color: white;
             font-size: 24px;
@@ -212,36 +162,6 @@
         </button>
     </div>
 
-    <!-- CSS -->
-    <style>
-        .back-to-top-btn {
-            position: fixed;
-            left: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            /* Butonun genişliği */
-            height: 50px;
-            /* Butonun yüksekliği */
-            background-color: #007bff;
-            /* Mavi arka plan */
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .back-to-top-btn svg {
-            display: block;
-            margin: auto;
-        }
-
-        .back-to-top-btn:hover {
-            background-color: #0056b3;
-            /* Daha koyu mavi */
-        }
-    </style>
 
 
     <!-- back to top end -->
@@ -572,7 +492,6 @@
 
     <!-- contact area start -->
 
-
     <section class="rr-contact-area fix" data-bg-color="#21313f">
         <div class="container">
             <div class="row">
@@ -612,11 +531,7 @@
                                     </div>
                                 </div>
 
-                                <!-- reCAPTCHA -->
-                                <div class="col-xl-12 col-md-12 mb-30">
-                                    <div class="g-recaptcha" data-sitekey="6LfiLPUqAAAAAOepUPcU3iMU8WU-JQa-9bsLqEVo">
-                                    </div>
-                                </div>
+                                <!-- reCAPTCHA removed -->
 
                                 <button class="rr-btn rr-form-theme-bg" type="submit" onclick="sendMail(event)">
                                     <span>Create Appointment!</span>
@@ -630,47 +545,35 @@
         </div>
     </section>
 
-
-    <script src="https:/www.google.com/recaptcha/api.js" async defer></script>
-
-    <script src="https:/cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
     <script>
         (function () {
             emailjs.init('AfjNJbvpclsfFJDiK');
         })();
 
-        / Check phone number length (No longer limited to 10 digits)
+        // Check phone number length (No longer limited to 10 digits)
         function checkPhoneLength(input) {
             var value = input.value;
             if (value.length > 15) {
-                input.value = value.slice(0, 15); / Allow up to 15 digits
+                input.value = value.slice(0, 15); // Allow up to 15 digits
             }
         }
 
-        / Allow only numeric input
+        // Allow only numeric input
         function isNumberKey(event) {
             var charCode = (event.which) ? event.which : event.keyCode;
-            return !(charCode < 48 || charCode > 57); / Allow only numbers
+            return !(charCode < 48 || charCode > 57); // Allow only numbers
         }
 
-        / Send the form and validate
+        // Send the form and validate
         function sendMail(event) {
             event.preventDefault();
 
-            / reCAPTCHA validation
-            var recaptchaResponse = grecaptcha.getResponse();
-            if (recaptchaResponse.length === 0) {
-                document.getElementById("response-message").innerHTML = "<span style='color:red;'>Please verify reCAPTCHA.</span>";
-                return;
-            }
-
-            / Get input values
+            // Get input values
             var name = document.getElementById("name").value.trim();
             var email = document.getElementById("email").value.trim();
             var phone = document.getElementById("phone").value.trim();
 
-            / Reset error messages
+            // Reset error messages
             document.getElementById("name-error").style.display = "none";
             document.getElementById("email-error").style.display = "none";
             document.getElementById("phone-error").style.display = "none";
@@ -678,19 +581,19 @@
 
             var isValid = true;
 
-            / Name validation (letters and spaces only)
+            // Name validation (letters and spaces only)
             if (!/^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/.test(name)) {
                 document.getElementById("name-error").style.display = "block";
                 isValid = false;
             }
 
-            / Email validation
+            // Email validation
             if (!/\S+@\S+\.\S+/.test(email)) {
                 document.getElementById("email-error").style.display = "block";
                 isValid = false;
             }
 
-            / Phone validation (No restrictions on number of digits or starting digit)
+            // Phone validation (No restrictions on number of digits or starting digit)
             if (!/^[0-9]+$/.test(phone)) {
                 document.getElementById("phone-error").style.display = "block";
                 isValid = false;
@@ -698,33 +601,33 @@
 
             if (!isValid) return;
 
-            / Display "Creating appointment..." message
+            // Display "Creating appointment..." message
             document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Your appointment is being created...</span>";
 
             var params = {
                 name: name,
                 email: email,
-                phone: phone,
-                recaptchaResponse: recaptchaResponse
+                phone: phone
             };
 
-            const serviceID = "service_b123ul8"; / EmailJS Service ID
+            const serviceID = "service_b123ul8"; // EmailJS Service ID
             const templateID = "template_8bekk3p";
             emailjs.send(serviceID, templateID, params)
                 .then(res => {
-                    / Success message
+                    // Success message
                     document.getElementById("response-message").innerHTML = "<span style='color:green;'>Your appointment has been successfully created!</span>";
-                    / Reset the form
+                    // Reset the form
                     document.getElementById("appointment-form").reset();
                 })
                 .catch(err => {
-                    / Error message
+                    // Error message
                     document.getElementById("response-message").innerHTML = "<span style='color:red;'>An error occurred, please try again.</span>";
                     console.log(err);
                 });
         }
     </script>
 
+    <script src="https:cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <!-- contact area end -->
 
@@ -833,7 +736,7 @@
 
         <a class="rr-btn-1 wow rrfadeUp" href="More" target="_blank"><span> More Photos... <i
                     class="fa-sharp fa-solid fa-plus"></i> </span></a>
-        <a target="_blank" href="https:/istanbulpsoriasiscenter.pixieset.com/oncesonra/"><img loading="lazy"
+        <a target="_blank" href="https:istanbulpsoriasiscenter.pixieset.com/oncesonra/"><img loading="lazy"
                 class="mb-50 border rounded" src="/assets/img/video/hasta.jpg" alt=""></a>
 
         <div class="rr-video-shap z-index-1 d-none d-xxl-block">

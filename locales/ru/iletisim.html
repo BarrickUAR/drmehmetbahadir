@@ -400,8 +400,7 @@
         <!-- breadcrumb area end -->
 
 
-        <!-- contact info area start -->
-
+        <!-- Контактная информация начало -->
         <section class="rr-contact-area pt-100 pb-100">
             <div class="container">
                 <div class="row">
@@ -427,10 +426,9 @@
                                 <div class="rr-contact-box-contat">
                                     <span>Адрес</span>
                                     <p><a href="https:/www.google.com/maps/search/dr+mehmet+ilteber+bahad%C4%B1r/@41.0092779,28.8989831,20z?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
-                                            target="_blank">Maltepe Mah. Eski
-                                            Çırpıcı Yolu Sok. No:2/63 Kat:11 E-5 Karayolu Merter Metro İstasyon Yanı
-                                            Merter İş
-                                            Merkezi Zeytinburnu / İstanbul</a></p>
+                                            target="_blank">Maltepe Mah. Eski Çırpıcı Yolu Sok. No:2/63 Kat:11 E-5
+                                            Karayolu Merter Metro İstasyon Yanı
+                                            Merter İş Merkezi Zeytinburnu / Стамбул</a></p>
                                 </div>
                             </div>
                         </div>
@@ -442,7 +440,7 @@
                                     <span><i class="fa-sharp fa-solid fa-envelope"></i></span>
                                 </div>
                                 <div class="rr-contact-box-contat">
-                                    <span>Отправьте нам письмо!</span>
+                                    <span>Отправьте нам email!</span>
                                     <p><a
                                             href="mailto:randevu@drmehmetilteberbahadir.net">randevu@drmehmetilteberbahadir.net</a>
                                     </p>
@@ -450,23 +448,20 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
+        <!-- Контактная информация конец -->
 
-        <!-- contact info area end -->
-
-
-        <!-- контактная зона начало -->
+        <!-- Контактная форма начало -->
         <section class="rr-contact-area p-relative black-bg fix">
             <div class="rr-contact-shap">
-                <img loading="lazy" src="assets/img/contact/shap01.png" alt="img">
+                <img loading="lazy" src="/assets/img/contact/shap01.png" alt="img">
             </div>
 
             <div class="rr-contact-img">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d376.3412762727412!2d28.89898311978924!3d41.009277887105284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdr%20mehmet%20ilteber%20bahad%C4%B1r!5e0!3m2!1str!2str!4v1741003329924!5m2!1str!2str"
+                    src="https:/www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d376.3412762727412!2d28.89898311978924!3d41.009277887105284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdr%20mehmet%20ilteber%20bahad%C4%B1r!5e0!3m2!1str!2str!4v1741003329924!5m2!1str!2str"
                     width="1265" height="855" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
@@ -482,31 +477,26 @@
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
                                         <div class="rr-form-input-box rr-form-input-main">
-                                            <input type="text" name="name" id="name" placeholder="Имя" required>
-                                            <small id="name-error" style="color: red; display: none;">Пожалуйста,
-                                                используйте
-                                                только буквы.</small>
+                                            <input type="text" name="name" id="name" placeholder="Ваше имя" required>
+                                            <small id="name-error" style="color: red; display: none;">Используйте только
+                                                буквы.</small>
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
                                         <div class="rr-form-input-box rr-form-input-main">
-                                            <input type="email" name="email" id="email" placeholder="Электронная почта"
+                                            <input type="email" name="email" id="email" placeholder="Ваш email"
                                                 required>
                                             <small id="email-error" style="color: red; display: none;">Пожалуйста,
-                                                введите
-                                                действительный адрес электронной почты.</small>
+                                                введите действительный адрес электронной почты.</small>
                                         </div>
                                     </div>
-                                    <!-- Вместо адреса телефонный номер -->
                                     <div class="col-xl-12 col-lg-12 col-md-12 mb-20">
                                         <div class="rr-form-input-box rr-form-input-main">
-                                            <input type="tel" name="phone" id="phone" placeholder="Номер телефона"
-                                                pattern="[0-9]{10,15}"
-                                                title="Пожалуйста, введите действительный номер телефона (от 10 до 15 цифр)."
-                                                required>
-                                            <small id="phone-error" style="color: red; display: none;">Пожалуйста,
-                                                введите
-                                                действительный номер телефона.</small>
+                                            <input type="tel" name="phone" id="phone" placeholder="Телефон" required
+                                                maxlength="15" oninput="checkPhoneLength(this)"
+                                                onkeypress="return isNumberKey(event)">
+                                            <small id="phone-error" style="color: red; display: none;">Неверный номер
+                                                телефона. Пожалуйста, введите правильный номер.</small>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-20">
@@ -516,14 +506,7 @@
                                         </div>
                                     </div>
 
-                                    <!-- reCAPTCHA -->
-                                    <div class="col-12 mb-20">
-                                        <div class="g-recaptcha"
-                                            data-sitekey="6LfiLPUqAAAAAOepUPcU3iMU8WU-JQa-9bsLqEVo"></div>
-                                        <small id="recaptcha-error" style="color: red; display: none;">Пожалуйста,
-                                            подтвердите
-                                            reCAPTCHA.</small>
-                                    </div>
+                                    <!-- reCAPTCHA удалено -->
 
                                     <div class="col-12">
                                         <button class="rr-btn-1 rr-form-theme-bg" type="submit"><span>Записаться на
@@ -539,7 +522,7 @@
             </div>
 
             <!-- Скрипт EmailJS -->
-            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+            <script src="https:/cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
             <script>
                 (function () {
@@ -548,80 +531,72 @@
 
                 // Отправка формы и валидация
                 document.getElementById("appointment-form").addEventListener("submit", function (event) {
-                    event.preventDefault(); // Останавливает перезагрузку страницы
+                    event.preventDefault();  // Запрещает перезагрузку страницы
 
                     var name = document.getElementById("name").value.trim();
                     var email = document.getElementById("email").value.trim();
-                    var phone = document.getElementById("phone").value.trim(); // Получаем номер телефона
+                    var phone = document.getElementById("phone").value.trim();
                     var message = document.getElementById("message").value.trim();
-                    var recaptchaResponse = grecaptcha.getResponse(); // Ответ reCAPTCHA
 
-                    // Сброс сообщений об ошибках
+                    // Сброс ошибок
                     document.getElementById("name-error").style.display = "none";
                     document.getElementById("email-error").style.display = "none";
-                    document.getElementById("phone-error").style.display = "none"; // Ошибка телефона
-                    document.getElementById("recaptcha-error").style.display = "none";
+                    document.getElementById("phone-error").style.display = "none";
                     document.getElementById("response-message").innerHTML = "";
 
                     var isValid = true;
 
-                    // Проверка имени (только буквы и пробелы)
+                    // Проверка имени (Только буквы и пробелы)
                     if (!/^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/.test(name)) {
                         document.getElementById("name-error").style.display = "block";
                         isValid = false;
                     }
 
-                    // Проверка электронной почты
+                    // Проверка email
                     if (!/\S+@\S+\.\S+/.test(email)) {
                         document.getElementById("email-error").style.display = "block";
                         isValid = false;
                     }
 
-                    // Проверка номера телефона (только цифры)
-                    if (!/^\d{10,15}$/.test(phone)) {
+                    // Проверка телефона (Только цифры)
+                    if (!/^[0-9]+$/.test(phone)) {
                         document.getElementById("phone-error").style.display = "block";
-                        isValid = false;
-                    }
-
-                    // Проверка reCAPTCHA
-                    if (recaptchaResponse === "") {
-                        document.getElementById("recaptcha-error").style.display = "block";
                         isValid = false;
                     }
 
                     if (!isValid) return;
 
-                    // Показываем сообщение о создании записи
+                    // Показать сообщение о создании записи
                     document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Ваша запись создается...</span>";
 
                     var params = {
                         name: name,
                         email: email,
-                        phone: phone, // Отправляем номер телефона
+                        phone: phone,
                         message: message
                     };
 
-                    const serviceID = "service_b123ul8"; // ID сервиса EmailJS
-                    const templateID = "template_8bekk3p"; // ID шаблона EmailJS
+                    const serviceID = "service_b123ul8";  // EmailJS Service ID
+                    const templateID = "template_8bekk3p";  // EmailJS Template ID
 
                     emailjs.send(serviceID, templateID, params)
                         .then(res => {
                             // Сообщение об успехе
                             document.getElementById("response-message").innerHTML = "<span style='color:green;'>Ваша запись успешно создана!</span>";
-                            // Сброс формы
+                            // Сбросить форму
                             document.getElementById("appointment-form").reset();
-                            grecaptcha.reset(); // Сброс reCAPTCHA
                         })
                         .catch(err => {
                             // Сообщение об ошибке
-                            document.getElementById("response-message").innerHTML = "<span style='color:red;'>Произошла ошибка, пожалуйста, попробуйте снова.</span>";
+                            document.getElementById("response-message").innerHTML = "<span style='color:red;'>Произошла ошибка, пожалуйста, попробуйте еще раз.</span>";
                             console.log(err);
                         });
                 });
             </script>
 
         </section>
-        <!-- контактная зона конец -->
+        <!-- Контактная форма конец -->
+
 
 
 

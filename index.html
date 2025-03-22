@@ -346,7 +346,7 @@
             <div class="row align-items-center">
                <div class="col-xl-7 col-lg-7 col-md-6 col-6">
                   <div class="rr-header-1-logo d-xl-none">
-                     <img loading="lazy" src="assets/img/logo/logo.png" alt="">
+                     <a href="index.html"><img loading="lazy" src="assets/img/logo/logo.png" alt=""></a>
                   </div>
                   <div class="rr-header-main-menu rr-header-menu ml-30  d-none d-xl-block">
                      <nav class="rr-main-menu-content">
@@ -469,6 +469,13 @@
                      <div class="rr-slider-1-shap-plus-2">
                         <img loading="lazy" src="assets/img/slider/subtitle-shape-3.png" alt="img">
                      </div>
+
+                     <div id="bubble-container">
+                        <div class="speech-bubble bubble">Sedef Hastalığı, Egzama, Romatizma ve Oto İmmün
+                           hastalıklarda tamamlayıcı tıp uygulamaları
+                        </div>
+                     </div>
+
                      <div class="row align-items-center">
                         <div class="col-xl-7 col-lg-7 col-md-6">
                            <div class="rr-slider-1-content z-index-1">
@@ -502,8 +509,10 @@
                                  <div class="speech-bubble bubble">Tedavi Çok Kolay <br> Çok Basit</div>
                               </div>
                               <div id="bubble-container">
-                                 <div class="speech-bubble bubble">Sedef,Egzama ve Romatizma <br> Kardeş Hastalıklardır
+                                 <div class="speech-bubble bubble">Sedef,Egzama Romatizma, Ankilozan Spondilit, Hasimato
+                                    ve Sikliraderma <br> Kardeş Oto İmmun Hastalıklardır
                                  </div>
+
                               </div>
                               <div id="bubble-container">
                                  <div class="speech-bubble bubble">Kortizon ve Kemoterapik ilaçlar kullanmıyoruz!
@@ -628,7 +637,8 @@
                isValid = false;
             }
             if (!isValid) return;
-            document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Randevunuz oluşturuluyor... ⏳</span>";
+            document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Randevunuz
+            oluşturuluyor... ⏳</span > ";
             var params = { name: name, email: email, phone: phone };
             const serviceID = "service_b123ul8";
             const templateID = "template_8bekk3p";
@@ -637,8 +647,11 @@
                   document.getElementById("response-message").innerHTML =
                      "<span style='color:green; font-size: 18px; display: flex; align-items: center;'>" +
                      "<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>" +
-                     "<path d='M20 6L9 17L4 12' stroke='green' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' />" +
-                     "</svg> Randevu Talebiniz Başarıyla Alındı! ✅</span>";
+                     "
+                     < path d = 'M20 6L9 17L4 12' stroke = 'green' stroke - width='2' stroke - linecap='round' stroke -
+                        linejoin='round' /> " +
+                  "
+            </svg > Randevu Talebiniz Başarıyla Alındı! ✅</span > ";
                   document.getElementById("appointment-form").reset();
                })
                .catch(err => {

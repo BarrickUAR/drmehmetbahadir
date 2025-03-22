@@ -245,7 +245,7 @@
             <div class="row align-items-center">
                <div class="col-xl-7 col-lg-7 col-md-6 col-6">
                   <div class="rr-header-1-logo d-xl-none">
-                     <img loading="lazy" src="assets/img/logo/logo.png" alt="">
+                     <a href="index.html"><img loading="lazy" src="assets/img/logo/logo.png" alt=""></a>
                   </div>
                   <div class="rr-header-main-menu rr-header-menu ml-30  d-none d-xl-block">
                      <nav class="rr-main-menu-content">
@@ -352,6 +352,153 @@
 
    <main>
 
+
+
+      <!-- İletişim Alanı Başlangıcı -->
+      <section class="rr-contact-area p-relative black-bg fix">
+         <div class="rr-contact-shap">
+            <img loading="lazy" src="" alt="img">
+         </div>
+
+         <div class="rr-contact-img d-none d-xl-block">
+            <iframe
+               src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d376.3412762727412!2d28.89898311978924!3d41.009277887105284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdr%20mehmet%20ilteber%20bahad%C4%B1r!5e0!3m2!1str!2str!4v1741003329924!5m2!1str!2str"
+               width="1265" height="855" style="border:0;" allowfullscreen="" loading="lazy"
+               referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+         </div>
+
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-6 col-lg-3 col-md-1"></div>
+               <div class="col-xl-4 col-lg-9 col-md-10">
+                  <div class="rr-form-box text-center">
+                     <h4 class="rr-section-title pb-60">Randevu Oluştur</h4>
+                     <form id="appointment-form">
+                        <div class="row">
+                           <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
+                              <div class="rr-form-input-box rr-form-input-main">
+                                 <input type="text" name="name" id="name" placeholder="Adınız" required>
+                                 <small id="name-error" style="color: red; display: none;">Sadece harf kullanın.</small>
+                              </div>
+                           </div>
+                           <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
+                              <div class="rr-form-input-box rr-form-input-main">
+                                 <input type="email" name="email" id="email" placeholder="E-posta" required>
+                                 <small id="email-error" style="color: red; display: none;">Lütfen geçerli bir e-posta
+                                    adresi girin.</small>
+                              </div>
+                           </div>
+                           <div class="col-xl-12 col-lg-12 col-md-12 mb-20">
+                              <div class="rr-form-input-box rr-form-input-main">
+                                 <input type="tel" name="phone" id="phone" placeholder="Telefon (örn. 555 123 45 67)"
+                                    required maxlength="13" oninput="formatPhoneNumber(this)">
+                                 <small id="phone-error" style="color: red; display: none;">Telefon numarası doğru
+                                    formatta olmalı (örn. 555 123 45 67).</small>
+                              </div>
+                           </div>
+                           <div class="col-12 mb-20">
+                              <div class="rr-form-textarea-box">
+                                 <textarea name="message" id="message" placeholder="Mesaj" required></textarea>
+                              </div>
+                           </div>
+                           <div class="col-12">
+                              <button class="rr-btn-1 rr-form-theme-bg" type="submit"><span>Randevu
+                                    Oluştur</span></button>
+                           </div>
+                        </div>
+                     </form>
+                     <div id="response-message" style="margin-top: 15px; font-weight: bold;"></div>
+                  </div>
+               </div>
+               <div class="col-xl-2 col-lg-10 col-md-1"></div>
+            </div>
+         </div>
+
+         <!-- EmailJS Script -->
+         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+         <script>
+            (function () {
+               emailjs.init('AfjNJbvpclsfFJDiK');
+            })();
+
+            // Telefon numarasını biçimlendiren fonksiyon
+            function formatPhoneNumber(input) {
+               const value = input.value.replace(/\D/g, ""); // Sadece rakamları al
+               const formattedValue = value
+                  .replace(/(\d{3})(\d{3})(\d{2})(\d{2})/, "$1 $2 $3 $4") // Format ekle
+                  .substring(0, 13); // Maksimum uzunluk
+               input.value = formattedValue;
+            }
+
+            // Form gönderimi ve doğrulama
+            document.getElementById("appointment-form").addEventListener("submit", function (event) {
+               event.preventDefault();
+
+               var name = document.getElementById("name").value.trim();
+               var email = document.getElementById("email").value.trim();
+               var phone = document.getElementById("phone").value.trim();
+               var message = document.getElementById("message").value.trim();
+
+               // Hata mesajlarını sıfırla
+               document.getElementById("name-error").style.display = "none";
+               document.getElementById("email-error").style.display = "none";
+               document.getElementById("phone-error").style.display = "none";
+               document.getElementById("response-message").innerHTML = "";
+
+               var isValid = true;
+
+               // İsim doğrulaması
+               if (!/^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/.test(name)) {
+                  document.getElementById("name-error").style.display = "block";
+                  isValid = false;
+               }
+
+               // E-posta doğrulaması
+               if (!/\S+@\S+\.\S+/.test(email)) {
+                  document.getElementById("email-error").style.display = "block";
+                  isValid = false;
+               }
+
+               // Telefon doğrulaması (555 123 45 67 formatında)
+               if (!/^\d{3} \d{3} \d{2} \d{2}$/.test(phone)) {
+                  document.getElementById("phone-error").style.display = "block";
+                  isValid = false;
+               }
+
+               if (!isValid) return;
+
+               // Randevu oluşturma mesajını hemen göster
+               document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Randevunuz oluşturuluyor...</span>";
+
+               var params = {
+                  name: name,
+                  email: email,
+                  phone: phone,
+                  message: message
+               };
+
+               const serviceID = "service_b123ul8";
+               const templateID = "template_8bekk3p";
+
+               emailjs.send(serviceID, templateID, params)
+                  .then(res => {
+                     document.getElementById("response-message").innerHTML = "<span style='color:green;'>Randevunuz başarıyla oluşturuldu!</span>";
+                     document.getElementById("appointment-form").reset();
+                  })
+                  .catch(err => {
+                     document.getElementById("response-message").innerHTML = "<span style='color:red;'>Bir hata oluştu, lütfen tekrar deneyin.</span>";
+                     console.log(err);
+                  });
+            });
+         </script>
+      </section>
+      <!-- İletişim Alanı Bitişi -->
+
+
+
+
       <!-- İletişim Bilgileri Alanı Başlangıcı -->
       <section class="rr-contact-area pt-100 pb-100">
          <div class="container">
@@ -367,7 +514,7 @@
                            <p><a href="tel:+902126772424">+90 (530) 225 03 25</a></p>
                            <p><a href="tel:+902126772424">+90 (540) 677 40 40</a></p>
                            <p><a href="tel:+905302250325">+90 (540) 677 24 24 </a></p>
-                           
+
                         </div>
                      </div>
                   </div>
@@ -407,147 +554,6 @@
       </section>
       <!-- İletişim Bilgileri Alanı Bitişi -->
 
-
-
-      <!-- İletişim Alanı Başlangıcı -->
-      <section class="rr-contact-area p-relative black-bg fix">
-         <div class="rr-contact-shap">
-            <img loading="lazy" src="/assets/img/contact/shap01.png" alt="img">
-         </div>
-
-         <div class="rr-contact-img d-none d-xl-block">
-            <iframe
-               src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d376.3412762727412!2d28.89898311978924!3d41.009277887105284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdr%20mehmet%20ilteber%20bahad%C4%B1r!5e0!3m2!1str!2str!4v1741003329924!5m2!1str!2str"
-               width="1265" height="855" style="border:0;" allowfullscreen="" loading="lazy"
-               referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-         </div>
-
-         <div class="container">
-            <div class="row">
-               <div class="col-xl-6 col-lg-3 col-md-1"></div>
-               <div class="col-xl-4 col-lg-9 col-md-10">
-                  <div class="rr-form-box text-center">
-                     <h4 class="rr-section-title pb-60">Randevu Oluştur</h4>
-                     <form id="appointment-form">
-                        <div class="row">
-                           <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
-                              <div class="rr-form-input-box rr-form-input-main">
-                                 <input type="text" name="name" id="name" placeholder="Adınız" required>
-                                 <small id="name-error" style="color: red; display: none;">Sadece harf kullanın.</small>
-                              </div>
-                           </div>
-                           <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
-                              <div class="rr-form-input-box rr-form-input-main">
-                                 <input type="email" name="email" id="email" placeholder="E-posta" required>
-                                 <small id="email-error" style="color: red; display: none;">Lütfen geçerli bir e-posta
-                                    adresi girin.</small>
-                              </div>
-                           </div>
-                           <div class="col-xl-12 col-lg-12 col-md-12 mb-20">
-                              <div class="rr-form-input-box rr-form-input-main">
-                                 <input type="tel" name="phone" id="phone" placeholder="Telefon" required maxlength="15"
-                                    oninput="checkPhoneLength(this)" onkeypress="return isNumberKey(event)">
-                                 <small id="phone-error" style="color: red; display: none;">Geçersiz telefon numarası.
-                                    Lütfen geçerli bir numara girin.</small>
-                              </div>
-                           </div>
-                           <div class="col-12 mb-20">
-                              <div class="rr-form-textarea-box">
-                                 <textarea name="message" id="message" placeholder="Mesaj" required></textarea>
-                              </div>
-                           </div>
-
-                           <!-- reCAPTCHA kaldırıldı -->
-
-                           <div class="col-12">
-                              <button class="rr-btn-1 rr-form-theme-bg" type="submit"><span>Randevu
-                                    Oluştur</span></button>
-                           </div>
-                        </div>
-                     </form>
-                     <div id="response-message" style="margin-top: 15px; font-weight: bold;"></div>
-                  </div>
-               </div>
-               <div class="col-xl-2 col-lg-10 col-md-1"></div>
-            </div>
-         </div>
-
-         <!-- EmailJS Script -->
-         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-         <script>
-            (function () {
-               emailjs.init('AfjNJbvpclsfFJDiK');
-            })();
-
-            // Form gönderimi ve doğrulama
-            document.getElementById("appointment-form").addEventListener("submit", function (event) {
-               event.preventDefault();  // Sayfa yenilenmesini engelle
-
-               var name = document.getElementById("name").value.trim();
-               var email = document.getElementById("email").value.trim();
-               var phone = document.getElementById("phone").value.trim();
-               var message = document.getElementById("message").value.trim();
-
-               // Hata mesajlarını sıfırla
-               document.getElementById("name-error").style.display = "none";
-               document.getElementById("email-error").style.display = "none";
-               document.getElementById("phone-error").style.display = "none";
-               document.getElementById("response-message").innerHTML = "";
-
-               var isValid = true;
-
-               // İsim doğrulaması (Sadece harfler ve boşluklar)
-               if (!/^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/.test(name)) {
-                  document.getElementById("name-error").style.display = "block";
-                  isValid = false;
-               }
-
-               // E-posta doğrulaması
-               if (!/\S+@\S+\.\S+/.test(email)) {
-                  document.getElementById("email-error").style.display = "block";
-                  isValid = false;
-               }
-
-               // Telefon doğrulaması (Sadece rakamlar)
-               if (!/^[0-9]+$/.test(phone)) {
-                  document.getElementById("phone-error").style.display = "block";
-                  isValid = false;
-               }
-
-               if (!isValid) return;
-
-               // Randevu oluşturma mesajını hemen göster
-               document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Randevunuz oluşturuluyor...</span>";
-
-               var params = {
-                  name: name,
-                  email: email,
-                  phone: phone,
-                  message: message
-               };
-
-               const serviceID = "service_b123ul8";  // EmailJS Hizmet ID
-               const templateID = "template_8bekk3p";  // EmailJS Şablon ID
-
-               emailjs.send(serviceID, templateID, params)
-                  .then(res => {
-                     // Başarı mesajı
-                     document.getElementById("response-message").innerHTML = "<span style='color:green;'>Randevunuz başarıyla oluşturuldu!</span>";
-                     // Formu sıfırla
-                     document.getElementById("appointment-form").reset();
-                  })
-                  .catch(err => {
-                     // Hata mesajı
-                     document.getElementById("response-message").innerHTML = "<span style='color:red;'>Bir hata oluştu, lütfen tekrar deneyin.</span>";
-                     console.log(err);
-                  });
-            });
-         </script>
-
-      </section>
-      <!-- İletişim Alanı Bitişi -->
 
 
 

@@ -61,7 +61,11 @@
    </script>
 </head>
 
+<!-- Bootstrap Icons CDN -->
+<link rel="stylesheet" href="https:/cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
 <body>
+
 
 
 
@@ -132,11 +136,6 @@
    <!-- WhatsApp Button -->
 
 
-   <!-- Bootstrap Icons CDN -->
-   <link rel="stylesheet" href="https:/cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
-
-
 
    <!-- preloader start -->
 
@@ -186,7 +185,8 @@
                   <option>Türkçe</option>
                   <option>English</option>
                   <option>Arabic</option>
-                  <option>Russian</option> <!-- Rusça ekleniyor -->
+                  <option>Russian</option>
+                  <option>Deutsch</option>
                </select>
                <div class="nice-select" tabindex="0">
                   <span class="current"> <img src="assets/img/header/tr.png" alt="tr"> </span>
@@ -196,6 +196,7 @@
                      <li data-value="English" class="option"><img src="assets/img/header/en.png" alt="en"> </li>
                      <li data-value="Arabic" class="option"><img src="assets/img/header/ar.png" alt="ar"> </li>
                      <li data-value="Russian" class="option"><img src="assets/img/header/ru.png" alt="ru"></li>
+                     <li data-value="Deutsch" class="option"><img src="assets/img/header/de.png" alt="de"></li>
                      <!-- Rusça simgesi -->
                   </ul>
                </div>
@@ -269,6 +270,7 @@
                            <option>English</option>
                            <option>Arabic</option>
                            <option>Russian</option> <!-- Rusça ekleniyor -->
+                           <option>Deutsch</option>
                         </select>
                         <div class="nice-select" tabindex="0"><span class="current"> <img src="assets/img/header/tr.png"
                                  width="30" alt=""> </span>
@@ -281,7 +283,10 @@
                                     alt=""> </li>
                               <li data-value="Russian" class="option"><img src="assets/img/header/ru.png" width="30"
                                     alt="">
-                              </li> <!-- Rusça simgesi -->
+                              </li>
+                              <li data-value="Deutsch" class="option"><img src="assets/img/header/de.png" width="30"
+                                    alt="">
+                              </li>
                            </ul>
                         </div>
                      </div>
@@ -429,7 +434,7 @@
                </div>
                <div class="col-xl-5 col-lg-5 col-md-6 col-6">
                   <div class="rr-header-right d-flex align-items-center justify-content-end">
-                     <div class="rr-header-1-contat d-none d-md-block ml-30">
+                     <div class="rr-header-1-contat d-md-block ml-30">
                         <a class="rr-btn-border" href="iletisim.html"><span>Randevu Oluştur <i
                                  class="fa-sharp fa-solid fa-plus"></i></span></a>
                      </div>
@@ -546,7 +551,7 @@
                               <div class="col-xl-4 col-md-4 col-12 mb-30">
                                  <div class="rr-form-input-box rr-contact-1-border">
                                     <input type="email" id="email" name="email" autocomplete="off"
-                                       placeholder="Mail Adresiniz*" required>
+                                       placeholder="E-posta Adresiniz*" required>
                                     <small id="email-error" style="color: red; display: none;">Lütfen geçerli bir
                                        e-posta adresi girin.</small>
                                  </div>
@@ -554,11 +559,11 @@
                               <div class="col-xl-4 col-md-4 col-12 mb-30">
                                  <div class="rr-form-input-box rr-contact-1-border">
                                     <input type="tel" id="phone" name="phone" autocomplete="off"
-                                       placeholder="Telefon Numarası*" required maxlength="13"
+                                       placeholder="Telefon Numaranız*" required maxlength="13"
                                        oninput="formatPhoneNumber(this)" onkeypress="return isNumberKey(event)"
                                        onkeydown="blockZero(event)">
-                                    <small id="phone-error" style="color: red; display: none;">Telefon numarası geçerli
-                                       değil. 10 haneli ve 0 ile başlamamalıdır.</small>
+                                    <small id="phone-error" style="color: red; display: none;">Telefon numarası
+                                       geçerli değil. 10 haneli ve 0 ile başlamamalıdır.</small>
                                  </div>
                               </div>
                            </div>
@@ -574,8 +579,7 @@
          </div>
       </section>
 
-      <script
-       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
       <script>
          <!-- Initialize EmailJS after the library has been loaded -->
@@ -624,24 +628,34 @@
                isValid = false;
             }
             if (!isValid) return;
-            document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Randevunuz oluşturuluyor...</span>";
+            document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Randevunuz
+            oluşturuluyor...</span > ";
             var params = { name: name, email: email, phone: phone };
             const serviceID = "service_b123ul8";
             const templateID = "template_8bekk3p";
             emailjs.send(serviceID, templateID, params)
                .then(res => {
-                  document.getElementById("response-message").innerHTML = "<span style='color:green; font-size: 18px; display: flex; align-items: center;'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http:/www.w3.org/2000/svg'><path d='M20 6L9 17L4 12' stroke='green' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg> Randevunuz başarıyla oluşturuldu!</span>";
+                  document.getElementById("response-message").innerHTML =
+                     "<span style='color:green; font-size: 18px; display: flex; align-items: center;'>" +
+                     "<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>" +
+                     "
+                     < path d = 'M20 6L9 17L4 12' stroke = 'green' stroke - width='2' stroke - linecap='round' stroke -
+                        linejoin='round' /> " +
+                  "
+            </svg > Randevunuz başarıyla oluşturuldu!</span > ";
                   document.getElementById("appointment-form").reset();
                })
                .catch(err => {
-                  document.getElementById("response-message").innerHTML = "<span style='color:red;'>❌ Bir hata oluştu, lütfen tekrar deneyin.</span>";
+                  document.getElementById("response-message").innerHTML =
+                     "<span style='color:red;'>❌ Bir hata oluştu, lütfen tekrar deneyin.</span>";
                   console.log(err);
                });
          }
       </script>
-      
+
       <!-- contact area end -->
 
+      //
 
       <!-- features area start -->
 
@@ -745,11 +759,10 @@
 
       <section class="rr-photo-area rr-photo-before pt-50 pb-50 mb-50 fix">
 
-         <a class="rr-btn-1  wow rrfadeUp" href="Dah" target="_blank"><span> Daha fazla Fotoğraf... <i
-                  class="fa-sharp fa-solid fa-plus"></i> </span></a>
-         <a target="_blank" href="https:/
-   /istanbulpsoriasiscenter.pixieset.com/oncesonra/"><img loading="lazy" class="mb-50 border rounded"
-               src="/assets/img/video/hasta.jpg" alt=""></a>
+         <a class="rr-btn-1  wow rrfadeUp" href="https://istanbulpsoriasiscenter.pixieset.com/oncesonra/"
+            target="_blank"><span> Daha fazla Fotoğraf... <i class="fa-sharp fa-solid fa-plus"></i> </span></a>
+         <a target="_blank" href="https://istanbulpsoriasiscenter.pixieset.com/oncesonra/"><img loading="lazy"
+               class="mb-50 border rounded" src="/assets/img/video/hasta.jpg" alt=""></a>
 
          <div class="rr-video-shap z-index-1 d-none d-xxl-block">
             <img loading="lazy" src="assets/img/video/plus-icon.png" alt="img">
@@ -1172,8 +1185,6 @@
 
                <!-- blog item -->
 
-               <!-- blog item -->
-
                <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                   <div class="rr-blog-item">
                      <div class="rr-blog-thumb-main p-relative">
@@ -1221,6 +1232,49 @@
 
                <!-- blog item -->
 
+               <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                  <div class="rr-blog-item">
+                     <div class="rr-blog-thumb-main p-relative">
+                        <a href="blog/deneme.html">
+                           <div class="rr-blog-thumb">
+                              <img loading="lazy" src="/assets/img/blog/2.jpg" alt="img">
+                              <span>Blog</span>
+                           </div>
+                        </a>
+                     </div>
+                     <div class="rr-blog-content rr-blog-content-opcity p-relative">
+                        <div class="rr-blog-content-info d-flex mb-15">
+                           <span><a href="bloglar/romatizma-ve-beslenme.html"><i
+                                    class="fa-sharp fa-solid fa-comments"></i> 0
+                                 Yorumlar</a></span>
+                           <span class="ml-30"><i class="fa-regular fa-calendar-days"></i>21 Şubat 2025</span>
+                        </div>
+                        <div class="rr-blog-text">
+                           <h4 class="rr-blog-title mb-0 pb-10"><a href="bloglar/romatizma-ve-beslenme.html">Romatizma
+                                 ve Beslenme</a></h4>
+                           <p>Romatizma, eklemlerde ağrı, şişlik ve hareket kısıtlılığına neden olan kronik bir
+                              rahatsızlıktır...</p>
+                        </div>
+                        <div class="rr-blog-wrap d-flex align-items-center justify-content-between">
+                           <div class="rr-blog-item-user d-flex align-items-center">
+                              <div class="rr-blog-item-user-thumb">
+                                 <img loading="lazy" src="assets/img/blog/avada.png" alt="img">
+                              </div>
+                              <div class="rr-blog-item-user-content">
+                                 <span class="rr-blog-item-user-title"><a href="bloglar/romatizma-ve-beslenme.html">Dr.
+                                       M.
+                                       İlteber
+                                       Bahadır</a></span>
+                              </div>
+                           </div>
+                           <div class="rr-blog-link">
+                              <a href="bloglar/romatizma-ve-beslenme.html">Daha Fazla... <i
+                                    class="fa-light fa-angle-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
 
 
 
@@ -1334,7 +1388,9 @@
 
 
    <!-- Bootstrap Icons CDN -->
-   <link rel="stylesheet" href="https:/cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="https:///cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+
 
 
 

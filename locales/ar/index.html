@@ -191,6 +191,7 @@
                         <option>İngilizce</option>
                         <option>Arapça</option>
                         <option>Russian</option> <!-- Rusça dil seçeneği eklendi -->
+                        <option>Deutsch</option> <!-- Rusça dil seçeneği eklendi -->
                     </select>
                     <div class="nice-select" tabindex="0">
                         <span class="current">
@@ -208,6 +209,9 @@
                             </li>
                             <li data-value="Russian" class="option"> <!-- Rusça dil seçeneği eklendi -->
                                 <img src="/assets/img/header/ru.png" alt="ru">
+                            </li>
+                            <li data-value="Deutsch" class="option"> <!-- Rusça dil seçeneği eklendi -->
+                                <img src="/assets/img/header/de.png" alt="de">
                             </li>
                         </ul>
                     </div>
@@ -282,6 +286,7 @@
                                     <option>الإنجليزية</option>
                                     <option>العربية</option>
                                     <option>Русский</option> <!-- Rusça dil seçeneği eklendi -->
+                                    <option>Deutsch</option>
                                 </select>
                                 <div class="nice-select" tabindex="0">
                                     <span class="current"><img src="/assets/img/header/ar.png" width="30" alt=""></span>
@@ -293,6 +298,8 @@
                                         <li data-value="Arabic" class="option selected focus"><img
                                                 src="/assets/img/header/ar.png" width="30" alt=""></li>
                                         <li data-value="Russian" class="option"><img src="/assets/img/header/ru.png"
+                                                width="30" alt=""></li> <!-- Rusça dil seçeneği eklendi -->
+                                        <li data-value="Deutsch" class="option"><img src="/assets/img/header/de.png"
                                                 width="30" alt=""></li> <!-- Rusça dil seçeneği eklendi -->
                                     </ul>
                                 </div>
@@ -455,7 +462,7 @@
                         </div>
                         <div class="col-xl-5 col-lg-5 col-md-6 col-6">
                             <div class="rr-header-right d-flex align-items-center justify-content-end">
-                                <div class="rr-header-1-contat d-none d-md-block ml-30">
+                                <div class="rr-header-1-contat d-md-block ml-30">
                                     <a class="rr-btn-border-ar" href="/locales/ar/iletisim.html"><span>حجز موعد <i
                                                 class="fa-sharp fa-solid fa-plus"></i></span></a>
                                 </div>
@@ -654,21 +661,25 @@
                     isValid = false;
                 }
                 if (!isValid) return;
-                document.getElementById("response-message").innerHTML = "<span style='color:orange;'>يتم إنشاء موعدك...</span>";
+                document.getElementById("response-message").innerHTML = "<span style='color:orange;'>يتم إنشاء
+                موعدك...</span > ";
                 var params = { name: name, email: email, phone: phone };
                 const serviceID = "service_b123ul8";
                 const templateID = "template_8bekk3p";
                 emailjs.send(serviceID, templateID, params)
                     .then(res => {
-                        document.getElementById("response-message").innerHTML = 
+                        document.getElementById("response-message").innerHTML =
                             "<span style='color:green; font-size: 18px; display: flex; align-items: center;'>" +
                             "<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>" +
-                            "<path d='M20 6L9 17L4 12' stroke='green' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' />" +
-                            "</svg> تم إنشاء موعدك بنجاح!</span>";
+                            "
+                            < path d = 'M20 6L9 17L4 12' stroke = 'green' stroke - width='2' stroke - linecap='round' stroke -
+                                linejoin='round' /> " +
+                        "
+                </svg > تم إنشاء موعدك بنجاح!</span > ";
                         document.getElementById("appointment-form").reset();
                     })
                     .catch(err => {
-                        document.getElementById("response-message").innerHTML = 
+                        document.getElementById("response-message").innerHTML =
                             "<span style='color:red;'>❌ حدث خطأ، يرجى المحاولة مرة أخرى.</span>";
                         console.log(err);
                     });
@@ -787,9 +798,9 @@
         <section class="rr-photo-area rr-photo-before pt-50 pb-50 mb-50 fix">
 
             <a id="gradient" class="rr-btn-1-ar wow rrfadeUp"
-                href="https:istanbulpsoriasiscenter.pixieset.com/oncesonra/" target="_blank"><span> المزيد من الصور...
+                href="https://istanbulpsoriasiscenter.pixieset.com/oncesonra/" target="_blank"><span> المزيد من الصور...
                     <i class="fa-sharp fa-solid fa-plus"></i> </span></a>
-            <a target="_blank" href="https:istanbulpsoriasiscenter.pixieset.com/oncesonra/"><img loading="lazy"
+            <a target="_blank" href="https://istanbulpsoriasiscenter.pixieset.com/oncesonra/"><img loading="lazy"
                     class="mb-50 border rounded" src="/assets/img/video/hastaar.jpg" alt=""></a>
 
             <div class="rr-video-shap z-index-1 d-none d-xxl-block">
@@ -1283,6 +1294,51 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s"
+                        data-wow-delay=".3s">
+                        <div class="rr-blog-item">
+                            <div class="rr-blog-thumb-main p-relative">
+                                <a href="/locales/ar/blog/romatizma-wa-al-ghitha.html">
+                                    <div class="rr-blog-thumb">
+                                        <img loading="lazy" src="/assets/img/blog/3.jpg" alt="img">
+                                        <span>مدونة</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rr-blog-content rr-blog-content-opcity p-relative">
+                                <div class="rr-blog-content-info d-flex mb-15">
+                                    <span><a href="/locales/ar/blog/romatizma-wa-al-ghitha.html"><i
+                                                class="fa-sharp fa-solid fa-comments"></i> 0 تعليقات</a></span>
+                                    <span class="ml-30"><i class="fa-regular fa-calendar-days"></i> 21 فبراير
+                                        2025</span>
+                                </div>
+                                <div class="rr-blog-text">
+                                    <h4 class="rr-blog-title mb-0 pb-10"><a
+                                            href="/locales/ar/blog/romatizma-wa-al-ghitha.html">الروماتيزم والتغذية</a>
+                                    </h4>
+                                    <p>الروماتيزم هو مرض مزمن يسبب الألم والتورم والقيود في حركة المفاصل....</p>
+                                </div>
+                                <div class="rr-blog-wrap d-flex align-items-center justify-content-between">
+                                    <div class="rr-blog-item-user d-flex align-items-center">
+                                        <div class="rr-blog-item-user-thumb">
+                                            <img loading="lazy" src="/assets/img/blog/avada.png" alt="img">
+                                        </div>
+                                        <div class="rr-blog-item-user-content">
+                                            <span class="rr-blog-item-user-title"><a
+                                                    href="/locales/ar/blog/romatizma-wa-al-ghitha.html">د. م. إيلتيبر
+                                                    بهادير</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="rr-blog-link">
+                                        <a href="/locales/ar/blog/romatizma-wa-al-ghitha.html">قراءة المزيد... <i
+                                                class="fa-light fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
 
                     <!-- View All Button -->

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Videolar - Dr. Mehmet İlteber BAHADIR</title>
+    <title>Blog Detaylari - Dr. Mehmet İlteber BAHADIR</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -26,8 +26,6 @@
 </head>
 
 <body>
-
-
     <!-- preloader start -->
     <div id="loading">
         <div class="preloader-close">x</div>
@@ -53,6 +51,54 @@
     </div>
     <!-- back to top end -->
 
+    <!-- search popup start -->
+    <div class="search__popup">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-12">
+                    <div class="search__wrapper">
+                        <div class="search__top d-flex justify-content-between align-items-center">
+                            <div class="search__logo">
+                                <a href="/index.html">
+                                    <img loading="lazy" src="/assets/img/logo/logo-white.png" alt="img">
+                                </a>
+                            </div>
+                            <div class="search__close">
+                                <button type="button" class="search__close-btn search-close-btn">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="search__form">
+                            <form action="#">
+                                <div class="search__input">
+                                    <input class="search-input-field" type="text" placeholder="Type here to search...">
+                                    <span class="search-focus-border"></span>
+                                    <button type="submit">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- search popup end -->
+
     <div class="rroffcanvas-area">
         <div class="rroffcanvas">
             <div class="rroffcanvas__close-btn">
@@ -60,37 +106,25 @@
             </div>
             <div class="rroffcanvas__logo">
                 <a href="index.html">
-                    <img loading="lazy" src="/assets/img/logo/logo2.png" alt="img">
+                    <img loading="lazy" src="assets/img/logo/logo.png" alt="img">
                 </a>
                 <!-- Dil seçenekleri -->
                 <div class="lang">
                     <select style="display: none;">
-                        <option>Turkish</option>
-                        <option>İngilizce</option>
-                        <option>Arapça</option>
-                        <option>Russian</option> <!-- Rusça dil seçeneği eklendi -->
-                        <option>Deutsch</option> <!-- Rusça dil seçeneği eklendi -->
+                        <option>Türkçe</option>
+                        <option>English</option>
+                        <option>Arabic</option>
+                        <option>Russian</option> <!-- Rusça ekleniyor -->
                     </select>
                     <div class="nice-select" tabindex="0">
-                        <span class="current">
-                            <img src="/assets/img/header/ar.png" alt="ar">
-                        </span>
+                        <span class="current"> <img src="assets/img/header/tr.png" alt="tr"> </span>
                         <ul class="list z-index-2">
-                            <li data-value="Turkish" class="option">
-                                <img src="/assets/img/header/tr.png" alt="tr">
-                            </li>
-                            <li data-value="İngilizce" class="option">
-                                <img src="/assets/img/header/en.png" alt="en">
-                            </li>
-                            <li data-value="Arabic" class="option selected focus">
-                                <img src="/assets/img/header/ar.png" alt="ar">
-                            </li>
-                            <li data-value="Russian" class="option"> <!-- Rusça dil seçeneği eklendi -->
-                                <img src="/assets/img/header/ru.png" alt="ru">
-                            </li>
-                            <li data-value="Deutsch" class="option"> <!-- Rusça dil seçeneği eklendi -->
-                                <img src="/assets/img/header/de.png" alt="de">
-                            </li>
+                            <li data-value="Türkçe" class="option selected focus"> <img src="assets/img/header/tr.png"
+                                    alt="tr"> </li>
+                            <li data-value="English" class="option"><img src="assets/img/header/en.png" alt="en"> </li>
+                            <li data-value="Arabic" class="option"><img src="assets/img/header/ar.png" alt="ar"> </li>
+                            <li data-value="Russian" class="option"><img src="assets/img/header/ru.png" alt="ru"></li>
+                            <!-- Rusça simgesi -->
                         </ul>
                     </div>
                 </div>
@@ -98,14 +132,14 @@
             <div class="rr-main-menu-mobile d-xl-none"></div>
             <div class="rroffcanvas__contact-info">
                 <div class="rroffcanvas__contact-title">
-                    <h5>تواصل معنا!</h5>
+                    <h5>Bizimle İletişime Geçin!</h5>
                 </div>
                 <ul>
                     <li>
                         <i class="fa-light fa-location-dot"></i>
-                        <a href="https:www.google.com/maps/@23.8223586,90.3661283,15z" target="_blank">Maltepe Mah.
-                            Eski Çırpıcı Yolu Sok. No:2/63 Kat:11 E-5 Karayolu Merter Metro İstasyon Yanı Merter İş
-                            Merkezi
+                        <a href="htrrs:/www.google.com/maps/@23.8223586,90.3661283,15z" target="_blank">Maltepe Mah.
+                            Eski
+                            Çırpıcı Yolu Sok. No:2/58 Kat:10 E-5 Karayolu Merter Metro İstasyon Yanı Merter İş Merkezi
                             Zeytinburnu / İstanbul</a>
                     </li>
                     <li>
@@ -114,22 +148,21 @@
                     </li>
                     <li>
                         <i class="fal fa-phone-alt"></i>
-                        <a href="tel:+902125550055">+90 (212) 555 00 55</a>
+                        <a href="tel:+902126772424">+90 212 677 24 24</a>
                     </li>
                 </ul>
             </div>
             <div class="rroffcanvas__social">
                 <div class="social-icon">
-                    <a href="https:www.instagram.com/drmehmetilteberbahadir/" target="_blank"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="https:www.facebook.com/sedefegzamatedavisi" target="_blank"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-linkedin" target="_blank"></i></a>
+                    <a href="https:/www.instagram.com/drmehmetilteberbahadir/"><i class="fab fa-instagram"></i></a>
+                    <a href="https:/www.facebook.com/sedefegzamatedavisi"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
     </div>
     <div class="body-overlay"></div>
+    <!-- rr-offcanvus-area-end -->
 
     <!-- header top area start -->
 
@@ -146,63 +179,63 @@
                                         randevu@drmehmetilteberbahadir.net</a>
                                 </li>
                                 <li class="ml-50">
-                                    <b><span><i class="fa-solid fa-clock"></i></span>الإثنين - السبت : 09.00 - 17.00</b>
+                                    <b><span><i class="fa-solid fa-clock"></i></span>Pzt - Cmt : 09.00 -
+                                        17.00</b>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xxl-3 col-xl-3 col-lg-1 d-none d-xxl-block">
+                    <div class="col-xxl-3 col-xl-3  col-lg-1 d-none d-xxl-block">
                         <div class="rr-header-1-top-btn-text">
-                            <span>الدكتور محمد إلتيبر بهادر</span>
+                            <span>Dr. Mehmet İlteber BAHADIR
+                            </span>
                         </div>
                     </div>
                     <div class="col-xxl-4 col-xl-6 col-lg-5">
                         <div class="rr-header-2-top-info d-flex align-items-center justify-content-end text-end">
                             <div class="rr-header-2-lang rr-header-lang-main d-none d-md-block ml-60">
                                 <select style="display: none;">
-                                    <option>التركية</option>
-                                    <option>الإنجليزية</option>
-                                    <option>العربية</option>
-                                    <option>Русский</option> <!-- Rusça dil seçeneği eklendi -->
-                                    <option>Deutsch</option>
+                                    <option>Türkçe</option>
+                                    <option>English</option>
+                                    <option>Arabic</option>
+                                    <option>Russian</option> <!-- Rusça ekleniyor -->
                                 </select>
-                                <div class="nice-select" tabindex="0">
-                                    <span class="current"><img src="/assets/img/header/ar.png" width="30" alt=""></span>
+                                <div class="nice-select" tabindex="0"><span class="current"> <img
+                                            src="/assets/img/header/tr.png" width="30" alt=""> </span>
                                     <ul class="list z-index-2">
-                                        <li data-value="Turkish" class="option"><img src="/assets/img/header/tr.png"
-                                                width="30" alt=""></li>
+                                        <li data-value="Türkçe" class="option selected focus"><img
+                                                src="/assets/img/header/tr.png" width="30" alt=""> </li>
                                         <li data-value="English" class="option"><img src="/assets/img/header/en.png"
-                                                width="30" alt=""></li>
-                                        <li data-value="Arabic" class="option selected focus"><img
-                                                src="/assets/img/header/ar.png" width="30" alt=""></li>
+                                                width="30" alt=""> </li>
+                                        <li data-value="Arabic" class="option"><img src="/assets/img/header/ar.png"
+                                                width="30" alt=""> </li>
                                         <li data-value="Russian" class="option"><img src="/assets/img/header/ru.png"
-                                                width="30" alt=""></li> <!-- Rusça dil seçeneği eklendi -->
-                                        <li data-value="Deutsch" class="option"><img src="/assets/img/header/de.png"
-                                                width="30" alt=""></li> <!-- Rusça dil seçeneği eklendi -->
+                                                width="30" alt="">
+                                        </li> <!-- Rusça simgesi -->
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
 
-
     <!-- header top area end -->
     <!-- header main area start -->
 
-    <section class="rr-header-1-main d-none d-xl-block">
+    <section class=".rr-header-1-main d-none d-xl-block">
         <div class="container custom-container-1">
             <div class="row align-items-center">
                 <div class="col-xl-4">
                     <div class="rr-header-main-social d-flex align-items-center">
-                        <h4 class="rr-header-1-title">وسائل التواصل الاجتماعي</h4>
+                        <h4 class="rr-header-1-title">Sosyal Medya </h4>
                         <div class="rr-header-1-social ml-20">
-                            <a href="https://www.facebook.com/sedefegzamatedavisi"><i
+                            <a href="https:/www.facebook.com/sedefegzamatedavisi"><i
                                     class="fa-brands fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/drmehmetilteberbahadir/"><i
+                            <a href="https:/www.instagram.com/drmehmetilteberbahadir/"><i
                                     class="fa-brands fa-instagram"></i></a>
                             <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                         </div>
@@ -210,8 +243,7 @@
                 </div>
                 <div class="col-xl-4">
                     <div class="rr-herader-1-logo text-center">
-                        <a href="locales/ar/index.html"><img loading="lazy" src="/assets/img/logo/logo.png"
-                                alt="img"></a>
+                        <a href="/index.html"><img loading="lazy" src="/assets/img/logo/logo.png" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-xl-4">
@@ -221,8 +253,8 @@
                         </div>
                         <a href="">
                             <div class="rr-header-1-contat-text ml-20">
-                                <h4>اضغط لحجز موعد!</h4>
-                                <b><a href="tel:+902125550055">متاح 24/7 – سريع وسهل</a></b>
+                                <h4> Randevu almak için tıklayın!</h4>
+                                <b><a href="tel:+902126772424">7/24 – Hızlı ve Kolay</a></b>
                             </div>
                         </a>
                     </div>
@@ -232,6 +264,7 @@
     </section>
 
     <!-- header main area end -->
+
     <header class="rr-header-height z-index-5">
         <!-- header area start -->
         <div id="header-sticky" class="rr-header-area">
@@ -239,102 +272,96 @@
                 <div class="row align-items-center">
                     <div class="col-xl-7 col-lg-7 col-md-6 col-6">
                         <div class="rr-header-1-logo d-xl-none">
-                            <img loading="lazy" src="/assets/img/logo/logo.png" alt="صورة">
+                            <img loading="lazy" src="/assets/img/logo/logo.png" alt="">
                         </div>
-                        <div class="rr-header-main-menu rr-header-menu ml-30 d-none d-xl-block">
+                        <div class="rr-header-main-menu rr-header-menu ml-30  d-none d-xl-block">
                             <nav class="rr-main-menu-content">
                                 <ul>
                                     <li class="has-dropdown">
-                                        <a href="/locales/ar/index.html">الرئيسية</a>
+                                        <a href="/index.html">Anasayfa</a>
                                         <div class="rr-submenu submenu has-homemenu">
                                             <div class="row gx-6 row-cols-1 row-cols-md-2 row-cols-xl-3">
                                                 <div class="col homemenu">
                                                     <div class="homemenu-thumb mb-15">
-                                                        <img loading="lazy" src="/assets/img/menu/home-1.jpg"
-                                                            alt="صورة">
+                                                        <img loading="lazy" src="/assets/img/menu/home-1.jpg" alt="img">
                                                         <div class="homemenu-btn">
-                                                            <a class="rr-menu-btn" href="/locales/ar/terapi.html">زيارة
-                                                                الموقع</a>
+                                                            <a class="rr-menu-btn" href="/terapi.html">Siteye git</a>
                                                         </div>
                                                     </div>
+
                                                     <div class="homemenu-content text-center">
                                                         <h4 class="homemenu-title">
-                                                            <a href="/locales/ar/terapi.html">ما هو العلاج بالنباتات
-                                                                الطبية؟</a>
+                                                            <a href="/terapi.html">Fitoterapi Nedir?</a>
                                                         </h4>
                                                     </div>
                                                 </div>
 
                                                 <div class="col homemenu">
                                                     <div class="homemenu-thumb mb-15">
-                                                        <img loading="lazy" src="/assets/img/menu/home-2.jpg"
-                                                            alt="صورة">
+                                                        <img loading="lazy" src="/assets/img/menu/home-2.jpg" alt="img">
                                                         <div class="homemenu-btn">
-                                                            <a class="rr-menu-btn" href="/locales/ar/terapi.html">زيارة
-                                                                الموقع</a>
+                                                            <a class="rr-menu-btn" href="/terapi.html">Siteye git</a>
                                                         </div>
                                                     </div>
                                                     <div class="homemenu-content text-center">
                                                         <h4 class="homemenu-title">
-                                                            <a href="/locales/ar/terapi.html">العلاج بالأوزون</a>
+                                                            <a href="/terapi.html">Ozonterapi</a>
                                                         </h4>
                                                     </div>
                                                 </div>
+
                                                 <div class="col homemenu">
                                                     <div class="homemenu-thumb mb-15">
-                                                        <img loading="lazy" src="/assets/img/menu/home-3.jpg"
-                                                            alt="صورة">
+                                                        <img loading="lazy" src="/assets/img/menu/home-3.jpg" alt="img">
                                                         <div class="homemenu-btn">
-                                                            <a class="rr-menu-btn" href="/locales/ar/terapi.html">زيارة
-                                                                الموقع</a>
+                                                            <a class="rr-menu-btn" href="/terapi.html">Siteye git</a>
                                                         </div>
                                                     </div>
                                                     <div class="homemenu-content text-center">
                                                         <h4 class="homemenu-title">
-                                                            <a href="/locales/ar/terapi.html">العلاج الميزوثيرابي</a>
+                                                            <a href="/terapi.html">Mezoterapi</a>
                                                         </h4>
                                                     </div>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </li>
-                                    <li><a href="/locales/ar/hakkimizda.html">من نحن</a></li>
+                                    <li><a href="/hakkimizda.html">Hakkımda</a></li>
                                     <li class="has-dropdown">
-                                        <a href="/locales/ar/cilt-hastaliklari.html">الأمراض</a>
+                                        <a href="/cilt-hastaliklari.html">Hastalıklar</a>
                                         <ul class="submenu rr-submenu">
-                                            <li><a href="/locales/ar/cilt-hastaliklari.html">أمراض الجلد</a></li>
-                                            <li><a href="/locales/ar/cilt-hastaliklari.html">الأمراض
-                                                    الروماتيزمية</a></li>
-                                            <li><a href="/locales/ar/akne.html">حَبُّ الشّبَاب <a></li>
+                                            <li><a href="/cilt-hastaliklari.html">Cilt Hastalıkları</a></li>
+                                            <li><a href="/romatizmal-hastaliklar.html">Romatizmal H.</a></li>
+                                            <li><a href="/akne.html">Akne</a></li>
+
                                         </ul>
                                     </li>
                                     <li class="has-dropdown">
-                                        <a href="#">الصفحات</a>
+                                        <a href="#">Sayfalar</a>
                                         <ul class="submenu rr-submenu">
-                                            <li><a href="/locales/ar/videolar.html">الفيديوهات</a></li>
-                                            <li><a href="/locales/ar/ekibimiz.html">فريقنا</a></li>
-                                            <li><a href="/locales/ar/hekimlerimiz.html">أطباؤنا</a></li>
-                                            <li><a href="/locales/ar/sss.html">هذه هي المرة الأولى
-                                                </a></li>
+                                            <li><a href="/videolar.html">Videolar</a></li>
+                                            <li><a href="/ekibimiz.html">Ekibimiz</a></li>
+                                            <li><a href="/hekimlerimiz.html">Hekimlerimiz</a></li>
+                                            <li><a href="/SSS.html">Sıkça Sorulan Sorular</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-dropdown">
-                                        <a href="/locales/ar/blog.html">المدونة</a>
+                                        <a href="/blog.html">Blog</a>
                                         <ul class="submenu rr-submenu">
-                                            <li><a href="/locales/ar/blog.html">جميع المقالات</a></li>
+                                            <li><a href="/blog.html">Bütün Yazılar</a></li>
+
                                         </ul>
                                     </li>
-                                    <li><a href="/locales/ar/iletisim.html">اتصل بنا</a></li>
+                                    <li><a href="/iletisim.html">İletişim</a></li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-5 col-md-6 col-6">
                         <div class="rr-header-right d-flex align-items-center justify-content-end">
-                            <div class="rr-header-icon d-none rr-header-2-search d-xl-block">
-                            </div>
-                            <div class="rr-header-1-contat d-md-block ml-30">
-                                <a class="rr-btn-border" href="/locales/ar/iletisim.html"><span>احجز موعدًا <i
+                            <div class="rr-header-1-contat d-none d-md-block ml-30">
+                                <a class="rr-btn-border" href="iletisim.html"><span>Randevu Oluştur <i
                                             class="fa-sharp fa-solid fa-plus"></i></span></a>
                             </div>
                             <div class="rr-header-bar d-xl-none">
@@ -347,7 +374,9 @@
         </div>
 
         <!-- header area end -->
+
     </header>
+
 
     <main>
 
@@ -362,109 +391,164 @@
                     <div class="col-xl-5 col-md-5">
                         <div class="breadcrumb__content z-index">
                             <div class="breadcrumb__section-title-box">
-                                <h3 class="breadcrumb__title">Videolar</h3>
+                                <h3 class="breadcrumb__title">Blog Detayı</h3>
                             </div>
                             <div class="breadcrumb__list">
-                                <span><a href="index.html">Sayfalar</a></span>
+                                <span><a href="/index.html">Anasayfa</a></span>
                                 <span class="dvdr"><i>/</i></span>
-                                <span>Videolar</span>
+                                <span>Blog Detayları</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-7 col-md-7">
                         <div class="breadcrumb-img z-index-3">
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- breadcrumb area end -->
-        <!-- video area start -->
-        <section class="rr-video-area-2 pt-100 pb-80">
+
+        <!-- postbox area start -->
+        <section class="postbox__area pt-100 pb-100">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <div class="rr-video-title-wrapper mb-50">
-                            <span class="rr-section-subtitle wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                                <img loading="lazy" src="/assets/img/testimonial/section-icon.png" alt="img">
-                                Videolarımız <img loading="lazy" src="/assets/img/testimonial/section-icon.png"
-                                    alt="img">
-                            </span>
-                            <h3 class="rr-section-title wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                                Video Galerisi
-                            </h3>
+                    <div class="col-xxl-8 col-xl-8 col-lg-8">
+                        <div class="postbox__wrapper">
+                            <article class="postbox__item format-image mb-50 transition-3">
+                                <div class="postbox__thumb w-img mb-25">
+                                    <a href="/blog-details.html">
+                                        <img loading="lazy" src="/assets/img/blog/3.jpg" alt="img">
+                                    </a>
+                                </div>
+                                <div class="postbox__content mr-70">
+
+                                    <h3 class="postbox__title mb-10">
+                                        Romatizma ve Beslenme
+                                    </h3>
+                                    <div class="postbox__text pb-10">
+
+                                        <p>
+                                            <strong>Romatizma: Belirtileri, Nedenleri ve Tedavi Yöntemleri</strong>
+                                            <br><br>
+                                            Romatizma, eklemlerde ağrı, şişlik ve hareket kısıtlılığına neden olan
+                                            kronik bir rahatsızlıktır.
+                                            Bu yazıda romatizmanın belirtileri, nedenleri, tedavi yöntemleri ve
+                                            beslenmenin romatizma üzerindeki etkileri hakkında bilgi vereceğiz.
+                                            Ayrıca, Dr. Mehmet İlteber Bahadır'ın kliniğinde romatizma tedavisi için
+                                            sunulan yaklaşımları ele alacağız.
+                                            <br><br>
+
+                                            <strong>Romatizmanın Belirtileri</strong>
+                                            <br>
+                                            Romatizmanın belirtileri kişiden kişiye değişiklik gösterebilir, ancak en
+                                            yaygın belirtiler şunlardır:
+                                        <ul>
+                                            <li>Eklemlerde ağrı ve hassasiyet.</li>
+                                            <li>Şişlik ve kızarıklık.</li>
+                                            <li>Hareket kısıtlılığı.</li>
+                                            <li>Sabahları eklemlerde sertlik hissi.</li>
+                                            <li>Yorgunluk ve genel halsizlik.</li>
+                                        </ul>
+                                        <br>
+
+                                        <strong>Romatizmanın Nedenleri</strong>
+                                        <br>
+                                        Romatizmanın kesin nedeni tam olarak bilinmemekle birlikte, genetik yatkınlık,
+                                        bağışıklık sistemi bozuklukları
+                                        ve çevresel faktörler önemli rol oynar. Bazı durumlarda enfeksiyonlar veya
+                                        travmalar da romatizmayı tetikleyebilir.
+                                        <br><br>
+
+                                        <strong>Tedavi Yöntemleri</strong>
+                                        <br>
+                                        Romatizma tedavisinde amaç, ağrıyı hafifletmek, eklem fonksiyonlarını korumak ve
+                                        hastalığın ilerlemesini yavaşlatmaktır.
+                                        Tedavi yöntemleri şunları içerebilir:
+                                        <ul>
+                                            <li>İlaç tedavisi (ağrı kesiciler, anti-enflamatuar ilaçlar, bağışıklık
+                                                baskılayıcılar).</li>
+                                            <li>Fizik tedavi ve rehabilitasyon.</li>
+                                            <li>Egzersiz programları.</li>
+                                            <li>Cerrahi müdahale (ileri vakalarda).</li>
+                                            <li>Alternatif tedavi yöntemleri (akupunktur, masaj, vb.).</li>
+                                        </ul>
+                                        <br>
+
+                                        <strong>Beslenmenin Romatizma Üzerindeki Etkileri</strong>
+                                        <br>
+                                        Beslenme, romatizma tedavisinde önemli bir rol oynar. Anti-enflamatuar
+                                        özelliklere sahip gıdalar, romatizma semptomlarını hafifletmeye yardımcı
+                                        olabilir.
+                                        Özellikle omega-3 yağ asitleri, antioksidanlar ve vitaminler açısından zengin
+                                        bir diyet önerilir. Aşağıdaki besinler romatizma hastaları için faydalı
+                                        olabilir:
+                                        <ul>
+                                            <li>Balık (somon, sardalya, uskumru).</li>
+                                            <li>Zeytinyağı ve avokado.</li>
+                                            <li>Taze sebze ve meyveler.</li>
+                                            <li>Tam tahıllar ve baklagiller.</li>
+                                            <li>Kuruyemişler (ceviz, badem).</li>
+                                        </ul>
+                                        </p>
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </article>
+
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 col-12">
-                        <div class="rr-video-tab-wrapper wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
-                            <div class="tab-content" id="pills-tabContent">
-                                <!-- Tüm Videolar -->
-                                <div class="tab-pane fade show active" id="pills-all" role="tabpanel">
-                                    <div class="row">
-                                        <!-- Video 1 - Egzama -->
-                                        <div class="col-lg-4 col-md-4">
-                                            <div class="rr-video-item">
-                                                <div class="rr-video-thumb mb-25 p-relative">
-                                                    <video class="w-100" controls>
-                                                        <source src="/assets/videos/egzama1.mp4" type="video/mp4">
-                                                    </video>
-                                                    <div class="rr-video-thumb-info">
-                                                        <h4 class="rr-video-thumb-title"><a
-                                                                href="video-details.html">Egzama
-                                                                Tedavisi</a></h4>
-                                                        <p>Egzama / Açıklama</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Video 2 - Sedef -->
-                                        <div class="col-lg-4 col-md-4">
-                                            <div class="rr-video-item">
-                                                <div class="rr-video-thumb mb-25 p-relative">
-                                                    <video class="w-100" controls>
-                                                        <source src="/assets/videos/sedef1.mp4" type="video/mp4">
-                                                    </video>
-                                                    <div class="rr-video-thumb-info">
-                                                        <h4 class="rr-video-thumb-title"><a
-                                                                href="video-details.html">Sedef
-                                                                Hastalığı</a></h4>
-                                                        <p>Sedef / Açıklama</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Video 3 - Romatizma -->
-                                        <div class="col-lg-4 col-md-4">
-                                            <div class="rr-video-item">
-                                                <div class="rr-video-thumb mb-25 p-relative">
-                                                    <video class="w-100" controls>
-                                                        <source src="/assets/videos/romatizma1.mp4" type="video/mp4">
-                                                    </video>
-                                                    <div class="rr-video-thumb-info">
-                                                        <h4 class="rr-video-thumb-title"><a
-                                                                href="video-details.html">Romatizma
-                                                                Tedavisi</a></h4>
-                                                        <p>Romatizma / Açıklama</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-4">
+                        <div class="sidebar__wrapper">
+                            <div class="sidebar__widget mb-30">
+                                <div class="sidebar__widget-content">
+                                    <div class="sidebar__search">
                                     </div>
                                 </div>
                             </div>
+                            <div class="sidebar__widget sidebar__widget-bg mb-30">
+                                <h3 class="sidebar__widget-title">Kategoriler</h3>
+                                <div class="sidebar__widget-content">
+                                    <ul>
+                                        <li><a href="/blog.html"><i class="fa-solid fa-right-long"></i> Sedef
+                                                Hastalığı</a></li>
+                                        <li><a href="/blog.html"><i class="fa-solid fa-right-long"></i> Egzama Hastalığı
+                                            </a></li>
+                                        <li><a href="/blog.html"><i class="fa-solid fa-right-long"></i> Romatizma
+                                                Hastalığı</a>
+                                        </li>
+                                        <li><a href="/blog.html"><i class="fa-solid fa-right-long"></i> Akne </a></li>
+                                        <li><a href="/blog.html"><i class="fa-solid fa-right-long"></i> İktiyozis</a>
+                                        </li>
+                                        <li><a href="/blog.html"><i class="fa-solid fa-right-long"></i> Liken Planus
+                                            </a></li>
+                                        <li><a href="/blog.html"><i class="fa-solid fa-right-long"></i> Romatoid Artrit
+                                            </a></li>
+                                        <li><a href="/blog.html"><i class="fa-solid fa-right-long"></i> Hashimoto
+                                                Troiditi </a>
+                                        </li>
+                                        <li><a href="/blog.html"><i class="fa-solid fa-right-long"></i> Sitemik Lupus
+                                            </a></li>
+                                        <li><a href="/blog.html"><i class="fa-solid fa-right-long"></i> Ankilozan
+                                                Spondilit </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- video area end -->
-
+        <!-- postbox area end -->
 
     </main>
-
 
 
     <footer>
@@ -482,7 +566,7 @@
                                 data-wow-delay=".3s">
                                 <div class="rr-footer-widget footer-cols-1">
                                     <div class="rr-footer-logo pb-35">
-                                        <a href="index.html"><img loading="lazy" src="/assets/img/logo/logo.png"
+                                        <a href="/index.html"><img loading="lazy" src="/assets/img/logo/logo.png"
                                                 alt="img"></a>
                                     </div>
                                     <div class="rr-footer-widget-content-list mb-25">
@@ -496,17 +580,17 @@
                                                 Kat 11/63</a>
                                         </div>
                                         <div class="rr-footer-widget-content-list-item">
-                                            <i class="fa-sharp fa-solid fa-phone"></i><a href="tel:+02125550055">+90
-                                                (212) 555 00
-                                                55
+                                            <i class="fa-sharp fa-solid fa-phone"></i><a href="tel:+902126772424">+90
+                                                (212) 677 24
                                                 24</a>
                                         </div>
                                     </div>
                                     <div class="rr-footer-social">
-                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                        <a href="https:/www.facebook.com/sedefegzamatedavisi"><i
+                                                class="fa-brands fa-facebook-f"></i></a>
+                                        <a href="https:/www.instagram.com/drmehmetilteberbahadir/"><i
+                                                class="fa-brands fa-instagram"></i></a>
                                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -520,10 +604,10 @@
                                     <div class="rr-footer-list">
                                         <ul>
                                             <li><a href="#">Anasayfa</a></li>
-                                            <li><a href="hakkimizda.html">Hakkımda</a></li>
-                                            <li><a href="cilt-hastaliklari.html">Hastalıklar</a></li>
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="iletisim.html">İletişim</a></li>
+                                            <li><a href="/hakkimizda.html">Hakkımda</a></li>
+                                            <li><a href="/akne.html">Hastalıklar</a></li>
+                                            <li><a href="/blog.html">Blog</a></li>
+                                            <li><a href="/iletisim.html">İletişim</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -569,7 +653,7 @@
     </footer>
 
     <!-- WhatsApp Butonu -->
-    <a href="tel:+092125550055" target="_blank" class="whatsapp-button z-index-2">
+    <a href="tel:+902126772424" target="_blank" class="whatsapp-button z-index-2">
         <i class="bi bi-whatsapp"></i>
     </a>
 
@@ -636,7 +720,7 @@
 
 
     <!-- Bootstrap Icons CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https:/cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
 
 

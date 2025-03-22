@@ -189,6 +189,7 @@
                         <option>English</option>
                         <option>Arabic</option>
                         <option>Russian</option> <!-- Added Russian language option -->
+                        <option>Deutsch</option> <!-- Added Russian language option -->
                     </select>
                     <div class="nice-select" tabindex="0">
                         <span class="current">
@@ -206,6 +207,9 @@
                             </li>
                             <li data-value="Russian" class="option">
                                 <img src="/assets/img/header/ru.png" alt="ru">
+                            </li> <!-- Added Russian language option -->
+                            <li data-value="Russian" class="option">
+                                <img src="/assets/img/header/de.png" alt="de">
                             </li> <!-- Added Russian language option -->
                         </ul>
                     </div>
@@ -278,6 +282,7 @@
                                     <option>English</option>
                                     <option>Arabic</option>
                                     <option>Russian</option> <!-- Added Russian language option -->
+                                    <option>Deutsch</option> <!-- Added Russian language option -->
                                 </select>
                                 <div class="nice-select" tabindex="0"><span class="current"> <img
                                             src="/assets/img/header/en.png" width="30" alt="en"> </span>
@@ -289,6 +294,8 @@
                                         <li data-value="Arabic" class="option"><img src="/assets/img/header/ar.png"
                                                 width="30" alt=""> </li>
                                         <li data-value="Russian" class="option"><img src="/assets/img/header/ru.png"
+                                                width="30" alt=""> </li> <!-- Added Russian language option -->
+                                        <li data-value="Deutsch" class="option"><img src="/assets/img/header/de.png"
                                                 width="30" alt=""> </li> <!-- Added Russian language option -->
                                     </ul>
                                 </div>
@@ -434,7 +441,7 @@
                     </div>
                     <div class="col-xl-5 col-lg-5 col-md-6 col-6">
                         <div class="rr-header-right d-flex align-items-center justify-content-end">
-                            <div class="rr-header-1-contat d-none d-md-block ml-30">
+                            <div class="rr-header-1-contat d-md-block ml-30">
                                 <a class="rr-btn-border" href="/locales/en/contact.html"><span>Make an Appointment <i
                                             class="fa-sharp fa-solid fa-plus"></i></span></a>
                             </div>
@@ -450,7 +457,7 @@
     </header>
 
     <!-- slider area start -->
-    /
+
     <div class="rr-slider-1-area fix p-relative theme-bg-2 pt-90 " data-background="/assets/img/slider/bg.jpg">
         <div class="rr-slider-1-wrapper">
             <div class="rr-slider-1-wrap p-relative">
@@ -528,7 +535,6 @@
 
 
     <!-- contact area start -->
-
     <section class="rr-contact-area fix" data-bg-color="#21313f">
         <div class="container">
             <div class="row">
@@ -538,40 +544,35 @@
                         <div class="rr-contact-1-form-box text-center mt-70">
                             <form id="appointment-form">
                                 <div class="row">
-                                    <!-- Your Name -->
                                     <div class="col-xl-4 col-md-4 col-12 mb-30">
                                         <div class="rr-form-input-box rr-contact-1-border">
                                             <input type="text" id="name" name="name" autocomplete="off"
                                                 placeholder="Your Name*" required>
-                                            <small id="name-error" style="color: red; display: none;">Please use
-                                                only letters.</small>
+                                            <small id="name-error" style="color: red; display: none;">Please use only
+                                                letters.</small>
                                         </div>
                                     </div>
-                                    <!-- Your Email -->
                                     <div class="col-xl-4 col-md-4 col-12 mb-30">
                                         <div class="rr-form-input-box rr-contact-1-border">
                                             <input type="email" id="email" name="email" autocomplete="off"
-                                                placeholder="Your Email*" required>
-                                            <small id="email-error" style="color: red; display: none;">Please enter
-                                                a valid email address.</small>
+                                                placeholder="Your Email Address*" required>
+                                            <small id="email-error" style="color: red; display: none;">Please enter a
+                                                valid email address.</small>
                                         </div>
                                     </div>
-                                    <!-- Your Phone Number -->
                                     <div class="col-xl-4 col-md-4 col-12 mb-30">
                                         <div class="rr-form-input-box rr-contact-1-border">
                                             <input type="tel" id="phone" name="phone" autocomplete="off"
-                                                placeholder="Your Phone Number*" required maxlength="15"
-                                                oninput="checkPhoneLength(this)" onkeypress="return isNumberKey(event)">
+                                                placeholder="Your Phone Number*" required maxlength="13"
+                                                oninput="formatPhoneNumber(this)" onkeypress="return isNumberKey(event)"
+                                                onkeydown="blockZero(event)">
                                             <small id="phone-error" style="color: red; display: none;">Invalid phone
-                                                number. Please enter a valid number.</small>
+                                                number. It should be 10 digits long and should not start with 0.</small>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- reCAPTCHA removed -->
-
                                 <button class="rr-btn rr-form-theme-bg" type="submit" onclick="sendMail(event)">
-                                    <span>Create Appointment!</span>
+                                    <span>Schedule an Appointment!</span>
                                 </button>
                             </form>
                             <div id="response-message" style="margin-top: 15px; font-weight: bold;"></div>
@@ -631,31 +632,33 @@
                 isValid = false;
             }
             if (!isValid) return;
-            document.getElementById("response-message").innerHTML = "<span style='color:orange;'>يتم إنشاء موعدك...</span>";
+            document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Your appointment is being
+            created...</span > ";
             var params = { name: name, email: email, phone: phone };
             const serviceID = "service_b123ul8";
             const templateID = "template_8bekk3p";
             emailjs.send(serviceID, templateID, params)
                 .then(res => {
-                    document.getElementById("response-message").innerHTML = "<span
-                    style = 'color:green; font-size: 18px; display: flex; align-items: center;' > <svg width='24' height='24'
-                        viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                        <path d='M20 6L9 17L4 12' stroke='green' stroke-width='2' stroke-linecap='round'
-                            stroke-linejoin='round' />
-                    </svg> تم إنشاء موعدك بنجاح!</span > ";
+                    document.getElementById("response-message").innerHTML =
+                        "<span style='color:green; font-size: 18px; display: flex; align-items: center;'>" +
+                        "<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>" +
+                        "
+                        < path d = 'M20 6L9 17L4 12' stroke = 'green' stroke - width='2' stroke - linecap='round' stroke -
+                            linejoin='round' /> " +
+                    "
+            </svg > Your appointment has been successfully created!</span > ";
                     document.getElementById("appointment-form").reset();
                 })
                 .catch(err => {
-                    document.getElementById("response-message").innerHTML = "<span style='color:red;'>❌ حدث خطأ، يرجى المحاولة مرة
-                    أخرى.</span > ";
+                    document.getElementById("response-message").innerHTML =
+                        "<span style='color:red;'>❌ An error occurred, please try again.</span>";
                     console.log(err);
                 });
         }
     </script>
 
-
-
     <!-- contact area end -->
+
 
     <!-- features area start -->
 
@@ -762,7 +765,7 @@
 
         <a class="rr-btn-1 wow rrfadeUp" href="More" target="_blank"><span> More Photos... <i
                     class="fa-sharp fa-solid fa-plus"></i> </span></a>
-        <a target="_blank" href="https:istanbulpsoriasiscenter.pixieset.com/oncesonra/"><img loading="lazy"
+        <a target="_blank" href="https://istanbulpsoriasiscenter.pixieset.com/oncesonra/"><img loading="lazy"
                 class="mb-50 border rounded" src="/assets/img/video/hasta.jpg" alt=""></a>
 
         <div class="rr-video-shap z-index-1 d-none d-xxl-block">
@@ -1245,6 +1248,50 @@
                 </div>
 
                 <!-- Blog item -->
+
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                    <div class="rr-blog-item">
+                        <div class="rr-blog-thumb-main p-relative">
+                            <a href="/locales/en/blog/rheumatism-and-nutrition.html">
+                                <div class="rr-blog-thumb">
+                                    <img loading="lazy" src="/assets/img/blog/3.jpg" alt="img">
+                                    <span>Blog</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="rr-blog-content rr-blog-content-opcity p-relative">
+                            <div class="rr-blog-content-info d-flex mb-15">
+                                <span><a href="/locales/en/blog/rheumatism-and-nutrition.html"><i
+                                            class="fa-sharp fa-solid fa-comments"></i> 0 Comments</a></span>
+                                <span class="ml-30"><i class="fa-regular fa-calendar-days"></i> February 21, 2025</span>
+                            </div>
+                            <div class="rr-blog-text">
+                                <h4 class="rr-blog-title mb-0 pb-10"><a
+                                        href="/locales/en/blog/rheumatism-and-nutrition.html">Rheumatism and
+                                        Nutrition</a></h4>
+                                <p>Rheumatism is a chronic condition that causes pain, swelling, and restricted movement
+                                    in the joints....</p>
+                            </div>
+                            <div class="rr-blog-wrap d-flex align-items-center justify-content-between">
+                                <div class="rr-blog-item-user d-flex align-items-center">
+                                    <div class="rr-blog-item-user-thumb">
+                                        <img loading="lazy" src="/assets/img/blog/avada.png" alt="img">
+                                    </div>
+                                    <div class="rr-blog-item-user-content">
+                                        <span class="rr-blog-item-user-title"><a
+                                                href="/locales/en/blog/rheumatism-and-nutrition.html">Dr. M. İlteber
+                                                Bahadır</a></span>
+                                    </div>
+                                </div>
+                                <div class="rr-blog-link">
+                                    <a href="/locales/en/blog/rheumatism-and-nutrition.html">Read More... <i
+                                            class="fa-light fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
         </div>

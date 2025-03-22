@@ -178,6 +178,7 @@
                         <option>English</option>
                         <option>Arabic</option>
                         <option>Russian</option> <!-- Rusça eklendi -->
+                        <option>Deutsch</option> <!-- Rusça eklendi -->
                     </select>
                     <div class="nice-select" tabindex="0">
                         <span class="current">
@@ -196,6 +197,9 @@
                             </li>
                             <li data-value="Arabic" class="option">
                                 <img src="/assets/img/header/ar.png" alt="ar">
+                            </li>
+                            <li data-value="Deutsch" class="option">
+                                <img src="/assets/img/header/de.png" alt="de">
                             </li>
                             <!-- Rusça eklendi -->
                         </ul>
@@ -269,6 +273,7 @@
                                     <option>English</option>
                                     <option>Arabic</option>
                                     <option>Russian</option> <!-- Rusça eklendi -->
+                                    <option>Deutsch</option> <!-- Rusça eklendi -->
                                 </select>
                                 <div class="nice-select" tabindex="0">
                                     <span class="current">
@@ -287,6 +292,9 @@
                                         </li>
                                         <li data-value="Arabic" class="option">
                                             <img src="/assets/img/header/ar.png" width="30" alt="">
+                                        </li>
+                                        <li data-value="Deutsch" class="option">
+                                            <img src="/assets/img/header/de.png" width="30" alt="">
                                         </li>
                                         <!-- Rusça eklendi -->
                                     </ul>
@@ -442,7 +450,7 @@
                     </div>
                     <div class="col-xl-5 col-lg-5 col-md-6 col-6">
                         <div class="rr-header-right d-flex align-items-center justify-content-end">
-                            <div class="rr-header-1-contat d-none d-md-block ml-30">
+                            <div class="rr-header-1-contat  d-md-block ml-30">
                                 <a class="rr-btn-border" href="/locales/ru/iletisim.html"><span>Записаться на прием <i
                                             class="fa-sharp fa-solid fa-plus"></i></span></a>
                             </div>
@@ -566,7 +574,7 @@
                                                 <input type="email" id="email" name="email" autocomplete="off"
                                                     placeholder="Ваш email*" required>
                                                 <small id="email-error" style="color: red; display: none;">Пожалуйста,
-                                                    введите действующий адрес электронной почты.</small>
+                                                    введите действительный адрес электронной почты.</small>
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-md-4 col-12 mb-30">
@@ -575,17 +583,12 @@
                                                     placeholder="Ваш номер телефона*" required maxlength="13"
                                                     oninput="formatPhoneNumber(this)"
                                                     onkeypress="return isNumberKey(event)" onkeydown="blockZero(event)">
-                                                <small id="phone-error" style="color: red; display: none;">Номер
-                                                    телефона некорректен. Он должен быть 10 цифр и не начинаться с
+                                                <small id="phone-error" style="color: red; display: none;">Неверный
+                                                    номер телефона. Он должен состоять из 10 цифр и не начинаться с
                                                     0.</small>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- reCAPTCHA removed -->
-                                    <!-- <div class="col-xl-12 col-md-12 mb-30">
-                                <div class="g-recaptcha"
-                                    data-sitekey="6LfiLPUqAAAAAOepUPcU3iMU8WU-JQa-9bsLqEVo"></div>
-                            </div> -->
                                     <button class="rr-btn rr-form-theme-bg" type="submit" onclick="sendMail(event)">
                                         <span>Записаться на прием!</span>
                                     </button>
@@ -597,13 +600,11 @@
                 </div>
             </div>
         </section>
-        <!-- contact area end -->
-
 
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
         <script>
-            <!-- Инициализация EmailJS после загрузки библиотеки -->
+            <!-- Initialize EmailJS after the library has been loaded -->
             (function () {
                 emailjs.init('AfjNJbvpclsfFJDiK');
             })();
@@ -649,28 +650,34 @@
                     isValid = false;
                 }
                 if (!isValid) return;
-                document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Ваш прием создается...</span>";
+                document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Создание вашей
+                записи...</span > ";
                 var params = { name: name, email: email, phone: phone };
                 const serviceID = "service_b123ul8";
                 const templateID = "template_8bekk3p";
                 emailjs.send(serviceID, templateID, params)
                     .then(res => {
-                        document.getElementById("response-message").innerHTML = 
+                        document.getElementById("response-message").innerHTML =
                             "<span style='color:green; font-size: 18px; display: flex; align-items: center;'>" +
                             "<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>" +
-                            "<path d='M20 6L9 17L4 12' stroke='green' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' />" +
-                            "</svg> Ваш прием успешно создан!</span>";
+                            "
+                            < path d = 'M20 6L9 17L4 12' stroke = 'green' stroke - width='2' stroke - linecap='round' stroke -
+                                linejoin='round' /> " +
+                        "
+                </svg > Ваша запись успешно создана!</span > ";
                         document.getElementById("appointment-form").reset();
                     })
                     .catch(err => {
-                        document.getElementById("response-message").innerHTML = 
+                        document.getElementById("response-message").innerHTML =
                             "<span style='color:red;'>❌ Произошла ошибка, пожалуйста, попробуйте снова.</span>";
                         console.log(err);
                     });
             }
         </script>
 
+
         <!-- contact area end -->
+
 
 
         <!-- features area start -->

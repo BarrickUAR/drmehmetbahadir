@@ -628,8 +628,7 @@
                isValid = false;
             }
             if (!isValid) return;
-            document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Randevunuz
-            oluşturuluyor...</span > ";
+            document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Randevunuz oluşturuluyor... ⏳</span>";
             var params = { name: name, email: email, phone: phone };
             const serviceID = "service_b123ul8";
             const templateID = "template_8bekk3p";
@@ -638,11 +637,8 @@
                   document.getElementById("response-message").innerHTML =
                      "<span style='color:green; font-size: 18px; display: flex; align-items: center;'>" +
                      "<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>" +
-                     "
-                     < path d = 'M20 6L9 17L4 12' stroke = 'green' stroke - width='2' stroke - linecap='round' stroke -
-                        linejoin='round' /> " +
-                  "
-            </svg > Randevunuz başarıyla oluşturuldu!</span > ";
+                     "<path d='M20 6L9 17L4 12' stroke='green' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' />" +
+                     "</svg> Randevu Talebiniz Başarıyla Alındı! ✅</span>";
                   document.getElementById("appointment-form").reset();
                })
                .catch(err => {

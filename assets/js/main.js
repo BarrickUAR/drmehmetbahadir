@@ -678,7 +678,7 @@ function getCookie(e) {
           English: "en",
           Arabic: "ar",
           Russian: "ru", // "Russian" kelimesini "ru" dil koduna çevir
-          Deutsch: "de", // "Russian" kelimesini "ru" dil koduna çevir
+          Deutsch: "de", // 
         }[e] || "tr"
       );
     }

@@ -37,9 +37,7 @@
 </head>
 
 <body>
-    <!--[if lte IE 9]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="htrrs:/browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-      <![endif]-->
+
 
     <!-- preloader start -->
     <div id="loading">
@@ -65,6 +63,77 @@
         </button>
     </div>
     <!-- back to top end -->
+
+
+    <!-- WhatsApp Butonu -->
+    <a href="https://wa.me/905528303491?text=مرحباً،%20كيف%20يمكنني%20مساعدتك؟" target="_blank"
+        class="whatsapp-button z-index-2">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- CSS -->
+    <style>
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-5px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 40px;
+            right: 100px;
+            background-color: #25D366;
+            color: white;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 1.5s infinite;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1EBE5D;
+            text-decoration: none;
+            animation: shake 0.5s ease-in-out;
+        }
+    </style>
+
+    <!-- WhatsApp Button -->
+
+
 
     <div class="rroffcanvas-area">
         <div class="rroffcanvas">
@@ -365,7 +434,6 @@
 
     <main>
 
-
         <!-- نموذج الاتصال بداية -->
         <section class="rr-contact-area p-relative black-bg fix">
             <div class="rr-contact-shap">
@@ -397,33 +465,22 @@
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
                                         <div class="rr-form-input-box rr-form-input-main">
-                                            <input type="email" name="email" id="email" placeholder="بريدك الإلكتروني"
-                                                required>
-                                            <small id="email-error" style="color: red; display: none;">يرجى إدخال بريد
-                                                إلكتروني صالح.</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12 col-lg-12 col-md-12 mb-20">
-                                        <div class="rr-form-input-box rr-form-input-main">
-                                            <input type="tel" name="phone" id="phone" placeholder="رقم الهاتف" required
-                                                maxlength="15" oninput="checkPhoneLength(this)"
-                                                onkeypress="return isNumberKey(event)">
-                                            <small id="phone-error" style="color: red; display: none;">رقم الهاتف غير
-                                                صالح. يرجى إدخال رقم صحيح.</small>
+                                            <input type="tel" name="phone" id="phone"
+                                                placeholder="رقم الهاتف (مثال: 555 123 45 67)" required maxlength="13"
+                                                oninput="formatPhoneNumber(this)">
+                                            <small id="phone-error" style="color: red; display: none;">يجب أن يكون رقم
+                                                الهاتف بتنسيق صحيح (مثال: 555 123 45 67).</small>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-20">
                                         <div class="rr-form-textarea-box">
-                                            <textarea name="message" id="message" placeholder="رسالة"
+                                            <textarea name="message" id="message" placeholder="يمكنك كتابة شكواك هنا"
                                                 required></textarea>
                                         </div>
                                     </div>
-
-                                    <!-- reCAPTCHA تم إزالته -->
-
                                     <div class="col-12">
                                         <button class="rr-btn-1 rr-form-theme-bg" type="submit"><span>حدد
-                                                الموعد</span></button>
+                                                موعدًا</span></button>
                                     </div>
                                 </div>
                             </form>
@@ -442,71 +499,61 @@
                     emailjs.init('AfjNJbvpclsfFJDiK');
                 })();
 
-                // إرسال النموذج والتحقق من صحة البيانات
+                function formatPhoneNumber(input) {
+                    const value = input.value.replace(/\D/g, "");
+                    const formattedValue = value
+                        .replace(/(\d{3})(\d{3})(\d{2})(\d{2})/, "$1 $2 $3 $4")
+                        .substring(0, 13);
+                    input.value = formattedValue;
+                }
+
                 document.getElementById("appointment-form").addEventListener("submit", function (event) {
-                    event.preventDefault();  // منع إعادة تحميل الصفحة
+                    event.preventDefault();
 
-                    var name = document.getElementById("name").value.trim();
-                    var email = document.getElementById("email").value.trim();
-                    var phone = document.getElementById("phone").value.trim();
-                    var message = document.getElementById("message").value.trim();
+                    const name = document.getElementById("name").value.trim();
+                    const phone = document.getElementById("phone").value.trim();
+                    const message = document.getElementById("message").value.trim();
 
-                    // إعادة تعيين رسائل الخطأ
                     document.getElementById("name-error").style.display = "none";
-                    document.getElementById("email-error").style.display = "none";
                     document.getElementById("phone-error").style.display = "none";
                     document.getElementById("response-message").innerHTML = "";
 
-                    var isValid = true;
+                    let isValid = true;
 
-                    // التحقق من الاسم (استخدام الحروف فقط)
                     if (!/^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/.test(name)) {
                         document.getElementById("name-error").style.display = "block";
                         isValid = false;
                     }
 
-                    // التحقق من البريد الإلكتروني
-                    if (!/\S+@\S+\.\S+/.test(email)) {
-                        document.getElementById("email-error").style.display = "block";
-                        isValid = false;
-                    }
-
-                    // التحقق من رقم الهاتف (أرقام فقط)
-                    if (!/^[0-9]+$/.test(phone)) {
+                    if (!/^\d{3} \d{3} \d{2} \d{2}$/.test(phone)) {
                         document.getElementById("phone-error").style.display = "block";
                         isValid = false;
                     }
 
                     if (!isValid) return;
 
-                    // عرض رسالة إنشاء الموعد
-                    document.getElementById("response-message").innerHTML = "<span style='color:orange;'>جاري إنشاء موعدك...</span>";
+                    document.getElementById("response-message").innerHTML = "<span style='color:orange;'>رصد الموعد...</span>";
 
-                    var params = {
+                    const params = {
                         name: name,
-                        email: email,
                         phone: phone,
                         message: message
                     };
 
-                    const serviceID = "service_b123ul8";  // معرف خدمة EmailJS
-                    const templateID = "template_8bekk3p";  // معرف القالب في EmailJS
+                    const serviceID = "service_b123ul8";
+                    const templateID = "template_8bekk3p";
 
                     emailjs.send(serviceID, templateID, params)
                         .then(res => {
-                            // رسالة النجاح
-                            document.getElementById("response-message").innerHTML = "<span style='color:green;'>تم إنشاء موعدك بنجاح!</span>";
-                            // إعادة تعيين النموذج
+                            document.getElementById("response-message").innerHTML = "<span style='color:green;'>تم إنشاء الموعد بنجاح!</span>";
                             document.getElementById("appointment-form").reset();
                         })
                         .catch(err => {
-                            // رسالة الخطأ
                             document.getElementById("response-message").innerHTML = "<span style='color:red;'>حدث خطأ، يرجى المحاولة مرة أخرى.</span>";
                             console.log(err);
                         });
                 });
             </script>
-
         </section>
         <!-- نموذج الاتصال نهاية -->
 
@@ -638,12 +685,12 @@
                                     <h4 class="rr-footer-title">ساعات العمل</h4>
                                     <div class="rr-footer-contact">
                                         <ul>
-                                            <li><span>الإثنين - 09:00 - 17:00</span></li>
-                                            <li><span>الثلاثاء - 09:00 - 17:00</span></li>
-                                            <li><span>الأربعاء - 09:00 - 17:00</span></li>
-                                            <li><span>الخميس - 09:00 - 17:00</span></li>
-                                            <li><span>الجمعة - 09:00 - 17:00</span></li>
-                                            <li><span>السبت - 09:00 - 17:00</span></li>
+                                            <li><span>الإثنين - 09:30- 17:00</span></li>
+                                            <li><span>الثلاثاء - 09:30- 17:00</span></li>
+                                            <li><span>الأربعاء - 09:30- 17:00</span></li>
+                                            <li><span>الخميس - 09:30- 17:00</span></li>
+                                            <li><span>الجمعة - 09:30- 17:00</span></li>
+                                            <li><span>السبت - 09:30- 17:00</span></li>
                                         </ul>
                                     </div>
                                 </div>

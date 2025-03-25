@@ -277,6 +277,7 @@ p {
 }
 
 img {
+  border-radius: 14px;
   max-width: 100%;
 }
 
@@ -1408,7 +1409,7 @@ div.demo img {
 }
 
 #gradient {
-  background: linear-gradient(200deg, #ff7a00, #ff3d00);
+  background: linear-gradient(200deg, #ff7a00, #dba754);
 }
 
 .rr-btn-1-ar {
@@ -9335,13 +9336,16 @@ a.ui-button:active {
   }
 }
 .rr-slider-1-subtitle {
-  font-size: 22px;
+  font-size: 26px;
   color: var(--rr-theme-1);
-  font-weight: 500;
+  font-weight: 800;
   display: inline-block;
   border-bottom: 1px solid;
   margin-bottom: 18px;
   font-family: var(--rr-ff-p);
+  border: 3px solid #076bb0;
+  border-radius: 16px;
+  padding: 18px;
 }
 @media (max-width: 767px) {
   .rr-slider-1-subtitle {
@@ -9803,6 +9807,7 @@ a.ui-button:active {
 .rr-features-item {
   border: 1px solid #ececec;
   margin-bottom: 30px;
+  height: 600px;
 }
 .rr-features-main {
   display: grid;
@@ -14717,75 +14722,203 @@ span.current {
   transition: all 0.3s ease-out 0s;
 }
 
-/* Bubble */
-
-/* Sayfa genelinde arka planı etkilememek için */
-
-/* Belirli bir container içindeki speech-bubble stilini uygulayalım */
-#bubble-container .speech-bubble {
-  position: relative;
-  margin: 0.5em auto;
-  padding: 8px;
-  width: 400px;
-  height: 4em;
-  border-radius: 0.25em;
-  transform: rotate(-4deg) rotateY(15deg);
-  background: #076bb0;
-  font: 20px Century Gothic, Verdana, sans-serif;
+.rr-funfact-icon2 {
+  padding: 5%;
   text-align: center;
-  color: white;
-  margin-bottom: 20px;
-}
-#bubble-container-ar .speech-bubble {
+  line-height: 106px;
+  border: 7px solid #fff;
+  display: inline-block;
+  margin-bottom: 19px;
+  z-index: 1;
   position: relative;
-  margin: 0.5em auto;
-  padding: 8px;
-  width: 400px;
-  height: 4em;
-  border-radius: 0.25em;
-  transform: rotate(-4deg) rotateY(15deg);
-  background: linear-gradient(200deg, #6610f2, #6f42c1);
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
 
-  font: 20px Century Gothic, Verdana, sans-serif;
-  text-align: center;
-  color: white;
+  img {
+    border-radius: 50%;
+  }
 }
 
-#bubble-container .speech-bubble:before,
-#bubble-container .speech-bubble:after {
-  position: absolute;
-  z-index: -1;
-  content: "";
+/* Bubble Wrapper */
+/* Bubble Wrapper */
+
+#bubble-simulation {
+  width: 100%;
 }
 
+.bubble-wrapper {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+/* Baloncuk satırları */
+.bubble-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+/* Baloncuk Stilleri: Her baloncuğa farklı özellikler veriliyor */
 .bubble {
-  position: relative;
-  left: 0%;
-  bottom: 30px;
+  display: inline-block;
+  color: #fff;
+  padding: 20px;
+  margin-right: 50px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  white-space: nowrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideBubble var(--animation-duration, 30s) linear infinite;
 }
 
-#bubble-container .speech-bubble:after {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: inherit;
-  transform: rotate(2deg) translate(0.35em, -0.15em) scale(1.02);
-  background: #076bb0;
+.rr-social-media {
+  text-align: center;
+  border: 3px dotted #e3e3e3;
+  margin-bottom: 50px;
 }
 
-#bubble-container .speech-bubble:before {
-  border: solid 0 transparent;
-  border-right: solid 3.5em #f4fbfe;
-  border-bottom: solid 0.25em #629bdd;
-  bottom: 0.25em;
-  left: 1.25em;
-  width: 0;
-  height: 1em;
-  transform: rotate(45deg) skewX(75deg);
+.socialMediaContainer {
+  display: flex;
+  justify-content: space-evenly; /* Ensures equal spacing between the items */
+  align-items: center;
+  width: 100%;
 }
 
-/* Bubble */
+.MediaBox {
+  border: 1px solid #e3e3e3;
+  box-shadow: 0 0 30px 0 rgba(0, 20, 9, 0.1);
+
+  padding: 24px;
+  margin: 0 auto;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column; /* Aligns text and image vertically */
+  align-items: center;
+  margin: 0 15px; /* Adds spacing between each box */
+
+  h2 {
+    margin: 0; /* Removes default margin */
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+.MediaBox a {
+  text-align: center;
+}
+
+.MediaBox img {
+  width: 100px; /* Set image size as needed */
+  margin-top: 10px; /* Adds space between text and image */
+}
+
+.MediaBox:hover {
+  background-color: #f2f4f9;
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .socialMediaContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    flex-direction: column; /* Stack the boxes vertically */
+    align-items: center; /* Center the content */
+    justify-content: center; /* Center content in the container */
+  }
+
+  .MediaBox {
+    width: 200px;
+    padding: 5px;
+    margin: 10px 0; /* Adjust the margin for stacked items */
+  }
+
+  .MediaBox img {
+    width: 50px; /* Optional: adjust the image size for smaller screens */
+  }
+}
+
+/* İlk baloncuk */
+.bubble-1 {
+  background: var(--rr-theme-1, #25d366);
+  border-radius: 30px 0px 30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* İkinci baloncuk */
+.bubble-2 {
+  background: #1ebe5d;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Üçüncü baloncuk */
+.bubble-3 {
+  background: #ff5733;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dördüncü baloncuk */
+.bubble-4 {
+  background: #3a8bda;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animasyon: Baloncuklar soldan başlayıp sağa doğru kayacak */
+@keyframes slideBubble {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+  .bubble {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bubble {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+/* Baloncuk stili */
 
 .rr-funfact-icon-ar {
   width: 120px;
@@ -14848,6 +14981,7 @@ span.current {
   -webkit-clip-path: polygon(0 0, 100% 5%, 100% 96%, 0 100%) !important;
   clip-path: polygon(0 0, 100% 5%, 100% 96%, 0 100%) !important;
 }
+
 .rr-funfact-content {
   padding: 60px 15px;
   position: relative;
@@ -15557,7 +15691,7 @@ span.current {
 }
 
 .rr-icon-box-title {
-  font-size: 20px;
+  font-size: 22px;
   color: var(--rr-heading-1);
   transition: all 0.3s ease-out 0s;
 }
@@ -15600,9 +15734,14 @@ span.current {
 
 .rr-icon-box-wrapper {
   display: flex;
-  padding: 30px;
+  padding: 50px;
   align-items: center;
 }
+
+.rr-icon-box-description {
+  font-size: 20px;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rr-icon-box-wrapper {
     padding: 17px;

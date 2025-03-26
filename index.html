@@ -136,6 +136,81 @@
 
    <!-- WhatsApp Button -->
 
+   <!-- Arama Butonu -->
+   <a href="tel:+902126772424" target="_blank" class="call-button z-index-2">
+      <i class="bi bi-telephone-fill"></i>
+   </a>
+
+   <!-- CSS -->
+   <style>
+      @keyframes shake {
+
+         0%,
+         100% {
+            transform: translateX(0);
+         }
+
+         25% {
+            transform: translateX(-5px);
+         }
+
+         50% {
+            transform: translateX(5px);
+         }
+
+         75% {
+            transform: translateX(-5px);
+         }
+      }
+
+      @keyframes pulse {
+         0% {
+            transform: scale(1);
+         }
+
+         50% {
+            transform: scale(1.1);
+         }
+
+         100% {
+            transform: scale(1);
+         }
+      }
+
+      .call-button {
+         position: fixed;
+         bottom: 38px;
+         right: 165px;
+         /* Bu değeri WhatsApp butonuna göre ayarlayabilirsiniz */
+         background-color: #0d6efd;
+         /* Mavi renk */
+         color: white;
+         font-size: 24px;
+         padding: 15px;
+         border-radius: 50%;
+         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+         transition: 0.3s;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         animation: pulse 1.5s infinite;
+      }
+
+      .call-button:hover {
+         background-color: #0b5ed7;
+         /* Hover mavi tonu */
+         text-decoration: none;
+         animation: shake 0.5s ease-in-out;
+      }
+
+      .call-button i {
+         font-size: 1.5em;
+         /* İkonun boyutunu ayarlayabilirsiniz */
+      }
+   </style>
+   <!-- Arama Butonu -->
+
+
 
    <!-- preloader start -->
 
@@ -632,74 +707,83 @@
       <div id="privacyModal" class="modal" onclick="closePrivacyPolicyOutside(event)">
          <div class="modal-content">
             <span class="close" onclick="closePrivacyPolicy()">&times;</span>
-            <h2>Gizlilik Politikası</h2>
-            <p><strong>Son güncellenme:</strong> 26/03/2025</p>
+            <h2 class="text-danger">Gizlilik Politikası</h1>
+               <p><strong>Son güncellenme:</strong> 26/03/2025</p>
 
-            <h3>Giriş</h3>
-            <p>“Yeni Bluevit Kozmetik” olarak, gizliliğinize ve verilerinizin güvenliğine değer veriyoruz. Bu nedenle,
-               sizi hangi verileri topladığımız, veri toplamanın amaçları ve verilerinize ilişkin haklarınızla ilgili
-               olarak aydınlatmak amacıyla bu Gizlilik Politikası’nı hazırladık.</p>
-            <p>Bu Gizlilik Politikası yalnızca <a href="https://drmehmetilteberbahadir.net" target="_blank">internet
-                  sitemiz</a> için geçerlidir. Bu Gizlilik Politikası’nı kabul etmiyorsanız, internet sitemizi
-               kullanmaya devam etmemelisiniz.</p>
+               <h3>Giriş</h3>
+               <p>“Yeni Bluevit Kozmetik” olarak, gizliliğinize ve verilerinizin güvenliğine değer veriyoruz. Bu
+                  nedenle,
+                  sizi hangi verileri topladığımız, veri toplamanın amaçları ve verilerinize ilişkin haklarınızla ilgili
+                  olarak aydınlatmak amacıyla bu Gizlilik Politikası’nı hazırladık.</p>
+               <p>Bu Gizlilik Politikası yalnızca <a href="https://drmehmetilteberbahadir.net" target="_blank">internet
+                     sitemiz</a> için geçerlidir. Bu Gizlilik Politikası’nı kabul etmiyorsanız, internet sitemizi
+                  kullanmaya devam etmemelisiniz.</p>
 
-            <h3>Diğer İnternet Sitelerine Bağlantılar</h3>
-            <p>İnternet sitemizdeki içerikler üçüncü kişilere ait internet sitelerine bağlantılar içerebilir ve bu
-               internet siteleri için Gizlilik Politikamız geçerli değildir. Bu internet sitelerine ilişkin hiçbir
-               sorumluluk kabul etmiyoruz. Üçüncü kişilere ait internet siteleriyle verilerinizi paylaşmadan önce
-               onların gizlilik politikalarını okumalısınız.</p>
+               <h3>Diğer İnternet Sitelerine Bağlantılar</h3>
+               <p>İnternet sitemizdeki içerikler üçüncü kişilere ait internet sitelerine bağlantılar içerebilir ve bu
+                  internet siteleri için Gizlilik Politikamız geçerli değildir. Bu internet sitelerine ilişkin hiçbir
+                  sorumluluk kabul etmiyoruz. Üçüncü kişilere ait internet siteleriyle verilerinizi paylaşmadan önce
+                  onların gizlilik politikalarını okumalısınız.</p>
 
-            <h3>Topladığımız Veriler</h3>
-            <p>Yukarıda yer alan form yardımıyla bize hastalığınızla ilgili bir şikayetinizi yazarken ad, soyad, eposta
-               adresi ve telefon numarası gibi veriler sağlarsınız.</p>
+               <h3>Topladığımız Veriler</h3>
+               <p>Yukarıda yer alan form yardımıyla bize hastalığınızla ilgili bir şikayetinizi yazarken ad, soyad,
+                  eposta
+                  adresi ve telefon numarası gibi veriler sağlarsınız.</p>
 
-            <h3>Topladığımız Verileri Nasıl Kullanıyoruz?</h3>
-            <p>Bize doğrudan sağladığınız verileri, size eposta yoluyla ya da telefonunuzu kullanarak ulaşmak, sizin de
-               teyidinizi alarak gerekiyorsa hastalığınızla ilgili ilk muayene ya da kontrol randevusu oluşturmak için
-               kullanıyoruz.</p>
+               <h3>Topladığımız Verileri Nasıl Kullanıyoruz?</h3>
+               <p>Bize doğrudan sağladığınız verileri, size eposta yoluyla ya da telefonunuzu kullanarak ulaşmak, sizin
+                  de
+                  teyidinizi alarak gerekiyorsa hastalığınızla ilgili ilk muayene ya da kontrol randevusu oluşturmak
+                  için
+                  kullanıyoruz.</p>
 
-            <h3>Verilerinizin Paylaşımı</h3>
-            <p>Yasal yükümlülüklerimizi yerine getirmek için resmi merciler ve mahkemelerden gelen bağlayıcı taleplere
-               cevap vermek amacı dışında verilerinizi 3. kişilerle paylaşmıyoruz.</p>
+               <h3>Verilerinizin Paylaşımı</h3>
+               <p>Yasal yükümlülüklerimizi yerine getirmek için resmi merciler ve mahkemelerden gelen bağlayıcı
+                  taleplere
+                  cevap vermek amacı dışında verilerinizi 3. kişilerle paylaşmıyoruz.</p>
 
-            <h3>Kişisel Verileri İşlenen Kişi Olarak Haklarınız</h3>
-            <p>KVKK madde 11 uyarınca herkes, veri sorumlusuna başvurarak aşağıdaki haklarını kullanabilir:</p>
-            <ul>
-               <li>🔺 Kişisel verilerinizin işlenip işlenmediğini öğrenme hakkı</li>
-               <li>🔺 Kişisel verileriniz işlenmişse buna ilişkin bilgi ve kopyalarını talep etme hakkı</li>
-               <li>🔺 Kişisel verilerin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme
-                  hakkı</li>
-               <li>🔺 Yurt içinde veya yurt dışında kişisel verilerin aktarıldığı üçüncü kişileri bilme hakkı</li>
-               <li>🔺 Kişisel verilerin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme hakkı
-               </li>
-               <li>🔺 Kişisel verilerin silinmesini veya yok edilmesini isteme hakkı</li>
-               <li>🔺 Kişisel verilerin düzeltilmesi, silinmesi veya yok edilmesinin kişisel verilerin aktarıldığı
-                  üçüncü kişilere bildirilmesini isteme hakkı</li>
-               <li>🔺 İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhinize
-                  bir sonucun ortaya çıkmasına itiraz etme hakkı</li>
-               <li>🔺 Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğramanız hâlinde zararın
-                  giderilmesini talep etme hakkı</li>
-               <li>🔺 Kişisel verilerinizin tamamının veya bir kısmının işlenmesine son verilmesini talep etme hakkı
-               </li>
-               <li>🔺 İşlenen kişisel verilerinizin elektronik formatta bir kopyasını isteme ve bunların bir başka
-                  kişiye iletimini talep etme hakkı</li>
-               <li>🔺 Kişisel verilerinizi işlememize istediğiniz zaman itiraz etme hakkı</li>
-            </ul>
+               <h3>Kişisel Verileri İşlenen Kişi Olarak Haklarınız</h3>
+               <p>KVKK madde 11 uyarınca herkes, veri sorumlusuna başvurarak aşağıdaki haklarını kullanabilir:</p>
+               <ul>
+                  <li>🔺 Kişisel verilerinizin işlenip işlenmediğini öğrenme hakkı</li>
+                  <li>🔺 Kişisel verileriniz işlenmişse buna ilişkin bilgi ve kopyalarını talep etme hakkı</li>
+                  <li>🔺 Kişisel verilerin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme
+                     hakkı</li>
+                  <li>🔺 Yurt içinde veya yurt dışında kişisel verilerin aktarıldığı üçüncü kişileri bilme hakkı</li>
+                  <li>🔺 Kişisel verilerin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme
+                     hakkı
+                  </li>
+                  <li>🔺 Kişisel verilerin silinmesini veya yok edilmesini isteme hakkı</li>
+                  <li>🔺 Kişisel verilerin düzeltilmesi, silinmesi veya yok edilmesinin kişisel verilerin aktarıldığı
+                     üçüncü kişilere bildirilmesini isteme hakkı</li>
+                  <li>🔺 İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle
+                     aleyhinize
+                     bir sonucun ortaya çıkmasına itiraz etme hakkı</li>
+                  <li>🔺 Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğramanız hâlinde zararın
+                     giderilmesini talep etme hakkı</li>
+                  <li>🔺 Kişisel verilerinizin tamamının veya bir kısmının işlenmesine son verilmesini talep etme hakkı
+                  </li>
+                  <li>🔺 İşlenen kişisel verilerinizin elektronik formatta bir kopyasını isteme ve bunların bir başka
+                     kişiye iletimini talep etme hakkı</li>
+                  <li>🔺 Kişisel verilerinizi işlememize istediğiniz zaman itiraz etme hakkı</li>
+               </ul>
 
-            <h3>İletişim</h3>
-            <p>Bizimle iletişime geçmek için aşağıdaki kontak bilgilerimizi kullanabilirsiniz:</p>
-            <p><strong>Ticari Unvan:</strong> Yeni Bluevit Kozmetik Pazarlama Ticaret Limited Şirketi</p>
-            <p><strong>Adres:</strong> Maltepe Mah. Eski Çırpıcı Yolu Sk. Merter İş Merkezi D Blok No: 2 İç Kapı No: 33
-               Zeytinburnu/İstanbul</p>
-            <p><strong>Telefon:</strong> +90 212 677 24 24</p>
-            <p><strong>Email:</strong> <a
-                  href="mailto:info@drmehmetilteberbahadir.com">info@drmehmetilteberbahadir.com</a></p>
+               <h3>İletişim</h3>
+               <p>Bizimle iletişime geçmek için aşağıdaki kontak bilgilerimizi kullanabilirsiniz:</p>
+               <p><strong>Ticari Unvan:</strong> Yeni Bluevit Kozmetik Pazarlama Ticaret Limited Şirketi</p>
+               <p><strong>Adres:</strong> Maltepe Mah. Eski Çırpıcı Yolu Sk. Merter İş Merkezi D Blok No: 2 İç Kapı No:
+                  33
+                  Zeytinburnu/İstanbul</p>
+               <p><strong>Telefon:</strong> +90 212 677 24 24</p>
+               <p><strong>Email:</strong> <a
+                     href="mailto:info@drmehmetilteberbahadir.com">info@drmehmetilteberbahadir.com</a></p>
          </div>
       </div>
 
       <!-- Stil ve Script -->
       <style>
          .modal {
+            padding: 24px;
             display: none;
             position: fixed;
             z-index: 1000;

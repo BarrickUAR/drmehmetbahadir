@@ -14745,7 +14745,7 @@ span.current {
 /* Bubble Wrapper */
 /* Bubble Wrapper */
 
-#bubble-simulation  {
+#bubble-simulation {
   width: 100%;
 }
 
@@ -14890,6 +14890,23 @@ span.current {
   color: white;
   font-size: 22px;
   height: 100px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 768px) {
+  .bubble-5 {
+    padding: 14px;
+    margin-bottom: 14px;
+    background: #3a8bda;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    height: 100px;
+  }
 }
 
 /* Animasyon: Baloncuklar soldan başlayıp sağa doğru kayacak */

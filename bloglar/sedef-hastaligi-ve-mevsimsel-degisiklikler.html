@@ -51,53 +51,74 @@
    </div>
    <!-- back to top end -->
 
-   <!-- search popup start -->
-   <div class="search__popup">
-      <div class="container">
-         <div class="row">
-            <div class="col-xxl-12">
-               <div class="search__wrapper">
-                  <div class="search__top d-flex justify-content-between align-items-center">
-                     <div class="search__logo">
-                        <a href="index.html">
-                           <img loading="lazy" src="/assets/img/logo/logo-white.png" alt="img">
-                        </a>
-                     </div>
-                     <div class="search__close">
-                        <button type="button" class="search__close-btn search-close-btn">
-                           <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                              <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                 stroke-linejoin="round" />
-                              <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                 stroke-linejoin="round" />
-                           </svg>
-                        </button>
-                     </div>
-                  </div>
-                  <div class="search__form">
-                     <form action="#">
-                        <div class="search__input">
-                           <input class="search-input-field" type="text" placeholder="Type here to search...">
-                           <span class="search-focus-border"></span>
-                           <button type="submit">
-                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                 <path
-                                    d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
-                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                 <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                           </button>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- search popup end -->
+
+   <!-- WhatsApp Butonu -->
+
+   <a href="https://wa.me/905302250325" target="_blank" class="whatsapp-button z-index-2">
+      <i class="bi bi-whatsapp"></i>
+   </a>
+
+   <!-- CSS -->
+   <style>
+      @keyframes shake {
+
+         0%,
+         100% {
+            transform: translateX(0);
+         }
+
+         25% {
+            transform: translateX(-5px);
+         }
+
+         50% {
+            transform: translateX(5px);
+         }
+
+         75% {
+            transform: translateX(-5px);
+         }
+      }
+
+      @keyframes pulse {
+         0% {
+            transform: scale(1);
+         }
+
+         50% {
+            transform: scale(1.1);
+         }
+
+         100% {
+            transform: scale(1);
+         }
+      }
+
+      .whatsapp-button {
+         position: fixed;
+         bottom: 40px;
+         right: 100px;
+         background-color: #25D366;
+         color: white;
+         font-size: 24px;
+         padding: 15px;
+         border-radius: 50%;
+         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+         transition: 0.3s;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         animation: pulse 1.5s infinite;
+      }
+
+      .whatsapp-button:hover {
+         background-color: #1EBE5D;
+         text-decoration: none;
+         animation: shake 0.5s ease-in-out;
+      }
+   </style>
+
+   <!-- WhatsApp Button -->
 
    <div class="rroffcanvas-area">
       <div class="rroffcanvas">

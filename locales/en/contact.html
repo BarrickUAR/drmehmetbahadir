@@ -378,6 +378,7 @@
                             <h4 class="rr-section-title pb-60">Create Appointment</h4>
                             <form id="appointment-form">
                                 <div class="row">
+                                    <!-- Name and Phone on the same row -->
                                     <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
                                         <div class="rr-form-input-box rr-form-input-main">
                                             <input type="text" name="name" id="name" placeholder="Name" required>
@@ -387,32 +388,22 @@
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
                                         <div class="rr-form-input-box rr-form-input-main">
-                                            <input type="email" name="email" id="email" placeholder="Email" required>
-                                            <small id="email-error" style="color: red; display: none;">Please enter a
-                                                valid email address.</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12 col-lg-12 col-md-12 mb-20">
-                                        <div class="rr-form-input-box rr-form-input-main">
                                             <input type="tel" name="phone" id="phone" placeholder="Phone" required
-                                                maxlength="15" oninput="checkPhoneLength(this)"
-                                                onkeypress="return isNumberKey(event)">
-                                            <small id="phone-error" style="color: red; display: none;">Invalid phone
-                                                number. Please enter a valid number.</small>
+                                                maxlength="15" onkeypress="return isValidPhoneChar(event)">
                                         </div>
                                     </div>
                                     <div class="col-12 mb-20">
                                         <div class="rr-form-textarea-box">
                                             <textarea name="message" id="message" placeholder="Message"
                                                 required></textarea>
+                                            <small id="message-error" style="color: red; display: none;">This field is
+                                                required.</small>
                                         </div>
                                     </div>
-
-                                    <!-- reCAPTCHA removed -->
-
                                     <div class="col-12">
-                                        <button class="rr-btn-1 rr-form-theme-bg" type="submit"><span>Create
-                                                Appointment</span></button>
+                                        <button class="rr-btn-1 rr-form-theme-bg" type="submit">
+                                            <span>Create Appointment</span>
+                                        </button>
                                     </div>
                                 </div>
                             </form>
@@ -427,77 +418,69 @@
             <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
             <script>
+                // Initialize EmailJS
                 (function () {
                     emailjs.init('AfjNJbvpclsfFJDiK');
                 })();
 
-                // Form submission and validation
-                document.getElementById("appointment-form").addEventListener("submit", function (event) {
-                    event.preventDefault();  // Prevent page reload
+                // Allow only numbers and special characters for phone
+                function isValidPhoneChar(event) {
+                    const charCode = (event.which) ? event.which : event.keyCode;
+                    const char = String.fromCharCode(charCode);
+                    return /^[\d+\s()-]*$/.test(char); // Allow numbers, "+", "(", ")", "-", and spaces
+                }
 
-                    var name = document.getElementById("name").value.trim();
-                    var email = document.getElementById("email").value.trim();
-                    var phone = document.getElementById("phone").value.trim();
-                    var message = document.getElementById("message").value.trim();
+                // Form submission and EmailJS integration
+                document.getElementById("appointment-form").addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    const name = document.getElementById("name").value.trim();
+                    const phone = document.getElementById("phone").value.trim();
+                    const message = document.getElementById("message").value.trim();
 
                     // Reset error messages
                     document.getElementById("name-error").style.display = "none";
-                    document.getElementById("email-error").style.display = "none";
-                    document.getElementById("phone-error").style.display = "none";
                     document.getElementById("response-message").innerHTML = "";
 
-                    var isValid = true;
+                    let isValid = true;
 
-                    // Name validation (Only letters and spaces)
-                    if (!/^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/.test(name)) {
+                    // Name validation
+                    if (!/^[a-zA-Z\s]+$/.test(name)) {
                         document.getElementById("name-error").style.display = "block";
                         isValid = false;
                     }
 
-                    // Email validation
-                    if (!/\S+@\S+\.\S+/.test(email)) {
-                        document.getElementById("email-error").style.display = "block";
-                        isValid = false;
-                    }
-
-                    // Phone validation (Only numbers allowed)
-                    if (!/^[0-9]+$/.test(phone)) {
-                        document.getElementById("phone-error").style.display = "block";
+                    // Message validation
+                    if (message.length === 0) {
+                        document.getElementById("message-error").style.display = "block";
                         isValid = false;
                     }
 
                     if (!isValid) return;
 
-                    // Show appointment creation message immediately
+                    // Appointment creation in progress
                     document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Creating your appointment...</span>";
 
-                    var params = {
-                        name: name,
-                        email: email,
-                        phone: phone,
-                        message: message
-                    };
-
-                    const serviceID = "service_b123ul8";  // EmailJS Service ID
-                    const templateID = "template_8bekk3p";  // EmailJS Template ID
+                    const params = { name, phone, message };
+                    const serviceID = "service_b123ul8";
+                    const templateID = "template_8bekk3p";
 
                     emailjs.send(serviceID, templateID, params)
                         .then(res => {
-                            // Success message
-                            document.getElementById("response-message").innerHTML = "<span style='color:green;'>Your appointment has been successfully created!</span>";
-                            // Reset form
+                            document.getElementById("response-message").innerHTML =
+                                "<span style='color:green;'>Your appointment has been successfully created!</span>";
                             document.getElementById("appointment-form").reset();
                         })
                         .catch(err => {
-                            // Error message
-                            document.getElementById("response-message").innerHTML = "<span style='color:red;'>An error occurred, please try again.</span>";
-                            console.log(err);
+                            document.getElementById("response-message").innerHTML =
+                                "<span style='color:red;'>An error occurred, please try again.</span>";
+                            console.error("Error:", err);
                         });
                 });
             </script>
-
         </section>
         <!-- contact area end -->
+
 
         <!-- contact info area start -->
         <section class="rr-contact-area pt-100 pb-100">

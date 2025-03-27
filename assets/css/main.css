@@ -10019,9 +10019,6 @@ a.ui-button:active {
   opacity: 1;
   height: 100px;
 }
-.rr-features-item:hover .rr-features-icon img {
-  filter: brightness(0) invert(1);
-}
 
 .rr-features-box-icon span {
   width: 65px;

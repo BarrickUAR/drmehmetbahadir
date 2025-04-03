@@ -149,7 +149,7 @@
                               randevu@drmehmetilteberbahadir.net</a>
                         </li>
                         <li class="ml-50">
-                           <b><span><i class="fa-solid fa-clock"></i></span>Pzt - Cmt : 09.00 -
+                           <b><span><i class="fa-solid fa-clock"></i></span>Pzt - Cmt : 09:30-
                               17.00</b>
                         </li>
                      </ul>
@@ -317,7 +317,7 @@
                               <ul class="submenu rr-submenu">
                                  <li><a href="videolar.html">Videolar</a></li>
                                  <li><a href="ekibimiz.html">Ekibimiz</a></li>
-                                 <li><a href="404.html">Hekimlerimiz</a></li>
+                                 <li><a href="hekimlerimiz.html">Hekimlerimiz</a></li>
                                  <li><a href="SSS.html">Sıkça Sorulan Sorular</a></li>
                               </ul>
                            </li>
@@ -415,8 +415,9 @@
          <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
          <script>
+
             (function () {
-               emailjs.init('AfjNJbvpclsfFJDiK');
+               emailjs.init('AfjNJbvpclsfFJDiK'); // EmailJS user ID'nizi doğru şekilde buraya eklediğinizden emin olun
             })();
 
             // Telefon formatlama
@@ -455,8 +456,8 @@
 
                let isValid = true;
 
-               // Ad doğrulama
-               if (!/^[a-zA-Z\s]+$/.test(name)) {
+               // Türkçe karakterler ve harflerle doğrulama
+               if (!/^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/.test(name)) {
                   document.getElementById("name-error").style.display = "block";
                   isValid = false;
                }
@@ -675,6 +676,75 @@
          <!-- copy-right area end -->
       </div>
    </footer>
+
+
+   <!-- Mail Butonu -->
+
+   <a href="mailto:randevu@drmehmetilteberbahadir.net" target="_blank" class="mail-button z-index-2">
+      <i class="bi bi-envelope-fill"></i>
+   </a>
+
+   <!-- CSS -->
+   <style>
+      @keyframes shake {
+
+         0%,
+         100% {
+            transform: translateX(0);
+         }
+
+         25% {
+            transform: translateX(-5px);
+         }
+
+         50% {
+            transform: translateX(5px);
+         }
+
+         75% {
+            transform: translateX(-5px);
+         }
+      }
+
+      @keyframes pulse {
+         0% {
+            transform: scale(1);
+         }
+
+         50% {
+            transform: scale(1.1);
+         }
+
+         100% {
+            transform: scale(1);
+         }
+      }
+
+      .mail-button {
+         position: fixed;
+         bottom: 40px;
+         right: 240px;
+         background-color: #007BFF;
+         color: white;
+         font-size: 24px;
+         padding: 15px;
+         border-radius: 50%;
+         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+         transition: 0.3s;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         animation: pulse 1.5s infinite;
+      }
+
+      .mail-button:hover {
+         background-color: #0056b3;
+         text-decoration: none;
+         animation: shake 0.5s ease-in-out;
+      }
+   </style>
+
+   <!-- Mail Button -->
 
    <!-- WhatsApp Butonu -->
 

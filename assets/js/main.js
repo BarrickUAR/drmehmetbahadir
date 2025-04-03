@@ -663,6 +663,7 @@ function getCookie(e) {
         ar: "العربية",
         ru: "Русский",
         de: "Deutsch",
+        ka: "Georgian",
       },
       a = localStorage.getItem("selectedLanguage") || "tr";
     function r(e) {
@@ -679,6 +680,7 @@ function getCookie(e) {
           Arabic: "ar",
           Russian: "ru", // "Russian" kelimesini "ru" dil koduna çevir
           Deutsch: "de", // 
+          Georgian: "ka", // 
         }[e] || "tr"
       );
     }

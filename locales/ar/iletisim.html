@@ -435,127 +435,160 @@
     <main>
 
         <!-- نموذج الاتصال بداية -->
-        <section class="rr-contact-area p-relative black-bg fix">
-            <div class="rr-contact-shap">
-                <img loading="lazy" src="" alt="img">
-            </div>
-
-            <div class="rr-contact-img d-none d-xl-block">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d376.3412762727412!2d28.89898311978924!3d41.009277887105284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdr%20mehmet%20ilteber%20bahad%C4%B1r!5e0!3m2!1str!2str!4v1741003329924!5m2!1str!2str"
-                    width="1265" height="855" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-
+        <section class="rr-contact-area fix" data-bg-color="#21313f">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-6 col-lg-3 col-md-1"></div>
-                    <div class="col-xl-4 col-lg-9 col-md-10">
-                        <div class="rr-form-box text-center">
-                            <h4 class="rr-section-title pb-60">حدد موعدًا</h4>
-                            <form id="appointment-form">
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
-                                        <div class="rr-form-input-box rr-form-input-main">
-                                            <input type="text" name="name" id="name" placeholder="اسمك" required>
-                                            <small id="name-error" style="color: red; display: none;">استخدم الحروف
-                                                فقط.</small>
+                    <!-- Index.html’deki form için kullanılan kolon sınıfları -->
+                    <div class="col-xl-8 col-lg-8 col-md-12 col-12 wow rrfadeUp" data-wow-duration=".9s"
+                        data-wow-delay=".3s">
+                        <div class="rr-contact-1-form mb-50 mr-30">
+                            <div class="rr-contact-1-form-box text-center mt-70">
+                                <form id="appointment-form">
+                                    <div class="row">
+                                        <!-- Your Name -->
+                                        <div class="col-xl-4 col-md-4 col-12 mb-30">
+                                            <div class="rr-form-input-box rr-contact-1-border">
+                                                <input type="text" id="name" name="name" autocomplete="off"
+                                                    placeholder="اسمك*" required>
+                                                <small id="name-error" style="color: red; display: none;">الرجاء استخدام
+                                                    الأحرف فقط.</small>
+                                            </div>
+                                        </div>
+                                        <!-- Your Phone Number -->
+                                        <div class="col-xl-4 col-md-4 col-12 mb-30">
+                                            <div class="rr-form-input-box rr-contact-1-border">
+                                                <input type="tel" id="phone" name="phone" autocomplete="off"
+                                                    placeholder="رقم الهاتف الخاص بك*" required maxlength="13">
+                                                <small id="phone-error" style="color: red; display: none;">رقم الهاتف
+                                                    غير صالح. يجب أن يكون مكونًا من 10 أرقام ولا يبدأ بـ 0.</small>
+                                            </div>
+                                        </div>
+                                        <!-- Your Message -->
+                                        <div class="col-xl-4 col-md-4 col-12 mb-30">
+                                            <div class="rr-form-input-box rr-contact-1-border">
+                                                <textarea id="message" name="message" rows="4"
+                                                    placeholder="يمكنك كتابة شكواك هنا*" required
+                                                    style="resize: none; max-height: 500px;"></textarea>
+                                                <small id="message-error" style="color: red; display: none; ">يمكنك
+                                                    كتابة شكواك هنا</small>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
-                                        <div class="rr-form-input-box rr-form-input-main">
-                                            <input type="tel" name="phone" id="phone"
-                                                placeholder="رقم الهاتف (مثال: 555 123 45 67)" required maxlength="13"
-                                                oninput="formatPhoneNumber(this)">
-                                            <small id="phone-error" style="color: red; display: none;">يجب أن يكون رقم
-                                                الهاتف بتنسيق صحيح (مثال: 555 123 45 67).</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 mb-20">
-                                        <div class="rr-form-textarea-box">
-                                            <textarea name="message" id="message" placeholder="يمكنك كتابة شكواك هنا"
-                                                required></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="rr-btn-1 rr-form-theme-bg" type="submit"><span>حدد
-                                                موعدًا</span></button>
-                                    </div>
-                                </div>
-                            </form>
-                            <div id="response-message" style="margin-top: 15px; font-weight: bold;"></div>
+                                    <button class="rr-btn-ar rr-form-theme-bg" type="submit">
+                                        <span>إنشاء موعد!</span>
+                                    </button>
+                                </form>
+                                <div id="response-message" style="margin-top: 15px; font-weight: bold;"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-10 col-md-1"></div>
                 </div>
             </div>
-
-            <!-- سكربت EmailJS -->
-            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-            <script>
-                (function () {
-                    emailjs.init('AfjNJbvpclsfFJDiK');
-                })();
-
-                function formatPhoneNumber(input) {
-                    const value = input.value.replace(/\D/g, "");
-                    const formattedValue = value
-                        .replace(/(\d{3})(\d{3})(\d{2})(\d{2})/, "$1 $2 $3 $4")
-                        .substring(0, 13);
-                    input.value = formattedValue;
-                }
-
-                document.getElementById("appointment-form").addEventListener("submit", function (event) {
-                    event.preventDefault();
-
-                    const name = document.getElementById("name").value.trim();
-                    const phone = document.getElementById("phone").value.trim();
-                    const message = document.getElementById("message").value.trim();
-
-                    document.getElementById("name-error").style.display = "none";
-                    document.getElementById("phone-error").style.display = "none";
-                    document.getElementById("response-message").innerHTML = "";
-
-                    let isValid = true;
-
-                    if (!/^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/.test(name)) {
-                        document.getElementById("name-error").style.display = "block";
-                        isValid = false;
-                    }
-
-                    if (!/^\d{3} \d{3} \d{2} \d{2}$/.test(phone)) {
-                        document.getElementById("phone-error").style.display = "block";
-                        isValid = false;
-                    }
-
-                    if (!isValid) return;
-
-                    document.getElementById("response-message").innerHTML = "<span style='color:orange;'>رصد الموعد...</span>";
-
-                    const params = {
-                        name: name,
-                        phone: phone,
-                        message: message
-                    };
-
-                    const serviceID = "service_b123ul8";
-                    const templateID = "template_8bekk3p";
-
-                    emailjs.send(serviceID, templateID, params)
-                        .then(res => {
-                            document.getElementById("response-message").innerHTML = "<span style='color:green;'>تم إنشاء الموعد بنجاح!</span>";
-                            document.getElementById("appointment-form").reset();
-                        })
-                        .catch(err => {
-                            document.getElementById("response-message").innerHTML = "<span style='color:red;'>حدث خطأ، يرجى المحاولة مرة أخرى.</span>";
-                            console.log(err);
-                        });
-                });
-            </script>
         </section>
         <!-- نموذج الاتصال نهاية -->
+
+        <!-- Include intl-tel-input CSS and JS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/css/intlTelInput.css">
+        <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/intlTelInput.js"></script>
+
+        <!-- Include EmailJS -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+        <script>
+            (function () {
+                emailjs.init('AfjNJbvpclsfFJDiK');
+            })();
+
+            // Initialize the intl-tel-input plugin
+            var input = document.querySelector("#phone");
+            var iti = window.intlTelInput(input, {
+                utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/utils.js", // Required for formatting/validation
+                initialCountry: "auto", // Sets initial country based on user's IP or default setting
+                preferredCountries: ['us', 'gb', 'tr'], // Optional: set preferred countries
+                separateDialCode: true // Display country code separately
+            });
+
+            // Function to validate phone number (with custom Turkey validation)
+            function validatePhoneNumber() {
+                const phoneError = document.getElementById("phone-error");
+                const selectedCountry = iti.getSelectedCountryData();
+                const phoneNumber = iti.getNumber();
+                phoneError.style.display = "none";
+
+                // General validity check
+                if (!iti.isValidNumber()) {
+                    phoneError.style.display = "block";
+                    phoneError.innerHTML = "الرجاء إدخال رقم هاتف صالح للبلد " + selectedCountry.name;
+                    return false;
+                }
+
+                // Custom validation for Turkey (TR)
+                if (selectedCountry.iso2 === "tr") {
+                    let validPhoneNumber = phoneNumber.replace(/^\+90/, '');
+                    validPhoneNumber = validPhoneNumber.replace(/\D/g, '');
+                    if (validPhoneNumber.length !== 10 || validPhoneNumber.startsWith("0")) {
+                        phoneError.style.display = "block";
+                        phoneError.innerHTML = "الرجاء إدخال رقم هاتف صحيح في تركيا (يجب أن يتكون من 10 أرقام وألا يبدأ بـ 0).";
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            document.getElementById("appointment-form").addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const name = document.getElementById("name").value.trim();
+                const phone = iti.getNumber(); // Full phone number including country code
+                const message = document.getElementById("message").value.trim();
+
+                // Hide error messages initially
+                document.getElementById("name-error").style.display = "none";
+                document.getElementById("phone-error").style.display = "none";
+                document.getElementById("message-error").style.display = "none";
+                document.getElementById("response-message").innerHTML = "";
+
+                let isValid = true;
+
+                // Validate Name
+                if (!/^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/.test(name)) {
+                    document.getElementById("name-error").style.display = "block";
+                    isValid = false;
+                }
+
+                // Validate Phone Number
+                if (!validatePhoneNumber()) {
+                    isValid = false;
+                }
+
+                // Validate Message
+                if (message.length === 0) {
+                    document.getElementById("message-error").style.display = "block";
+                    isValid = false;
+                }
+
+                if (!isValid) return;
+
+                document.getElementById("response-message").innerHTML = "<span style='color:orange;'>جاري معالجة طلبك... ⏳</span>";
+
+                const params = { name, phone, message };
+                const serviceID = "service_b123ul8";
+                const templateID = "template_8bekk3p";
+
+                emailjs.send(serviceID, templateID, params)
+                    .then(res => {
+                        document.getElementById("response-message").innerHTML = "<span style='color:green;'>✅ تم استلام طلبك بنجاح!</span>";
+                        document.getElementById("appointment-form").reset();
+                    })
+                    .catch(err => {
+                        document.getElementById("response-message").innerHTML = "<span style='color:red;'>❌ حدث خطأ، يرجى المحاولة مرة أخرى.</span>";
+                        console.error("خطأ:", err);
+                    });
+            });
+        </script>
+
+
+
 
 
 

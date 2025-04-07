@@ -1,9 +1,9 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="tr">
 
 <head>
     <meta charset="utf-8">
-    <title>أمراض الجلد - د. محمد إلتبر بهادر</title>
+    <title>İletişim - Dr. Mehmet İlteber BAHADIR</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,9 +23,33 @@
     <link rel="stylesheet" href="/assets/css/spacing.css">
     <link rel="stylesheet" href="/assets/css/custom-animation.css">
     <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16978219240">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-16978219240');
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-936493452');
+    </script>
+
+
 </head>
 
 <body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="htrrs:/browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+      <![endif]-->
+
     <!-- preloader start -->
     <div id="loading">
         <div class="preloader-close">x</div>
@@ -50,7 +74,6 @@
         </button>
     </div>
     <!-- back to top end -->
-
     <div class="rroffcanvas-area">
         <div class="rroffcanvas">
             <div class="rroffcanvas__close-btn">
@@ -341,7 +364,7 @@
                         <div class="col-xl-5 col-lg-5 col-md-6 col-6">
                             <div class="rr-header-right d-flex align-items-center justify-content-end">
                                 <div class="rr-header-1-contat d-md-block ml-30">
-                                    <a class="rr-btn-border-ar" href="/locales/ar/randevu.html"><span>حجز موعد <i
+                                    <a class="rr-btn-border-ar" href="/locales/ar/iletisim.html"><span>حجز موعد <i
                                                 class="fa-sharp fa-solid fa-plus"></i></span></a>
                                 </div>
                                 <div class="rr-header-bar d-xl-none">
@@ -362,293 +385,218 @@
 
     <main>
 
-        <!-- breadcrumb area start -->
-        <div class="breadcrumb__area breadcrumb__overlay breadcrumb__height fix p-relative"
-            data-background="/assets/img/breadcurmb">
-            <div class="breadcrumb-shap d-none d-xxl-block">
-                <img loading="lazy" src="/assets/img/breadcurmb/img-2.png" alt="img">
-            </div>
+        <!-- نموذج الاتصال بداية -->
+        <section class="rr-contact-area fix" data-bg-color="#21313f">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-5 col-md-5">
-                        <div class="breadcrumb__content z-index">
-                            <div class="breadcrumb__section-title-box">
-                                <h3 class="breadcrumb__title">الأمراض</h3>
+                    <!-- Index.html’deki form için kullanılan kolon sınıfları -->
+                    <div class="col-xl-8 col-lg-8 col-md-12 col-12 wow rrfadeUp" data-wow-duration=".9s"
+                        data-wow-delay=".3s">
+                        <div class="rr-contact-1-form mb-50 mr-30">
+                            <div class="rr-contact-1-form-box text-center mt-70">
+                                <form id="appointment-form">
+                                    <div class="row">
+                                        <!-- Your Name -->
+                                        <div class="col-xl-4 col-md-4 col-12 mb-30">
+                                            <div class="rr-form-input-box rr-contact-1-border">
+                                                <input type="text" id="name" name="name" autocomplete="off"
+                                                    placeholder="اسمك*" required>
+                                                <small id="name-error" style="color: red; display: none;">الرجاء استخدام
+                                                    الأحرف فقط.</small>
+                                            </div>
+                                        </div>
+                                        <!-- Your Phone Number -->
+                                        <div class="col-xl-4 col-md-4 col-12 mb-30">
+                                            <div class="rr-form-input-box rr-contact-1-border">
+                                                <input type="tel" id="phone" name="phone" autocomplete="off"
+                                                    placeholder="رقم الهاتف الخاص بك*" required maxlength="13">
+                                                <small id="phone-error" style="color: red; display: none;">رقم الهاتف
+                                                    غير صالح. يجب أن يكون مكونًا من 10 أرقام ولا يبدأ بـ 0.</small>
+                                            </div>
+                                        </div>
+                                        <!-- Your Message -->
+                                        <div class="col-xl-4 col-md-4 col-12 mb-30">
+                                            <div class="rr-form-input-box rr-contact-1-border">
+                                                <textarea id="message" name="message" rows="4"
+                                                    placeholder="يمكنك كتابة شكواك هنا*" required
+                                                    style="resize: none; max-height: 500px;"></textarea>
+                                                <small id="message-error" style="color: red; display: none; ">يمكنك
+                                                    كتابة شكواك هنا</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="rr-btn-ar rr-form-theme-bg" type="submit">
+                                        <span>إنشاء موعد!</span>
+                                    </button>
+                                </form>
+                                <div id="response-message" style="margin-top: 15px; font-weight: bold;"></div>
                             </div>
-                            <div class="breadcrumb__list">
-                                <span><a href="index.html">الصفحة الرئيسية</a></span>
-                                <span class="dvdr"><i>/</i></span>
-                                <span>أمراض الجلد</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-7 col-md-7">
-                        <div class="breadcrumb-img z-index-3">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- breadcrumb area end -->
-
-        <!-- service details area start -->
-
-        <section class="tab-area rr-tab__ptb theme-background pt-90 pb-50 p-relative fix">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                        <div class="rr-price-2-title-box text-center mb-45">
-                            <span class="rr-section-subtitle p-relative"><img loading="lazy"
-                                    src="/assets/img/testimonial/section-icon.png" alt="img"> الأمراض <img
-                                    loading="lazy" src="/assets/img/testimonial/section-icon.png" alt="img"></span>
-                            <h4 class="rr-section-title">أمراض الجلد</h4>
-                        </div>
-                        <div class="rr-tab__section">
-                            <nav>
-                                <div class="nav rr-tab justify-content-center " id="nav-tab" role="tablist">
-                                    <button class="nav-links active" id="nav-Home-tab" data-bs-toggle="tab"
-                                        data-bs-target="#Home" type="button" role="tab" aria-controls="nav-Home-tab"
-                                        aria-selected="true">
-                                        <span class="rr-tab">
-                                            <span
-                                                class="rr-tab__item d-flex justify-content-between align-items-center">
-                                                <span class="rr-tab__item-info d-flex align-items-center">
-                                                    <b><i class="icofont-brain"></i></b>
-                                                    <span class="rr-tab__item-title m-0">الصدفية</span>
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </button>
-
-                                    <button class="nav-links " id="nav-Car-tab" data-bs-toggle="tab"
-                                        data-bs-target="#Car" type="button" role="tab" aria-controls="nav-Car-tab"
-                                        aria-selected="false" tabindex="-1">
-                                        <span class="rr-tab">
-                                            <span
-                                                class="rr-tab__item d-flex justify-content-between align-items-center">
-                                                <span class="rr-tab__item-info d-flex align-items-center">
-                                                    <b><i class="icofont-ambulance-cross"></i></b>
-                                                    <span class="rr-tab__item-title m-0">الإكزيما</span>
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </button>
-                                    <button class="nav-links" id="nav-Health-tab" data-bs-toggle="tab"
-                                        data-bs-target="#Health" type="button" role="tab" aria-controls="nav-Health-tab"
-                                        aria-selected="false" tabindex="-1">
-                                        <span class="rr-tab">
-                                            <span
-                                                class="rr-tab__item d-flex justify-content-between align-items-center">
-                                                <span class="rr-tab__item-info d-flex align-items-center">
-                                                    <b><i class="icofont-heart-beat-alt"></i></b>
-                                                    <span class="rr-tab__item-title m-0">الحزاز المسطح</span>
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </button>
-                                    <button class="nav-links" id="nav-Education-tab" data-bs-toggle="tab"
-                                        data-bs-target="#Education" type="button" role="tab"
-                                        aria-controls="nav-Education-tab" aria-selected="false" tabindex="-1">
-                                        <span class="rr-tab">
-                                            <span
-                                                class="rr-tab__item d-flex justify-content-between align-items-center">
-                                                <span class="rr-tab__item-info d-flex align-items-center">
-                                                    <b> <i class="icofont-blood"></i></b>
-                                                    <span class="rr-tab__item-title m-0">التقرن الشعري</span>
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </button>
-                                </div>
-                            </nav>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- نموذج الاتصال نهاية -->
 
-        <div class="rr-tab_content fix">
-            <div class="container p-0">
+        <!-- Include intl-tel-input CSS and JS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/css/intlTelInput.css">
+        <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/intlTelInput.js"></script>
+
+        <!-- Include EmailJS -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+        <script>
+            (function () {
+                emailjs.init('AfjNJbvpclsfFJDiK');
+            })();
+
+            // Initialize the intl-tel-input plugin
+            var input = document.querySelector("#phone");
+            var iti = window.intlTelInput(input, {
+                utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/utils.js", // Required for formatting/validation
+                initialCountry: "auto", // Sets initial country based on user's IP or default setting
+                preferredCountries: ['us', 'gb', 'tr'], // Optional: set preferred countries
+                separateDialCode: true // Display country code separately
+            });
+
+            // Function to validate phone number (with custom Turkey validation)
+            function validatePhoneNumber() {
+                const phoneError = document.getElementById("phone-error");
+                const selectedCountry = iti.getSelectedCountryData();
+                const phoneNumber = iti.getNumber();
+                phoneError.style.display = "none";
+
+                // General validity check
+                if (!iti.isValidNumber()) {
+                    phoneError.style.display = "block";
+                    phoneError.innerHTML = "الرجاء إدخال رقم هاتف صالح للبلد " + selectedCountry.name;
+                    return false;
+                }
+
+                // Custom validation for Turkey (TR)
+                if (selectedCountry.iso2 === "tr") {
+                    let validPhoneNumber = phoneNumber.replace(/^\+90/, '');
+                    validPhoneNumber = validPhoneNumber.replace(/\D/g, '');
+                    if (validPhoneNumber.length !== 10 || validPhoneNumber.startsWith("0")) {
+                        phoneError.style.display = "block";
+                        phoneError.innerHTML = "الرجاء إدخال رقم هاتف صحيح في تركيا (يجب أن يتكون من 10 أرقام وألا يبدأ بـ 0).";
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            document.getElementById("appointment-form").addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const name = document.getElementById("name").value.trim();
+                const phone = iti.getNumber(); // Full phone number including country code
+                const message = document.getElementById("message").value.trim();
+
+                // Hide error messages initially
+                document.getElementById("name-error").style.display = "none";
+                document.getElementById("phone-error").style.display = "none";
+                document.getElementById("message-error").style.display = "none";
+                document.getElementById("response-message").innerHTML = "";
+
+                let isValid = true;
+
+                // Validate Name
+                if (!/^[a-zA-ZıİçÇğĞşŞöÖüÜ\s]+$/.test(name)) {
+                    document.getElementById("name-error").style.display = "block";
+                    isValid = false;
+                }
+
+                // Validate Phone Number
+                if (!validatePhoneNumber()) {
+                    isValid = false;
+                }
+
+                // Validate Message
+                if (message.length === 0) {
+                    document.getElementById("message-error").style.display = "block";
+                    isValid = false;
+                }
+
+                if (!isValid) return;
+
+                document.getElementById("response-message").innerHTML = "<span style='color:orange;'>جاري معالجة طلبك... ⏳</span>";
+
+                const params = { name, phone, message };
+                const serviceID = "service_b123ul8";
+                const templateID = "template_8bekk3p";
+
+                emailjs.send(serviceID, templateID, params)
+                    .then(res => {
+                        document.getElementById("response-message").innerHTML = "<span style='color:green;'>✅ تم استلام طلبك بنجاح!</span>";
+                        document.getElementById("appointment-form").reset();
+                    })
+                    .catch(err => {
+                        document.getElementById("response-message").innerHTML = "<span style='color:red;'>❌ حدث خطأ، يرجى المحاولة مرة أخرى.</span>";
+                        console.error("خطأ:", err);
+                    });
+            });
+        </script>
+
+
+
+
+
+
+
+        <!-- معلومات الاتصال بداية -->
+        <section class="rr-contact-area pt-100 pb-100">
+            <div class="container">
                 <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12">
-                        <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade" id="Home" role="tabpanel" aria-labelledby="nav-Home-tab"
-                                tabindex="0">
-                                <div class="rr-tab__wrapper">
-                                    <div class="rr-tab__section-box">
-                                        <div class="container p-0">
-                                            <div class="row">
-                                                <div class="col-xl-6 col-lg-6  col-md-6 col-12">
-                                                    <div class="rr-tab__thumb rr-cursor-point-area text-end p-relative">
-                                                        <img loading="lazy" class="w-100"
-                                                            src="/assets/img/feature/sedef.jpg" alt="img">
-                                                        <div class="rr-tab-video-play">
-                                                            <a class="popup-video"
-                                                                href="https://www.youtube.com/watch?v=4H5auGSRfo4&t=2s"><i
-                                                                    class="fa-solid fa-play"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-6 col-lg-6  col-md-6 col-12">
-                                                    <div class="rr-tab__item pt-30 ">
-                                                        <h2 class="rr-tab-title-3">الصدفية</h2>
-                                                        <p>
-                                                            الصدفية هي مرض يتميز بظهور احمرار وطفح جلدي. يعاني حوالي
-                                                            مليون شخص في تركيا من هذا المرض، وهو غير معدٍ على الرغم من
-                                                            أن أعراضه الجلدية قد تجعله يبدو كذلك. غالبًا ما يتم استبعاد
-                                                            الأفراد المصابين بهذا المرض من الحياة الاجتماعية بسبب
-                                                            الأعراض الجسدية.
-                                                            <br><br>
-                                                            هناك أنواع مختلفة من الصدفية يتم تحديدها بناءً على خصائص
-                                                            معينة. تشمل هذه الأنواع الصدفية اللويحية، والعكسية،
-                                                            والحمراء، والنقطية. يتم تصنيف المرض بناءً على المناطق التي
-                                                            تظهر فيها الأعراض وشدتها. النوع اللويحي، الذي يسبب احمرارًا
-                                                            في الركبتين والمرفقين، هو النوع الأكثر شيوعًا.
-                                                        </p>
-                                                        <div class="rr-tab-lists">
-                                                            <div class="rr-tab-item"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                        <div class="rr-contat-box-info">
+                            <div class="rr-contact-box-item d-flex align-items-center p-relative">
+                                <div class="rr-contact-box-icon mr-20">
+                                    <span><i class="fa-solid fa-phone"></i></span>
+                                </div>
+                                <div class="rr-contact-box-contat">
+                                    <span>اتصل بنا!</span>
+                                    <p><a href="tel:+902126772424">+90 212 677 24 24</a></p>
                                 </div>
                             </div>
-                            <div class="tab-pane fade active show" id="Car" role="tabpanel"
-                                aria-labelledby="nav-Car-tab" tabindex="0">
-                                <div class="rr-tab__wrapper">
-                                    <div class="rr-tab__section-box">
-                                        <div class="container p-0">
-                                            <div class="row">
-                                                <div class="col-xl-6 col-lg-6  col-md-6 col-12">
-                                                    <div class="rr-tab__thumb rr-cursor-point-area text-end p-relative">
-                                                        <img loading="lazy" class="w-100"
-                                                            src="/assets/img/feature/egzama.jpg" alt="img">
-                                                        <div class="rr-tab-video-play">
-                                                            <a class="popup-video"
-                                                                href="https://www.youtube.com/watch?v=4H5auGSRfo4&t=2s"><i
-                                                                    class="fa-solid fa-play"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-6 col-lg-6  col-md-6 col-12">
-                                                    <div class="rr-tab__item pt-30 ">
-                                                        <h2 class="rr-tab-title-3">الإكزيما</h2>
-                                                        <p>
-                                                            الإكزيما هي نوع من الأمراض الجلدية، ولكنها ليست خطيرة. يعاني
-                                                            شخص واحد من كل 12 شخصًا من الإكزيما، مما يجعلها مرضًا
-                                                            شائعًا.
-                                                            <br><br>
-                                                            من الطبيعي أن تسبب الإكزيما حكة، ولكنها ليست مزعجة للغاية.
-                                                            ومع ذلك، يمكن أن تسبب تلوثًا بصريًا عندما تظهر في مناطق
-                                                            معينة من الجسم.
-                                                        </p>
-                                                        <div class="rr-tab-lists"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
+                        <div class="rr-contat-box-info">
+                            <div class="rr-contact-box-item d-flex align-items-center p-relative">
+                                <div class="rr-contact-box-icon mr-20">
+                                    <span><i class="fa-solid fa-location-dot"></i></span>
+                                </div>
+                                <div class="rr-contact-box-contat">
+                                    <span>العنوان</span>
+                                    <p><a href="https://www.google.com/maps/search/dr+mehmet+ilteber+bahad%C4%B1r/@41.0092779,28.8989831,20z?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
+                                            target="_blank">Maltepe Mah. Eski Çırpıcı Yolu Sok. No:2/63 Kat:11 E-5
+                                            Karayolu Merter Metro İstasyon Yanı
+                                            Merter İş Merkezi Zeytinburnu / إسطنبول</a></p>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="Health" role="tabpanel" aria-labelledby="nav-Health-tab"
-                                tabindex="0">
-                                <div class="rr-tab__wrapper">
-                                    <div class="rr-tab__section-box">
-                                        <div class="container p-0">
-                                            <div class="row">
-                                                <div class="col-xl-6 col-lg-6  col-md-6 col-12">
-                                                    <div class="rr-tab__thumb rr-cursor-point-area text-end p-relative">
-                                                        <img loading="lazy" class="w-100"
-                                                            src="/assets/img/feature/liken.jpg" alt="img">
-                                                        <div class="rr-tab-video-play">
-                                                            <a class="popup-video"
-                                                                href="https://www.youtube.com/watch?v=4H5auGSRfo4&t=2s"><i
-                                                                    class="fa-solid fa-play"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-6 col-lg-6  col-md-6 col-12">
-                                                    <div class="rr-tab__item pt-30 ">
-                                                        <h2 class="rr-tab-title-3">الحزاز المسطح</h2>
-                                                        <p>
-                                                            الحزاز المسطح هو مرض التهابي يصيب الجلد والأغشية المخاطية،
-                                                            ولا يُعرف سببه الدقيق، ولكن يُعتقد أن له أساس مناعي. يظهر
-                                                            على شكل حطاطات حلقية مثيرة للحكة ذات لون بنفسجي، وقد يكون
-                                                            عليها سطح أبيض يشبه الدانتيل.
-                                                            <br><br>
-                                                            يعاني 30% من المرضى من ظهور شبكة بيضاء على الغشاء المخاطي
-                                                            للفم، وقد تظهر الآفات أيضًا في المنطقة التناسلية.
-                                                            <br><br>
-                                                            هناك أشكال مختلفة من الحزاز المسطح، بما في ذلك الأشكال
-                                                            الحبيبية والضخامية. في بعض الأحيان، يمكن أن يؤدي إصابة فروة
-                                                            الرأس إلى تساقط الشعر. كما يمكن أن يصيب الأظافر.
-                                                            <br><br>
-                                                            يعتمد العلاج على استخدام الكورتيكوستيرويدات الموضعية لتخفيف
-                                                            الحكة، ولكن المرض قد يشفى من تلقاء نفسه.
-                                                        </p>
-                                                        <div class="rr-tab-lists">
-                                                            <div class="rr-tab-item"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
+                        <div class="rr-contat-box-info">
+                            <div class="rr-contact-box-item d-flex align-items-center p-relative">
+                                <div class="rr-contact-box-icon mr-20">
+                                    <span><i class="fa-sharp fa-solid fa-envelope"></i></span>
                                 </div>
-                            </div>
-                            <div class="tab-pane fade" id="Education" role="tabpanel"
-                                aria-labelledby="nav-Education-tab" tabindex="0">
-                                <div class="rr-tab__wrapper">
-                                    <div class="rr-tab__section-box">
-                                        <div class="container p-0">
-                                            <div class="row">
-                                                <div class="col-xl-6 col-lg-6  col-md-6 col-12">
-                                                    <div class="rr-tab__thumb rr-cursor-point-area text-end p-relative">
-                                                        <img loading="lazy" class="w-100"
-                                                            src="/assets/img/feature/iktiyoz.jpg" alt="img">
-                                                        <div class="rr-tab-video-play">
-                                                            <a class="popup-video"
-                                                                href="https://www.youtube.com/watch?v=4H5auGSRfo4&t=2s"><i
-                                                                    class="fa-solid fa-play"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-6 col-lg-6  col-md-6 col-12">
-                                                    <div class="rr-tab__item pt-30 ">
-                                                        <h2 class="rr-tab-title-3">مرض السماك</h2>
-                                                        <p>
-                                                            السماك هو مرض جلدي يتميز بتكون قشور جافة تشبه قشور السمك.
-                                                            يحدث بسبب تراكم خلايا الجلد الميتة على سطح الجلد.
-                                                            <br><br>
-                                                            يمكن أن يظهر المرض منذ الولادة أو خلال مرحلة الطفولة. تشمل
-                                                            الأعراض جفاف الجلد، وتكون القشور، وزيادة سماكة الجلد، خاصة
-                                                            في مناطق مثل المرفقين والركبتين.
-                                                        </p>
-                                                        <div class="rr-tab-lists">
-                                                            <div class="rr-tab-item">
-                                                                <div class="rr-tab-list-item d-flex align-items-center">
-                                                                </div>
-                                                            </div>
-                                                            <div class="rr-tab-link"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="rr-contact-box-contat">
+                                    <span>أرسل بريدًا إلكترونيًا!</span>
+                                    <p><a
+                                            href="mailto:randevu@drmehmetilteberbahadir.net">randevu@drmehmetilteberbahadir.net</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- معلومات الاتصال نهاية -->
 
-
-        <!-- service details area end -->
 
 
     </main>
@@ -657,37 +605,38 @@
 
     <footer>
         <div class="rr-footer-main p-relative fix" data-background="/assets/img/footer/footer-bg.jpg">
-            <!-- Footer Main Section -->
-            <div class="rr-footer-area pt-125 p-relative fix">
+
+            <!-- بداية منطقة التذييل -->
+            <div class="rr-footer-area pt-125 p-relative fix ">
                 <div class="rr-footer-right-shap d-none d-xl-block">
-                    <img loading="lazy" src="/assets/img/footer/footer-shap.png" alt="الصورة" loading="lazy">
+                    <img loading="lazy" src="/assets/img/footer/footer-shap.png" alt="img">
                 </div>
                 <div class="container">
                     <div class="rr-footer-border">
                         <div class="row">
-                            <!-- First Footer Column -->
                             <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp" data-wow-duration=".9s"
                                 data-wow-delay=".3s">
                                 <div class="rr-footer-widget footer-cols-1">
                                     <div class="rr-footer-logo pb-35">
-                                        <a href="/index.html"><img loading="lazy" src="/assets/img/logo/logo.png"
-                                                alt="الشعار" loading="lazy"></a>
+                                        <a href="/locales/arindex.html"><img loading="lazy"
+                                                src="/assets/img/logo/logo.png" alt="img"></a>
                                     </div>
                                     <div class="rr-footer-widget-content-list mb-25">
                                         <div class="rr-footer-widget-content-list-item">
                                             <i class="fa-sharp fa-solid fa-clock"></i> <a href="#">ساعات العمل:<br />
-                                                الاثنين - السبت : 09:30- 17:00</a>
+                                                الإثنين - السبت: 9:00 صباحًا - 5:00 مساءً</a>
                                         </div>
                                         <div class="rr-footer-widget-content-list-item">
-                                            <i class="fa-solid fa-location-dot"></i> <a href="#">مركز أعمال ميرتر -
-                                                الطابق 11/63</a>
+                                            <i class="fa-solid fa-location-dot"></i> <a href="#"> مركز أعمال مرتر -
+                                                الطابق
+                                                11/63</a>
                                         </div>
                                         <div class="rr-footer-widget-content-list-item">
                                             <i class="fa-sharp fa-solid fa-phone"></i><a href="tel:+902125550055">+90
-                                                (212) 555 00 55</a>
+                                                (212) 555 00
+                                                55</a>
                                         </div>
                                     </div>
-                                    <!-- Social Media Links -->
                                     <div class="rr-footer-social">
                                         <a href="https://www.facebook.com/sedefegzamatedavisi"><i
                                                 class="fa-brands fa-facebook-f"></i></a>
@@ -697,37 +646,31 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Second Footer Column (empty placeholder) -->
                             <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp" data-wow-duration=".9s"
                                 data-wow-delay=".5s">
                             </div>
-
-                            <!-- Third Footer Column (Quick Links) -->
                             <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp" data-wow-duration=".9s"
                                 data-wow-delay=".7s">
                                 <div class="rr-footer-widget footer-cols-3">
                                     <h4 class="rr-footer-title">روابط سريعة</h4>
                                     <div class="rr-footer-list">
                                         <ul>
-                                            <li><a href="#">الرئيسية</a></li>
+                                            <li><a href="#">الصفحة الرئيسية</a></li>
                                             <li><a href="/locales/ar/hakkimizda.html">من نحن</a></li>
-                                            <li><a href="/locales/ar/cilt-hastaliklari.html">الأمراض الجلدية</a></li>
+                                            <li><a href="/locales/ar/cilt-hastaliklari.html">الأمراض</a></li>
                                             <li><a href="/locales/ar/blog.html">المدونة</a></li>
                                             <li><a href="/locales/ar/iletisim.html">اتصل بنا</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Fourth Footer Column (Business Hours) -->
                             <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp" data-wow-duration=".9s"
                                 data-wow-delay=".9s">
                                 <div class="rr-footer-widget footer-cols-4">
                                     <h4 class="rr-footer-title">ساعات العمل</h4>
                                     <div class="rr-footer-contact">
                                         <ul>
-                                            <li><span>الاثنين - 09:30- 17:00</span></li>
+                                            <li><span>الإثنين - 09:30- 17:00</span></li>
                                             <li><span>الثلاثاء - 09:30- 17:00</span></li>
                                             <li><span>الأربعاء - 09:30- 17:00</span></li>
                                             <li><span>الخميس - 09:30- 17:00</span></li>
@@ -741,23 +684,93 @@
                     </div>
                 </div>
             </div>
+            <!-- نهاية منطقة التذييل -->
 
-            <!-- Copyright Section -->
+            <!-- بداية منطقة حقوق النشر -->
             <div class="rr-copyright-area p-relative">
                 <div class="container rr-copyright-broder rr-copyright-space">
                     <div class="row align-items-center">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-12 wow rrfadeUp" data-wow-duration=".9s"
                             data-wow-delay=".3s">
                             <div class="rr-copyright-left text-center text-md-start">
-                                <p>© 2024 <a href="#">د. محمد إلتيبير بهادير، </a> جميع الحقوق محفوظة.</p>
+                                <p>© 2024 <a href="#"> د. محمد إلتبر بهادر، </a> جميع الحقوق محفوظة.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- نهاية منطقة حقوق النشر -->
         </div>
     </footer>
 
+
+    <!-- Mail Butonu -->
+
+    <a href="mailto:randevu@drmehmetilteberbahadir.net" target="_blank" class="mail-button z-index-2">
+        <i class="bi bi-envelope-fill"></i>
+    </a>
+
+    <!-- CSS -->
+    <style>
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-5px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .mail-button {
+            position: fixed;
+            bottom: 40px;
+            right: 240px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 1.5s infinite;
+        }
+
+        .mail-button:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+            animation: shake 0.5s ease-in-out;
+        }
+    </style>
+
+    <!-- Mail Button -->
 
     <!-- Mail Butonu -->
 
@@ -970,8 +983,83 @@
     </style>
     <!-- Arama Butonu -->
 
+    <!-- Arama Butonu -->
+    <a href="tel:+902126772424" target="_blank" class="call-button z-index-2">
+        <i class="bi bi-telephone-fill"></i>
+    </a>
+
+    <!-- CSS -->
+    <style>
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-5px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .call-button {
+            position: fixed;
+            bottom: 38px;
+            right: 165px;
+            /* Bu değeri WhatsApp butonuna göre ayarlayabilirsiniz */
+            background-color: #0d6efd;
+            /* Mavi renk */
+            color: white;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 1.5s infinite;
+        }
+
+        .call-button:hover {
+            background-color: #0b5ed7;
+            /* Hover mavi tonu */
+            text-decoration: none;
+            animation: shake 0.5s ease-in-out;
+        }
+
+        .call-button i {
+            font-size: 1.5em;
+            /* İkonun boyutunu ayarlayabilirsiniz */
+        }
+    </style>
+    <!-- Arama Butonu -->
+
     <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
 
 
     <!-- JS here -->

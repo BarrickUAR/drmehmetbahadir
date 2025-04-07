@@ -272,8 +272,9 @@ p {
   color: var(--rr-text-body);
   font-weight: 400;
   font-size: 16px;
-  line-height: 28px;
+  line-height: 20px;
   margin-bottom: 15px;
+  padding-top: 30px;
 }
 
 img {
@@ -9883,10 +9884,10 @@ a.ui-button:active {
   height: 200px;
   width: 200px;
   text-align: center;
-  line-height: 120px;
+  line-height: 100px;
   border-radius: 50%;
   position: absolute;
-  top: 35px;
+  top: 5px;
   left: 50%;
   right: 50%;
   z-index: 1;
@@ -14850,9 +14851,9 @@ span.current {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .socialMediaContainer {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 10px;
+  display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 5px;
     flex-direction: column; /* Stack the boxes vertically */
     align-items: center; /* Center the content */
     justify-content: center; /* Center content in the container */

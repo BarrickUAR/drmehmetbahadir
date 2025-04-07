@@ -27,23 +27,14 @@
     <link rel="stylesheet" href="/assets/css/main.css">
 
     <!-- Google tag (gtag.js) -->
-    <script async src="httpswww.googletagmanager.com/gtag/js?id=G-KC044R9CB0"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-KC044R9CB0');
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16978219240">
     </script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="httpswww.googletagmanager.com/gtag/js?id=G-M4NQZ2E3PR"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
-        gtag('config', 'G-M4NQZ2E3PR');
+        gtag('config', 'AW-16978219240');
     </script>
 
     <script src="httpscdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -83,11 +74,78 @@
 
     <!-- preloader start -->
 
+    <!-- Mail Butonu -->
+
+    <a href="mailto:randevu@drmehmetilteberbahadir.net" target="_blank" class="mail-button z-index-2">
+        <i class="bi bi-envelope-fill"></i>
+    </a>
+
+    <!-- CSS -->
+    <style>
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-5px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .mail-button {
+            position: fixed;
+            bottom: 40px;
+            right: 240px;
+            background-color: red;
+            color: white;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 1.5s infinite;
+        }
+
+        .mail-button:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+            animation: shake 0.5s ease-in-out;
+        }
+    </style>
+
+    <!-- Mail Button -->
 
 
     <!-- WhatsApp Butonu -->
-    <a href="https://wa.me/905528303491?text=مرحباً،%20كيف%20يمكنني%20مساعدتك؟" target="_blank"
-        class="whatsapp-button z-index-2">
+
+    <a href="https://wa.me/905528303491" target="_blank" class="whatsapp-button z-index-2">
         <i class="bi bi-whatsapp"></i>
     </a>
 
@@ -152,6 +210,82 @@
     </style>
 
     <!-- WhatsApp Button -->
+
+    <!-- Arama Butonu -->
+    <a href="tel:+902126772424" target="_blank" class="call-button z-index-2">
+        <i class="bi bi-telephone-fill"></i>
+    </a>
+
+    <!-- CSS -->
+    <style>
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-5px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .call-button {
+            position: fixed;
+            bottom: 38px;
+            right: 165px;
+            /* Bu değeri WhatsApp butonuna göre ayarlayabilirsiniz */
+            background-color: #0d6efd;
+            /* Mavi renk */
+            color: white;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 1.5s infinite;
+        }
+
+        .call-button:hover {
+            background-color: #0b5ed7;
+            /* Hover mavi tonu */
+            text-decoration: none;
+            animation: shake 0.5s ease-in-out;
+        }
+
+        .call-button i {
+            font-size: 1.5em;
+            /* İkonun boyutunu ayarlayabilirsiniz */
+        }
+    </style>
+    <!-- Arama Butonu -->
+
+
 
 
     <link rel="stylesheet" href="https:cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -468,7 +602,7 @@
                         <div class="col-xl-5 col-lg-5 col-md-6 col-6">
                             <div class="rr-header-right d-flex align-items-center justify-content-end">
                                 <div class="rr-header-1-contat d-md-block ml-30">
-                                    <a class="rr-btn-border-ar" href="/locales/ar/iletisim.html"><span>حجز موعد <i
+                                    <a class="rr-btn-border-ar" href="/locales/ar/randevu.html"><span>حجز موعد <i
                                                 class="fa-sharp fa-solid fa-plus"></i></span></a>
                                 </div>
                                 <div class="rr-header-bar d-xl-none">
@@ -786,7 +920,7 @@
                                 <span>01</span>
                             </div>
                             <div class="rr-features-icon-ar">
-                                <img loading="lazy" src="/assets/img/feature/icon-1-copy.png" alt="صورة">
+                                <img loading="lazy" src="/assets/img/feature/sedef.jpg" alt="صورة">
                             </div>
                             <div class="rr-features-content text-center">
                                 <h3 class="rr-features-title"><a href="/locales/acilt-hastaliklari.html">الصدفية</a>
@@ -807,7 +941,7 @@
                                 <span>02</span>
                             </div>
                             <div class="rr-features-icon-ar">
-                                <img loading="lazy" src="/assets/img/feature/icon-2-copy.png" alt="صورة">
+                                <img loading="lazy" src="/assets/img/feature/egzama.jpg" alt="صورة">
                             </div>
                             <div class="rr-features-content text-center">
                                 <h3 class="rr-features-title"><a href="/locales/ar/cilt-hastaliklari.html">الأكزيما</a>
@@ -828,7 +962,7 @@
                                 <span>03</span>
                             </div>
                             <div class="rr-features-icon-ar">
-                                <img loading="lazy" src="/assets/img/feature/icon-3-copy.png" alt="صورة">
+                                <img loading="lazy" src="/assets/img/feature/liken.jpg" alt="صورة">
                             </div>
                             <div class="rr-features-content text-center">
                                 <h3 class="rr-features-title"><a href="/locales/ar/cilt-hastaliklari.html">الحزاز
@@ -849,7 +983,7 @@
                                 <span>04</span>
                             </div>
                             <div class="rr-features-icon-ar">
-                                <img loading="lazy" src="/assets/img/feature/icon-4-copy.png" alt="صورة">
+                                <img loading="lazy" src="/assets/img/feature/iktiyoz.jpg" alt="صورة">
                             </div>
                             <div class="rr-features-content text-center">
                                 <h3 class="rr-features-title"><a href="/locales/ar/cilt-hastaliklari.html">السماك</a>

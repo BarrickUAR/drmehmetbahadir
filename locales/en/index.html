@@ -29,7 +29,15 @@
 
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC044R9CB0"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16978219240">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-16978219240');
+    </script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -81,10 +89,76 @@
 
     <!-- preloader start -->
 
+    <!-- Mail Butonu -->
 
+    <a href="mailto:randevu@drmehmetilteberbahadir.net" target="_blank" class="mail-button z-index-2">
+        <i class="bi bi-envelope-fill"></i>
+    </a>
 
+    <!-- CSS -->
+    <style>
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-5px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .mail-button {
+            position: fixed;
+            bottom: 40px;
+            right: 240px;
+            background-color: red;
+            color: white;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 1.5s infinite;
+        }
+
+        .mail-button:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+            animation: shake 0.5s ease-in-out;
+        }
+    </style>
+
+    <!-- Mail Button -->
 
     <!-- WhatsApp Butonu -->
+
     <a href="https://wa.me/905528303492?text=Hello,%20how%20can%20I%20assist%20you?" target="_blank"
         class="whatsapp-button z-index-2">
         <i class="bi bi-whatsapp"></i>
@@ -152,6 +226,79 @@
 
     <!-- WhatsApp Button -->
 
+    <!-- Arama Butonu -->
+    <a href="tel:+902126772424" target="_blank" class="call-button z-index-2">
+        <i class="bi bi-telephone-fill"></i>
+    </a>
+
+    <!-- CSS -->
+    <style>
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-5px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .call-button {
+            position: fixed;
+            bottom: 38px;
+            right: 165px;
+            /* Bu değeri WhatsApp butonuna göre ayarlayabilirsiniz */
+            background-color: #0d6efd;
+            /* Mavi renk */
+            color: white;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 1.5s infinite;
+        }
+
+        .call-button:hover {
+            background-color: #0b5ed7;
+            /* Hover mavi tonu */
+            text-decoration: none;
+            animation: shake 0.5s ease-in-out;
+        }
+
+        .call-button i {
+            font-size: 1.5em;
+            /* İkonun boyutunu ayarlayabilirsiniz */
+        }
+    </style>
+    <!-- Arama Butonu -->
 
 
     <!-- back to top start -->
@@ -254,9 +401,12 @@
 
     <!-- header top area start -->
     <div class="rr-header-1-top rr-header-1-shap d-none d-xl-block grey-bg p-relative">
+
         <div class="container custom-container-1 z-index-3">
+
             <div class="rr-header-1-before">
                 <div class="row align-items-center">
+
                     <div class="col-xxl-5 col-xl-6 col-lg-6">
                         <div class="rr-header-1-top-info text-end">
                             <ul class="d-flex align-items-center">
@@ -312,8 +462,11 @@
     <!-- header main area start -->
 
     <section class="rr-header-1-main d-none d-xl-block">
+
         <div class="container custom-container-1">
+
             <div class="row align-items-center">
+
                 <div class="col-xl-4">
                     <div class="rr-header-main-social d-flex align-items-center">
                         <h4 class="rr-header-1-title">Social Media</h4>
@@ -464,6 +617,34 @@
         <div class="rr-slider-1-wrapper">
             <div class="rr-slider-1-wrap p-relative">
                 <div class="rr-slider-1-height">
+                    <div id="bubble-simulation">
+                        <div class="bubble-wrapper">
+                            <!-- First row -->
+                            <div class="bubble-row">
+
+                                <div class="bubble bubble-2">
+                                    The treatment is very easy, simple, and without side effects.
+                                </div>
+
+                                <div class="bubble bubble-3">
+                                    We do not use cortisone or chemical drugs!
+                                </div>
+                            </div>
+
+                            <!-- Second row -->
+                            <div class="bubble-row">
+                                <div class="bubble bubble-4">
+                                    Psoriasis, eczema, rheumatism, ankylosing spondylitis, <br> Hashimoto’s and
+                                    scleroderma are sister autoimmune diseases.
+                                </div>
+
+                                <div class="bubble bubble-1">
+                                    Psoriasis, eczema, and rheumatism are sister diseases!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="container">
                         <div class="rr-slider-1-shap-star">
                             <img loading="lazy" src="/assets/img/slider/start-shap.png" alt="img">
@@ -503,18 +684,7 @@
                             <div class="col-xl-5 col-lg-5 col-md-6 wow fadeInRight" data-wow-duration=".9s"
                                 data-wow-delay=".5s">
                                 <div class="rr-slider-1-img p-relative pt-50">
-                                    <div id="bubble-container">
-                                        <div class="speech-bubble bubble1">The treatment is very easy <br> Very simple
-                                        </div>
-                                    </div>
-                                    <div id="bubble-container">
-                                        <div class="speech-bubble bubble1">Psoriasis, Eczema, and Rheumatism <br> Are
-                                            sibling diseases</div>
-                                    </div>
-                                    <div id="bubble-container">
-                                        <div class="speech-bubble bubble1">We don't use corticosteroids or chemotherapy
-                                            drugs!</div>
-                                    </div>
+
                                     <div class="rr-slider-1-thumb z-index-2">
                                         <img loading="lazy" src="/assets/img/slider/hoca.png" alt="img">
                                     </div>
@@ -678,7 +848,7 @@
                             <span>01</span>
                         </div>
                         <div class="rr-features-icon">
-                            <img loading="lazy" src="/assets/img/feature/icon-1.png" alt="img">
+                            <img loading="lazy" src="/assets/img/feature/sedef.jpg" alt="img">
                         </div>
                         <div class="rr-features-content text-center">
                             <h3 class="rr-features-title"><a href="/locales/en/skin-diseases.html">Psoriasis</a>
@@ -698,7 +868,7 @@
                             <span>02</span>
                         </div>
                         <div class="rr-features-icon">
-                            <img loading="lazy" src="/assets/img/feature/icon-2.png" alt="img">
+                            <img loading="lazy" src="/assets/img/feature/egzama.jpg" alt="img">
                         </div>
                         <div class="rr-features-content text-center">
                             <h3 class="rr-features-title"><a href="/locales/en/skin-diseases.html">Eczema</a></h3>
@@ -717,7 +887,7 @@
                             <span>03</span>
                         </div>
                         <div class="rr-features-icon">
-                            <img loading="lazy" src="/assets/img/feature/icon-3.png" alt="img">
+                            <img loading="lazy" src="/assets/img/feature/liken.jpg" alt="img">
                         </div>
                         <div class="rr-features-content text-center">
                             <h3 class="rr-features-title"><a href="/locales/en/skin-diseases.html">Lichen Planus</a>
@@ -737,7 +907,7 @@
                             <span>04</span>
                         </div>
                         <div class="rr-features-icon">
-                            <img loading="lazy" src="/assets/img/feature/icon-4.png" alt="img">
+                            <img loading="lazy" src="/assets/img/feature/iktiyoz.jpg" alt="img">
                         </div>
                         <div class="rr-features-content text-center">
                             <h3 class="rr-features-title"><a href="/locales/en/skin-diseases.html">Ichthyosis</a>
@@ -1386,6 +1556,8 @@
 
 
     </main>
+
+
 
     <footer>
         <div class="rr-footer-main p-relative fix" data-background="/assets/img/footer/footer-bg.jpg">

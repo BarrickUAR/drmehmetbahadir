@@ -541,7 +541,8 @@
 
                     <!-- blog item 4 -->
 
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s"
+                        data-wow-delay=".3s">
                         <div class="rr-blog-item">
                             <div class="rr-blog-thumb-main p-relative">
                                 <a href="/locales/de/blog/gut-health.html">
@@ -555,13 +556,15 @@
                                 <div class="rr-blog-content-info d-flex mb-15">
                                     <span><a href="/locales/de/blog/gut-health.html"><i
                                                 class="fa-sharp fa-solid fa-comments"></i> 0 Kommentare</a></span>
-                                    <span class="ml-30"><i class="fa-regular fa-calendar-days"></i> 21. Februar 2025</span>
+                                    <span class="ml-30"><i class="fa-regular fa-calendar-days"></i> 21. Februar
+                                        2025</span>
                                 </div>
                                 <div class="rr-blog-text">
                                     <h4 class="rr-blog-title mb-0 pb-10"><a href="/locales/de/blog/gut-health.html">Der
                                             Schlüssel zu einem gesunden Darm: Gallensekretion</a>
                                     </h4>
-                                    <p>Der Schlüssel zur Verbesserung Ihrer Darmgesundheit sind nicht Probiotika, sondern
+                                    <p>Der Schlüssel zur Verbesserung Ihrer Darmgesundheit sind nicht Probiotika,
+                                        sondern
                                         der Gallensekretion.....</p>
                                 </div>
                                 <div class="rr-blog-wrap d-flex align-items-center justify-content-between">
@@ -582,7 +585,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div> 
+                    </div>
 
                 </div>
             </div>
@@ -704,7 +707,76 @@
         </div>
     </footer>
 
+    <!-- Mail Butonu -->
+
+    <a href="mailto:randevu@drmehmetilteberbahadir.net" target="_blank" class="mail-button z-index-2">
+        <i class="bi bi-envelope-fill"></i>
+    </a>
+
+    <!-- CSS -->
+    <style>
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-5px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .mail-button {
+            position: fixed;
+            bottom: 40px;
+            right: 240px;
+            background-color: red;
+            color: white;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 1.5s infinite;
+        }
+
+        .mail-button:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+            animation: shake 0.5s ease-in-out;
+        }
+    </style>
+
+    <!-- Mail Button -->
+
     <!-- WhatsApp Butonu -->
+
     <a href="https://wa.me/905521502223?text=Hallo,%20kann%20ich%20Ihnen%20helfen?" target="_blank"
         class="whatsapp-button z-index-2">
         <i class="bi bi-whatsapp"></i>
@@ -771,6 +843,80 @@
     </style>
 
     <!-- WhatsApp Button -->
+
+    <!-- Arama Butonu -->
+    <a href="tel:+902126772424" target="_blank" class="call-button z-index-2">
+        <i class="bi bi-telephone-fill"></i>
+    </a>
+
+    <!-- CSS -->
+    <style>
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-5px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .call-button {
+            position: fixed;
+            bottom: 38px;
+            right: 165px;
+            /* Bu değeri WhatsApp butonuna göre ayarlayabilirsiniz */
+            background-color: #0d6efd;
+            /* Mavi renk */
+            color: white;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 1.5s infinite;
+        }
+
+        .call-button:hover {
+            background-color: #0b5ed7;
+            /* Hover mavi tonu */
+            text-decoration: none;
+            animation: shake 0.5s ease-in-out;
+        }
+
+        .call-button i {
+            font-size: 1.5em;
+            /* İkonun boyutunu ayarlayabilirsiniz */
+        }
+    </style>
+    <!-- Arama Butonu -->
 
 
     <!-- Bootstrap Icons CDN -->

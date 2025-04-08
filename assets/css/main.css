@@ -1410,7 +1410,7 @@ div.demo img {
 }
 
 #gradient {
-  background: linear-gradient(200deg, #ff7a00, #dba754);
+  background: linear-gradient(200deg, #ff7639, #ff7639);
 }
 
 .rr-btn-1-ar {
@@ -9804,7 +9804,7 @@ a.ui-button:active {
     display: none;
   }
 }
-
+/* 
 /*----------------------------------------*/
 /*  7.9 feature css start
 /*----------------------------------------*/
@@ -9844,7 +9844,7 @@ a.ui-button:active {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rr-features-main {
-    grid-template-columns: 320px 320px 320px;
+    grid-template-columns: 300px 300px 300px;
     margin: 0;
   }
 }
@@ -10167,6 +10167,8 @@ a.ui-button:active {
 .rr-features-3:hover .rr-features-3-content p {
   color: var(--rr-common-white);
 }
+*/
+
 
 /*----------------------------------------*/
 /*  7.1 about css start
@@ -14851,7 +14853,7 @@ span.current {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .socialMediaContainer {
-  display: grid;
+    display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns */
     gap: 5px;
     flex-direction: column; /* Stack the boxes vertically */

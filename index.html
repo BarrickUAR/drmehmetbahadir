@@ -27,41 +27,25 @@
    <link rel="stylesheet" href="assets/css/custom-animation.css">
    <link rel="stylesheet" href="assets/css/main.css">
 
-
-
    <script type="module">
       import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
       const swiper = new Swiper(...)
    </script>
 
-   <!-- Google tag (gtag.js) -->
-   <script async src="https:/www.googletagmanager.com/gtag/js?id=G-KC044R9CB0"></script>
-   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
+   <!-- Google TAG -->
+   <!-- Google Tag Manager -->
+   <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+               'gtm.start':
+                  new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+               j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                  'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+         })(window, document, 'script', 'dataLayer', 'GTM-5MKP397L');</script>
+   <!-- End Google Tag Manager -->
+   <!-- Google TAG -->
 
-      gtag('config', 'G-KC044R9CB0');
-   </script>
-
-   <!-- Google tag (gtag.js) -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16978219240">
-   </script>
-   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-
-      gtag('config', 'AW-16978219240');
-   </script>
-   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-
-      gtag('config', 'G-M4NQZ2E3PR');
-   </script>
 
    <!-- Emailjs -->
 
@@ -347,7 +331,7 @@
                   <option>Georgian</option>
                </select>
                <div class="nice-select" tabindex="0">
-                  <span class="current"> <img src="assets/img/header/tr.png" alt="tr"> </span>
+                  <span class="current"> <img src="assets/img/eheader/tr.png" alt="tr"> </span>
                   <ul class="list z-index-2">
                      <li data-value="Türkçe" class="option selected focus"> <img src="assets/img/header/tr.png"
                            alt="tr"> </li>
@@ -436,7 +420,7 @@
                         <div class="nice-select" tabindex="0"><span class="current"> <img src="assets/img/header/tr.png"
                                  width="30" alt=""> </span>
                            <ul class="list z-index-2">
-                              <li data-value="Türkçe" class="option selected focus"><img src="assets/img/header/tr.png"
+                              <li data-value="" class="option selected focus"><img src="assets/img/header/tr.png"
                                     width="30" alt=""> </li>
                               <li data-value="English" class="option"><img src="assets/img/header/en.png" width="30"
                                     alt=""> </li>
@@ -571,11 +555,12 @@
                            <li class="has-dropdown">
                               <a href="cilt-hastaliklari.html">Hastalıklar</a>
                               <ul class="submenu rr-submenu">
+                                 <li><a href="hastaliklar.html">Hastalıklar</a></li>
                                  <li><a href="cilt-hastaliklari.html">Cilt Hastalıkları</a></li>
                                  <li><a href="romatizmal-hastaliklar.html">Romatizmal H.</a></li>
-                                 <li><a href="akne.html">Akne</a></li>
-
+                                 <li><a class="disabled-link">Akne</a></li>
                               </ul>
+
                            </li>
                            <li class="has-dropdown">
                               <a href="#">Sayfalar</a>
@@ -725,7 +710,6 @@
       </div>
 
       <!-- slider area end -->
-
 
 
 
@@ -1026,6 +1010,51 @@
 
       <!-- contact area end -->
 
+      <!-- Banner  -->
+
+      <section class="rr-photo-area rr-photo-before pt-50 pb-50 mb-30* fix">
+
+         <a class="rr-btn-1  wow rrfadeUp" id="gradient" href="https://istanbulpsoriasiscenter.pixieset.com/oncesonra/"
+            target="_blank"><span> Daha fazla Fotoğraf... <i class="fa-sharp fa-solid fa-plus"></i> </span></a>
+         <a target="_blank" href="https://istanbulpsoriasiscenter.pixieset.com/oncesonra/"><img loading="lazy"
+               class="mb-50 border rounded" src="/assets/img/video/hasta.jpg" alt=""></a>
+
+         <div class="rr-video-shap z-index-1 d-none d-xxl-block">
+            <img loading="lazy" src="assets/img/video/plus-icon.png" alt="img">
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-6 col-lg-8  col-md-10 col-12 ">
+                  <div class="rr-video-title-box z-index-2">
+                     <span class="rr-video-subtitle p-relative wow rrfadeUp" data-wow-duration=".9s"
+                        data-wow-delay=".3s"><img loading="lazy" src="assets/img/testimonial/section-icon.png"
+                           alt="img">
+                        Fotoğraflarımız</span>
+                     <h4 class="rr-video-title wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".5s"> Fotoğraflar
+                     </h4>
+                     <p class="wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">Binlerce hasta fotoğrafı
+                        yayınladık, hiç bir hastayı tertemiz yapmadan bırakmıyoruz. <br />
+                     </p>
+
+
+                  </div>
+
+               </div>
+
+               <div class="col-xl-6  col-lg-4 col-md-2  col-12 p-relative">
+                  <div class="rr-video-area">
+                     <div class="rr-video-play z-index-2">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Banner  -->
+
+
+
 
       <!-- features area start -->
 
@@ -1322,50 +1351,6 @@
 
       <!-- Social Media Section -->
 
-
-
-      <!-- Banner  -->
-
-      <section class="rr-photo-area rr-photo-before pt-50 pb-50 mb-50 fix">
-
-         <a class="rr-btn-1  wow rrfadeUp" id="gradient" href="https://istanbulpsoriasiscenter.pixieset.com/oncesonra/"
-            target="_blank"><span> Daha fazla Fotoğraf... <i class="fa-sharp fa-solid fa-plus"></i> </span></a>
-         <a target="_blank" href="https://istanbulpsoriasiscenter.pixieset.com/oncesonra/"><img loading="lazy"
-               class="mb-50 border rounded" src="/assets/img/video/hasta.jpg" alt=""></a>
-
-         <div class="rr-video-shap z-index-1 d-none d-xxl-block">
-            <img loading="lazy" src="assets/img/video/plus-icon.png" alt="img">
-         </div>
-         <div class="container">
-            <div class="row">
-               <div class="col-xl-6 col-lg-8  col-md-10 col-12 ">
-                  <div class="rr-video-title-box z-index-2">
-                     <span class="rr-video-subtitle p-relative wow rrfadeUp" data-wow-duration=".9s"
-                        data-wow-delay=".3s"><img loading="lazy" src="assets/img/testimonial/section-icon.png"
-                           alt="img">
-                        Fotoğraflarımız</span>
-                     <h4 class="rr-video-title wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".5s"> Fotoğraflar
-                     </h4>
-                     <p class="wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">Binlerce hasta fotoğrafı
-                        yayınladık, hiç bir hastayı tertemiz yapmadan bırakmıyoruz. <br />
-                     </p>
-
-
-                  </div>
-
-               </div>
-
-               <div class="col-xl-6  col-lg-4 col-md-2  col-12 p-relative">
-                  <div class="rr-video-area">
-                     <div class="rr-video-play z-index-2">
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      <!-- Banner  -->
 
 
       <!-- About area end -->
@@ -1931,7 +1916,7 @@
                                     Pzt- Cmt : 09:30 - 17.00 </a>
                               </div>
                               <div class="rr-footer-widget-content-list-item">
-                                 <i class="fa-solid fa-location-dot"></i> <a href="#"> Merter İş Merkezi - Kat 11/63</a>
+                                 <i class="fa-solid fa-location-dot"></i> <a href="#"> Merter İş Merkezi - Kat 10/59</a>
                               </div>
                               <div class="rr-footer-widget-content-list-item">
                                  <i class="fa-sharp fa-solid fa-phone"></i><a href="tel:+902126772424">+90 (212) 677 24

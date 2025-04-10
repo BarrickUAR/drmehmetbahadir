@@ -15979,3 +15979,8 @@ span.current {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+.disabled-link {
+  cursor: not-allowed; /* İmleci değiştirir */
+  opacity: 0.6; /* (İsteğe bağlı) Görsel olarak farklılık yaratır */
+}

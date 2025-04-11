@@ -51,6 +51,8 @@
    </div>
    <!-- back to top end -->
 
+   <!-- Offcanvas Bölümü -->
+
    <div class="rroffcanvas-area">
       <div class="rroffcanvas">
          <div class="rroffcanvas__close-btn">
@@ -68,9 +70,10 @@
                   <option>Arabic</option>
                   <option>Russian</option>
                   <option>Deutsch</option>
+                  <option>Georgian</option>
                </select>
                <div class="nice-select" tabindex="0">
-                  <span class="current"> <img src="assets/img/header/tr.png" alt="tr"> </span>
+                  <span class="current"> <img src="assets/img/eheader/tr.png" alt="tr"> </span>
                   <ul class="list z-index-2">
                      <li data-value="Türkçe" class="option selected focus"> <img src="assets/img/header/tr.png"
                            alt="tr"> </li>
@@ -78,7 +81,8 @@
                      <li data-value="Arabic" class="option"><img src="assets/img/header/ar.png" alt="ar"> </li>
                      <li data-value="Russian" class="option"><img src="assets/img/header/ru.png" alt="ru"></li>
                      <li data-value="Deutsch" class="option"><img src="assets/img/header/de.png" alt="de"></li>
-                     <!-- Rusça simgesi -->
+                     <li data-value="Georgian" class="option disabled-link"><img src="assets/img/header/ka.png"
+                           alt="ka"></li>
                   </ul>
                </div>
             </div>
@@ -107,8 +111,10 @@
          </div>
          <div class="rroffcanvas__social">
             <div class="social-icon">
-               <a href="https:/www.instagram.com/drmehmetilteberbahadir/"><i class="fab fa-instagram"></i></a>
-               <a href="https:/www.facebook.com/sedefegzamatedavisi"><i class="fab fa-facebook-f"></i></a>
+               <a href="https:/www.instagram.com/drmehmetilteberbahadir/" target="_blank"><i
+                     class="fab fa-instagram"></i></a>
+               <a href="https:/www.facebook.com/sedefegzamatedavisi" target="_blank"><i
+                     class="fab fa-facebook-f"></i></a>
                <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
          </div>
@@ -131,7 +137,7 @@
                               randevu@drmehmetilteberbahadir.net</a>
                         </li>
                         <li class="ml-50">
-                           <b><span><i class="fa-solid fa-clock"></i></span>Pzt - Cmt : 09:30-
+                           <b><span><i class="fa-solid fa-clock"></i></span>Pzt - Cmt : 09.30 -
                               17.00</b>
                         </li>
                      </ul>
@@ -152,11 +158,12 @@
                            <option>Arabic</option>
                            <option>Russian</option> <!-- Rusça ekleniyor -->
                            <option>Deutsch</option>
+                           <option>Georxgian</option>
                         </select>
                         <div class="nice-select" tabindex="0"><span class="current"> <img src="assets/img/header/tr.png"
                                  width="30" alt=""> </span>
                            <ul class="list z-index-2">
-                              <li data-value="Türkçe" class="option selected focus"><img src="assets/img/header/tr.png"
+                              <li data-value="" class="option selected focus"><img src="assets/img/header/tr.png"
                                     width="30" alt=""> </li>
                               <li data-value="English" class="option"><img src="assets/img/header/en.png" width="30"
                                     alt=""> </li>
@@ -166,6 +173,9 @@
                                     alt="">
                               </li>
                               <li data-value="Deutsch" class="option"><img src="assets/img/header/de.png" width="30"
+                                    alt="">
+                              </li>
+                              <li data-value="Georgian" class="option"><img src="assets/img/header/ka.png" width="30"
                                     alt="">
                               </li>
                            </ul>
@@ -182,17 +192,19 @@
    <!-- header top area end -->
    <!-- header main area start -->
 
-   <section class="rr-header-1-main d-none d-xl-block">
+   <section class=".rr-header-1-main d-none d-xl-block">
       <div class="container custom-container-1">
          <div class="row align-items-center">
             <div class="col-xl-4">
                <div class="rr-header-main-social d-flex align-items-center">
                   <h4 class="rr-header-1-title">Sosyal Medya </h4>
                   <div class="rr-header-1-social ml-20">
-                     <a href="https://www.facebook.com/sedefegzamatedavisi"><i class="fa-brands fa-facebook-f"></i></a>
-                     <a href="https://www.instagram.com/drmehmetilteberbahadir/"><i
+                     <a href="https:/www.facebook.com/sedefegzamatedavisi" target="_blank"><i
+                           class="fa-brands fa-facebook-f"></i></a>
+                     <a href="https:/www.instagram.com/drmehmetilteberbahadir/" target="_blank"><i
                            class="fa-brands fa-instagram"></i></a>
-                     <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                     <a href="https://www.linkedin.com/company/dr-mehmet-i%CC%87lteber-bahad%C4%B1r-klini%C4%9Fi"
+                        target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                   </div>
                </div>
             </div>
@@ -286,11 +298,12 @@
                            <li class="has-dropdown">
                               <a href="cilt-hastaliklari.html">Hastalıklar</a>
                               <ul class="submenu rr-submenu">
+                                 <li><a href="hastaliklar.html">Hastalıklar</a></li>
                                  <li><a href="cilt-hastaliklari.html">Cilt Hastalıkları</a></li>
                                  <li><a href="romatizmal-hastaliklar.html">Romatizmal H.</a></li>
-                                 <li><a href="akne.html">Akne</a></li>
-
+                                 <li><a class="disabled-link">Akne</a></li>
                               </ul>
+
                            </li>
                            <li class="has-dropdown">
                               <a href="#">Sayfalar</a>
@@ -329,6 +342,116 @@
       </div>
 
       <!-- header area end -->
+
+   </header>eader-height z-index-5">
+   <!-- header area start -->
+   <div id="header-sticky" class="rr-header-area">
+      <div class="container custom-container-1 rr-header-bg">
+         <div class="row align-items-center">
+            <div class="col-xl-7 col-lg-7 col-md-6 col-6">
+               <div class="rr-header-1-logo d-xl-none">
+                  <a href="index.html"><img loading="lazy" src="assets/img/logo/logo.png" alt=""></a>
+               </div>
+               <div class="rr-header-main-menu rr-header-menu ml-30  d-none d-xl-block">
+                  <nav class="rr-main-menu-content">
+                     <ul>
+                        <li class="has-dropdown">
+                           <a href="index.html">Anasayfa</a>
+                           <div class="rr-submenu submenu has-homemenu">
+                              <div class="row gx-6 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                                 <div class="col homemenu">
+                                    <div class="homemenu-thumb mb-15">
+                                       <img loading="lazy" src="assets/img/menu/home-1.jpg" alt="img">
+                                       <div class="homemenu-btn">
+                                          <a class="rr-menu-btn" href="terapi.html">Siteye git</a>
+                                       </div>
+                                    </div>
+
+                                    <div class="homemenu-content text-center">
+                                       <h4 class="homemenu-title">
+                                          <a href="terapi.html">Fitoterapi Nedir?</a>
+                                       </h4>
+                                    </div>
+                                 </div>
+
+                                 <div class="col homemenu">
+                                    <div class="homemenu-thumb mb-15">
+                                       <img loading="lazy" src="assets/img/menu/home-2.jpg" alt="img">
+                                       <div class="homemenu-btn">
+                                          <a class="rr-menu-btn" href="terapi.html">Siteye git</a>
+                                       </div>
+                                    </div>
+                                    <div class="homemenu-content text-center">
+                                       <h4 class="homemenu-title">
+                                          <a href="terapi.html">Ozonterapi</a>
+                                       </h4>
+                                    </div>
+                                 </div>
+
+                                 <div class="col homemenu">
+                                    <div class="homemenu-thumb mb-15">
+                                       <img loading="lazy" src="assets/img/menu/home-3.jpg" alt="img">
+                                       <div class="homemenu-btn">
+                                          <a class="rr-menu-btn" href="terapi.html">Siteye git</a>
+                                       </div>
+                                    </div>
+                                    <div class="homemenu-content text-center">
+                                       <h4 class="homemenu-title">
+                                          <a href="terapi.html">Mezoterapi</a>
+                                       </h4>
+                                    </div>
+                                 </div>
+                              </div>
+
+                           </div>
+                        </li>
+                        <li><a href="hakkimizda.html">Hakkımda</a></li>
+                        <li class="has-dropdown">
+                           <a href="cilt-hastaliklari.html">Hastalıklar</a>
+                           <ul class="submenu rr-submenu">
+                              <li><a href="cilt-hastaliklari.html">Cilt Hastalıkları</a></li>
+                              <li><a href="romatizmal-hastaliklar.html">Romatizmal H.</a></li>
+                              <li><a href="akne.html">Akne</a></li>
+
+                           </ul>
+                        </li>
+                        <li class="has-dropdown">
+                           <a href="#">Sayfalar</a>
+                           <ul class="submenu rr-submenu">
+                              <li><a href="videolar.html">Videolar</a></li>
+                              <li><a href="ekibimiz.html">Ekibimiz</a></li>
+                              <li><a href="hekimlerimiz.html">Hekimlerimiz</a></li>
+                              <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+                           </ul>
+                        </li>
+                        <li class="has-dropdown">
+                           <a href="blog.html">Blog</a>
+                           <ul class="submenu rr-submenu">
+                              <li><a href="blog.html">Bütün Yazılar</a></li>
+
+                           </ul>
+                        </li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+            <div class="col-xl-5 col-lg-5 col-md-6 col-6">
+               <div class="rr-header-right d-flex align-items-center justify-content-end">
+                  <div class="rr-header-1-contat d-md-block ml-30">
+                     <a class="rr-btn-border" href="randevu.html"><span>Randevu Oluştur <i
+                              class="fa-sharp fa-solid fa-plus"></i></span></a>
+                  </div>
+                  <div class="rr-header-bar d-xl-none">
+                     <button class="rr-menu-bar"><i class="fa-solid fa-bars"></i></button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- header area end -->
 
    </header>
 

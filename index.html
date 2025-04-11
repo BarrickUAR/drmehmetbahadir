@@ -339,7 +339,8 @@
                      <li data-value="Arabic" class="option"><img src="assets/img/header/ar.png" alt="ar"> </li>
                      <li data-value="Russian" class="option"><img src="assets/img/header/ru.png" alt="ru"></li>
                      <li data-value="Deutsch" class="option"><img src="assets/img/header/de.png" alt="de"></li>
-                     <li data-value="Georgian" class="option"><img src="assets/img/header/ka.png" alt="ka"></li>
+                     <li data-value="Georgian" class="option disabled-link"><img src="assets/img/header/ka.png"
+                           alt="ka"></li>
                   </ul>
                </div>
             </div>
@@ -892,21 +893,80 @@
 
       <!-- JavaScript -->
       <script>
-         function openPrivacyPolicy() {
-            document.getElementById('privacyModal').style.display = 'flex';
-         }
-
-         function closePrivacyPolicy() {
-            document.getElementById('privacyModal').style.display = 'none';
-         }
-
-         function closePrivacyPolicyOutside(event) {
-            const modal = document.getElementById('privacyModal');
-            if (event.target === modal) {
-               closePrivacyPolicy();
+         // Telefonu otomatik formatla (505 123 45 67 gibi)
+         function formatPhoneNumber(input) {
+            let value = input.value.replace(/\D/g, '').slice(0, 10); // En fazla 10 hane
+            if (value.length > 6) {
+               input.value = value.replace(/(\d{3})(\d{3})(\d{2})(\d{2})/, '$1 $2 $3 $4');
+            } else if (value.length > 3) {
+               input.value = value.replace(/(\d{3})(\d{3})/, '$1 $2');
+            } else {
+               input.value = value;
             }
          }
+
+         // Sadece rakam girilmesine izin ver
+         function isNumberKey(event) {
+            var charCode = (event.which) ? event.which : event.keyCode;
+            return !(charCode < 48 || charCode > 57);
+         }
+
+         // Form gönderimini yönet
+         document.getElementById("appointment-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const phone = document.getElementById("phone").value.replace(/\s/g, '').trim();
+            const message = document.getElementById("message").value.trim();
+            const privacyChecked = document.getElementById("privacy-policy").checked;
+
+            // Hata mesajlarını gizle
+            document.getElementById("name-error").style.display = "none";
+            document.getElementById("phone-error").style.display = "none";
+            document.getElementById("message-error").style.display = "none";
+            document.getElementById("privacy-error").style.display = "none";
+            document.getElementById("response-message").innerHTML = "";
+
+            let isValid = true;
+
+            // İsim kontrolü (sadece harf)
+            if (!/^[a-zA-ZçÇğĞıİöÖşŞüÜ\s]+$/.test(name)) {
+               document.getElementById("name-error").style.display = "block";
+               isValid = false;
+            }
+
+            // Telefon kontrolü (10 haneli, 5 ile başlıyor)
+            if (!/^5\d{9}$/.test(phone)) {
+               document.getElementById("phone-error").innerHTML = "Lütfen geçerli bir 10 haneli telefon numarası girin (örnek: 5051234567).";
+               document.getElementById("phone-error").style.display = "block";
+               isValid = false;
+            }
+
+            // Mesaj boş mu?
+            if (message.length === 0) {
+               document.getElementById("message-error").style.display = "block";
+               isValid = false;
+            }
+
+            // Gizlilik politikası işaretli mi?
+            if (!privacyChecked) {
+               document.getElementById("privacy-error").style.display = "block";
+               isValid = false;
+            }
+
+            if (!isValid) return;
+
+            // Başarılı gönderim
+            document.getElementById("response-message").innerHTML = "<span style='color:orange;'>Randevunuz oluşturuluyor...</span>";
+
+            // Buraya form gönderme (örn: PHP veya EmailJS) kodu eklersin
+            setTimeout(() => {
+               document.getElementById("response-message").innerHTML = "<span style='color:green;'>✅ Randevunuz başarıyla oluşturuldu!</span>";
+               document.getElementById("appointment-form").reset();
+            }, 1000);
+         });
       </script>
+
 
 
       <!-- EmailJS Script -->

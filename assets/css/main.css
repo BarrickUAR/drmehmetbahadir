@@ -102,6 +102,13 @@
 /*----------------------------------------*/
 /*  1.1 Theme Default
 /*----------------------------------------*/
+
+.disabled-link {
+  cursor: not-allowed; /* İmleci değiştirir */
+  opacity: 0.6; /* (İsteğe bağlı) Görsel olarak farklılık yaratır */
+  pointer-events: none; /* Tıklanabilirliği devre dışı bırakır */
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Rubik:wght@400;500;600;700;800&display=swa" rel="stylesheet');
 .rr-product-tab-2 .nav-tabs .nav-link .rr-product-tab-tooltip,
 .rr-tab-line,
@@ -2880,7 +2887,6 @@ div.demo img {
   padding: 0 18px;
   text-overflow: ellipsis;
   white-space: nowrap;
-
   text-align: left;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -15979,8 +15985,3 @@ span.current {
 }
 
 /*# sourceMappingURL=main.css.map */
-
-.disabled-link {
-  cursor: not-allowed; /* İmleci değiştirir */
-  opacity: 0.6; /* (İsteğe bağlı) Görsel olarak farklılık yaratır */
-}

@@ -28,74 +28,6 @@
 <body>
 
 
-    <!-- Mail Butonu -->
-
-    <a href="mailto:randevu@drmehmetilteberbahadir.net" target="_blank" class="mail-button z-index-2">
-        <i class="bi bi-envelope-fill"></i>
-    </a>
-
-    <!-- CSS -->
-    <style>
-        @keyframes shake {
-
-            0%,
-            100% {
-                transform: translateX(0);
-            }
-
-            25% {
-                transform: translateX(-5px);
-            }
-
-            50% {
-                transform: translateX(5px);
-            }
-
-            75% {
-                transform: translateX(-5px);
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.1);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        .mail-button {
-            position: fixed;
-            bottom: 40px;
-            right: 240px;
-            background-color: red;
-            color: white;
-            font-size: 24px;
-            padding: 15px;
-            border-radius: 50%;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            animation: pulse 1.5s infinite;
-        }
-
-        .mail-button:hover {
-            background-color: #0056b3;
-            text-decoration: none;
-            animation: shake 0.5s ease-in-out;
-        }
-    </style>
-
-    <!-- Mail Button -->
-
 
     <!-- WhatsApp Butonu -->
 
@@ -239,6 +171,75 @@
     </style>
     <!-- Arama Butonu -->
 
+
+    <!-- Mail Butonu -->
+
+    <a href="mailto:randevu@drmehmetilteberbahadir.net" target="_blank" class="mail-button z-index-2">
+        <i class="bi bi-envelope-fill"></i>
+    </a>
+
+    <!-- CSS -->
+    <style>
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-5px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .mail-button {
+            position: fixed;
+            bottom: 40px;
+            right: 240px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 1.5s infinite;
+        }
+
+        .mail-button:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+            animation: shake 0.5s ease-in-out;
+        }
+    </style>
+
+    <!-- Mail Button -->
+
     <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
@@ -269,13 +270,14 @@
     <!-- back to top end -->
 
 
+
     <div class="rroffcanvas-area">
         <div class="rroffcanvas">
             <div class="rroffcanvas__close-btn">
                 <button class="close-btn"><i class="fal fa-times"></i></button>
             </div>
             <div class="rroffcanvas__logo">
-                <a href="index.html">
+                <a href="/locales/ru/index.html">
                     <img loading="lazy" src="/assets/img/logo/logo2.png" alt="img">
                 </a>
                 <!-- Dil seçenekleri -->
@@ -284,8 +286,9 @@
                         <option>Turkish</option>
                         <option>İngilizce</option>
                         <option>Arapça</option>
-                        <option>Russian</option> <!-- Rusça dil seçeneği eklendi -->
-                        <option>Deutsch</option> <!-- Rusça dil seçeneği eklendi -->
+                        <option>Russian</option>
+                        <option>Deutsch</option>
+                        <option>Georgian</option>
                     </select>
                     <div class="nice-select" tabindex="0">
                         <span class="current">
@@ -301,11 +304,14 @@
                             <li data-value="Arabic" class="option selected focus">
                                 <img src="/assets/img/header/ar.png" alt="ar">
                             </li>
-                            <li data-value="Russian" class="option"> <!-- Rusça dil seçeneği eklendi -->
+                            <li data-value="Russian" class="option">
                                 <img src="/assets/img/header/ru.png" alt="ru">
                             </li>
-                            <li data-value="Deutsch" class="option"> <!-- Rusça dil seçeneği eklendi -->
+                            <li data-value="Deutsch" class="option">
                                 <img src="/assets/img/header/de.png" alt="de">
+                            </li>
+                            <li data-value="Georgian" class="option">
+                                <img src="/assets/img/header/ka.png" alt="ka">
                             </li>
                         </ul>
                     </div>
@@ -379,8 +385,9 @@
                                     <option>التركية</option>
                                     <option>الإنجليزية</option>
                                     <option>العربية</option>
-                                    <option>Русский</option> <!-- Rusça dil seçeneği eklendi -->
+                                    <option>Русский</option>
                                     <option>Deutsch</option>
+                                    <option>Georgian</option>
                                 </select>
                                 <div class="nice-select" tabindex="0">
                                     <span class="current"><img src="/assets/img/header/ar.png" width="30" alt=""></span>
@@ -392,9 +399,11 @@
                                         <li data-value="Arabic" class="option selected focus"><img
                                                 src="/assets/img/header/ar.png" width="30" alt=""></li>
                                         <li data-value="Russian" class="option"><img src="/assets/img/header/ru.png"
-                                                width="30" alt=""></li> <!-- Rusça dil seçeneği eklendi -->
+                                                width="30" alt=""></li>
                                         <li data-value="Deutsch" class="option"><img src="/assets/img/header/de.png"
-                                                width="30" alt=""></li> <!-- Rusça dil seçeneği eklendi -->
+                                                width="30" alt=""></li>
+                                        <li data-value="Georgian" class="option"><img src="/assets/img/header/ka.png"
+                                                width="30" alt=""></li>
                                     </ul>
                                 </div>
                             </div>
@@ -426,7 +435,7 @@
                 </div>
                 <div class="col-xl-4">
                     <div class="rr-herader-1-logo text-center">
-                        <a href="index.html"><img loading="lazy" src="/assets/img/logo/logo2.png"
+                        <a href="//locales/ru/index.html"><img loading="lazy" src="/assets/img/logo/logo2.png"
                                 alt="img"></a>
                     </div>
                 </div>
@@ -467,7 +476,7 @@
                                 <nav class="rr-main-menu-content">
                                     <ul>
                                         <li class="has-dropdown">
-                                            <a href="index.html">الصفحة الرئيسية</a>
+                                            <a href="//locales/ru/index.html">الصفحة الرئيسية</a>
                                             <div class="rr-submenu submenu has-homemenu">
                                                 <div class="row gx-6 row-cols-1 row-cols-md-2 row-cols-xl-3">
                                                     <div class="col homemenu">
@@ -542,7 +551,7 @@
                                                 <li><a href="/locales/ar/404.html">الفيديوهات</a></li>
                                                 <li><a href="/locales/ar/ekibimiz.html">فريقنا</a></li>
                                                 <li><a href="/locales/ar/hekimlerimiz.html">أطباؤنا</a></li>
-                                                <li><a href="/locales/ar/sss.html">الأسئلة الشائعة</a></li>
+                                                <li><a href="/locales/ar/SSS.html">الأسئلة الشائعة</a></li>
                                             </ul>
                                         </li>
                                         <li class="has-dropdown">
@@ -559,7 +568,7 @@
                         <div class="col-xl-5 col-lg-5 col-md-6 col-6">
                             <div class="rr-header-right d-flex align-items-center justify-content-end">
                                 <div class="rr-header-1-contat d-md-block ml-30">
-                                    <a class="rr-btn-border-ar" href="/locales/ar/randevu.html"><span>حجز موعد <i
+                                    <a class="rr-btn-border-ar" href="/locales/ar/iletisim.html"><span>حجز موعد <i
                                                 class="fa-sharp fa-solid fa-plus"></i></span></a>
                                 </div>
                                 <div class="rr-header-bar d-xl-none">
@@ -576,6 +585,7 @@
 
         <!-- header area end -->
     </header>
+
 
 
     <main>

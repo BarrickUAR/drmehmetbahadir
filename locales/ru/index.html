@@ -29,7 +29,15 @@
 
 
     <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16980772703">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'AW-16980772703');
+    </script>
     <!-- End Google Tag Manager -->
 
 
@@ -260,10 +268,6 @@
     </style>
     <!-- Arama Butonu -->
 
-
-
-
-
     <!-- preloader start -->
 
     <div id="loading">
@@ -279,7 +283,6 @@
     </div>
 
     <!-- preloader start -->
-
 
     <!-- back to top start -->
     <div class="back-to-top-wrapper">
@@ -372,8 +375,8 @@
             </div>
         </div>
     </div>
-    <div class="body-overlay"></div>
 
+    <div class="body-overlay"></div>
 
     <div class="rr-header-1-top rr-header-1-shap d-none d-xl-block grey-bg p-relative">
         <div class="container custom-container-1 z-index-3">
@@ -389,7 +392,7 @@
                                     </a>
                                 </li>
                                 <li class="ml-50">
-                                    <b><span><i class="fa-solid fa-clock"></i></span>Пон - Суб: 09:00 - 17:00</b>
+                                    <b><span><i class="fa-solid fa-clock"></i></span>Пон - Суб: 09:30- 17:00</b>
                                 </li>
                             </ul>
                         </div>
@@ -560,16 +563,17 @@
                                     <li class="has-dropdown">
                                         <a href="/locales/ru/cilt-hastaliklari.html">Заболевания</a>
                                         <ul class="submenu rr-submenu">
+                                            <li><a href="/locales/ru/hastaliklar.html">болезни</a></li>
                                             <li><a href="/locales/ru/cilt-hastaliklari.html">Кожные заболевания</a></li>
                                             <li><a href="/locales/ru/romatizmal-hastaliklar.html">Ревматические
                                                     заболевания</a></li>
-                                            <li><a href="/locales/ru/akne.html">Акне</a></li>
+                                            <li><a class="disabled-link" href="/locales/ru/akne.html">Акне</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-dropdown">
                                         <a href="#">Страницы</a>
                                         <ul class="submenu rr-submenu">
-                                            <li><a href="/locales/ru/404.html">Видео</a></li>
+                                            <li><a href="/locales/ru/videolar.html">Видео</a></li>
                                             <li><a href="/locales/ru/ekibimiz.html">Наша команда</a></li>
                                             <li><a href="/locales/ru/hekimlerimiz.html">Наши врачи</a></li>
                                             <li><a href="/locales/ru/sss.html">Часто задаваемые вопросы</a></li>
@@ -1068,98 +1072,239 @@
                     <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                         <div class="rr-features-title-box text-center mb-45">
                             <span class="rr-section-subtitle p-relative"><img loading="lazy"
-                                    src="/assets/img/testimonial/section-icon.png" alt="img"> Наши Услуги <img
+                                    src="/assets/img/testimonial/section-icon.png" alt="img"> Наши процедуры <img
                                     loading="lazy" src="/assets/img/testimonial/section-icon.png" alt="img"></span>
-                            <h4 class="rr-section-title">Наши Услуги</h4>
+                            <h4 class="rr-section-title">Наши услуги</h4>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-6 ">
                         <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s"
                             data-wow-delay=".3s">
                             <div class="rr-features-thumb p-relative">
                                 <img loading="lazy" src="/assets/img/feature/bg-black.jpg" alt="img">
-                                <span>01</span>
                             </div>
-                            <div class="rr-features-icon ">
-                                <img loading="lazy" src="/assets/img/feature/sedef.jpg" alt="img">
+                            <div class="rr-features-icon">
+                                <a href="cilt-hastaliklari.html#nav-Home-tab"><img loading="lazy"
+                                        src="/assets/img/feature/sedef.jpg" alt="img"></a>
                             </div>
                             <div class="rr-features-content text-center">
-                                <h3 class="rr-features-title"><a href="/locales/ru/cilt-hastaliklari.html">Псориаз</a>
-                                </h3>
-                                <p>Псориаз — это заболевание кожи, которое вызывает покраснение и высыпания на коже. В
-                                    Турции около 1 миллиона человек страдают от этого заболевания, которое из-за внешних
-                                    проявлений считалось заразным, но на самом деле не является таковым.</p>
-                                <a class="rr-features-btn" href="/locales/ru/cilt-hastaliklari.html"><span>Подробнее...
-                                        <i class="fa-solid fa-angle-right"></i></span></a>
+                                <h3 class="rr-features-title"><a href="cilt-hastaliklari.html">Псориаз</a></h3>
+                                <p>Псориаз — это кожное заболевание, провоцируемое стрессом и эмоциональными
+                                    переживаниями. У предрасположенных людей стресс может усилить симптомы.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-6">
                         <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s"
                             data-wow-delay=".5s">
                             <div class="rr-features-thumb p-relative">
                                 <img loading="lazy" src="/assets/img/feature/bg-black.jpg" alt="img">
-                                <span>02</span>
                             </div>
                             <div class="rr-features-icon">
-                                <img loading="lazy" src="/assets/img/feature/egzama.jpg" alt="img">
+                                <a href="cilt-hastaliklari.html#nav-Car-tab"><img loading="lazy"
+                                        src="/assets/img/feature/egzama.jpg" alt="img"></a>
                             </div>
                             <div class="rr-features-content text-center">
-                                <h3 class="rr-features-title  "><a href="cilt-hastaliklari.html">Экзема</a>
-                                </h3>
-                                <p>Экзема — это кожное заболевание, которое, однако, не представляет опасности. Примерно
-                                    1 из 12 человек страдает экземой, и это достаточно распространенная болезнь.</p>
-                                <a class="rr-features-btn" href="cilt-hastaliklari.html"><span>Подробнее... <i
-                                            class="fa-solid fa-angle-right"></i></span></a>
+                                <h3 class="rr-features-title"><a href="cilt-hastaliklari.html">Экзема</a></h3>
+                                <p>Экзема (дерматит) сопровождается отеком эпидермиса и может проявляться в различных
+                                    формах, таких как аллергический контактный дерматит. На коже появляются зуд и
+                                    покраснение.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-6">
                         <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s"
                             data-wow-delay=".7s">
                             <div class="rr-features-thumb p-relative">
                                 <img loading="lazy" src="/assets/img/feature/bg-black.jpg" alt="img">
-                                <span>03</span>
                             </div>
                             <div class="rr-features-icon">
-                                <img loading="lazy" src="/assets/img/feature/liken.jpg" alt="img">
+                                <img loading="lazy" src="/assets/img/feature/akne.jpg" alt="img">
                             </div>
                             <div class="rr-features-content text-center">
-                                <h3 class="rr-features-title"><a href="cilt-hastaliklari.html">Ликен планус</a></h3>
-                                <p>Ликен планус — это заболевание кожи, происхождение которого считается
-                                    психологическим. Точные причины возникновения заболевания неизвестны. Он часто
-                                    встречается на внутренних частях кожи, а также в области половых органов, рук и ног
-                                    у мужчин и женщин.</p>
-                                <a class="rr-features-btn" href="cilt-hastaliklari.html"><span>Подробнее... <i
-                                            class="fa-solid fa-angle-right"></i></span></a>
+                                <h3 class="rr-features-title"><a href="cilt-hastaliklari.html">Проблема акне</a></h3>
+                                <p>Часто встречающееся в подростковом возрасте акне возникает из-за закупорки волосяных
+                                    фолликулов и воспалений. Это приводит к появлению прыщей и высыпаний на коже.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-6">
                         <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s"
                             data-wow-delay=".9s">
                             <div class="rr-features-thumb p-relative">
                                 <img loading="lazy" src="/assets/img/feature/bg-black.jpg" alt="img">
-                                <span>04</span>
                             </div>
                             <div class="rr-features-icon">
                                 <img loading="lazy" src="/assets/img/feature/iktiyoz.jpg" alt="img">
                             </div>
                             <div class="rr-features-content text-center">
-                                <h3 class="rr-features-title"><a href="cilt-hastaliklari.html">Иктиозис</a> </h3>
-                                <p>Иктиозис вулгарис, часто называемая болезнью рыбьей кожи, является кожным
-                                    заболеванием, при котором постоянно отмирающие клетки кожи накапливаются, образуя
-                                    чешуйки, напоминающие рыбий чешуй.</p>
-                                <a class="rr-features-btn" href="cilt-hastaliklari.html"><span>Подробнее... <i
-                                            class="fa-solid fa-angle-right"></i></span></a>
+                                <h3 class="rr-features-title"><a href="cilt-hastaliklari.html">Ихтиоз</a></h3>
+                                <p>Ихтиоз — это заболевание, вызывающее утолщение кожи. Из-за нарушений процесса
+                                    кератинизации кожа становится сухой и шелушится.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-6">
+                        <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s"
+                            data-wow-delay=".3s">
+                            <div class="rr-features-thumb p-relative">
+                                <img loading="lazy" src="/assets/img/feature/bg-black.jpg" alt="img">
+                            </div>
+                            <div class="rr-features-icon">
+                                <a href="cilt-hastaliklari.html#nav-Health-tab"><img loading="lazy"
+                                        src="/assets/img/feature/liken.jpg" alt="img"></a>
+                            </div>
+                            <div class="rr-features-content text-center">
+                                <h3 class="rr-features-title"><a href="cilt-hastaliklari.html">Лишай планус</a></h3>
+                                <p>Лишай планус — воспалительное заболевание, вызванное иммунной системой. Проявляется
+                                    на слизистых оболочках в виде плоских фиолетовых высыпаний.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-6">
+                        <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s"
+                            data-wow-delay=".5s">
+                            <div class="rr-features-thumb p-relative">
+                                <img loading="lazy" src="/assets/img/feature/bg-black.jpg" alt="img">
+                            </div>
+                            <div class="rr-features-icon">
+                                <a href="cilt-hastaliklari.html#nav-Education-tab"><img loading="lazy"
+                                        src="/assets/img/feature/ankilozan.jpg" alt="img"></a>
+                            </div>
+                            <div class="rr-features-content text-center">
+                                <h3 class="rr-features-title"><a href="cilt-hastaliklari.html">Анкилозирующий
+                                        спондилит</a></h3>
+                                <p>Это воспалительное заболевание позвоночника, известное как ревматизм поясницы,
+                                    которое вызывает ограничение подвижности.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-6">
+                        <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s"
+                            data-wow-delay=".7s">
+                            <div class="rr-features-thumb p-relative">
+                                <img loading="lazy" src="/assets/img/feature/bg-black.jpg" alt="img">
+                            </div>
+                            <div class="rr-features-icon">
+                                <img loading="lazy" src="/assets/img/feature/romatizma.jpg" alt="img">
+                            </div>
+                            <div class="rr-features-content text-center">
+                                <h3 class="rr-features-title"><a href="cilt-hastaliklari.html">Ревматоидный артрит</a>
+                                </h3>
+                                <p>Это аутоиммунное заболевание, вызывающее боль и отек суставов. Ранняя диагностика и
+                                    лечение имеют большое значение.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-6">
+                        <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s"
+                            data-wow-delay=".9s">
+                            <div class="rr-features-thumb p-relative">
+                                <img loading="lazy" src="/assets/img/feature/bg-black.jpg" alt="img">
+                            </div>
+                            <div class="rr-features-icon">
+                                <img loading="lazy" src="/assets/img/feature/haşimato.jpg" alt="img">
+                            </div>
+                            <div class="rr-features-content text-center">
+                                <h3 class="rr-features-title"><a href="cilt-hastaliklari.html">Тиреоидит Хашимото</a>
+                                </h3>
+                                <p>Хашимото — это заболевание, при котором иммунная система атакует щитовидную железу.
+                                    Симптомы включают усталость, увеличение веса и сухость кожи.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-6">
+                        <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s"
+                            data-wow-delay=".3s">
+                            <div class="rr-features-thumb p-relative">
+                                <img loading="lazy" src="/assets/img/feature/bg-black.jpg" alt="img">
+                            </div>
+                            <div class="rr-features-icon">
+                                <img loading="lazy" src="/assets/img/feature/kalp.jpg" alt="img">
+                            </div>
+                            <div class="rr-features-content text-center">
+                                <h3 class="rr-features-title">
+                                    <a href="kalp-damar-hastaliklari.html">Фитотерапия при сердечно-сосудистых
+                                        заболеваниях</a>
+                                </h3>
+                                <p>Растения могут помочь в поддержании здоровья сердца и нормализации давления.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-6">
+                        <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s"
+                            data-wow-delay=".5s">
+                            <div class="rr-features-thumb p-relative">
+                                <img loading="lazy" src="/assets/img/feature/bg-black.jpg" alt="img">
+                            </div>
+                            <div class="rr-features-icon">
+                                <img loading="lazy" src="/assets/img/feature/beyin.jpg" alt="img">
+                            </div>
+                            <div class="rr-features-content text-center">
+                                <h3 class="rr-features-title"><a href="alzheimer-fitoterapi.html">Фитотерапия при
+                                        болезни Альцгеймера</a></h3>
+                                <p>Фитотерапия помогает укрепить память и замедлить прогрессирование болезни
+                                    Альцгеймера.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-6">
+                        <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s"
+                            data-wow-delay=".7s">
+                            <div class="rr-features-thumb p-relative">
+                                <img loading="lazy" src="/assets/img/feature/bg-black.jpg" alt="img">
+                            </div>
+                            <div class="rr-features-icon">
+                                <img loading="lazy" src="/assets/img/feature/otizm.jpg" alt="img">
+                            </div>
+                            <div class="rr-features-content text-center">
+                                <h3 class="rr-features-title"><a href="otizm-fitoterapi.html">Фитотерапия при
+                                        аутизме</a></h3>
+                                <p>Растительные средства могут использоваться для смягчения симптомов аутизма и
+                                    улучшения социальных навыков.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-6">
+                        <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s"
+                            data-wow-delay=".9s">
+                            <div class="rr-features-thumb p-relative">
+                                <img loading="lazy" src="/assets/img/feature/bg-black.jpg" alt="img">
+                            </div>
+                            <div class="rr-features-icon">
+                                <img loading="lazy" src="/assets/img/feature/cinsellik.jpg" alt="img">
+                            </div>
+                            <div class="rr-features-content text-center">
+                                <h3 class="rr-features-title">
+                                    <a href="cinsel-problemler-fitoterapi.html">Растительная и озонотерапия при
+                                        сексуальных нарушениях</a>
+                                </h3>
+                                <p>Эти методы могут регулировать гормональный баланс и укрепить иммунную систему.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
 
 
         <!-- features area end -->
@@ -1793,7 +1938,7 @@
                                     <div class="rr-footer-widget-content-list mb-25">
                                         <div class="rr-footer-widget-content-list-item">
                                             <i class="fa-sharp fa-solid fa-clock"></i> <a href="#">Часы работы:<br />
-                                                Пн-Сб: 9.00 - 17.00</a>
+                                                Пн-Сб: 09.00 - 17.00</a>
                                         </div>
                                         <div class="rr-footer-widget-content-list-item">
                                             <i class="fa-solid fa-location-dot"></i> <a href="#">Merter İş Merkezi -
@@ -1839,12 +1984,12 @@
                                     <h4 class="rr-footer-title">Наши рабочие часы</h4>
                                     <div class="rr-footer-contact">
                                         <ul>
-                                            <li><span>Понедельник - 09.00 - 17.00</span></li>
-                                            <li><span>Вторник - 09.00 - 17.00</span></li>
-                                            <li><span>Среда - 09.00 - 17.00</span></li>
-                                            <li><span>Четверг - 09.00 - 17.00</span></li>
-                                            <li><span>Пятница - 09.00 - 17.00</span></li>
-                                            <li><span>Суббота - 09.00 - 17.00</span></li>
+                                            <li><span>Понедельник - 09:30- 17.00</span></li>
+                                            <li><span>Вторник - 09:30- 17.00</span></li>
+                                            <li><span>Среда - 09:30- 17.00</span></li>
+                                            <li><span>Четверг - 09:30- 17.00</span></li>
+                                            <li><span>Пятница - 09:30- 17.00</span></li>
+                                            <li><span>Суббота - 09:30- 17.00</span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1874,10 +2019,13 @@
     </footer>
 
 
+
+
+
+
+
     <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
-
 
     <!-- JS here -->
     <script src="/assets/js/vendor/jquery.js"></script>
